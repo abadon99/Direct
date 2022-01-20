@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>KT 다이렉트 퍼블리싱가이드</title>
+
+	<link rel="apple-touch-icon" href="/images/mobile/favicon.png">
+	<link rel="shortcut icon" href="/images/mobile/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/directShop/css/default.css">
+    <link rel="stylesheet" href="/directShop/css/contents.css">
+    <link rel="stylesheet" href="/directShop/css/popup.css">
+    <link rel="stylesheet" href="/directShop/css/swiper.css">
+
+	<link rel="stylesheet" href="/directShop/css/ktDirect.css">
+
+    <link href="/directShop/renew/Publishing_Guide/Publishing_Guide/common/css/ini.min.css" rel="stylesheet">
+    <link href="/directShop/renew/Publishing_Guide/Publishing_Guide/common/css/guide.css" rel="stylesheet">
+    <link href="/directShop/renew/Publishing_Guide/Publishing_Guide/common/css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="/directShop/renew/Publishing_Guide/Publishing_Guide/common/css/shThemeRDark.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript"  src="/directShop/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="/directShop/js/ui/common_front.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/ui.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/pub.js" type="text/javascript"></script>
+	<script src="/directShop/js/lib/swiper.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shCore.js"></script>
+    <script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shBrushCss.js"></script>
+    <script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shBrushXml.js"></script>
+	<script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/guide.js"></script>
+
+
+    <script>
+        SyntaxHighlighter.all()
+    </script>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- Header -->
+		<header id="header">
+			<h1>KT 다이렉트 퍼블리싱가이드</h1>
+		</header>
+		<!-- //Header -->
+
+		<div id="container">
+			<!-- Lnb -->
+			<aside id="lnb">
+				<ul class="depth01">
+					<li><a href="javascript:;">기본 정책 사항</a>
+						<ul class="depth02">
+							<li><a href="">기본 정책</a></li>
+							<li><a href="">퍼블리싱 규칙사항</a></li>
+							<li><a href="">Html 규칙사항</a></li>
+							<li><a href="">CSS 규칙사항</a></li>
+							<li><a href="">JS 규칙사항</a></li>
+							<li><a href="">Images 규칙사항</a></li>
+						</ul>
+					</li>
+					<li><a href="javascript:;">문서 구조</a>
+						<ul class="depth02">
+							<li><a href="">공통 사항</a></li>
+							<li><a href="">Main Page</a></li>
+							<li><a href="">Content Page</a></li>
+							<li><a href="">기타 사항</a></li>
+						</ul>
+					</li>
+					<li><a href="javascript:;">라이브러리</a>
+						<ul class="depth02">
+							<li><a href="">Table</a></li>
+							<li><a href="">Form</a></li>
+							<li><a href="">Tab</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+			<!-- //Lnb -->
+
+			<article class="content">
+				<div class="p_title">
+					<h2>기본 정책 사항</h2>
+				</div>
+
+				<!-- 기본정책 -->
+				<section class="s_block">
+					<div class="s_title">
+						<h3>기본정책</h3>
+					</div>
+					<h4 class="s_subTitle01">KT DIrect 리뉴얼 프로젝트</h4>
+					<ul class="desc_list01">
+						<li>
+							기존 <a href="https://direct.kt.com/">https://direct.kt.com/</a>에 적용된 개발 환경에 디자인 개선 도입.
+						</li>
+						<li>was 및 web 자원은 기존 다이렉트샵 자원 활용을 기준으로 한다.</li>
+					</ul>
+
+					<h4 class="s_subTitle01">반응형 구조</h4>
+					<ul class="desc_list01">
+						<li>반응형 웹으로 사이트 구성</li>
+						<li>window width(px)를 기준으로 하여 반응형 제작을 하며, 아래 BreakPoint를 기준으로 한다.</li>
+						<li>BreakPoint
+							<ul>
+								<li>PC 구간 : width 1024px 이상</li>
+								<li>Tablets 구간 : 768px to 1024px</li>
+								<li>Mobile 구간 : 768px 이하</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h4 class="s_subTitle01">was 경로</h4>
+					<ul class="desc_list01">
+						<li>/ollehshop_was/src/main/webapp/WEB-INF/views/directShop/</li>
+					</ul>
+
+					<h4 class="s_subTitle01">web 경로</h4>
+					<ul class="desc_list01">
+						<li>기존 경로 :
+							<ul>
+								<li>css : /ollehshop_web/directShop/css/</li>
+								<li>js : /ollehshop_web/directShop/js/</li>
+								<li>images : /ollehshop_web/images/directShop/</li>
+							</ul>
+						</li>
+						<li>신규 제작용 경로 :
+							<ul>
+								<li>css : /ollehshop_web/directShop/css/ktDirect.css</li>
+								<li>js : /ollehshop_web/directShop/js/pub.js
+									<ul>
+										<li>jquery 추가 사항은 신규 파일 제작 없음</li>
+										<li>as-is 하단에 주석(// Direct 개선 2022) 이후에 추가</li>
+									</ul>
+								</li>
+								<li>images : /ollehshop_web/images/directShop/renew/</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<!-- 퍼블리싱 규칙사항 -->
+				<section class="s_block">
+					<div class="s_title">
+						<h3>퍼블리싱 규칙사항</h3>
+					</div>
+
+					<h4 class="s_subTitle01">General Formatting Rules</h4>
+					<ul class="desc_list01">
+						<li>문서의 기본구조는 html5의 규격을 준수하며, 의미에 맞게 시멘틱 마크업을 한다.</li>
+						<li>들여쓰기, 빈줄삽입, 주석 등은 아래 형태로 진행한다.</li>
+					</ul>
+
+					<h4 class="s_subTitle01">들여쓰기</h4>
+					<ul class="desc_list01">
+						<li>코드 및 단락의 들여쓰기는 1탭 들여쓰기를 하며, 1탭의 크기는 4칸으로 설정한다.</li>
+					</ul>
+
+					<h4 class="s_subTitle01">빈줄</h4>
+					<ul class="desc_list01">
+						<li>문서의 가독성 및 단락 구분을 위하여 필요시 빈줄을 추가한다.</li>
+						<li>단 빈줄 추가는 최대 1줄을 초과하지 아니한다.</li>
+					</ul>
+
+					<h4 class="s_subTitle01">주석</h4>
+					<ul class="desc_list01">
+						<li>문서의 주석 표시는 문서를 열람하는 모든이가 단락의 구분을 확인할 수 있도록 한다.</li>
+						<li>html문서의 주석은 시작주석과 끝주석을 표기하여 단락의 구분을 명확히 할 수 있도록 한다.</li>
+						<li>시작주석은 &lt;!-- 내용 --&gt;으로 하며, 끝주석은 &lt;!-- //내용 --&gt; 으로 한다.</li>
+					</ul>
+					<div class="code_box">
+						<pre class="brush: html">
+							&lt;!-- Header --&gt;
+							&lt;header id="header"&gt;
+								&lt;!-- Gnb --&gt;
+								&lt;nav class="gnb"&gt;
+									.....
+								&lt;/nav&gt;
+								&lt;!-- //Gnb --&gt;
+							&lt;/header&gt;
+							&lt;!-- //Header --&gt;
+						</pre>
+					</div>
+				</section>
+
+				<!-- Html 규칙사항 -->
+				<section class="s_block">
+					<div class="s_title">
+						<h3>Html 규칙사항</h3>
+					</div>
+
+					<h4 class="s_subTitle01">KT DIrect 리뉴얼 프로젝트</h4>
+					<ul class="desc_list01">
+						<li>as-is 기준으로 작업 진행</li>
+						<li>메인 및 콘텐츠 페이지의 경우 1024px 이상 좌측 안내 영역 확보</li>
+						<li style="color: #f00;">신규, 수정 등 작업 주석은 &lt;!-- ktd : 내용 --&gt;</li>
+					</ul>
+
+					<h4 class="s_subTitle01">Html 폴더구조</h4>
+					<div class="s_content">
+						<div class="code_box">
+							<pre class="brush: html">
+								/ollehshop_web/directShop/htmlKTD/                 // 다이렉트 퍼블리싱 폴더
+								/ollehshop_web/directShop/htmlKTD/main/            // 다이렉트 메인
+								/ollehshop_web/directShop/htmlKTD/content/         // 다이렉트 콘텐츠
+							</pre>
+						</div>
+					</div>
+				</section>
+
+				<!-- Css 규칙사항 -->
+				<p style="font-size: 20px; color:#f00;">작업 여기서 부터 진행</p>
+				<section class="s_block">
+					<div class="s_title">
+						<h3>Css 규칙사항</h3>
+					</div>
+
+					<h4 class="s_subTitle01">General Formatting Rules</h4>
+					<ul class="desc_list01">
+						<li>속성값은 기본은 따옴표 '', ""를 사용한다.</li>
+						<li>css문서는 기본으로 들여쓰기는 사용하지 않는다. (단 미디어쿼리의 사용으로 인하여 코드구분을 하기위하여 1탭 4칸 들여쓰기는 허용한다.)</li>
+						<li>속성값을 적용하기 위하여 id, class명 과 {} 사이에는 한칸 띄어쓰기를 한다.</li>
+						<li>css의 끝주석은 작성하지 않는다.</li>
+						<li>문서의 가독성 및 단락 구분을 위하여 필요시 빈줄을 추가한다.</li>
+						<li>단 빈줄 추가는 최대 1줄을 초과하지 아니한다.</li>
+					</ul>
+
+					<h4 class="s_subTitle01">세미콜론 ;</h4>
+					<ul class="desc_list01">
+						<li>속성 구분을 위한 ;은 마지막에도 사용을 한다.</li>
+					</ul>
+					<div class="code_box">
+						<pre class="brush: css">
+							.class {margin:0; padding:0;}
+						</pre>
+					</div>
+
+					<h4 class="s_subTitle01">공백</h4>
+				</section>
+
+				<!-- js 규칙사항 -->
+				<p>js는 기존 pub 하단에 작업 주석 내용 표기</p>
+				<section class="s_block">
+					<div class="s_title">
+						<h3>Css 규칙사항</h3>
+					</div>
+
+					<h4 class="s_subTitle01">General Formatting Rules</h4>
+					<ul class="desc_list01">
+						<li>속성값은 기본은 따옴표 '', ""를 사용한다.</li>
+						<li>css문서는 기본으로 들여쓰기는 사용하지 않는다. (단 미디어쿼리의 사용으로 인하여 코드구분을 하기위하여 1탭 4칸 들여쓰기는 허용한다.)</li>
+						<li>속성값을 적용하기 위하여 id, class명 과 {} 사이에는 한칸 띄어쓰기를 한다.</li>
+						<li>css의 끝주석은 작성하지 않는다.</li>
+						<li>문서의 가독성 및 단락 구분을 위하여 필요시 빈줄을 추가한다.</li>
+						<li>단 빈줄 추가는 최대 1줄을 초과하지 아니한다.</li>
+					</ul>
+
+					<h4 class="s_subTitle01">세미콜론 ;</h4>
+					<ul class="desc_list01">
+						<li>속성 구분을 위한 ;은 마지막에도 사용을 한다.</li>
+					</ul>
+					<div class="code_box">
+						<pre class="brush: css">
+							.class {margin:0; padding:0;}
+						</pre>
+					</div>
+
+					<h4 class="s_subTitle01">공백</h4>
+				</section>
+
+				<!-- images 규칙사항 -->
+				<p>images 경로 //images/directShop/renew/</p>
+				<p>메인 다이렉트가 필요한순간 아이콘</p>
+				<p>가입신청(유심미보유) 다이렉트 아이콘 샘플링 작업 </p>
+				<section class="s_block">
+					<div class="s_title">
+						<h3>Css 규칙사항</h3>
+					</div>
+
+					<h4 class="s_subTitle01">General Formatting Rules</h4>
+					<ul class="desc_list01">
+						<li>속성값은 기본은 따옴표 '', ""를 사용한다.</li>
+						<li>css문서는 기본으로 들여쓰기는 사용하지 않는다. (단 미디어쿼리의 사용으로 인하여 코드구분을 하기위하여 1탭 4칸 들여쓰기는 허용한다.)</li>
+						<li>속성값을 적용하기 위하여 id, class명 과 {} 사이에는 한칸 띄어쓰기를 한다.</li>
+						<li>css의 끝주석은 작성하지 않는다.</li>
+						<li>문서의 가독성 및 단락 구분을 위하여 필요시 빈줄을 추가한다.</li>
+						<li>단 빈줄 추가는 최대 1줄을 초과하지 아니한다.</li>
+					</ul>
+
+					<h4 class="s_subTitle01">세미콜론 ;</h4>
+					<ul class="desc_list01">
+						<li>속성 구분을 위한 ;은 마지막에도 사용을 한다.</li>
+					</ul>
+					<div class="code_box">
+						<pre class="brush: css">
+							.class {margin:0; padding:0;}
+						</pre>
+					</div>
+
+					<h4 class="s_subTitle01">공백</h4>
+				</section>
+
+
+
+
+				<!-- css/js 폴더 구조 -->
+				<section class="s_block">
+					<div class="s_title">
+						class는 - 로<br>
+						<h3>css/js 폴더 구조</h3>
+					</div>
+					<div class="s_content">
+						<div class="code_box">
+							<pre class="brush: html">
+								// css folder
+								/inc/css/import.css                  // css 가져오기
+								/inc/css/ini.min.css                 // 스타일 초기화
+								/inc/css/common.css                  // 공통사항
+
+								// js folder
+								/inc/js/libs/jquery.min.js           // jQuery core
+								/inc/js/libs/html5shiv.js            // html5 호환성
+								/inc/js/libs/기타 플러그인 파일      // 외부 플러그인
+
+								/inc/js/pub/main.js                  // 메인 UI
+								/inc/js/pub/ui.js                    // 공통 UI
+							</pre>
+						</div>
+					</div>
+				</section>
+
+				<!-- 이미지 폴더 구조 -->
+				<section class="s_block">
+					<div class="s_title">
+						<h3>이미지 폴더 구조</h3>
+					</div>
+					<div class="s_content">
+						<div class="code_box">
+							<pre class="brush: html">
+								// image folder
+								/inc/img/common                  // 공통이미지
+								/inc/img/main                    // 메인페이지
+								/inc/img/sub                     // 서브페이지
+
+								* 이미지 폴더의 경우 필요시 카테고리 명으로 /inc/img/***** 위치에 생성하여 사용
+							</pre>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="s_block">
+					<style>
+						.ktd-guide-wrap-info {border:1px solid #ccc; padding:20px; font-size: 12px;}
+						.ktd-guide-wrap-info > div,
+						.ktd-guide-wrap-info > div div {border: 1px solid #ddd; padding:20px; margin:10px 0}
+					</style>
+					메인 레이아웃
+					<div class="ktd-guide-wrap-info">
+						body : class="ktd-wrap"
+						<div>
+							작업영역 : div class="ktd-conWrap"
+
+							<div>헤더 영역 : header</div>
+							<div>Lnb 메뉴 영역 : div class="ktd-depthMenu"</div>
+
+							<div>
+								메인 콘텐츠 영역 : div id="main-contents"
+								<div>메인 슬라이드 영역 : div class="main-swiper"</div>
+								<div>유심요금제 가입 영역 : div class="ktd-main-section-1"</div>
+								<div>추천 요금제 영역 : div class="ktd-main-section-2"</div>
+								<div>가입혜택 영역 : div class="ktd-gift-section"</div>
+								<div>중고폰, 자급제폰 영역 : div class="ktd-main-section-3"</div>
+							</div>
+							<div>푸터영역 : div class="footer"</div>
+						</div>
+					</div>
+
+					콘텐츠 레이아웃 01
+					<div class="ktd-guide-wrap-info">
+						body : class="ktd-wrap"
+						<div>
+							작업영역 : div class="ktd-conWrap"
+
+							<div>헤더 영역 : header</div>
+
+							<div>
+								Default 콘텐츠 영역 : div id="content" class="bodyContent"<br>
+								** 작업 성격에 따라 class가 상이함 ( 작업성격에 맞게 제작)
+								<div>메인 슬라이드 영역 : div class="main-swiper"</div>
+							</div>
+							<div>푸터영역 : div class="footer"</div>
+						</div>
+					</div>
+
+					버튼타입
+					<div>
+						Default - Full size - height 48px
+						<div>
+							<div>
+								<a href="#" class="btn" role="button">a type</a>
+								<a href="#" class="btn gray" role="button">a type</a>
+								<button type="button" class="btn">button type</button>
+								<button type="button" class="btn gray">button type</button>
+								<button type="button" class="btn" disabled>button type</button>
+							</div>
+							<div class="code_box">
+								<pre class="brush: html">
+									<a href="#" class="btn" role="button">a type</a>
+									<a href="#" class="btn gray" role="button">a type</a>
+									<button type="button" class="btn">button type</button>
+									<button type="button" class="btn gray">button type</button>
+									<button type="button" class="btn" disabled>button type</button>
+								</pre>
+							</div>
+						</div>
+
+						Default - Auto size - height 48px
+						<div>
+							<div style="text-align: center;">
+								<a href="#" class="btn inline" role="button">a type</a>
+								<a href="#" class="btn inline gray" role="button">a type</a>
+								<button type="button" class="btn inline">button type</button>
+								<button type="button" class="btn inline gray">button type</button>
+								<button type="button" class="btn inline" disabled>button type</button>
+							</div>
+							<div class="code_box">
+								<pre class="brush: html">
+									<a href="#" class="btn inline" role="button">a type</a>
+									<a href="#" class="btn inline gray" role="button">a type</a>
+									<button type="button" class="btn inline">button type</button>
+									<button type="button" class="btn inline gray">button type</button>
+									<button type="button" class="btn inline" disabled>button type</button>
+								</pre>
+							</div>
+						</div>
+
+						Midium - Full size - height 40px
+						<div>
+							<div>
+								<a href="#" class="btn medium" role="button">a type</a>
+								<a href="#" class="btn medium gray" role="button">a type</a>
+								<button type="button" class="btn medium">button type</button>
+								<button type="button" class="btn medium gray">button type</button>
+								<button type="button" class="btn medium" disabled>button type</button>
+							</div>
+							<div class="code_box">
+								<pre class="brush: html">
+									<a href="#" class="btn medium" role="button">a type</a>
+									<a href="#" class="btn medium gray" role="button">a type</a>
+									<button type="button" class="btn medium">button type</button>
+									<button type="button" class="btn medium gray">button type</button>
+									<button type="button" class="btn medium" disabled>button type</button>
+								</pre>
+							</div>
+						</div>
+
+						Midium - Auto size - height 40px
+						<div>
+							<div style="text-align: center;">
+								<a href="#" class="btn medium inline" role="button">a type</a>
+								<a href="#" class="btn medium inline gray" role="button">a type</a>
+								<button type="button" class="btn medium inline">button type</button>
+								<button type="button" class="btn medium inline gray">button type</button>
+								<button type="button" class="btn medium inline" disabled>button type</button>
+							</div>
+							<div class="code_box">
+								<pre class="brush: html">
+									<a href="#" class="btn medium inline" role="button">a type</a>
+									<a href="#" class="btn medium inline gray" role="button">a type</a>
+									<button type="button" class="btn medium inline">button type</button>
+									<button type="button" class="btn medium inline gray">button type</button>
+									<button type="button" class="btn medium inline" disabled>button type</button>
+								</pre>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="join-link">
+						<a href="#">
+							<dl class="join-data">
+								<dt>
+									데이터 <br>
+									쉐어링 가입
+								</dt>
+								<dd>
+									다양한 스마트 기기를 <br>
+									함께 사용하고 싶다면
+								</dd>
+							</dl>
+						</a>
+						<a href="#">
+							<dl class="join-plan">
+								<dt>
+									무약정플랜 <br>
+									요금제 변경
+								</dt>
+								<dd>
+									KT 다이렉트에서만 <br>
+									가입이 가능한
+								</dd>
+							</dl>
+						</a>
+					</div>
+
+					<div class="usim-buy-find">
+						<h3>유심 구매처 안내</h3>
+						<ul>
+							<li class="seller-gs25">
+								<a href="https://direct.kt.com/direct/directEvent.do#div-section-1" role="button">
+									<span>GS25</span>
+								</a>
+							</li>
+							<li class="seller-kt">
+								<a href="https://shop.kt.com:444/accessory/accsProductView.do?prodNo=AC00051548" target="_blank" title="새창열림" role="button">
+									<span>KT Shop</span>
+								</a>
+							</li>
+							<li class="seller-coupang">
+								<a href="https://www.coupang.com/vp/products/4353623438?itemId=5110980269&amp;vendorItemId=72420516921&amp;pickType=COU_PICK&amp;q=KT%EC%9C%A0%EC%8B%AC&amp;itemsCount=36&amp;searchId=9e64b4d1c80145bfbb879a18f58cf1e1&amp;rank=1&amp;isAddedCart=" target="_blank" title="새창열림" role="button">
+									<span>쿠팡</span>
+								</a>
+							</li>
+							<li class="seller-naver">
+								<a href="https://smartstore.naver.com/ktdirect/products/5584809660" target="_blank" title="새창열림" role="button">
+									<span>N스토어</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+
+
+
+			</article>
+		</div>
+	</div>
+</body>
+</html>

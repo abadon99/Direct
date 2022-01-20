@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix___2번" width="140" height="70" data-name="2번" viewBox="0 0 140 70">
+    <rect id="prefix__사각형_75" width="140" height="70" data-name="사각형 75" rx="35" style="fill:#ebebeb"/>
+    <text id="prefix__Shop" transform="translate(91 45)" style="font-size:26px;font-family:Roboto-Medium,Roboto;font-weight:500;letter-spacing:-.02em;fill:#879198">
+        <tspan x="-29.003" y="0">Shop</tspan>
+    </text>
+    <path id="prefix__영문" d="M652.345 172.2l2.65-3.4h-3.1a4.489 4.489 0 0 0-3.091 1.022l-.235.3v-11.039h-3.15a1.37 1.37 0 0 0-1.338 1.4v20.6h3.149a1.371 1.371 0 0 0 1.339-1.4V174.2l2.552 3.261 2.169 2.78a1.994 1.994 0 0 0 1.6.837h4.394l-2.843-3.629zm12.573 3.739V168.8h-4.5v8.012a3.993 3.993 0 0 0 4.1 4.268h3.458a1.374 1.374 0 0 0 1.345-1.4v-2.49h-3.207a1.233 1.233 0 0 1-1.196-1.253zm5.16-9.65v-3.109l-.279.307c-.009.008-.853.9-3.276.9h-1.6v-5.308h-3.151a1.373 1.373 0 0 0-1.345 1.4v3.912h-5.357a3.777 3.777 0 0 0-3.308 1.595l-2.63 3.374a4.751 4.751 0 0 1 3.067-1.225h14.323c1.568 0 2.643-.321 3.2-.951a1.3 1.3 0 0 0 .356-.898z" transform="translate(-614.98 -135.006)" style="fill:#879198"/>
+</svg>

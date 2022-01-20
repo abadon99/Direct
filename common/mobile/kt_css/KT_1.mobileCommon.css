@@ -1,0 +1,130 @@
+@charset "utf-8";
+#mShopSnb {display:none;}
+
+.orderProgress {position:relative;background-color:#39a7a8;}
+.orderProgress a {position:absolute;display:block;background:url('/images/mobile/smart/mobile_com/btn_page_back.png') no-repeat 50% 0;background-size:100%;}
+.orderProgress strong {display:block;color:#fff;text-align:center;}
+.orderProgress span {position:absolute;top:50%;display:inline-block;font-weight:bold;color:#fff;line-height:200%;background-color:#108396;}
+.orderProgress span em {color:#56ddf2;}
+
+/*190503 스탭바개선*/
+.new-orderProgress{position:relative;padding:4% 4% 0;}
+.new-orderProgress.bshadow{box-shadow:0px 5px 7px #ddd;padding-bottom:4%;}
+.new-orderProgress a {display:block;}
+.new-orderProgress a img{width:2.13vw;}
+.new-orderProgress p.new-complete{text-align:center;color:#2ab0d5;font-size:14px;font-weight:bold;padding:2% 0;}
+.new-orderStep{margin-top:-3.52vw;width:95%;margin-left:5%;}
+.new-orderStep ul:after{display:block;content:"";clear:both;}
+.new-orderStep ul li{position:relative;color:#2ab0d5;font-size:14px;text-align:center;}
+.new-orderStep ul li em.stepNum{display:inline-block;background:url('/images/mobile/smart/mobile_com/img_stepNum_off.png') no-repeat 0 0;background-size:100%;padding:1% 2%;}
+.new-orderStep ul li em.stepNum.on{color:#fff;background:url('/images/mobile/smart/mobile_com/img_stepNum_on.png') no-repeat 0 0;background-size:100%;}
+@media screen and (max-width:320px)  {
+	.new-orderStep{margin-top:-4.52vw}
+	.new-orderStep ul li em.stepNum{padding:0.5% 2%;}
+}
+@media screen and (min-width:451px)  {
+	.new-orderStep ul li em.stepNum{padding:0.5% 1%;}
+}
+
+/* 요금제 변경 */
+.planSearch {display:table-cell;vertical-align:top;}
+.planSearch div {position:relative;display:inline-block;border:1px solid #cdcdcd;}
+.planSearch p {color:#222;text-align:left;}
+.planSearch a {position:absolute;display:block;}
+.planSearch a.open {background:url('/images/mobile/smart/detail_new/btn_plan_open.png') no-repeat center;background-size:60%;}
+.planSearch a.close {display:none;background:url('/images/mobile/smart/detail_new/btn_plan_close.png') no-repeat center;background-size:60%;}
+.planSearch ul {display:none;position:absolute;left:-1px;padding:inherit;width:inherit;border:1px solid #cdcdcd;background-color:#FFF;z-index:1;}
+.planSearch button {display:block;width:100%;text-align:left;line-height:200%;}
+.tipBanner {color:#fff;text-align:left;background:url('/images/mobile/smart/detail_new/bg_planTip.png') no-repeat;background-size:100%;}
+.tipBanner img {width:100%;}
+.tipBanner span {display:inline-block;}
+.tipBanner.recom {background-color:#672194;background-position:100% 50%;}
+.tipBanner.promotion {background-color:#422194;}
+.planList {border-top:1px solid #333;border-bottom:1px solid #e9e9e9;}
+.planList li {position:relative;border-top:1px solid #e9e9e9;}
+.planList li:first-child {border-top:0;}
+.planList li > a {position:absolute;top:0;right:0;display:block;}
+.planList li > a.open {background:url('/images/mobile/smart/detail_new/btn_plan_open.png') no-repeat center;background-size:50%;}
+.planList li > a.close {display:none;background:url('/images/mobile/smart/detail_new/btn_plan_close.png') no-repeat center;background-size:50%;}
+.planList li > p {color:#000;text-align:left;}
+.planList li > p em {display:inline-block;color:#fff;}
+.planList li div {position:relative;display:none;border-top:1px dotted #e9e9e9;}
+.planList dl {padding-left:1.33vw;overflow:hidden;}
+.planList dt {clear:both;float:left;color:#787878;text-align:left;}
+.planList dd {float:left;color:#222;}
+.planList li div > p {color:#222;text-align:left;}
+.planList li div > p span {font-weight:bold;color:#d71826;}
+.planList li div > p em {font-size:3.2vw;color:#787878;}
+.planList li div a {position:absolute;right:0;display:block;text-align:center;}
+.planList li div a.info {color:#767676;border:1px solid #cdcdcd;}
+.planList li div a.change {right:0;color:#fff;border:1px solid #d71826;background-color:#d71826;}
+.planList li.current > a.open {display:none;}
+.planList li.current > a.close {display:block;}
+.planList li.current > p {color:#d71826;}
+.planList li.current > div {display:block;}
+
+@media screen and (max-width:450px)  {
+	.orderProgress {height:14.4vw;}
+	.orderProgress a {left:5.3vw;top:5.2vw;width:5.6vw;height:3.85vw;}
+	.orderProgress strong {font-size:3.74vw;line-height:14.4vw;}
+	.orderProgress span {right:3vw;margin-top:-2.4vw;padding:0 2vw;font-size:2.25vw;border-radius:2vw;}
+	
+	.tariff_change {padding:7.9vw 5.34vw 0;}
+	.planSearch div {padding:0 2vw;width:30.46vw;height:9.35vw;line-height:9.35vw;}
+	.planSearch div:first-child {width:47.46vw;}
+	.planSearch p {font-size:4vw;}
+	.planSearch a {top:3vw;right:2vw;width:6vw;height:3vw;}
+	.planSearch ul {left:-1px;top:9.35vw;padding-top:2vw;padding-bottom:2vw;}
+	.tipBanner {margin-top:4.926vw;font-size:2.933vw;line-height:7.02vw;}
+	.tipBanner span {line-height:7.02vw;}
+	.tipBanner.promotion {background-position:5vw 50%;}
+	.tipBanner.recom span {padding:0 4.3vw 0 2vw;}
+	.tipBanner.promotion span {padding:0 3vw 0 1.5vw;}
+	.planList {margin-top:4.926vw;}
+	.planList li > a {width:5.333vw;height:13.79vw;}
+	.planList li > p {padding-left:1.33vw;font-size:3.733vw;line-height:13.79vw;}
+	.planList li > p em {margin-left:1vw;padding:0 1vw;font-size:3.2vw;line-height:5.2vw;border-radius:1vw;}
+	.planList li div {padding:2.463vw 0 5.541vw;}
+	.planList dl {padding-left:1.33vw;}
+	.planList dt {width:21vw;font-size:3.46vw;line-height:4.926vw;padding-left:1.5vw;}
+	.planList dd {font-size:3.46vw;line-height:4.926vw;}
+	.planList li div > p {margin:3vw 0 0 1.33vw;font-size:3.73vw;color:#222;}
+	.planList li div > p em {font-size:3.2vw;}
+	.planList li div a {bottom:4vw;padding:0 3vw;height:6.896vw;line-height:6.896vw;border-radius:1vw;}
+	.planList li div a.info {right:13.3vw;}
+}
+@media screen and (min-width:451px)  {
+	.orderProgress {height:56px;}
+	.orderProgress a {left:20px;top:19px;width:21px;height:14.5px;}
+	.orderProgress strong {font-size:14px;line-height:56px;}
+	.orderProgress span {right:14px;margin-top:-12px;padding:0 10px;font-size:12px;border-radius:13px;}
+
+	.tariff_change {padding:30px 20px 0;}
+	.planSearch div {padding:0 10px;width:120px;height:32px;line-height:32px;}
+	.planSearch div:first-child {width:195px;}
+	.planSearch p {font-size:15px;}
+	.planSearch a {top:8px;right:10px;width:18px;height:11px;}
+	.planSearch ul {left:-1px;top:28px;padding-top:7px;padding-bottom:5px;}
+	.tipBanner {margin-top:20px;font-size:12px;line-height:32px;}
+	.tipBanner span {line-height:32px;}
+	.tipBanner.promotion {background-position:5vw 50%;}
+	.tipBanner.recom span {padding:0 4.3vw 0 2vw;}
+	.tipBanner.promotion span {padding:0 3vw 0 1.5vw;}
+	.planList {margin-top:15px;}
+	.planList li > a {width:25px;height:50px;}
+	.planList li > p {padding-left:8px;font-size:14px;line-height:50px;}
+	.planList li > p em {margin-left:10px;padding:0 10px;font-size:12px;line-height:24px;border-radius:3px;}
+	.planList li div {padding:10px 0 10px;}
+	.planList dl {padding-left:10px;}
+	.planList dt {width:100px;font-size:14px;line-height:22px;}
+	.planList dd {font-size:14px;line-height:22px;}
+	.planList li div > p {margin:8px 0 0 10px;font-size:16px;}
+	.planList li div > p em {font-size:12px;}
+	.planList li div a {bottom:20px;padding:0 10px;height:30px;line-height:30px;border-radius:3px;}
+	.planList li div a.info {right:50px;}
+}
+
+/*갤럭시 노트10 푸터 스타일*/
+.Popfooter{background:#000;color:#fff;padding:4.33vw;font-size:16px;font-weight:bold;}
+.Popfooter span{display:inline-block;color:#fff;font-size:12px;font-weight:normal;padding-top:2px;}
+.Popfooter .copyR{text-align:right;font-size:11px;color:#5d5d5d;padding-top:4vw;}

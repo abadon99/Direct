@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>KT 다이렉트 퍼블리싱가이드</title>
+
+    <link href="../common/css/ini.min.css" rel="stylesheet">
+    <link href="../common/css/guide.css" rel="stylesheet">
+    <link href="../common/css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="../common/css/shThemeRDark.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../common/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../common/js/shCore.js"></script>
+    <script type="text/javascript" src="../common/js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../common/js/shBrushCss.js"></script>
+    <script type="text/javascript" src="../common/js/shBrushXml.js"></script>
+	<script type="text/javascript" src="../common/js/guide.js"></script>
+    <script>
+        SyntaxHighlighter.all()
+    </script>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- Header -->
+		<header id="header">
+			<h1>KT 다이렉트 퍼블리싱가이드</h1>
+			<!-- Gnb -->
+			<nav class="gnb">
+				<ul>
+					<li><a href="guide_coding_list.html">코딩리스트</a></li>
+					<li class="current"><a href="guide_roul_intro.html">가이드 기본규칙</a></li>
+					<li><a href="guide_plan_codeSet.html">설계가이드</a></li>
+					<li><a href="guide_library_table.html">라이브러리</a></li>
+				</ul>
+			</nav>
+			<!-- //Gnb -->
+		</header>
+		<!-- //Header -->
+
+		<div id="container">
+			<!-- Lnb -->
+			<aside id="lnb">
+				<ul class="depth01">
+					<li>가이드 기본규칙
+						<ul class="depth02">
+							<li class="current"><a href="guide_roul_intro.html">기본정책</a></li>
+							<li><a href="guide_roul_standard.html">표준 규칙사항</a></li>
+							<li><a href="guide_roul_code.html">코드 규칙사항</a></li>
+							<li><a href="guide_roul_name.html">네임 규칙사항</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+			<!-- //Lnb -->
+
+			<article class="content">
+				<div class="p_title">
+					<h2>기본 정책 사항</h2>
+				</div>
+
+				<!-- 프로젝트 환경 -->
+				<section class="s_block">
+					<div class="s_title">
+						<h3>프로젝트 환경</h3>
+					</div>
+					<div class="s_content">
+						<div class="tbl_type01">
+							<table>
+								<caption>환경정의</caption>
+								<colgroup>
+									<col style="width: 20%">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">문서 버전</th>
+										<td>HTML5, CSS3</td>
+									</tr>
+									<tr>
+										<th scope="row">인코딩</th>
+										<td>UTF-8</td>
+									</tr>
+									<tr>
+										<th scope="row">웹 유형</th>
+										<td>PC Web, Mobile Web, Responcive Web</td>
+									</tr>
+									<tr>
+										<th scope="row">PC 웹 호환성</th>
+										<td>
+											<div class="g-browser-icons">
+												<img src="../img/ico_ie9.png" alt="">
+												<img src="../img/ico_crom.png" alt="">
+												<img src="../img/ico_firefox.png" alt="">
+												<img src="../img/ico_sapari.jpg" alt="">
+												<img src="../img/ico_opera.png" alt="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">Mobile 웹 호환성</th>
+										<td>
+											<div class="g-browser-icons">
+												안드로이드 4.x 이상, IOS 9.x 이상, 사파리, 크롬
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<!-- >폴더/파일 규칙 -->
+				<section class="s_block">
+					<div class="s_title">
+						<h3>폴더/파일 규칙</h3>
+					</div>
+					<div class="s_content">
+						<div class="tbl_type01">
+							<table>
+								<caption>파일/폴더 규칙</caption>
+								<colgroup>
+									<col style="width:20%">
+									<col style="width:20%">
+									<col style="width:30%">
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>분류</th>
+										<th>폴더</th>
+										<th>파일 이름</th>
+										<th>파일 설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>html</td>
+										<td></td>
+										<td></td>
+										<td>
+											화면별 페이지
+										</td>
+									</tr>
+									<tr>
+										<td>폰트</td>
+										<td>public/fonts</td>
+										<td></td>
+										<td>
+											웹폰트
+										</td>
+									</tr>
+									<tr>
+										<td>css</td>
+										<td>public/css</td>
+										<td>
+											import.css<br>
+											ini.css<br>
+											common.css<br>
+											layout.css<br>
+											main.css<br>
+											content.css<br>
+											plugins.css
+										</td>
+										<td>
+											스타일 - CSS 가져오기<br>
+											스타일 - 초기화<br>
+											스타일 - 공통사항<br>
+											스타일 - 레이아웃<br>
+											스타일 - 메인페이지<br>
+											스타일 - 콘텐츠페이지<br>
+											스타일 - 플러그인<br>
+										</td>
+									</tr>
+									<tr>
+										<td>js</td>
+										<td>public/js/libs<br>(라이브러리)</td>
+										<td>
+											jquery.min.js<br>
+											html5shiv-printshiv.js<br>
+										</td>
+										<td>
+											스크립트 - Jquery Core<br>
+											스크립트 - HTML5 호환성<br>
+										</td>
+									</tr>
+									<tr>
+										<td>js</td>
+										<td>public/js/pub<br>(퍼블모듈)</td>
+										<td>
+											device.js<br>
+											ui.js<br>
+											plugins.js
+										</td>
+										<td>
+											스크립트 - 기기체크<br>
+											스크립트 - 공통 UI<br>
+											스크립트 - 플러그인
+										</td>
+									</tr>
+									<tr>
+										<td>이미지</td>
+										<td>
+											public/img/common<br>
+											public/img/main<br>
+											public/img/sub
+										</td>
+										<td>* 필요시 카테고리명으로 폴더 생성</td>
+										<td>
+											공통이미지<br>
+											메인페이지<br>
+											서브페이지
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<!-- html 폴더 구조 -->
+				<section class="s_block">
+					<div class="s_title">
+						<h3>html 폴더 구조</h3>
+					</div>
+					<div class="s_content">
+						<div class="code_box">
+							<pre class="brush: html">
+								/html/main/                 // 메인
+								/html/member/               // 멤버/회원
+								/html/policy/               // 사이트정책
+								/html/siteMap/              // 사이트맵
+								/html/about/                // 사업단소개
+								/html/program/              // 산학협력 진화형 교육
+								/html/corporation/          // 기업 협업&middot;지원
+								/html/region/               // 지역사회 협업&middot;지원
+								/html/online/               // 온라인신청
+								/html/information/          // 정보마당
+							</pre>
+						</div>
+					</div>
+				</section>
+
+				<!-- css/js 폴더 구조 -->
+				<section class="s_block">
+					<div class="s_title">
+						<h3>css/js 폴더 구조</h3>
+					</div>
+					<div class="s_content">
+						<div class="code_box">
+							<pre class="brush: html">
+								// css folder
+								/inc/css/import.css                  // css 가져오기
+								/inc/css/ini.min.css                 // 스타일 초기화
+								/inc/css/common.css                  // 공통사항
+								/inc/css/layout.css                  // 레이아웃
+								/inc/css/main.css                    // 메인페이지
+								/inc/css/content.css                 // 콘텐츠(서브)
+								/inc/css/plugins.css                 // 플러그인
+
+								// js folder
+								/inc/js/libs/jquery.min.js           // jQuery core
+								/inc/js/libs/html5shiv.js            // html5 호환성
+								/inc/js/libs/기타 플러그인 파일      // 외부 플러그인
+
+								/inc/js/pub/main.js                  // 메인 UI
+								/inc/js/pub/ui.js                    // 공통 UI
+							</pre>
+						</div>
+					</div>
+				</section>
+
+				<!-- 이미지 폴더 구조 -->
+				<section class="s_block">
+					<div class="s_title">
+						<h3>이미지 폴더 구조</h3>
+					</div>
+					<div class="s_content">
+						<div class="code_box">
+							<pre class="brush: html">
+								// image folder
+								/inc/img/common                  // 공통이미지
+								/inc/img/main                    // 메인페이지
+								/inc/img/sub                     // 서브페이지
+
+								* 이미지 폴더의 경우 필요시 카테고리 명으로 /inc/img/***** 위치에 생성하여 사용
+							</pre>
+						</div>
+					</div>
+				</section>
+			</article>
+		</div>
+	</div>
+</body>
+</html>

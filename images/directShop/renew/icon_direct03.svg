@@ -1,0 +1,21 @@
+<svg id="_008_icon_56_01_etc_Add-cell_phone" data-name="008 icon/56/01 etc/Add-cell phone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_22429" data-name="사각형 22429" width="56" height="56" transform="translate(5606 8550)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="_008_icon_56_01_etc_Add-cell_phone-2" data-name="008 icon/56/01 etc/Add-cell phone" transform="translate(-5606 -8550)" clip-path="url(#clip-path)">
+    <g id="사각형_22427" data-name="사각형 22427" transform="translate(5615.645 8553)" fill="#fff" stroke="#000" stroke-width="2">
+      <rect width="32" height="50" rx="8" stroke="none"/>
+      <rect x="1" y="1" width="30" height="48" rx="7" fill="none"/>
+    </g>
+    <rect id="사각형_22428" data-name="사각형 22428" width="6" height="2" transform="translate(5628.645 8558)"/>
+    <circle id="타원_2610" data-name="타원 2610" cx="1.4" cy="1.4" r="1.4" transform="matrix(0.999, -0.035, 0.035, 0.999, 5630.245, 8595.598)"/>
+    <g id="그룹_25371" data-name="그룹 25371" transform="translate(-0.391 -71.366)">
+      <path id="패스_57727" data-name="패스 57727" d="M55.816,45.783A10.533,10.533,0,1,1,45.283,35.25,10.534,10.534,0,0,1,55.816,45.783" transform="translate(5601.752 8616.05)" fill="#fff"/>
+      <circle id="타원_2611" data-name="타원 2611" cx="10.533" cy="10.533" r="10.533" transform="translate(5636.502 8651.3)" fill="#fff" stroke="#000" stroke-width="2"/>
+      <path id="패스_57728" data-name="패스 57728" d="M0,0V11.329" transform="translate(5647.036 8656.168)" fill="none" stroke="#3accc8" stroke-linecap="round" stroke-width="2"/>
+      <line id="선_5891" data-name="선 5891" x1="11.329" transform="translate(5641.371 8661.833)" fill="none" stroke="#3accc8" stroke-linecap="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

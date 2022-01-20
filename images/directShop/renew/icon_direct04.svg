@@ -1,0 +1,23 @@
+<svg id="_008_icon_56_01_etc_internet_router" data-name="008 icon/56/01 etc/internet router" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_22430" data-name="사각형 22430" width="56" height="56" transform="translate(5677 8550)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="_008_icon_56_01_etc_internet_router-2" data-name="008 icon/56/01 etc/internet router" transform="translate(-5677 -8550)" clip-path="url(#clip-path)">
+    <g id="그룹_17486" data-name="그룹 17486" transform="translate(5680.992 8558.857)">
+      <path id="사각형_13425" data-name="사각형 13425" d="M2.39,0h0A2.39,2.39,0,0,1,4.78,2.39v22.7a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.39A2.39,2.39,0,0,1,2.39,0Z" transform="translate(7.06 -2.883)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2"/>
+      <path id="사각형_13426" data-name="사각형 13426" d="M2.39,0h0A2.39,2.39,0,0,1,4.78,2.39v22.7a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.39A2.39,2.39,0,0,1,2.39,0Z" transform="translate(36.174 -2.883)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2"/>
+      <path id="사각형_13424" data-name="사각형 13424" d="M892.095,1146.23a3.9,3.9,0,0,1-3.668,4.1H847.748a3.9,3.9,0,0,1-3.669-4.1v-9.775a3.9,3.9,0,0,1,3.669-4.1h40.678a3.9,3.9,0,0,1,3.668,4.1Z" transform="translate(-844.079 -1110.147)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <g id="타원_834" data-name="타원 834" transform="translate(29.122 29.195)">
+        <circle id="타원_2612" data-name="타원 2612" cx="2" cy="2" r="2" transform="translate(0 0)" fill="none" stroke="#3accc8" stroke-linecap="round" stroke-width="2"/>
+      </g>
+      <g id="타원_836" data-name="타원 836" transform="translate(20.785 29.195)">
+        <circle id="타원_2613" data-name="타원 2613" cx="2" cy="2" r="2" transform="translate(0 0)" fill="none" stroke="#3accc8" stroke-linecap="round" stroke-width="2"/>
+      </g>
+      <g id="타원_835" data-name="타원 835" transform="translate(37.459 29.195)">
+        <circle id="타원_2614" data-name="타원 2614" cx="2" cy="2" r="2" transform="translate(0 0)" fill="none" stroke="#3accc8" stroke-linecap="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

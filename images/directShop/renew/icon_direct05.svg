@@ -1,0 +1,26 @@
+<svg id="_008_icon_56_01_etc_5G_LTE" data-name="008 icon/56/01 etc/5G,LTE" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_22438" data-name="사각형 22438" width="56" height="56" transform="translate(5535 8550)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="사각형_22437" data-name="사각형 22437" width="56" height="56" transform="translate(10106 10279.247)" fill="#d8d8d8" stroke="#000" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="_008_icon_56_01_etc_5G_LTE-2" data-name="008 icon/56/01 etc/5G,LTE" transform="translate(-5535 -8550)" clip-path="url(#clip-path)">
+    <g id="마스크_그룹_18426" data-name="마스크 그룹 18426" transform="translate(-4571 -1729.247)" clip-path="url(#clip-path-2)">
+      <g id="사각형_22434" data-name="사각형 22434" transform="translate(10125 10286.247)" fill="#fff" stroke="#000" stroke-width="2">
+        <rect width="30" height="46" rx="8" stroke="none"/>
+        <rect x="1" y="1" width="28" height="44" rx="7" fill="none"/>
+      </g>
+      <g id="사각형_22435" data-name="사각형 22435" transform="translate(10113 10281.247)" fill="#fff" stroke="#000" stroke-width="2">
+        <rect width="33" height="51" rx="8" stroke="none"/>
+        <rect x="1" y="1" width="31" height="49" rx="7" fill="none"/>
+      </g>
+      <rect id="사각형_22436" data-name="사각형 22436" width="6" height="2" transform="translate(10126 10287.247)"/>
+      <circle id="타원_2615" data-name="타원 2615" cx="1.407" cy="1.407" r="1.407" transform="matrix(0.999, -0.035, 0.035, 0.999, 10127.808, 10324.824)"/>
+      <text id="LTE" transform="translate(10129 10316.247)" fill="#3accc8" font-size="10" font-family="Roboto-Black, Roboto" font-weight="800" letter-spacing="-0.02em"><tspan x="-7.959" y="0">LTE</tspan></text>
+      <text id="_5G" data-name="5G" transform="translate(10129 10303.247)" fill="#3accc8" font-size="10" font-family="Roboto-Black, Roboto" font-weight="800" letter-spacing="-0.02em"><tspan x="-6.204" y="0">5G</tspan></text>
+    </g>
+  </g>
+</svg>

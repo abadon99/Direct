@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+    <g id="prefix__물음표" transform="translate(-184 -3222)">
+        <g id="prefix__타원_1" data-name="타원 1" transform="translate(184 3223)" style="stroke:#000;stroke-width:2px;fill:none">
+            <ellipse cx="19" cy="18.5" rx="19" ry="18.5" style="stroke:none"/>
+            <ellipse cx="19" cy="18.5" rx="18" ry="17.5" style="fill:none"/>
+        </g>
+        <text id="prefix___" data-name="?" transform="translate(197 3251)" style="font-size:25px;font-family:NotoSansCJKkr-Regular,Noto Sans CJK KR;letter-spacing:-.02em">
+            <tspan x="0" y="0">?</tspan>
+        </text>
+    </g>
+</svg>

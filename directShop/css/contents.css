@@ -1,0 +1,1373 @@
+@charset "UTF-8";
+.bg-f8{background-color:#f8f8f8}
+.checkbox-1{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background: #D6D6D6 url(../../images/directShop/icon_check_off.png) center center no-repeat;
+  background-size: 25px;
+}
+.checkbox-1:checked{
+  background-image:url(../../images/directShop/icon_check_on.png)
+}
+/* select */
+.sort-area{position:relative; z-index:200; text-align:right}
+.sort-area .area{
+    position: relative; display:inline-block;
+}
+.select-area > a{position:relative;padding:0 17px;line-height:36px;font-size:13px;color:#959595;text-align:right;  text-decoration: none; text-overflow: ellipsis; white-space: nowrap;overflow: hidden;}
+.select-area > a:after{
+    content:"";    
+    position:absolute; top:50%; right:15px;width:11px;height:5px;
+    background:url(../../images/directShop/icon_arrow_bottom.png) center center no-repeat;background-size:10px auto;
+    transform: translate(0,-50%);
+    -webkit-transform: translate(0,-50%);
+    transition: transform ease 0.3s;
+    -webkit-transition: transform ease 0.3s;    
+}
+.select-area > a.open:after{
+    transform: translate(0,-50%) rotate(180deg);
+    -webkit-transform: translate(0,-50%) rotate(180deg);
+} 
+ 
+.select-area  ul{ 
+    display:none; position: absolute; left: 0;  top: 40px;  width: 100%;
+    z-index: 300; padding: 8px 0;text-align: left;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0 8px 9px #0000001a;  border: 1px solid #D9D9D9;
+    border-radius: 5px;  
+}
+.select-area ul li{padding:0 16px}
+.select-area ul li a{display: block; padding:11px 0;font-size: 13px; text-align: left; color: #959595;}
+.select-area ul li a.selected,
+.select-area ul li a.selected span{color:#000} 
+
+/* 요금제 */
+.sort-area.charge-table{margin-bottom:8px}
+.sort-area.charge-table .select-area > a{
+  font-size:12px;padding-right:34px;letter-spacing:-.48px;
+}
+/* 버튼 화살표 */
+dl[class*=list-charge] dt:after, .btn-arrow:after{
+  content:"";position:absolute;width:7px;height:7px;top:calc(50% - 3px);right:20px;
+  border:2px solid #00a2be; border-top:0; border-left:0;
+  transition: transform ease 0.3s;
+  transform:  translateY(-50%) rotate(45deg) ;
+}
+.btn-arrow-r{position:relative;padding-right:10px;font-size:13px;color:#000}
+.btn-arrow-r:after{
+  content:"";position:absolute; 
+  width:6px;height:6px;top:50%;right:0;
+  border:1px solid #000; border-top:0; border-left:0; 
+  transform:  translateY(-50%) rotate(-45deg);
+}
+/* 목록 */
+.infor-list > li{position:relative;margin-bottom:8px;padding-left:15px;line-height:18px; color:#666; }
+.infor-list.fc > li{color:#000}
+.infor-list > li:before{content:"";position:absolute; top:7px; left:0;width:4px;height:4px;background-color:#666;border-radius: 50%;}
+.infor-list > li:last-child{margin-bottom:0;}
+.infor-list-line > li{position:relative;margin-bottom:2px;padding-left:10px;line-height:18px; font-size:13px; color:#666; }
+.infor-list-line > li:before{content:"-";position:absolute; top:0; left:0;}
+.infor-list-line > li:last-child{margin-bottom:0;}
+/* 가입하기 버튼*/
+.btn-enter{position:relative;display:inline-block;padding:0 23px 0 13px;line-height:24px;background-color: #00a2be; color:#fff;font-size:12px; border-radius: 12px;}
+.btn-enter.black{background-color:#000;}
+.btn-enter.btn-arrow:after{border-color:#fff;right:12px;transform: rotate(-45deg);width:6px; height:6px; border-width: 1px;}
+.self-sufficient-gift h2, h2.title{margin-bottom:12px;line-height:23px;font-size:16px; font-weight: 600;}
+h2.title-2{margin-bottom:12px;font-size:16px; font-weight: 600;}
+.tit_btxt{margin-bottom:15px;color:#666;}
+/* main */
+
+header {
+    position:fixed;z-index:10; top:0;left:0;right:0; height: 80px;background-color:#fff;}
+
+header > div   {
+  position: relative;   max-width: 768px;  margin: 30px auto 0 auto;
+  padding:0 30px;
+}
+header h1{  
+  width:85px; height:20px; ;
+  background:url(../../images/directShop/kt_logo.png) 0 0 no-repeat;
+  background-size: 85px auto;
+}
+header h1 a{height:100%;display:block;overflow:hidden;text-indent: -1000px;;}
+header .menu {
+  position: absolute;top: 50%; right: 30px;
+  width: 26px;
+  height: 20px;
+  text-indent: -9999px;
+  overflow: hidden;  
+  background: url(../../images/directShop/main-menu.svg) 0 0 no-repeat;
+  background-size: 100%;
+  transform: translateY(-50%);
+} 
+#menu {
+  position: fixed;  top: 0;  right: 0;  width: 100%;  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);  opacity: 0;
+  z-index: 15; transition: all 0.4s ease-in-out;   visibility: hidden;
+}
+
+#menu.active { opacity: 1;  visibility: visible;}
+
+#menu.active .inner {transform: translateX(0%);}
+
+#menu .inner {
+  transition: all 0.4s ease-in-out;
+  position: fixed;
+  top: 0; right: 0;  width: 303px;  height: 100%;  background-color: #f8f8f8;
+  transform: translateX(100%);  padding: 115px 40px 0;  box-sizing: border-box;
+}
+
+#menu .inner a,
+#menu .inner button { display: block; text-align: right;}
+
+
+#menu .inner .menu-close:before {
+  content: '';  
+  position:absolute;
+  top: 50%;  left: 50%;  transform: translate(-50%, -50%);
+  width: 14px;  height: 14px;  background: url(../../images/directShop/main-close.svg) 0 0 no-repeat;
+  background-size: 100%;  position: absolute;
+  
+}
+
+#menu .inner .login,#menu .inner .logout {  font-size: 14px;  line-height: 20px;}
+#menu .inner .login:after,
+#menu .inner .logout:after {
+  display: block;  content: '';
+  width: 15px;  height: 20px;
+  background: url(../../images/directShop/main-login.svg) 0 0 no-repeat;
+  background-size: 100%;  float: right;
+  margin-left: 15px;
+}
+
+#menu .inner .logout:after { background: url(../../images/directShop/main-logout.svg) 0 0 no-repeat;}
+#menu .inner .mypage {
+  font-family: 'Roboto', sans-serif;  letter-spacing: 0;  font-size: 14px;
+  line-height: 20px;  padding-top: 2px;
+}
+
+#menu .inner .mypage:after {
+  display: block;   content: '';  margin-top: -2px;  width: 20px;
+  height: 20px;  background: url(../../images/directShop/main-my.svg) 0 0 no-repeat;
+  background-size: 100%;  float: right;  margin-left: 15px;
+}
+#menu .inner .group {
+  padding-bottom: 35px; margin-bottom: 25px; border-bottom: 1px solid #ebebeb;
+}
+#menu .inner > ul {margin-bottom:40px}
+#menu .inner > ul a:hover{font-weight: 700;}
+#menu .inner > ul > li {line-height: 50px;}
+#menu .inner > ul > li > a {
+  font-size: 20px;  line-height: 2.5;  letter-spacing: -0.8px;
+} 
+#menu .inner .btn-arrow{padding-right:20px}
+#menu .inner .btn-arrow:after{right:0;border-color:#000;border-width:1px}
+#menu .inner .sub{display:none}
+#menu .inner .sub li a{line-height:24px;}
+#menu .inner .btn-group a {float:left;width: 70px;  height: 35px;  margin-left: 4px;}
+#menu .inner .bottom  img { width: 100%;}
+#menu .inner .bottom {position:absolute; left:40px; right:40px; bottom:30px;}
+#menu .inner .bottom .menubanner{margin-bottom:20px}
+#menu .inner .menu-close {
+  overflow: hidden;  text-indent: 99989px;  position: absolute;
+  top: 29px;  right: 30px;  z-index: 11;  width: 30px;  height: 30px;
+  white-space: nowrap;
+}
+@media all and (max-height: 640px) {
+  #menu .inner{overflow:auto}
+  #menu .inner .bottom{
+    position: static;
+    padding-bottom:30px
+  }
+}
+.comPage{display:none;}
+#main-contents{padding:80px 30px 0 30px;margin:0 auto}
+.main-swiper{margin:0 0 65px -30px;  padding-left:30px }
+.main-swiper .swiper-container{height:365px;padding-bottom: 30px; background-color: #fff;box-sizing: initial;}
+.main-swiper .swiper-wrapper > div{
+  border-top-left-radius:20px ; border-bottom-left-radius:20px; 
+  width:100%;
+}
+.main-swiper p.t{margin-bottom:10px;font-size:23px;font-weight:600;line-height:32px;color:#fff}
+.main-swiper p.t-2{font-size:13px;color:#fff;line-height:19px;opacity: 0.9;}
+.main-swiper .opt{position: absolute;bottom:0;left:0; width:100%;}
+.main-swiper .swiper-pagination{position:relative;top:1px; display: inline-block;height:10px;text-align:left; }
+.main-swiper .swiper-pagination-bullet{overflow:hidden;color:transparent;width:10px;height:10px;margin-right:8px;background-color: #fff; border:2px solid #ccc;box-sizing: border-box;opacity: 1;} 
+.main-swiper .swiper-pagination-bullet-active{
+  background-color: #000;border-color: #000;
+}
+.main-swiper .play{display:none;width: 0;  height: 0;  border-top: 5px solid transparent; color:transparent;border-bottom: 5px solid transparent; border-left: 8px solid #000; }
+.main-swiper .pause{position:relative;width:9px;height:10px;font-size:1px;color:transparent;}
+.main-swiper .pause:before{content:"";position:absolute; top:0; left:0; width:3px;height:100%; background-color: #000;}
+.main-swiper .pause:after{content:"";position:absolute; top:0; right:0; width:3px;height:100%; background-color: #000;}
+.main-swiper .swiper-slide a{position:absolute;left:0;top:0;width:100%;height:100%;padding:35px;display:block;text-align:left;box-sizing:border-box;}
+.main-swiper .swiper-slide a:focus{border:1px solid #2491eb;}
+.main-swiper .type-a{
+  /*background-image:url(../../images/directShop/main_1_pic_2.png),url(../../images/directShop/main_1_pic_1.png);*/
+  background-image:url('https://image.shop.kt.com/upload/editor/display/pc_direct_main_banner_plan_01_201229.png'),url('/images/directShop/main_1_pic_1.png');
+  background-repeat:no-repeat, no-repeat;
+  background-position: 35px 180px, right bottom;
+  background-size:161px auto, auto 280px;
+  background-color:#00b398
+}
+ 
+
+.main-swiper .type-b{
+  background-image:url(../../images/directShop/main_2_pic_1.png), url(../../images/directShop/main_2_pic_2.png),url(../../images/directShop/main_2_bg.jpg);
+  background-repeat:no-repeat, no-repeat, repeat-x;
+  background-position: 35px 40px, center 0, 0 0;
+  background-size:83px auto, auto 365px, auto 365px;
+} 
+.main-swiper .type-b a{padding-top:73px}
+.main-swiper .type-b .t{color:#000}
+.main-swiper .type-b .t-2{color:#333}
+ 
+.main-swiper .type-c{
+  /*background-image:url(../../images/directShop/main_3_pic_1.png), url(../../images/directShop/main_3_pic_3.png), url(../../images/directShop/main_3_bg.jpg);*/
+  background-image:url('/images/directShop/main_3_pic_1.png'), url('https://image.shop.kt.com/upload/editor/display/main_3_pic_3_201229.png'), url('/images/directShop/main_3_bg.jpg');
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-position: -1px 190px, right center, 0 0;
+  background-size: 207px auto, 438px auto, auto 365px;
+} 
+.main-swiper .type-c .t{color:#fff}
+.main-swiper .type-c .t-2{color:#fff} 
+
+.main-section-1, .main-section-2, .main-section-3, .main-section-4{margin-bottom:60px}
+.main-section-1 .enter{display:flex;-webkit-display:flex; -ms-display:flex; justify-content: space-between;} 
+.main-section-1 a{
+  display:block; 
+  width:200px; padding:17px 10px 10px 10px;line-height:17px;
+  box-shadow: 0px 3px 4px #0000001A;
+  border: 1px solid #E7EAF4;
+  border-radius: 7px;  word-break: keep-all;
+}
+.main-section-1 a span{display:inline-block}
+.main-section-1 .enter a:nth-of-type(2){margin:0 5px}
+.main-section-1 a:before{content:"";display:block;margin:0 auto 10px auto; width:60px;height:60px;background:url() 0 0 no-repeat; background-size:60px }
+.main-section-1 a:nth-of-type(1):before{background-image:url(../../images/directShop/pic_d_1.png)}
+.main-section-1 a:nth-of-type(2):before{background-image:url(../../images/directShop/pic_d_2.png)}
+.main-section-1 a:nth-of-type(3):before{background-image:url(../../images/directShop/pic_d_3.png)}
+.main-section-2{margin-bottom:60px}
+.main-section-2 .tab:after, 
+.main-section-4 .tab:after{content:"";display:block;clear:both}
+.main-section-2 .tab li, .main-section-4 .tab li{float:left;display: table;height:40px;background-color:#f4f4f4;vertical-align: middle;}
+.main-section-2 .tab li{width:50%;}
+.main-section-4 .tab li{width:50%;}
+.main-section-2 .tab li:nth-of-type(2){width:calc(50% - 10px);margin:0 5px}
+.main-section-4 .tab li:nth-of-type(2){width:calc(50% - 10px);margin:0 5px}
+.main-section-2 .tab li a, 
+.main-section-4 .tab li a{font-size:13px;}
+.main-section-2 .tab li.active, 
+.main-section-4 .tab li.active{background-color: #000; border-radius: 5px}
+.main-section-2 .tab li.active a, 
+.main-section-4 .tab li.active a{color:#fff;}
+.main-section-2 .tab a, 
+.main-section-4 .tab a{display:table-cell;height:100%;text-align:center;text-align:center;}
+.main-section-2 .tab-content{margin-top:30px}
+.main-section-2 .tab-content + .tab{margin-top:30px;}
+.main-section-2 .btn-arrow-r{line-height:20px;}
+.main-section-2 .box{
+  padding:35px;
+  box-shadow: 0px 10px 20px #9A9A9A0F;
+  border: 1px solid #E7EAF4;
+  border-radius: 15px;
+}
+.main-section-2 .t{display:block;margin-bottom:10px;line-height:32px;font-size:22px;color:#000;font-weight: 600;}
+.main-section-2 .btn-arrow-r{font-weight: 500;}
+.main-section-2 .btn-arrow-r:after{width:5px;height:5px}
+.main-section-2 p{margin-top:30px;line-height:20px;font-size:13px;color:#666}
+.main-section-2 p span{display:inline-block; margin-right:10px}
+.main-section-2 .btn{margin-top:20px} 
+.main-section-banner {margin-top:60px;margin-right:-30px;}
+.main-section-banner a{display:block;}
+.main-section-banner img{max-width:100%;}
+.coupon-section {margin-top:65px}
+.gift-section{margin-bottom:60px;}
+.gift-section .gift-box, .coupon-section .coupon-box{margin-top:20px;padding:30px 20px;background-color:#fff; box-shadow: 0px 3px 6px #0000000F; border: 1px solid #E7EAF4; border-radius: 10px;}
+.gift-section .gift-box p.p-1, .coupon-section .coupon-box p.p-1{margin-bottom:10px; color:#666; font-size:14px;font-weight: 500;color:#000}
+.gift-section .gift-box p.p-2, .coupon-section .coupon-box p.p-2{margin-bottom:40px;color:#666;font-size:12px}
+.gift-section .gift-box .pic span{display:block;margin-top:13px;font-weight:500;text-align:center}
+.gift-section .gift-box .pic-1{padding-bottom:52px;background:url(../../images/directShop/gift_plus.png) center bottom no-repeat;background-size:27px 27px}
+.gift-section .gift-box .pic.no-plus{ margin-bottom: 20px;}
+.gift-section .gift-box .pic.no-plus .pic-1{padding-bottom:0;background-image:none;}
+.gift-section .gift-box .pic-2 {display:table;width:100%;margin-top:25px;}
+.gift-section .gift-box .pic-2 > span{display:table-cell;vertical-align:bottom;width:50%;box-sizing:border-box;padding:0 2px;}
+.gift-section .gift-box .pic-2 strong{font-weight:700;}
+.gift-section .gift-box .pic-2 img{width:auto;height:78px;}
+.gift-section .gift-box .pic-2 img.img1{height:108px;}
+.gift-section .gift-box .pic-2 img.img2{height:88px;}
+.gift-section .list-type li{position:relative;padding-left:14px;margin-bottom:10px;font-weight: 500;color:#666}
+.gift-section .list-type li:last-child{margin-bottom:0}
+.gift-section .list-type li > em{position: absolute;left:0;top:0;font-size:20px;}
+.gift-section .list-type li .star-fixed{margin-top:5px}
+.gift-section .pic{margin-top:40px;margin-bottom:30px;text-align: center;}
+.gift-section .gift_table {margin:30px 0 10px;border-bottom:1px solid #D9D9D9;border-left:1px solid #D9D9D9;;font-size:11px}
+.gift-section .gift_table .tbl{text-align:center;border-collapse:separate;}
+.gift-section .gift_table .tbl thead th {background:#EEEEEE;color:#000;}
+.gift-section .gift_table .tbl thead td{background:#F4F4F4;color:#000;}
+.gift-section .gift_table .tbl tbody th{color:#000000;}
+.gift-section .gift_table .tbl tbody td{color:#959595;}
+.gift-section .gift_table .tbl th, .gift_table .tbl td {padding:8px;border-top:1px solid #D9D9D9;border-right:1px solid #D9D9D9;}
+.gift-section .info-txt {margin-top:10px;color:#666;}
+.gift-section .gift-box .stit {margin-top:30px;}
+.gift-section .gift-box .couponpack-img img {width:70%;}
+@media all and (max-width: 420px) {
+  .gift-section .gift-box .pic img{width:100%;}
+}
+
+/* 쿠폰팩 */
+.coupon-section .coupon-list:after{display:block;content:'';clear:both;}
+.coupon-section .coupon-list > li{width:49%;height:148px;text-align:center;padding:10px;margin-bottom:15px;border-radius:7px;box-shadow: 0px 3px 4px #0000001A;border: 1px solid #E7EAF4;}
+.coupon-section .coupon-list > li:nth-child(odd){float:left;}
+.coupon-section .coupon-list > li:nth-child(even){float:right;}
+.coupon-section .coupon-list > li.w100{width:100%;height:auto;padding:15px;}
+.coupon-section .coupon-list > li.w100 .img{display:inline-block;width:40%;min-height:auto;border-right:1px dotted #E7EAF4;padding-right:15px;margin-right:-5px;vertical-align:middle;}
+.coupon-section .coupon-list > li.w100 .bot{display:inline-block;width:60%;border:none;vertical-align:middle;padding:0 0 0 15px;margin:0;text-align:left;}
+.coupon-section .coupon-list > li .img{display:block;margin:0 auto 10px;height:65px;}
+.coupon-section .coupon-list > li .img img{max-height:100%;max-width:100%;width:auto;}
+.coupon-section .coupon-list > li .img.img2 img{margin-top:24px;max-height:20px;}
+.coupon-section .coupon-list > li .img.img3 img{margin-top:24px;max-height:25px;}
+.coupon-section .coupon-list > li .bot{font-size:13px;letter-spacing:-1.3px;color:#000;border-top:1px dotted #E7EAF4;padding-top:7px;margin-top:10px;}
+.coupon-section .coupon-list > li .bot .txt_s{display:inline-block;font-size:11px;color:#666666;line-height:1.3;}
+.coupon-section .coupon-list .bg1{background-color:#DBF4FB;}
+.coupon-section .coupon-list .bg1 .bot{border-color:#7F9AA1;}
+.coupon-section .list-type{margin-top:26px;color:#000;}
+/*쿠폰팩 case02*/
+.coupon-section .coupon-list-type2{margin-top:30px;}
+.coupon-section .coupon-list-type2 > li{margin-bottom:15px;font-size:0;}
+.coupon-section .coupon-list-type2 > li strong{position:relative;display:inline-block;width:65px;height:88px;margin-right:7px;padding-top:45px;font-size:13px;color:#fff;text-align:center;line-height:17px;background:#599ce9;border-radius:7px;vertical-align:top;}
+.coupon-section .coupon-list-type2 > li strong:before{content:'';display:block;position:absolute;left:50%;top:25px;transform:translateX(-50%);width:25px;height:18px;background:url('/images/directShop/coupon_type02_ico.png') no-repeat 0 0;background-size:auto 18px;}
+.coupon-section .coupon-list-type2 > li.eat strong:before{background-position:0 0;}
+.coupon-section .coupon-list-type2 > li.drink strong:before{background-position:-25px 0;}
+.coupon-section .coupon-list-type2 > li.enjoy strong:before{background-position:-50px 0;}
+.coupon-section .coupon-list-type2 > li .coupon{display:inline-block;width:calc(100% - 72px);height:88px;text-align:center;border-radius:7px;box-shadow:0px 3px 4px #0000001a;border:1px solid #e7eaf4;vertical-align:top;}
+.coupon-section .coupon-list-type2 > li .coupon .img{position:relative;height:50px;margin:0 13px;border-bottom:1px dotted #599ce9;}
+.coupon-section .coupon-list-type2 > li .coupon .img img{position:absolute;left:50%;top:50%;transform:translate(-50% , -50%);max-width:100%;max-height:100%;}
+.coupon-section .coupon-list-type2 > li .coupon .txt{padding:10px 0;font-size:13px;color:#000;text-align:center;line-height:17px;}
+.coupon-section .coupon-list-type2 > li.oncemore{margin:30px 0 0;}
+.coupon-section .coupon-list-type2 > li.oncemore strong{width:100%;height:35px;margin:0;padding:0;line-height:35px;background:#2e4f75;}
+.coupon-section .coupon-list-type2 > li.oncemore strong:before{display:none;}
+.coupon-section .coupon-list-type2 > li.oncemore .coupon-area{margin-top:8px;font-size:0;}
+.coupon-section .coupon-list-type2 > li.oncemore .coupon-area .coupon{width:calc(33.333% - 6px);height:67px;margin-left:9px;}
+.coupon-section .coupon-list-type2 > li.oncemore .coupon-area .coupon:first-child{margin-left:0;}
+.coupon-section .coupon-list-type2 > li.oncemore .coupon-area .coupon .img{height:100%;margin:0;border:none;} 
+.coupon-section .coupon-list-type2 > li.oncemore .coupon-area .coupon .img img{max-width:100%;max-height:100%;} 
+.coupon-section .coupon-list-type2 > li.oncemore .text-box{margin-top:10px;padding:13px 20px;border-radius:7px;box-shadow:0px 3px 4px #0000001a;border:1px solid #e7eaf4;}
+.coupon-section .coupon-list-type2 > li.oncemore .text-box li{position:relative;padding-left:10px;font-size:13px;color:#000;line-height:20px;}
+.coupon-section .coupon-list-type2 > li.oncemore .text-box li:before{content:'';display:block;position:absolute;left:0;top:10px;width:3px;height:3px;background:#98989e;opacity:0.6;border-radius:50%;}
+@media all and (max-width: 420px) {
+  .coupon-section .coupon-list-type2 > li .coupon .txt{font-size:3.47vw;}
+}
+/* 210819 쿠폰팩 */
+.couponpack .checkbox{width: 100%;border: 1px solid #ddd;padding: 16px;margin: 30px 0 0;}
+.couponpack .checkbox input{left:10px;}
+.couponpack .checkbox label {padding-left:28px;color:#666666;}
+.couponpack .checkbox button:before{right:10px;display: block;content: '';width: 6px;height: 12px;background: url(../../images/directShop/icon-arrow-right.svg) 0 0 no-repeat;background-size: 100%;position: absolute;top: 50%;transform: translateY(-50%);}
+.coupon-select{overflow:hidden;width:100%;}
+.coupon-select ul {margin-right:-20px;}
+.coupon-select ul:after{content:"";display:block;clear:both}
+.coupon-select li{float:left;position:relative;width: calc(33% - 20px);height:170px;margin: 0 20px 22px 0;text-align: center;background:#fff;border:1px solid #ddd;border-radius:5px;padding:20px 0;}
+.coupon-select li input {position:absolute;top:12%;
+ left:74%;width:25px;height:25px;background:url(../../images/directShop/icon_check_off.png) center center no-repeat;background-size:100%;-webkit-appearance:none;appearance:none;border:none;}
+.coupon-select li input:checked{background-image:url(../../images/directShop/icon_check_on.png);}
+.coupon-select li label {display: inline-block;vertical-align: top;letter-spacing: -0.6px;}
+.coupon-select li label > img{width:70%;padding: 15px 3px;}
+.coupon-select li label > strong{display: block; font-size:16px;margin-bottom:5px;font-weight:600;}
+.coupon-select li label > span{display: block; font-size: 12px;line-height: 1.5;color:#666;}
+.raw-list{margin-top:20px;border: 1px solid #ddd;padding: 20px 12px;font-size: 15px;color: #666}
+@media all and (max-width: 420px) {
+  .coupon-select li {width: calc(50% - 20px);}
+}
+
+.star-fixed{position: relative;padding-left:20px;}
+.star-fixed em{position: absolute;top:0;left:0;}
+.footer {margin-top:50px;background-color: #373a3c;
+  color: #fff;
+  padding: 30px 0 30px 30px;
+  font-size: 13px;
+  line-height: 1.92;
+  letter-spacing: -1.3px;
+  width:100%;
+  max-width:100%;
+
+}
+.footer > div{max-width:768px;margin:0 auto;position:relative;}
+.footer p strong {
+  font-weight: 700;
+}
+.footer .award {margin-bottom:15px;}
+.footer .award img {width:140px;}
+
+.copy {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+/* main content 공통 (PageCall)*/
+#mainContents.new-contents{height:100%;}
+#mainContents.new-contents .content-in{height:calc(100% - 70px);padding:0 30px;}
+#mainContents.new-contents .top{padding:12px 0 43px 0;box-sizing:border-box;}
+#mainContents.new-contents .top .text_desc{font-size:26px;line-height:42px;padding-bottom:20px;letter-spacing:-1.35px;color:#000;font-family:'Noto Sans KR'}
+#mainContents.new-contents .top .btn-bottom{padding:0;}
+#mainContents.new-contents .bottom{margin:0 -30px;padding:40px 30px;background-color:#F5F5F5;text-align:center;}
+
+.round_white_box{padding:30px 20px 40px;text-align:left;background:#fff;box-shadow:0px 2px 3px #0000000F;border:1px solid #E7EAF4;border-radius:10px;}
+.round_white_box .top_txt{font-size:14px;line-height:20px;color:#000;}
+.round_white_box .bold_txt{display:block;margin-top:8px;font-size:22px;line-height:32px;color:#000;font-weight:700;}
+.round_white_box .btm_txt{margin-top:8px;font-size:16px;line-height:23px;color:#000;}
+.round_white_box .icon_list{margin-top:37px;}
+.round_white_box .icon_list li{margin-top:13px;padding:15px 20px;font-size:0;background:#fff;box-shadow:0px 3px 4px #00000029;border:1px solid #E7EAF4;border-radius:5px;}
+.round_white_box .icon_list li:first-child{margin-top:0;}
+.round_white_box .icon_list li strong{display:block;font-weight:700;}
+.round_white_box .icon_list li:before{content:'';display:inline-block;width:60px;height:60px;background-repeat:no-repeat;background-position:center;background-color:#F4F4F4;border-radius:50%;vertical-align:middle;}
+.round_white_box .icon_list li:nth-child(1):before{background-image:url(../../images/directShop/ico_only_list01.png);background-size:29px auto;}
+.round_white_box .icon_list li:nth-child(2):before{background-image:url(../../images/directShop/ico_only_list02.png);;background-size:32px auto;}
+.round_white_box .icon_list li:nth-child(3):before{background-image:url(../../images/directShop/ico_only_list03.png);;background-size:25px auto;}
+.round_white_box .icon_list li .txt{display:inline-block;width:calc(100% - 60px);padding-left:15px;font-size:13px;line-height:20px;color:#000;word-break:keep-all;vertical-align:middle;}
+
+
+/* ver 2.0*/ 
+#contents.new-contents{position:relative;height: 100%;padding-left:0;padding-right:0;padding-bottom:0;} 
+#contents.new-contents h1, #mainContents.new-contents h1{line-height:70px;margin:0 30px} 
+#contents.new-contents #content{min-height:calc(100% - 207px);padding-bottom:0;padding:0 30px; word-break: keep-all;} 
+#mainContents.new-contents{display:none;position:relative;max-width:768px;height: 100%;margin:0 auto;background:#fff;z-index:50;}
+#contents.new-contents #content.done{margin:0;padding:0}
+#contents.new-contents #content.done .coupon-section{margin:10px 30px 30px 30px}
+#contents.contents-bottom,
+#content.contents-bottom{padding-bottom:0;}
+.ui-tab{margin-top:10px;}
+.row{display:table;width:100%}
+.row .td{position:relative;display:table-cell}
+.row .td.research input{padding-right:65px}
+.row .td.research button{
+    position: absolute; right:0; top:12px;
+    line-height:27px; width:55px; color:#fff; font-weight: 700;font-size:13px;text-align:center;background-color: #bcbcbc;border-radius: 6px;}
+
+/*이벤트*/
+.event-content{margin-top:80px}
+.event-content img{display:block;width:100%}
+.event-content > div{margin-top:0 !important;}
+/* 자주 묻는 질문 */
+.faq-area{margin:0 -30px;padding:40px 30px;background-color:#f0f4f5;}
+.faq-area dt{font-weight: 500;}
+.faq-area dt, .faq-area dd{position: relative; margin-bottom:10px;padding:15px 50px;background-color:#fff;word-break: keep-all;border-radius: 10px;line-height:20px;}
+.faq-area dd{display:none;background-color:#fff; padding-left:50px;padding-right:25px; border-top-right-radius: 0;border-top-left-radius: 0;}
+.faq-area dt.selected{margin-bottom:0;border-bottom-right-radius: 0;border-bottom-left-radius: 0;}
+.faq-area dt.selected + dd{display:block;}
+.faq-area dt.selected + dd:before{content:"";position:absolute; top:0; left:25px;right:25px;height:1px;background-color: #E7EAF4;}
+.faq-area .btn-arrow:after{top:22px;right:28px;border-color:#000}
+.faq-area dt a{position:absolute;top:0;left:0; width:100%;height:100%;}
+.faq-area .t{font-weight:500;font-size:14px;letter-spacing: -0.7px}
+.faq-area em.t{position:absolute;left:25px;font-family:"Roboto Bold";font-size:15px;  }
+.faq-area strong.t + .area{margin-top:10px}
+.faq-area .area{ line-height: 18px; letter-spacing: -0.65px;color: #666;font-size:13px; }
+.faq-area br{height:20px}
+.faq-area .table-title{margin-bottom:10px;}
+.faq-area .bold{font-weight:500}
+.faq-area .table-box{overflow:auto}
+.faq-area .table-box table{min-width:600px}
+.faq-area table {margin-top:10px}
+.faq-area table {border-top:1px solid #666;border-bottom:1px solid #888;}
+.faq-area table thead th{padding:10px 18px;background-color:#efefef;color:#000}
+.faq-area table tbody th,
+.faq-area table tbody td {height:28px;padding:10px 18px; color:#333;text-align:left;letter-spacing:-1px;border-top:1px solid #d2d2d2; word-wrap:break-word;word-break:break-all;white-space:inherit;text-align:center; }
+.faq-area table tbody tr:first-child th,
+.faq-area table tbody tr:first-child td {border-top:0;} 
+.faq-area table tbody tr th{border-left:0;text-align:center}
+.faq-area table tbody tr td + td{border-left:0;}
+.faq-area table thead tr th:first-child,
+.faq-area table tbody tr th{background-color:#e4e4e4}
+.faq-area .total{margin-top:20px;}
+.faq-area .total strong{font-size:16px;color:#ed2054;font-weight:bold;}
+/* 자급제폰 */
+.self-sufficient-ex{margin-bottom:65px; }
+.self-sufficient-ex {display:flex; -webkit-display:flex;flex-wrap:wrap;}
+.self-sufficient-ex li{margin-bottom:25px;width:50%;}
+.self-sufficient-ex li:before{content:"";display:block;width:90px;height:90px;margin:0 auto 15px auto;background:url(../../images/directShop/pic_self.png) 0 0 no-repeat; background-size:200px auto;}
+.self-sufficient-ex li:nth-child(1):before{background-position: 0 0;}
+.self-sufficient-ex li:nth-child(2):before{background-position: right 0;}
+.self-sufficient-ex li:nth-child(3):before{background-position: 0 bottom;}
+.self-sufficient-ex li:nth-child(4):before{background:url(../../images/directShop/pic_self04.png) 0 0 no-repeat; background-size:80px auto;}
+.self-sufficient-ex li:nth-child(5):before{background-position: right bottom;}
+.self-sufficient-ex li span{display:block;text-align:center;}
+.self-sufficient-ex li .t-1{margin-bottom:10px;font-size:12px; font-weight: 500;color:#222;}
+.self-sufficient-ex li .t-2{margin-bottom:5px;font-size:11px;color:#00a2be;font-weight:300}
+.self-sufficient-ex li .t-3{font-size:11px;color:#222;font-weight:300 }
+.self-sufficient-ready{padding:50px 50px 30px 50px;margin:0 -30px 65px -30px;background-color:#00a2be; /* 13BEB7*/color:#fff;}
+.self-sufficient-ready h2{margin-bottom:10px;line-height:34px;font-size:24px;font-weight: 700;}
+.self-sufficient-ready p,
+.self-sufficient-ready dd{opacity: 0.7;line-height:20px;  }     
+.self-sufficient-ready dd p{opacity: 1; line-height:inherit}
+.self-sufficient-ready ul{margin-top:34px}
+.self-sufficient-ready ul li{position:relative}
+.self-sufficient-ready ul li:before{content:"";position:absolute; top:0;left:0;width:80px;height:50px; background:url(/) 0 0 no-repeat;background-size:100% 100%;box-shadow: 10px 10px 10px #00000012;}
+.self-sufficient-ready ul li:nth-child(1):before{background-image:url(../../images/directShop/ready_1.png)}
+.self-sufficient-ready ul li:nth-child(3):before{background-image:url(../../images/directShop/ready_2.png)}
+.self-sufficient-ready ul li:nth-child(2):before{background-image:url(../../images/directShop/ready_3.png)}
+.self-sufficient-ready dl{padding-left:107px}
+.self-sufficient-ready dt{margin-bottom:10px}
+.self-sufficient-ready dd{margin-bottom:20px;word-break: keep-all;}
+.self-sufficient-ready .fixed{font-size:13px}
+/* 셀프개통*/
+.self-sufficient-ready .usim-is li:nth-child(1):before{background-image:url(../../images/directShop/card_usim.png)}
+.self-sufficient-ready .usim-is li:nth-child(2):before{background-image:url(../../images/directShop/pic_ready_2.png)}
+.self-sufficient-ready .usim-is li:nth-child(3):before{background-image:url(../../images/directShop/ready_3.png)}
+
+.self-sufficient-gift{padding:65px 30px 0;margin:0 -30px;}
+.self-sufficient-gift p{margin-bottom:20px;line-height:20px;}
+.self-sufficient-gift .gift{padding:28px 0 25px;line-height:19px;background-color:#fff;font-size:13px;color:#666;text-align:center;}
+.self-sufficient-gift .gift:before{content:""; display:block; margin:0 auto; width:160px; height:160px;background:url(../../images/directShop/pic_starbucks.png) 0 0 no-repeat; background-size:100%}
+.fixed{position: relative; padding-left:15px;}
+.fixed em{position:absolute;left:0 }
+.star-list li{position:relative;padding-left:20px;margin-bottom:5px;color: #959595;}
+.star-list li em{position:absolute;left:0 }
+
+.line-list li{position:relative; padding-left:10px;}
+.line-list li em{position: absolute; top:0; left:0;}
+/*데이터 쉐어링 연기*/
+.data-sharing {margin-bottom:65px}
+.data-sharing .pic{display:table;width:100%;margin-top:20px}
+.data-sharing .pic div{display:table-cell;text-align:center;     }
+.data-sharing .pic div span{font-weight:500}
+.data-sharing .pic div:nth-of-type(1):before,
+.data-sharing .pic div:nth-of-type(3):before{
+  content:"";
+  display:block; height:120px; width:120px; margin:0 auto 12px auto;
+  background:url(../../images/directShop/pic_sharing_1.png) center 0 no-repeat;
+  background-size:100% auto;
+}
+.data-sharing .pic div:nth-of-type(3):before{background-image:url(../../images/directShop/pic_sharing_2.png)}
+.data-sharing .pic div.gu-arrow,
+.sharing-area-information .gu-arrow{font-size:12px;vertical-align: middle;}
+.data-sharing .pic div.gu-arrow:after,
+.sharing-area-information .gu-arrow:after{content:"";display:block;margin:10px auto 0 auto;height:25px;width:31px;margin-bottom:32px; background:url(../../images/directShop/pic_phone_arrow.png) 0 0 no-repeat;background-size:100% auto}
+.data-sharing p {margin-top:20px;color:#666} 
+.data-sharing-money{margin-bottom:65px}
+.sharing-area-information{margin-bottom:10px;padding:30px 25px;background-color: #fff;border-radius: 10px;} 
+.sharing-area-information h3{float:left;font-weight: 700;font-size:20px;}
+.sharing-area-information .price{float:right;font-size:18px;font-weight: 500;}
+.sharing-area-information .box{display:table;width:100%;clear:both;padding-top:25px;}
+.sharing-area-information .box > div{display:table-cell;text-align:center;}
+.sharing-area-information .box > div span{font-size:13px;font-weight:500}
+.sharing-area-information .box.a div:before{content:"";display:block;height:75px;margin-bottom:12px;}
+.sharing-area-information .box.a div:before{
+  background:url(../../images/directShop/pic_phone_5g.png) center 0 no-repeat;background-size:auto 100%
+}
+.sharing-area-information .box.a .gu-arrow{padding-bottom:30px} 
+.sharing-area-information .box.a .gu-arrow:before{display:none}
+.sharing-area-information .box.a div:nth-of-type(3):before{background-image:url(../../images/directShop/pic_phone_sharing.png);background-size:auto 100%}
+.sharing-area-information .box.b div{width:33.3%}
+.sharing-area-information .box.b div:before{content:"";display:block;height:68px;margin-bottom:12px;background:url(../../images/directShop/pic_phone_lte.png) center 0 no-repeat;background-size:auto 68px;}
+.sharing-area-information .box.b div:nth-of-type(2):before{
+  background-image:url(../../images/directShop/pic_phone_ltes.png)
+}
+.sharing-area-information .box.b div:nth-of-type(3):before{
+  height:62px;
+  background-image:url(../../images/directShop/pic_phone_data.png);
+  background-size:auto 100%;
+}
+
+.data-sharing-faq .faq-area{padding:0 30px;    background-color: transparent;}
+.data-sharing-faq .faq-area dt,
+.data-sharing-faq .faq-area dd{padding-left:25px}
+
+.data-sharing-noti .title , .data-sharing-time .title{font-size:18px;}
+.data-sharing-time{margin-bottom:65px;}
+.data-sharing-time .time-list li{position:relative;padding-left:15px;font-size:14px;color:#000;line-height:20px;}
+.data-sharing-time .time-list li:before{content:'';position:absolute;left:0;top:9px;width:4px;height:4px;background:#666;border-radius:50%;}
+.data-sharing-time .time-list li + li{margin-top:8px;}
+ 
+
+/* 무약정 */
+.type-list-area{padding-bottom:3px;margin-bottom:65px;margin-right:-30px;overflow-x:auto;-webkit-overflow-scrolling: touch;}
+.type-list:after{display:block; clear: both; content:"";}
+.type-list{margin:0 auto;}
+.type-list li{float:left;width:300px;margin-right:15px;padding:35px;      box-shadow: 0px 10px 20px #9A9A9A0F; border: 1px solid #E7EAF4; border-radius: 15px;background-color:#fff}
+.type-list .t{display:block; margin-bottom:12px;font-size:22px;line-height:33px;font-weight: 600;}
+.type-list .row .td{padding:8px 0}
+.type-list .row strong.td{font-weight:500}
+.type-list .row .td:last-child{text-align:right;color:#959595}
+.type-list .btn{ margin-top:50px;} 
+.money-detail{ }
+.money-detail h3{margin-bottom:15px;font-weight: 500;font-size:14px}
+.money-detail ul{margin-bottom:15px}
+.money-point {margin-left:15px}
+.money-point .t{display:block;margin-bottom:15px;font-weight: 500;font-size:13px;color:#666}
+.money-point ul.infor-list:last-child{margin-bottom:0}
+.money-point ul.infor-list > li{padding-left:8px;font-size:14px}
+.money-point ul.infor-list > li:before{content:"-";top:0;width:auto;height:auto;background-color: #fff;}
+/* 25% 할일  */
+.sale-section{padding:50px 30px 55px 30px;margin:0 -30px}
+.sale-section:nth-of-type(even){background-color:#EBF0F2}
+.sale-section dt , .sale-section strong.tit{display:block;margin-bottom:8px;font-size:20px;font-weight: 700;}
+.sale-section .price{margin-bottom:15px;font-size:20px;font-weight:500}
+.sale-section .price span{font-weight:400;font-size:15px}
+.sale-section .infor-list {margin-top:30px}
+.sale-section .infor-list li{color:#000}
+.sale-section .stxt-1 {font-size:12px;color:#666;margin-top:13px;}
+.sale-section-3{margin-bottom:20px}
+.sale-section-1 dl:after{content:"";display:block;height:215px;margin-top:56px;background:url(../../images/directShop/sale_1.png) center bottom no-repeat;background-size:auto 100%;}
+.sale-section-2 dl:after{content:"";display:block;height:239px;margin-top:30px;background:url(../../images/directShop/sale_2.png) center bottom no-repeat;background-size:auto 100%;}
+.sale-section-3 dl:after{content:"";display:block;height:200px;margin-top:63px;background:url(../../images/directShop/sale_3.png) center bottom no-repeat;background-size:auto 100%;}
+/* 희망번호 */    
+.open-number-area .box{
+    margin:30px 0 15px;padding:30px;
+    text-align:center;
+    background-color:#f4f4f4
+  }
+.open-number-area .box .title{font-size:16px}
+.open-number-area .box .number{margin-top:20px;line-height:20px;font-size:20px;font-weight: 500;}
+.open-number-area .box .number input{background:none;border:none;height:initial;font-size:20px;color:#000;font-weight:500;text-align:center;line-height:25px;}
+
+/*번호이동*/
+.number-info{position:relative;display:inline-block;color:#666;font-weight:500;padding-right:15px;font-size:13px;}
+.number-info.arrow:after{top:53%;width: 5px; height: 9px;}
+.btn.fill.btn-number-info{height:36px;line-height:36px;background-color:#000;font-size:13px;}
+
+/*eSiM*/
+.input-esim .msg{margin-bottom:18px;font-size: 20px; line-height: 29px;}
+.input-esim .msg a{overflow:hidden;display:inline-block; width:27px;height:27px;text-indent: -1000px;; background:url(../../images/directShop/icon-help.png) 0 0 no-repeat;background-size:100% auto;}
+.input-esim .msg + p{margin-bottom:30px;font-size:12px;color:#666}
+
+/* 데이터쉐어링 요금 */
+.sharing-report {margin-bottom:25px}
+.sharing-report p{margin-bottom:20px;font-size:16px;line-height:21px;}
+.sharing-report ul.number{background-color:#f4f4f4}
+.sharing-report .row .td{padding:13px 25px;font-size:13px;}
+.sharing-report .row .td:first-child{color:#999;padding-right:0}
+.sharing-report .row .td:last-child{text-align:right;padding-left:0}
+.sharing-report dl{margin-top:25px;}
+.sharing-report dl dt{margin-bottom:10px;font-weight: 500; font-size:15px;color:#666; line-height:24px;}
+.sharing-report dl dd{font-size:13px; color:#666; line-height:18px;word-break: keep-all;}
+.sharing-report dl dd ul li{position: relative;padding-left:10px;}
+.sharing-report dl dd ul li:before{
+  position:absolute; top:0; left:0; content:"-"; 
+}
+/*USIM*/
+.usim-number{position:relative;margin-bottom:20px;padding-left:72px;}
+.usim-number .number{position: absolute; left:0; top:0;}
+.usim-number .number span{font-size:16px;line-height:53px; }
+.usim-number .number span:first-child{margin-right:15px}
+.usim-ex {padding:25px;background-color: #f4f4f4;text-align:center;}
+.usim-ex span{display:block;margin-bottom:10px;color:#666; font-size:13px;text-align:left}
+.usim-ex img{width:100%;max-width:260px;}
+
+/*  개통진행중 */
+.open-msg{ padding-top:220px;font-size:20px;line-height:30px;text-align:center;letter-spacing: -1px;background:url(../../images/directShop/pic-open.png) center 50px no-repeat; background-size:auto 140px}
+.open-msg-2{padding-top:230px;background:url(../../images/directShop/pic-open-2.png) center 50px no-repeat; background-size:auto 150px }
+.open-msg-3{padding-top:230px;background:url(../../images/directShop/pic-open-3.png) center 50px no-repeat; background-size:auto 150px }
+.open-information{margin-top:50px;color:#666;}
+.open-information dt{display:block;margin-bottom:14px; line-height:24px;font-size:15px;}
+.open-information p{font-size:13px;line-height:20px;}
+/*전체 요금제*/
+.tab-charge{margin:0 0 27px; padding-top:10px;}
+.tab:after{content:"";display:block;clear:both}
+.tab-charge li{float:left;width:50%}
+.tab-charge li:nth-of-type(2){float:right}
+.tab-charge li:nth-of-type(1) a{border-top-left-radius:5px;border-bottom-left-radius:5px}
+.tab-charge li:nth-of-type(2) a{border-top-right-radius:5px;border-bottom-right-radius:5px}
+.tab-charge li a{display:block;line-height:48px;text-align:center;font-size:16px;background-color:#f4f4f4;color:#000}
+.tab-charge li.active a{background-color:#00a2be;color:#fff;font-weight:700}
+
+.select-charge li{display:inline-block; }
+.select-charge a{display:inline-block;line-height:36px;padding:0 15px;margin:0 5px 5px 0;border-radius:5px;font-size:13px;color:#959595;background-color:#ededed}
+.select-charge a.active{color:#fff;background-color:#000}
+.popup-charge-table .content-area{margin:-25px -30px 0;padding:0 30px;background-color:#fff}
+.popup-charge-table .sort-area{margin-bottom:8px}
+.popup-charge-table .sort-area .select-area > a{font-size:12px;padding-right:34px;letter-spacing:-.48px}
+/*요금제 선택표*/ 
+[class*=list-charge] .area{position:relative;margin-bottom:10px;background-color:#fff;border-radius:10px;border:1px solid #fff;overflow:hidden}
+[class*=list-charge] .area:after{content:"";position:absolute;top:25px;right:25px;z-index:0;width:25px;height:25px;border-radius:12px;box-sizing:border-box;background:#D6D6D6 url(../../images/directShop/icon_check_off.png) center center no-repeat;background-size:25px}
+[class*=list-charge] dd.area{display:none}
+[class*=list-charge] .area.selected{border:1px solid #000}
+[class*=list-charge] .area.selected .choice-area{display:block}
+[class*=list-charge] .area.selected:after{background-image:url(../../images/directShop/icon_check_on.png)}   
+[class*=list-charge] .area .box{position:relative;padding:25px}
+[class*=list-charge] .area .box .checkbox-1{position:absolute;right:30px;top:25px;left:inherit}
+[class*=list-charge] .area .title{display:block;margin-bottom:10px;padding-right:30px;font-size:20px;font-weight:700;line-height:25px}
+[class*=list-charge] .area .title .recomm{color: #f01c45;font-weight: 700;}
+[class*=list-charge] .area .summary{margin-bottom:10px;letter-spacing:-.48px;font-size:12px;color:#959595;line-height:1.4;}
+[class*=list-charge] .area .line{display:table;width:100%;font-size:13px}
+[class*=list-charge] .area .line > span{display:table-cell;padding:6px 0;line-height:1.3}
+[class*=list-charge] .area .a{color:#959595;width:60px;vertical-align:top}
+[class*=list-charge] .area .b{text-align:right;font-weight:500;width:auto}
+[class*=list-charge] .area .opt{margin-bottom:5px;text-align:right}
+[class*=list-charge] .area .opt > span{display:inline-block; line-height:1.4; border-radius:5px; font-size:12px}
+[class*=list-charge] .area .price{position:relative;margin-top:15px;font-size:20px;font-weight:500;height:20px; }
+[class*=list-charge] .area .price a.go-charge{position:absolute;top: -5px;right:0;z-index:20;line-height: 29px;font-size:13px;font-weight: 500;color:#000;}
+[class*=list-charge] .area .price a.go-charge:after{  content:"";  height: 5px;  width: 5px;  border:1px solid #000;  border-top:0;  border-left:0;  transform: rotate(-45deg) translate(0,-2px);  display: inline-block;  margin-left: 6px;}
+[class*=list-charge] .area .gift{margin-top:20px;padding:5px 15px;background-color:#F0F4F5;border-radius:2px;font-size:12px;color:#666;line-height:1.3}
+[class*=list-charge] .area a.go{position:absolute;top:0;left:0;height:100%;width:100%;z-index:10;text-indent:-999px;overflow:hidden;border-radius:10px;box-sizing:border-box}
+[class*=list-charge] .choice-area{display:none;padding:30px 20px;background-color:#f8f8f8}
+[class*=list-charge] .choice-area .title{margin-bottom:9px;line-height:20px;font-size:13px;font-weight:500}
+[class*=list-charge] .choice-area > p{margin-bottom:20px}
+[class*=list-charge] .choice-area ul{line-height:19px}
+[class*=list-charge] .choice-area ul + .title{margin-top:30px}
+[class*=list-charge] .choice-area li{position:relative;margin-top:8px;padding:18px 20px;background-color:#fff}
+[class*=list-charge] .choice-area li label{display:block;}
+[class*=list-charge] .choice-area li .checkbox-1{position:absolute;top:10px;right:30px;left:inherit}
+[class*=list-charge] .choice-area .t{display:block;margin-bottom:12px;padding-right:40px;font-weight: 500;}
+[class*=list-charge] .choice-area .t:only-child{margin-bottom:0;}
+[class*=list-charge] .choice-area p,[class*=list-charge] .choice-area .m{font-size:13px;color:#959595;word-break:break-all;line-height:19px}
+[class*=list-charge] .choice-area .p{display:block;margin-top:5px;font-size:12px;text-indent:-12px;padding-left:12px;color:#959595}
+[class*=list-charge] .choice-area .checkbox{width:100%;margin:30px 0 0;padding:16px;border:1px solid #ddd;}
+[class*=list-charge] .choice-area .checkbox input{left:10px;}
+[class*=list-charge] .choice-area .checkbox button:before{display:block;content:'';width:6px;height:12px;position:absolute;top:50%;right:10px;transform:translateY(-50%);background:url(../../images/directShop/icon-arrow-right.svg) 0 0 no-repeat;background-size:100%;}
+[class*=list-charge] .table{text-align:right}
+[class*=list-charge] .table a{color:#00a2be}
+[class*=list-charge] .table a:after{border-color:#00a2be;border-color:#00a2be}
+ 
+/* 요금제 선택*/
+[class*=list-charge] dt, a.btn-re-charge{height:56px;line-height:54px;font-size:16px;border-radius: 5px;font-weight: 500;}
+dl[class*=list-charge] dt{margin-bottom:10px;letter-spacing: -1.28px;}
+dl[class*=list-charge] dt{padding:0 20px;position: relative;text-align:left; background-color:#fff; color:#00a2be;border:1px solid #00a2be;font-weight:500}
+dl[class*=list-charge] dt > a{display:block;text-align:left;color:#00a2be;font-weight:500;vertical-align:top;padding-right:26px;}
+dl[class*=list-charge] dt > .checkbox-1{position:absolute;right:17px;top:50%;transform:translateY(-50%);z-index:5;}
+dl[class*=list-charge] .area .box{padding:10px 25px 30px} 
+dl[class*=list-charge] .choice-area{display:block;padding-left:25px; padding-right:25px}
+dl[class*=list-charge] .area:after{display:none}
+
+dl[class*=list-charge] dt.selected{margin-bottom:0;border-bottom-color:#fff;border-bottom-right-radius: 0;border-bottom-left-radius: 0;}
+dl[class*=list-charge] dt dd {display:none}
+dl[class*=list-charge] dt.selected + dd{display:block;border:1px solid #00a2be;border-top:0;border-radius: 0;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;} 
+dl[class*=list-charge] dd .btn-area{padding:0 25px 30px 25px;background-color:#f8f8f8} 
+dl[class*=list-charge] dd .btn-area button.fill{display:block;height:35px;line-height:35px; border:0; background-color:#000;font-size:13px;letter-spacing: -0.52px;font-weight: normal;}
+dl[class*=list-charge] .choice-area li .checkbox-1{right:20px}
+a.btn-re-charge{margin:30px 0 20px;text-align:left;padding: 0 20px;background-color:#00a2be;color:#fff}
+.btn-charge-go{height: 19px;line-height: 19px;margin-bottom:40px;position: relative; padding-right: 12px;font-size:15px;font-weight:500;
+  color:#000; }
+  .btn-charge-go:after{content:"";display:inline-block; width:6px;height:6px; margin-left:5px;border-top:1px solid #000;border-right:1px solid #000;transform: rotate(45deg) translateY(-2px);}
+/* 데이터 투게더 wathc*/
+.watch-top{margin:74px 0 65px 0;padding-top: 177px;background:url(../../images/directShop/watch_1.png) center 0 no-repeat;background-size:auto 169px; }
+.watch-section-1, .watch-section-2, .watch-section-3, .watch-section-4{margin-bottom:65px;} 
+.watch-section-1 .area{ padding:30px 25px;background-color: #fff;}
+.watch-section-1 .area .title-2{margin-bottom:25px;font-size: 20px;font-weight:700;}
+.watch-section-1 .area .title-2 span{font-size:13px}
+.watch-section-1 .box{display:table;width:100%;background-color: #fff;border-radius: 10px;}
+.watch-section-1 .box > div{display:table-cell; width:33.3%;text-align:center;}
+.watch-section-1 .box > div:before{content:"";display:block; height:60px;margin-bottom:20px;;background-position:center 0;background-repeat:no-repeat;background-size:auto 100%;
+}
+.watch-section-1 .box > div:nth-of-type(1):before{background-image:url(../../images/directShop/pic_watch_1.png)}
+.watch-section-1 .box > div:nth-of-type(2):before{background-image:url(../../images/directShop/pic_watch_2.png)}
+.watch-section-1 .box > div:nth-of-type(3):before{background-image:url(../../images/directShop/pic_watch_3.png)}
+.watch-section-1 .box > div span{font-size:13px;font-weight:500}
+.watch-section-2 .arrow-2{color:#000;font-weight:500}
+.watch-section-2 .box{padding:30px 10px;background-color: #fff;}
+.watch-section-2 .box li{position:relative;height:85px; margin-bottom:10px;color:#555; font-weight: 500; border-radius: 42px;background:#F6F6F6 url() 30px center no-repeat;} 
+.watch-section-2 .box li:nth-of-type(1){background-image:url(../../images/directShop/watch_2_1.png);background-size:60px auto}
+.watch-section-2 .box li:nth-of-type(2){background-image:url(../../images/directShop/watch_2_2.png);background-size:58px auto}
+.watch-section-2 .box li:nth-of-type(3){background-image:url(../../images/directShop/watch_2_3.png);background-size:60px auto}
+.watch-section-2 .box li > div{
+  position: absolute; left:112px; top:50%;
+  transform: translateY(-50%); -ms-transform: translateY(-50%);
+ }
+.watch-section-2 .box li:last-child{margin-bottom:0}
+.watch-section-2 .box li span{color:#00a2be;font-weight: inherit;}
+.watch-section-2 .site{margin-top:50px}
+.watch-section-2 .site li{margin-bottom:12px}
+.watch-section-3 .faq-watch dt{padding-left:25px}
+.watch-section-3 .faq-watch dd{padding-left:25px;}
+.faq-watch {color:#666;background-color: transparent;
+  padding: 0 30px;}
+.faq-watch .step-area > li{margin-bottom:40px}
+.faq-watch .step{display:inline-block; padding:0 12px;line-height:24px;font-size:14px;background-color: #23C1C4; border-radius: 12px;color:#fff;}
+.faq-watch .title{margin:10px 0 5px;color:#000;font-size:16px;font-weight:700}
+.faq-watch p{color:#666}
+.faq-watch .img{margin:30px 0;text-align:center;}
+.faq-watch .img img{width:262px;}
+.faq-watch  .num > li{position: relative; padding-left:20px;margin-bottom:10px;}
+.faq-watch  .num > li em{position:absolute ;left:0;top:3px; width:16px;height:16px;line-height:16px;font-size:11px; border-radius: 50%;color:#fff; background-color: #000;text-align:center;font-family: Arial, Helvetica, sans-serif;}
+.faq-watch  .num a{color:#00a2be}
+.watch-section-4 li{font-size:14px;color:#000}
+.watch-section-4 p{margin-top:10px;color:#666;font-size:13px}
+ 
+/* 추천요금제 */
+.step-top-msg{position:relative;padding-top:20px;margin:0 0 50px 0;font-size: 27px;line-height: 1.56;letter-spacing: -1.08px;}
+.step-top-msg .btn-next{position:absolute; bottom:0; right:0;width:88px;height:36px;line-height:36px;background-color: #ededed;color:#959595;font-size:13px;font-weight: 400;}
+.setp-area{display:none;height: calc(100% - 127px);}
+.setp-area .content{min-height:100%}
+.page-num{position:absolute;top:39px;right:26px}
+.page-num span{float:left;position:relative;width:20px;height:20px;padding-top:3px;margin-left:2px;font-size:12px;text-align:center;border-radius:50%;text-indent:-1000px;overflow:hidden}
+.page-num span.current{background-color:#00a2be;color:#fff;font-weight:500;text-indent:0}
+.page-num span:before{content:"";position:absolute;top:50%;left:50%;width:9px;height:9px;transform:translate(-50%,-50%);background-color:#ddd;border-radius:50%}
+.page-num span.current:before{display:none}
+/* 슬라이더바 */
+.new-range-area{position:relative;height:52px;margin:60px 0 0 0; }
+.new-range-area input[type=radio]{
+    -webkit-appearance: none; appearance: none;
+    position:absolute;top:0;width:20px;z-index:10;height:20px; border:1px solid #ccc;overflow:hidden; border-radius:10px;background-color:#fff
+}
+.new-range-area label{position:absolute;top:32px; text-align:center;transform:translateX(-50%);font-size:14px;font-weight:500;color:#666; min-width:90px;}
+.new-range-area label em{display:block;margin-top:10px;font-size:12px}
+.new-range-area input[type=radio]::-ms-check {
+    border-color:#ccc;color:transparent
+}
+
+.track{position:relative;width:100%;height:20px;border-radius:3px;outline:none; }
+.track:before{content:"";position:absolute;top:50%; margin-top:-3px;width:100%;height:6px;border-radius:3px;background-color:#ccc;outline:none; }
+.track em.bar{
+    position:absolute; top:0;left:0;width:20px;height:20px;background:#00a2be;border-radius:50%;cursor:pointer; z-index:20;
+    -webkit-transition:transform 0.1s ease; 
+    -ms-transition:transform 0.1s ease; 
+    transition:transform 0.1s ease;    
+}
+ 
+.setp-msg{margin-top:40px;color:#666;font-size:13px}
+.setp-msg dt{margin-bottom:15px;font-weight: 500;font-size:14px}
+.setp-msg dd ul li{position:relative; padding-left:15px;margin-bottom:10px;line-height:20px}
+.setp-msg dd ul li:before{content:"";position:absolute; top:8px; left:0;width:4px;height:4px;background-color: #666;}
+
+/* 요금제선택 - 혜택 선택*/
+.benefit-check-list li{position: relative;margin-bottom:10px;}
+.benefit-check-list li:last-child{margin-bottom:0}
+.benefit-check-list .checkbox{
+  -webkit-appearance: none; appearance: none; position:absolute; top:50%; right:25px;z-index:10; width:15px;height:10px; transform: translateY(-50%); background:url(../../images/directShop/icon_check_2_off.png) 0 0 no-repeat; background-size:100% auto
+} 
+.benefit-check-list label{  
+  display:block; padding: 15px 45px 15px 25px; font-size:15px;line-height:24px;color:#666;font-weight:500; background-color:#fff; border-radius:5px;  word-break: keep-all;
+}
+.benefit-check-list .checkbox[disabled] + label {
+  color: #dedbdb;
+}
+.benefit-check-list .checkbox:checked{
+   background-image:url(../../images/directShop/icon_check_2_on.png)
+}
+.benefit-check-list .checkbox:checked + label{background-color: #000; color:#fff}
+.benefit-check-list label span{display:block;font-size:12px;font-weight: 400;line-height:18px}
+
+/*약정기간 선택*/
+.select-date-title{margin-bottom:10px;color:#666}
+.select-date{display:flex;margin-bottom:30px;}
+.select-date button{width:100%;height:36px;margin-right:5px;text-align:center;background-color: #ededed;color:#959595;border-radius: 5px;}
+.select-date button.selected{background-color: #000;color:#fff}
+.select-date button:last-child{margin-right:0;}
+.result-price{padding:25px;background-color: #fff;}
+.result-price .row:first-child{padding-top:0}
+.result-price .row{padding:6px 0;}
+.result-price .row.total{padding:15px 0 0 0;}
+.result-price .row.sale .td{color:#ff0000}
+.result-price .row.point .td{color:#00a2be}
+.result-price .td{width:50%;font-size:16px}
+.result-price .td:last-child{text-align:right} 
+.result-price-total{margin-top:20px;text-align:center;font-size:16px;}
+.result-price-total .price{color:#ff0000}
+.btn-arrow{position: relative;} 
+dl[class*=list-charge] dt.selected:after, 
+.btn-arrow.selected:after{
+  transform:   rotate(225deg) ;
+}
+/* 유효선 버튼 오른쪽 간격*/
+.free-spacing{padding-right:100px !important}
+/* 보안문자 usim*/
+.security-area {margin-top:30px;padding:30px;border:1px solid #ccc;border-radius: 10px;}              
+.security-area h2{font-size: 16px; text-align: center;  font-weight: 500; letter-spacing: -.64px; padding-bottom: 30px;background-color: #fff; overflow: hidden;}
+.security-area  .notice-list{margin-bottom:20px}
+/* 다른 인증밥법 */
+.other-auth{margin-top:30px;}
+.other-auth p{margin-bottom:10px;color:#666}
+.other-auth .link + .link{margin-top:7px;}
+.other-auth a.arrow-2{color:#000;font-weight:500;}
+.pass-padding input{padding-right:100px;}
+.pass-area .point{color:#F44B57;font-weight:500}
+/* 신분증 정보 입력 */
+.user-auth{margin-top:30px;}
+.user-auth .txt {margin-bottom:10px;color:#666}
+.user-auth.auth-type01{margin-top:15px;}
+.user-auth.auth-type01 .txt{margin-bottom:3px;}
+.user-auth.auth-type01 .txt:last-child{margin-bottom:0;}
+.user-auth.auth-type01 + .checkbox.fee{margin-top:30px;}
+.checkbox.fee label{font-size:13px;line-height:25px;}
+.checkbox.fee input:checked + label{color:#000;}
+.checkbox.minor{margin:-3px 0 20px;}
+.checkbox.minor label{font-size:13px;color:#a2a2a2;}
+.checkbox.minor input:checked + label{color:#000;}
+.user-auth-img {max-width:100%;margin:10px 0 10px 10px;display:block;}
+.credit-user{margin-bottom:15px;}
+
+/* usedPhoneinsurance */
+.usedPhone .com-list-dot{margin-top:20px;}
+.usedPhone .btn.fill{height:auto;line-height:1.4;padding:12px 0;background-color:#DBF4FB99;line-height:1.6;}
+.usedPhone .btn.fill .txt_b{display:block;color:#557178;font-size:17px;font-weight:700}
+.usedPhone .btn.fill .txt_s{display:block;color:#557178;font-size:13px;}
+
+/* 인증 */
+#contents.new-contents .content-cetify.user #content{min-height:calc(100% - 237px);}
+.content-cetify{display:none;height:100%;}
+.content-cetify.user{display:block;}
+.content-cetify input, .content-cetify select{background-color:#f8f8f8;}
+.content-cetify .row{margin-bottom:20px}
+.content-cetify .member-input .name input{margin-bottom:0;}
+.other-cerify{margin-top:20px;}
+.member-input .row{position:relative;display:table;width:100%;}
+.member-input .row > *{display:table-cell;padding-bottom:1px;vertical-align:bottom}
+.member-input .row > .line{vertical-align:middle;}
+.member-input .row > input{border-bottom:none;}
+.member-input .sex{width:20px} 
+.member-input .sex input{padding:0;text-align:center}
+.member-input .jumin{width:50%}
+.member-input .row > span.masking{font-size:16px;border-bottom-color:#fff}
+.member-input .row > span.line{position:relative;padding:0 10px;width:6px;height:100%;border-bottom-color:transparent}
+.member-input .line:before{display:inline-block;content:"-";}
+.member-input .sex{padding-right:1px}
+.member-input .active{border-bottom:1px solid #000!important}
+.member-input input:focus + .del{display:block}
+.member-input .card-type{margin-top:10px}
+.member-input .card-type label{padding-left:10px;font-size:13px;color:#959595}
+.member-input .card-type input:checked + label{color:#000}
+.member-input #card-name{color:#d6d6d6}
+.member-input #card-name.selected{color:#000}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 30px 0;
+  } 
+  .footer br {
+    display: none;
+  }
+  .footer p.award {position:absolute; top:5px; right:0px;}
+  .footer p.award img{width:125px;height:auto;}
+  .main-section-banner {margin-right:0;}
+  .sale-section{margin-left:0;margin-right:0}
+  .btn-charge-go{margin-left:12px}
+  br.m_none{display:none;}
+
+}
+ 
+@media (max-width: 768px) {
+  .main-swiper{margin:0 -30px 65px -30px;}
+}
+@media all and (max-width: 700px) {
+  .main-section-1 a{width:130px}
+  .main-swiper .type-c{
+    /*background-image:url(../../images/directShop/main_3_pic_1.png), url(../../images/directShop/main_3_pic_2.png), url(../../images/directShop/main_3_bg.jpg);*/
+  background-image:url('/images/directShop/main_3_pic_1.png'), url('https://image.shop.kt.com/upload/editor/display/main_3_pic_2_201230.png'), url('/images/directShop/main_3_bg.jpg');
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: -1px 190px, calc(100% - 10px) center, 0 0;
+    background-size: 207px auto, 226px auto, auto 365px;
+  }   
+ 
+}
+@media all and (max-width: 500px) {
+  .main-swiper .type-a{
+    /*background-image:url(../../images/directShop/main_1_pic_2.png),url(../../images/directShop/main_1_pic_1.png);*/
+  background-image:url('https://image.shop.kt.com/upload/editor/display/pc_direct_main_banner_plan_01_201229.png'),url('/images/directShop/main_1_pic_1.png');
+    background-repeat:no-repeat, no-repeat;
+    background-position: 35px 180px, calc(100% + 110px) calc(100% + 15px);
+    background-size:161px auto, auto 280px;
+    background-color:#00b398
+  }
+  
+  .main-section-1 a{width:100px}
+
+  .step-top-msg{font-size:20px;}
+  .step-top-msg .btn-enter{margin-top:5px;}
+}
+@media all and (max-width: 420px) {
+  .main-section-2 .tab li, 
+  .main-section-4 .tab li{line-height:1.3}
+  .main-section-2 .tab li span, 
+  .main-section-4 .tab li span{display:block;}
+  .new-range-area .txt{font-size:14px}
+}
+@media all and (max-width: 370px) {
+  .main-section-1 a{width:80px;font-size:12px;}
+  p.step0,.step-top-msg{font-size:20px}
+  .new-range-area label{font-size:12px}
+  .new-range-area label em{font-size:11px;}
+  .new-range-area .txt{font-size:12px}
+  .type-list li{width:260px;padding:30px;}
+  .type-list .t{font-size:20px}
+  .data-sharing .pic div:nth-of-type(1):before, .data-sharing .pic div:nth-of-type(3):before{width:100px;height:100px; border-radius: 50%;}
+  .planjoinKT .top .text_desc{font-size:25px;}
+}
+
+
+
+
+/* 메인 배너 (2020-12-02) */
+.main-swiper .buyKT_201202 {
+  background-image:url('https://image.shop.kt.com/upload/editor/display/pc_direct_main_banner_buyKT_01_201202.png'), url('https://image.shop.kt.com/upload/editor/display/pc_direct_main_banner_buyKT_02_201202.png');
+  background-repeat:no-repeat, no-repeat;
+  background-position:right 0, 0 0;
+  background-size:auto 365px, auto 365px;
+}
+@media all and (max-width:580px) {
+  .main-swiper .buyKT_201202 {
+    background-image:url('https://image.shop.kt.com/upload/editor/display/m_direct_main_banner_buyKT_01_201202.png');
+    background-repeat:no-repeat;
+    background-position:0 0;
+    background-size:auto 365px;
+  }
+}
+
+
+
+/* 메인 배너 (2020-12-29) */
+.main-swiper .newyear201229 {
+  background-image:url('https://image.shop.kt.com/upload/editor/display/pc_direct_main_banner_newyear_02_201231.png'), url('https://image.shop.kt.com/upload/editor/display/pc_direct_main_banner_newyear_01_201229.png');
+  background-repeat:no-repeat, no-repeat;
+  background-position:right 0, 0 0;
+  background-size:auto 365px, auto 365px;
+  background-color:#fceceb;
+}
+.main-swiper .newyear201229 p.t,
+.main-swiper .newyear201229 p.t-2 {color:#3aa5a4;}
+.main-swiper .newyear201229 a {padding-right:0;}
+
+@media all and (max-width:620px) {
+  .main-swiper .newyear201229 {
+    background-image:url('https://image.shop.kt.com/upload/editor/display/pc_direct_main_banner_newyear_04_201231.png'), url('https://image.shop.kt.com/upload/editor/display/pc_direct_main_banner_newyear_05_201231.png');
+    background-repeat:no-repeat, no-repeat;
+    background-position:right 0, 0 0;
+    background-size:auto 365px, auto 365px;
+    background-color:#fceceb;
+  }
+}
+@media all and (max-width:430px) {
+  .main-swiper .newyear201229 {
+    background-image:url('https://image.shop.kt.com/upload/editor/display/pc_direct_main_banner_newyear_03_201229.png');
+    background-repeat:no-repeat;
+    background-position:0 0;
+    background-size:auto 365px;
+  }
+}
+
+
+/* 요금제 수정 */
+.sale-section.odd:nth-of-type(odd) {background-color:#ebf0f2;}
+.sale-section.odd:nth-of-type(even) {background-color:#f8f8f8;}
+@media all and (max-width:555px) {
+  .step-top-msg.response p {display:inline;}
+
+}
+
+/* 메인 notice */
+.box_notice {background-color:#dbf4fb99; padding:25px; border-radius:15px; margin:-25px 0 35px 0;}
+.box_notice .inbox {display:table; width:100%; background:url("/images/directShop/ico_mark_notice.png") no-repeat 0 0; background-size:50px auto; min-height:50px;}
+.box_notice p {display:table-cell; color:#557178; font-size:15px; vertical-align:middle; padding-left:70px;}
+.box_notice p span {display:block;}
+
+@media all and (max-width:450px) {
+  .box_notice {padding-left:20px; padding-right:20px;}
+  .box_notice p {font-size:14px; padding-left:65px;}
+  .box_notice p span {display:inline;}
+  .coupon-section .coupon-list > li .bot{font-size:12px;}
+  .gift-section .gift-box .pic-2 > span{vertical-align:top}
+  .gift-section .gift-box .pic-2 img, 
+  .gift-section .gift-box .pic-2 img.img1,
+  .gift-section .gift-box .pic-2 img.img2{width:auto;height:64px;}
+}
+
+
+
+/* 다이렉트샵 개선 (2021.05.11) */
+.main-section-1 a {color:#000; padding:17px 3px 10px 3px; font-weight:500; font-size:14px;}
+.main-section-1 span {font:inherit;}
+.main-section-1 .full a {width:100%;}
+.main-section-1 .full a:before {display:inline-block; margin:0; vertical-align:middle; margin-right:12px;}
+
+.main-section-1 .ico_usim:before {background-image:url("/images/directShop/bg_join_usim.png") !important;}
+.main-section-1 .ico_datashare:before {background-image:url("/images/directShop/bg_join_dataShare.png") !important;}
+.main-section-1 .ico_kt:before {background-image:url("/images/directShop/bg_join_kt.png") !important;}
+.main-section-1 .ico_self:before {background-image:url("/images/directShop/bg_join_self.png") !important;}
+
+.main-section-linebanner {margin-bottom:60px;}
+.main-section-linebanner a {display:block;}
+.main-section-linebanner img {width:100%;}
+
+.ratelist li {text-align:center;}
+.ratelist li .rate_tit {font-size:22px; font-weight:500;}
+.ratelist li .rate_img {margin-top:25px;}
+.ratelist li .rate_img.cp {margin:35px 0;}
+.ratelist li .rate_img img {max-width:100%;}
+.ratelist li img {max-width:100%;}
+.ratelist li .plus {background:url("/images/directShop/ico_plus.png") no-repeat center; background-size:27px 27px; width:27px; height:27px; margin:35px auto; color:transparent;}
+
+/* KT 다이렉트 전용 요금제 BG */
+.rate_img_bg {background-image:url("/images/directShop/direct_rate_main_pc.png"); background-position:center 0; background-repeat:no-repeat; width:628px; height:555px;}
+@media all and (max-width: 768px) {
+  .rate_img_bg {background-image:url("/images/directShop/direct_rate_main_m.png"); width:100%; height:100vw; background-size:auto 100%;}
+}
+@media all and (max-width: 350px) {
+  .rate_img_bg {background-image:url("/images/directShop/direct_rate_main_m.png"); background-size:100% 100%;}
+}
+
+.titbox {display:table; width:100%; margin-bottom:20px;}
+.titbox > div {display:table-cell; vertical-align:middle;}
+.titbox > .r {text-align:right;}
+.titbox .title {margin-bottom:0;}
+.btn_view {position:relative; display:inline-block; padding-right:16px; font-size:14px; color:#000; font-weight:500;}
+.btn_view:before {content:""; width: 11px; height: 17px; background: url("/images/directShop/icon-arrow-right.svg") right no-repeat; background-size:60%;position: absolute; top:1px; right:0;}
+
+
+.links {display:flex; flex-wrap:wrap; margin-top:10px;}
+.links li {flex:1; background-color:#000; border-radius:5px; margin-left:5px;}
+.links li:first-child {margin-left:0;}
+.links > li > .inner {display:table; width:100%; height:100%;}
+.links > li a {display:table-cell; vertical-align:middle; padding:10px 5px;}
+.links > li a > em {position:relative; display:inline-block; color:#fff; font-size:14px; font-weight:bold; padding-right:15px; line-height:18px;}
+.links > li a > em:after {
+  content:""; position:absolute; 
+  width:6px; height:6px; top:50%; right:0;
+  border:2px solid #fff; border-top:0; border-left:0; 
+  transform:translateY(-50%) rotate(-45deg);
+}
+.links > li .br {font:inherit; display:inline;}
+
+@media (max-width: 600px) {
+  .links > li .br {display:block;}
+}
+@media (max-width: 400px) {
+  .links > li a > em {font-size:13px;}
+}
+@media (max-width: 330px) {
+  .links > li a > em {padding-right:10px;}
+}
+
+
+.toggle_box {border-bottom:1px solid #e4e4e4; margin-top:50px;}
+.toggle_box > li {border-top:1px solid #e4e4e4; font-weight:500;}
+.toggle_box > li .sublist_1 {margin-top:5px;}
+.toggle_box > li .sublist_1 > li {position:relative; padding-left:10px; color:#666; margin-top:2px; font-size:13px;}
+.toggle_box > li .sublist_1 > li:first-child {margin-top:0;}
+.toggle_box > li .sublist_1 > li::after {content:"-"; position:absolute; top:0; left:0;}
+
+.toggle_box > li .sublist_2 {margin:6px 0;}
+.toggle_box > li .sublist_2 > li {position:relative; color:#666; margin-top:2px; padding-left:17px;}
+.toggle_box > li .sublist_2 > li:first-child {margin-top:0;}
+.toggle_box > li .sublist_2 > li .num {position:absolute; top:0; left:0;}
+
+.toggle_tit > button {position:relative; display:block; width:100%; height:50px; text-align:left;}
+.toggle_tit > button:after {
+    content:""; position:absolute; 
+    width:8px; height:8px; top:50%; right:4px;
+    border:2px solid #000; border-top:0; border-right:0; 
+    transform:translateY(-50%) rotate(-45deg);
+}
+.toggle_tit > button span {color:#222; font-size:16px; font-weight:500;}
+.toggle_tit > button.active:after {border:2px solid #000; border-bottom:0; border-left:0;}
+.toggle_cont {padding:5px 0 15px 0;}
+
+.bodyContent {padding:80px 30px 30px 30px;}
+
+.tab_links_box {border-radius:6px; overflow:hidden;}
+.tab_links {display:flex;}
+.tab_links li {flex:1;}
+.tab_links li > a {display:table; width:100%; background-color:#F5F5F5;}
+.tab_links li > a > span {display:table-cell; height:60px; vertical-align:middle; color:#000; font-weight:500; font-size:14px;}
+.tab_links li.active a {background-color:#00A2BE;}
+.tab_links li.active span {color:#fff;}
+
+.self-sufficient-ready.modify210511 ul li:nth-child(1):before {background-image:url('/images/directShop/img_ready_usim.png');}
+.self-sufficient-ready.modify210511 ul li:nth-child(2):before {background-image:url('/images/directShop/img_ready_credit.png');}
+.self-sufficient-ready.modify210511 ul li:nth-child(3):before {background-image:url('/images/directShop/img_ready_number.png');}
+
+.self-sufficient-ready.usim {padding-top:30px; padding-left:35px;}
+
+.step-top-msg2 {padding-top:30px; margin-bottom:30px;}
+.step-top-msg2 strong {font-size:20px; font-weight:500;}
+.step-top-msg2 p {font-size:15px; margin-top:8px;}
+
+
+.self-sufficient-ex.modify210511 {margin-top:40px;}
+.self-sufficient-ex.modify210511 li:before {background: url('/images/directShop/pic_self_210511.png') 0 0 no-repeat; background-size: 200px auto;}
+.self-sufficient-ex.modify210511 li:nth-child(1):before {background-position: 0 0;}
+.self-sufficient-ex.modify210511 li:nth-child(2):before {background-position: right 0;}
+.self-sufficient-ex.modify210511 li:nth-child(3):before {background-position: 0 -109px;}
+.self-sufficient-ex.modify210511 li:nth-child(4):before {background-position: right -109px;}
+.self-sufficient-ex.modify210511 li:nth-child(5):before {background-position: 0 bottom;}
+
+.self-sufficient-time {margin:35px 0;}
+
+.self-sufficient-movie{margin-bottom:35px;}
+.self-sufficient-movie .youtube-movie-area{position:relative;width:100%;height:0;padding-bottom:56.25%;}
+.self-sufficient-movie .youtube-movie-area iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
+
+.self_link {margin:15px 0 0 -5px;}
+.self_link a {display:inline-block; height:35px; padding:0 14px; background-color:#fff; border-radius:20px; margin:5px 0 0 5px;}
+.self_link span {display:inline-block; height:35px; line-height:35px; color:#00A2BE;}
+
+.self-sufficient-guide {padding:50px 50px 30px 40px; margin:0 -30px 20px; background-color:#F4F4F4; color:#000;}
+.self-sufficient-guide .mark {position:relative; padding-left:17px;;}
+.self-sufficient-guide .mark:after {content:"※"; position:absolute; top:0; left:0;}
+.self-sufficient-guide .num {margin-top:15px; padding-left:10px;}
+.self-sufficient-guide .num li {margin-top:8px;}
+.self-sufficient-guide .num li:first-child {margin-top:0;}
+.self-sufficient-guide .num li > span {display:inline-block; font-size:11px; width:21px; height:20px; line-height:20px; text-align:center;; background-color:#666; border-radius:50%; color:#fff; margin-right:3px; vertical-align:1px;}
+
+
+.direct_rate_box {background-color:#f5f5f5; padding:50px 30px;}
+.direct_rate_visual img {width:100%;}
+
+@media (max-width: 768px) {
+  .direct_rate_box,
+  .direct_rate_visual,
+  .direct_member_rate_box {margin:0 -30px;}
+}
+
+.direct_rate_tit {color:#000; text-align:center;}
+.direct_rate_tit p {font-size:20px; font-weight:bold;}
+.direct_rate_tit strong {font-size:30px; font-weight:bold;}
+
+.btnbox {display:flex; margin-top:25px;}
+.btnbox a {flex:1; margin-left:5px;}
+.btnbox a:first-child {margin-left:0;}
+
+.direct_rate_list {margin-top:65px;}
+.direct_rate_list li {margin-top:35px;}
+.direct_rate_list li:first-child {margin-top:0;}
+.direct_rate_list li .tit {display:block; text-align:center; font-size:22px; font-weight:bold;}
+.direct_rate_list li .img {margin-top:20px; padding:40px; padding-top:0;}
+.direct_rate_list li .img img {width:100%;}
+@media (max-width: 768px) {
+  .direct_rate_list li .img {padding:0;}
+}
+
+.list-type-ast > li {position:relative; margin-top:8px; padding-left:10px;; font-size:14px;}
+.list-type-ast > li:first-child {margin-top:0;}
+.list-type-ast > li:after {content:"*"; position:absolute; top:2px; left:0;}
+
+.coupon-section .title_txt {text-align:center; font-size:18px; font-weight:bold;}
+.coupon-section .title {text-align:center; font-size:25px; margin:5px 0 30px 0;}
+
+.direct_rate_gift {text-align:center; margin:65px 0 0 0;}
+.direct_rate_gift p {font-size:18px; font-weight:bold;}
+.direct_rate_gift strong {font-size:25px; font-weight:bold;}
+
+/*무약정플랜 요금제 변경 안내 페이지*/
+.direct_member_rate_box .direct_rate_list{margin-top:43px;padding:37px 0 40px;background-color:#f5f5f5;}
+.direct_member_rate_box .direct_rate_list li .img{padding:0 30px;}
+.direct_member_rate_box .member_rate_check{margin:50px 30px 0;}
+.direct_member_rate_box .member_rate_check .cont{margin-top:20px;padding:30px 20px 39px;background-color:#fff;box-shadow:0px 3px 6px #0000000f;border:1px solid #E7EAF4;border-radius:10px;}
+.direct_member_rate_box .member_rate_check .txt{font-size:14px;color:#000;line-height:19px;}
+.direct_member_rate_box .member_rate_check .bold_txt{display:block;margin-top:5px;font-size:16px;color:#000;font-weight:500;line-height:21px;}
+.direct_member_rate_box .member_rate_check .img{margin-top:15px;width:100%;}
+.direct_member_rate_box .member_rate_check .img img{width:100%;}
+.direct_member_rate_box .member_rate_check .notice{margin-top:15px;padding:15px 0;border-top:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7;}
+.direct_member_rate_box .member_rate_check .notice strong{display:block;margin-bottom:15px;font-size:15px;color:#222;line-height:23px;}
+.direct_member_rate_box .member_rate_check .notice li{position:relative;padding-left:13px;font-size:13px;color:#000;line-height:20px;}
+.direct_member_rate_box .member_rate_check .notice li + li{margin-top:6px;}
+.direct_member_rate_box .member_rate_check .notice li:before{content:'*';display:block;position:absolute;left:0;top:6px;line-height:1;}
+
+/*데이터쉐어링 개선*/
+.data-sharing-wrap .step-top-msg{margin-bottom:65px;}
+.data-sharing-wrap h2.title{margin-bottom:15px;line-height:34px;}
+
+#content.sharing .faq-area{margin:20px 0 0;padding:0;background:none;border-top:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;}
+#content.sharing .faq-area dt , #content.sharing .faq-area dd{margin-bottom:0;}
+#content.sharing .faq-area dt{padding:15px 30px 15px 0;font-size:15px;color:#222;line-height:22px;}
+#content.sharing .faq-area .btn-arrow:after{right:5px;}
+#content.sharing .faq-area dd{padding:0 0 15px 0;}
+#content.sharing .faq-area dt.selected + dd:before{display:none;}
+#content.sharing .faq-area .b_btn{height:18px;margin:0 8px;padding:0 8px;font-size:11px;color:#fff;line-height:18px;background:#000;border-radius:5px;}
+
+.sharing-btm-list{margin-top:20px;}
+.sharing-btm-list li{position:relative;margin-top:10px;padding-left:15px;font-size:13px;color:#666;line-height:20px;}
+.sharing-btm-list li:first-child{margin-top:0;}
+.sharing-btm-list li:before{content:'';display:block;position:absolute;left:0;top:9px;width:4px;height:4px;background:#666;}
+.sharing-btm-list02{margin-top:20px;}
+.sharing-btm-list02 strong{display:block;font-size:15px;color:#666;line-height:24px;}
+.sharing-btm-list02 ul{margin-top:15px;}
+.sharing-btm-list02 li{position:relative;padding-left:10px;font-size:13px;color:#666;line-height:20px;}
+.sharing-btm-list02 li:before{content:'-';position:absolute;left:0;top:0;}
+
+.data-sharing-noti .noti-list{padding:20px 25px;background:#fff;border:1px solid #d9d9d9;border-radius:10px;}
+.data-sharing-noti li{position:relative;margin-top:7px;padding-left:13px;font-size:13px;line-height:20px;color:#666;z-index: 1;}
+.data-sharing-noti li:first-child{margin-top:0;}
+.data-sharing-noti li:before{content:'*';display:inline-block;position:absolute;left:0;top:3px;}
+.data-sharing-noti li em{color:#00a2be;}
+.data-sharing-noti li em.accent {color:#666;box-shadow:inset 0px -10px 0px #5DDFDE;}
+
+
+.data-sharing-store{margin-top:50px;padding:40px 30px;background:#00a2be;}
+.data-sharing-store h2.title{margin-bottom:10px;font-size:24px;line-height:34px;color:#fff;}
+.data-sharing-store p{font-size:14px;color:#fff;opacity:70%;line-height:21px;}
+.data-sharing-store .btn{margin-top:20px;overflow:hidden;}
+.data-sharing-store .btn a{display:inline-block;float:left;width:calc(50% - 7px);height:38px;margin-top:15px;font-size:13px;color:#00a2be;text-align:center;line-height:38px;background:#fff;border-radius:50px;}
+.data-sharing-store .btn a:nth-child(even){float:right;}
+.data-sharing-store .btn a:first-child , .data-sharing-store .btn a:nth-child(2){margin-top:0;}
+
+.data-sharing{margin:50px 0 0;}
+.data-sharing h2.title{margin-bottom:20px;}
+
+.data-sharing-money{margin:65px 0 0;}
+
+.data-sharing-money .faq-area{padding:2px 30px 20px 30px;}
+.data-sharing-money .faq-area dt, .data-sharing-money .faq-area dd{padding-left:25px;}
+.data-sharing-money .faq-area .infor-list li{margin:7px 0 0;line-height:20px;}
+.data-sharing-money .faq-area .infor-list > li:first-child{margin-top:0;}
+.data-sharing-money .faq-area .infor-list > li:before{content:"※";top:2px;width:auto;height:auto;font-size:13px;color:#808080;background:none;}
+.data-sharing-money .faq-area .infor-list > li li{position:relative;}
+.data-sharing-money .faq-area .infor-list > li li:before{content:"";position:absolute;top:7px;left:-10px;width:4px;height:4px;background-color:#808080;border-radius:50%;}
+
+.data-sharing-faq{margin-top:40px;}
+
+.sharing-title{margin-bottom:13px;font-size:13px;color:#666;letter-spacing:-0.52px;}
+
+.parent-line-search .t-txt{margin-top:15px;font-size:16px;color:#000;line-height:24px;}
+.parent-line-search .parent-line-list{margin-top:40px;}
+.parent-line-search .parent-line-list li.checkbox{display:block;}
+.parent-line-search .parent-line-list li.checkbox + li.checkbox{margin-top:24px;}
+.parent-line-search .parent-line-list li.checkbox label{padding-left:50px;font-size:0;}
+.parent-line-search .parent-line-list li.checkbox label span{display:inline-block;font-size:16px;color:#dcdddc;}
+.parent-line-search .parent-line-list li.checkbox label .b-txt{color:#000;}
+.parent-line-search .parent-line-list li.checkbox label span + span{position:relative;padding-left:28px;}
+.parent-line-search .parent-line-list li.checkbox label span + span:before{content:'';display:block;position:absolute;left:10px;top:50%;width:8px;height:1px;background:#dcdddc;}
+.parent-line-search .link{margin-top:40px;}
+
+.tariff-system .tariff-system-check{margin-top:20px;}
+.tariff-system .tariff-system-check .checkbox{display:block;}
+.tariff-system .tariff-system-check .checkbox input{left:auto;right:25px;}
+.tariff-system .tariff-system-check .checkbox label{display:block;width:100%;padding:30px 55px 30px 25px;font-size:20px;color:#000;font-weight:bold;border:1px solid #e4e4e4;border-radius:10px;}
+.tariff-system .b-txt{margin-top:25px;font-size:13px;color:#666;line-height:24px;}
+
+.tariff-system-table{margin-top:50px;}
+.tariff-system-table .table-guide-desc{padding-bottom:13px;font-size:12px;text-align:right;}
+.tariff-system .table-plan {font-size:11px;border-collapse:collapse;border-bottom:2px solid #8f8f8f;text-align:center;background:#fff;}
+.tariff-system .table-plan caption.invisible{position:absolute;display:inline-block;width:0;height:0;margin:-1px;font-size:0;line-height:0;clip:rect(0 0 0 0);overflow:hidden;}
+.tariff-system .table-plan thead th:first-child{background-color:#536894;}
+.tariff-system .table-plan thead th{padding:3px;color:#fff;font-size:11px;font-weight:normal;border-left:1px solid #fff;background-color:#4d5973;}
+.tariff-system .table-plan tbody tr {border-bottom:1px solid #c8c8c8;}
+.tariff-system .table-plan tbody tr th {padding:3px;color:#222;font-weight:bold;border-left:0;}
+.tariff-system .table-plan tbody tr.tbody-head th{background:#4d5973;color:#fff;}
+.tariff-system .table-plan tbody tr td {padding:3px;color:#666;vertical-align:middle;border-left:1px solid #c8c8c8;}
+.tariff-system .table-plan .fare-list{padding:0 5px;text-align:left;}
+.tariff-system .table-plan .fare-list li{position:relative;margin-top:5px;padding-left:5px;}
+.tariff-system .table-plan .fare-list li:first-child{margin-top:0;}
+.tariff-system .table-plan .fare-list li:before{content:'';display:block;position:absolute;left:0;top:7px;width:2px;height:2px;background:#666;}
+
+.number-confirm .number-confirm-box{margin-top:20px;padding:18px;font-size:20px;color:#000;line-height:25px;text-align:center;background:#f4f4f4;border-radius:5px;}
+
+.done-notice .sharing-list li{position:relative;padding-left:10px;font-size:13px;color:#666;line-height:19px;}
+.done-notice .sharing-list li:before{content:'-';display:block;position:absolute;left:0;top:0;}
+
+.hope-notice-area strong{display:block;margin-bottom:15px;font-size:15px;line-height:24px;color:#666;}
+.hope-notice-area li{position:relative;padding-left:10px;font-size:13px;color:#666;line-height:19px;}
+.hope-notice-area li:before{content:'-';display:block;position:absolute;left:0;top:0;}
+
+.sharing-complete{padding-top:45px;}
+.sharing-complete .ico-txt{padding-top:65px;font-size:20px;line-height:28px;color:#000;text-align:center;font-weight:bold;background:url('../../images/directShop/img_sharing_complete.png') no-repeat center 0;background-size:45px auto;}
+.sharing-complete .notice{margin-top:50px;}
+.sharing-complete .notice strong{display:block;margin-bottom:14px;font-size:15px;color:#666;line-height:24px;}
+.sharing-complete .notice li{position:relative;padding-left:9px;font-size:13px;color:#666;line-height:20px;}
+.sharing-complete .notice li:before{content:'-';position:absolute;left:0;top:0;display:block;}
+
+@media (max-width: 768px) {
+  .data-sharing-store{margin:40px -30px 0;}
+}
+
+/*반값초이스 북GO 개통*/
+.halfbook-top-msg{padding:12px 0 230px;font-size:27px;color:#000;line-height:42px;background:url('../../images/directShop/bg_halfbook.jpg') no-repeat 50% 100%;background-size:308px;}
+.halfbook-top-msg + .btn{margin-top:25px;}
+.halfbook-btnbtm-msg{margin-top:20px;font-size:13px;color:#666;line-height:20px;}
+.halfbook-notice{margin:50px -30px 0;padding:50px 30px;background:#f8f8f8;}
+.halfbook-notice strong{display:block;margin-bottom:15px;font-size:15px;color:#222;line-height:23px;}
+.halfbook-notice li{position:relative;padding-left:10px;font-size:13px;color:#000;line-height:20px;}
+.halfbook-notice li.f-red{color:#f01c45;}
+.halfbook-notice li + li{margin-top:6px;}
+.halfbook-notice li:before{content:'*';display:block;position:absolute;left:0;top:3px;}

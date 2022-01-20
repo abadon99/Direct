@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>KT 다이렉트 퍼블리싱가이드</title>
+
+    <link href="../common/css/ini.min.css" rel="stylesheet">
+    <link href="../common/css/guide.css" rel="stylesheet">
+    <link href="../common/css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="../common/css/shThemeRDark.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../common/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../common/js/shCore.js"></script>
+    <script type="text/javascript" src="../common/js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../common/js/shBrushCss.js"></script>
+    <script type="text/javascript" src="../common/js/shBrushXml.js"></script>
+	<script type="text/javascript" src="../common/js/guide.js"></script>
+    <script>
+        SyntaxHighlighter.all()
+    </script>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- Header -->
+		<header id="header">
+			<h1>KT 다이렉트 퍼블리싱가이드</h1>
+			<!-- Gnb -->
+			<nav class="gnb">
+				<ul>
+					<li><a href="guide_coding_list.html">코딩리스트</a></li>
+					<li class="current"><a href="guide_roul_intro.html">가이드 기본규칙</a></li>
+					<li><a href="guide_plan_codeSet.html">설계가이드</a></li>
+					<li><a href="guide_library_table.html">라이브러리</a></li>
+				</ul>
+			</nav>
+			<!-- //Gnb -->
+		</header>
+		<!-- //Header -->
+
+		<div id="container">
+			<!-- Lnb -->
+			<aside id="lnb">
+				<ul class="depth01">
+					<li>가이드 기본규칙
+						<ul class="depth02">
+							<li><a href="guide_roul_intro.html">기본정책</a></li>
+							<li class="current"><a href="guide_roul_standard.html">표준 규칙사항</a></li>
+							<li><a href="guide_roul_code.html">코드 규칙사항</a></li>
+							<li><a href="guide_roul_name.html">네임 규칙사항</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+			<!-- //Lnb -->
+
+			<article class="content">
+				<div class="p_title">
+					<h2>표준 규칙사항</h2>
+				</div>
+
+				<!-- 문서 기본 사항 -->
+				<section class="s_block">
+					<div class="s_title">
+						<h3>문서 기본 사항</h3>
+					</div>
+					<div class="s_content">
+						<h4 class="s_subTitle01">문서 기본구조</h4>
+						<div class="code_box">
+							<pre class="brush: html">
+								&lt;!DOCTYPE html&gt;
+								&lt;html lang="ko"&gt;
+								&lt;head&gt;
+									다이렉트 헤드에 필요한 기본 사항 입력
+								&lt;/head&gt;
+								&lt;body&gt;
+									다이렉트 본문 구조에 대한 기본 사항 입력
+								&lt;/body&gt;
+								&lt;/html&gt;
+							</pre>
+						</div>
+						<ul class="desc_list01">
+							<li>문서의 기본 구조는 html5 doctype을 기본으로 한다.</li>
+							<li>문서의 encoding 은 UTF-8로 선언한다. </li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- 시멘틱 마크업 -->
+				<section class="s_block">
+					<div class="s_title">
+						<h3>시멘틱 마크업</h3>
+					</div>
+					<div class="s_content">
+						<ul class="desc_list01">
+							<li>모든 문서에 사용된 태그들은 적절한 html요소를 올바르게 사용하여 그 의미와 용도에 맞게 마크업한다.</li>
+						</ul>
+						<div class="tbl_type01">
+							<table>
+								<caption>시멘틱 마크업</caption>
+								<colgroup>
+									<col style="width:20%">
+									<col style="width:20%">
+									<col style="width:20%">
+									<col style="width:auto">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">종류</th>
+										<th scope="col">구분</th>
+										<th scope="col">태그</th>
+										<th scope="col">설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="7">그룹</td>
+										<td>머리글</td>
+										<td>header</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>바닥글</td>
+										<td>footer</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>연속적 컨텐츠형태</td>
+										<td>section</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>독립적 컨텐츠형태</td>
+										<td>article</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>보조적 컨텐츠형태</td>
+										<td>aside</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>블록형태</td>
+										<td>div</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>인라인형태</td>
+										<td>span</td>
+										<td></td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<td rowspan="6">제목</td>
+										<td>제목 1레벨</td>
+										<td>h1</td>
+										<td>페이지 제목 최상위 레벨(문서 필수 요소)</td>
+									</tr>
+									<tr>
+										<td>제목 2레벨</td>
+										<td>h2</td>
+										<td>페이지 제목 수준</td>
+									</tr>
+									<tr>
+										<td>제목 3레벨</td>
+										<td>h3</td>
+										<td>컨텐츠 핵심 제목 수준</td>
+									</tr>
+									<tr>
+										<td>제목 4레벨</td>
+										<td>h4</td>
+										<td>컨텐츠 부 제목 수준</td>
+									</tr>
+									<tr>
+										<td>제목 5레벨</td>
+										<td>h5</td>
+										<td>컨텐츠 상세 제목 수준</td>
+									</tr>
+									<tr>
+										<td>제목 6레벨</td>
+										<td>h6</td>
+										<td>컨텐츠 상세 제목 수준</td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<td rowspan="3">순서</td>
+										<td>순서 없는 리스트</td>
+										<td>ul, li</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>순서 있는 리스트</td>
+										<td>ol, li</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>정의 리스트</td>
+										<td>dl, dt, dd</td>
+										<td></td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<td rowspan="4">컨텐츠<br>(Block Type)</td>
+										<td>단락</td>
+										<td>p</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>주소</td>
+										<td>address</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>사진의 내용 표시</td>
+										<td>figure</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>사진의 제목 표시</td>
+										<td>figcaption</td>
+										<td></td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<td rowspan="6">컨텐츠<br>(Inline Type)</td>
+										<td>링크</td>
+										<td>a</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>중요한</td>
+										<td>strong</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>일반강조</td>
+										<td>em</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>의미없는 마크업</td>
+										<td>i</td>
+										<td>실제 용도에 의미를 두지는 않으며 아이콘 등에 사용한다.</td>
+									</tr>
+									<tr>
+										<td>정의</td>
+										<td>dfn</td>
+										<td>title속성을 사용하여 용어를 정의한다.</td>
+									</tr>
+									<tr>
+										<td>작은 텍스트</td>
+										<td>small</td>
+										<td></td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<td rowspan="5">서식<br></td>
+										<td>서식 그룹</td>
+										<td>fieldset</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>서식 제목</td>
+										<td>legend</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>라벨</td>
+										<td>label</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>입력, 선택 컨트롤</td>
+										<td>input, textarea, select</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>버튼</td>
+										<td>button</td>
+										<td>일반 버튼타입과 전송타입의 버튼을 구분한다.</td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<td rowspan="11">표<br></td>
+										<td>표</td>
+										<td>table</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>표 제목</td>
+										<td>caption</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>표 열 그룹</td>
+										<td>colgroup</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>표 열</td>
+										<td>col</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>표 헤더</td>
+										<td>thead</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>표 본문</td>
+										<td>tbody</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>표 푸터</td>
+										<td>tfoot</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>표 행</td>
+										<td>tr</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>표 제목셀</td>
+										<td>th</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>표 내용셀</td>
+										<td>td</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+			</article>
+		</div>
+	</div>
+</body>
+</html>

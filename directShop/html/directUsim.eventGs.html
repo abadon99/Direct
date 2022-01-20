@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="Description" content="KT 공식 온라인몰 KT Shop">
+	<meta name="keywords" content="KT, KT공식, KT직영">
+
+	<title>GS25 매장 찾기</title>
+	<!-- style -->
+	<link rel="stylesheet" href="https://direct.kt.com/directShop/css/default.css">
+	<link rel="stylesheet" href="https://direct.kt.com/directShop/css/contents.css">
+	<link rel="stylesheet" href="https://direct.kt.com/directShop/css/popup.css">
+	<link rel="stylesheet" href="https://direct.kt.com/directShop/css/swiper.css">
+
+    <!-- js -->
+	<script src="https://direct.kt.com/directShop/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="https://direct.kt.com/directShop/js/ui/common_front.js" ></script>
+	<script src="https://direct.kt.com/directShop/js/ui/ui.js" ></script>
+	<script src="https://direct.kt.com/directShop/js/ui/pub.js" ></script>
+	<script src="https://direct.kt.com/directShop/js/lib/swiper.js" ></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e8a1a7e094550f88ecaa5c7e949fb3b8&libraries=services,clusterer"></script>
+
+	<style>
+		body, html{min-width:auto;}
+		.popup-gsmap{box-sizing:border-box;background-color:#fff;border-radius:13px;padding:10px 0 20px;}
+		.map-wrap{height:280px;background-color:#ddd;margin-bottom:30px;}
+		.arrows:after{content:"";display:inline-block;border:2px solid #222;border-left:0;border-bottom:0;}
+		.arrows.arrows-down:after{width:5px;height:5px;margin-left:3px;transform:translate(4px,-4px) rotate(135deg);}
+		.num-box, .store-info-list .pos{display:inline-block;vertical-align:middle;width:20px;height:23px;padding-bottom:3px;text-align:center;border-radius:10px;color:#fff;font-size:11px;line-height:20px;background:url(https://shop.kt.com/images/kplace/bg_pos.png) 0 0 no-repeat;background-size:20px 23px}
+		.store-list-area .arrows{width:100%;margin-top:35px;padding:9px 0;color:#666;text-align:center;font-size:14px;border:1px solid #d1d1d1;background-color:#fff;border-radius:10px}
+		/*.store-info-list{overflow-y:auto;max-height:300px;}*/
+		.store-info-list > li{margin-top:25px;}
+		.store-info-list > li:first-child{margin-top:0;}
+		.store-info-list .store_tit{display:block;margin-bottom:7px;color:#000;font-size:16px;font-weight:bold;text-align:left;}
+		.store-info-list .store_addr{position:relative;padding:15px 14px 15px 28px;border-bottom:1px solid #e0e0e0;background-color:#f6f6f6;font-size:14px;color:#000;}
+		.store-info-list .store_addr:before{position:absolute;left:14px;top:17px;content:'';display:inline-block;width:11px;height:16px;background:url(https://shop.kt.com/images/kplace/icon_pos_3.png) 0 0 no-repeat;background-size:11px auto;}
+		.map-search-wrap{margin-bottom:30px;}
+		.map-search-wrap:after{display:block;content:'';clear:both;}
+		.map-search{float:right;width:63%;position:relative;padding-bottom:5px;padding-right:50px;border-bottom:2px solid #222}
+		.map-search input{height:52px;width:100%;box-sizing:border-box;border:0;font-size:15px;color:#222;font-weight:bold;}
+		.map-search .btn{position:absolute;top:0;right:0;width:52px;height:52px;background:url(https://shop.kt.com/images/kplace/btn_search.png) center center no-repeat}
+		.map-category{position:relative;float:left;width:35%;z-index:10;}
+		.map-category .area-name{display:block;height:59px;line-height:59px;padding-left:5px;border-bottom:2px solid #222;color: #dcdddc;text-align:left;font-size:15px;font-weight:bold;box-sizing:border-box}
+		.map-category .area-name.on{color:#000;}
+		.map-category .select-wrap{display:none;opacity:0;position:absolute;width:100%;padding:0 7px;overflow:hidden;box-sizing:border-box;border-radius:0  0 9px 9px;box-shadow:0 6px 8px rgba(0,0,0,0.1);background-color:#fff;animation:clickEffect 0.2s ease;}
+		.map-category.on .select-wrap{display:block;opacity:1;}
+		.map-category.arrows-down:after{position:absolute;right:15px;top:50%;}
+		.map-category.arrows-down.on:after{transform:rotate(-45deg);right:12px}
+		.map-category .map-select{overflow-y:auto;max-height:250px;animation:clickHeight 0.2s ease;}
+		.map-category .map-select > a{display:block;padding:10px;font-size:16px;border-bottom:1px solid #e5e5e5;color:#888;}
+		.map-category .map-select > a.selected{color:#000;}
+		.map-category .map-select::-webkit-scrollbar{width: 5.2px;} /* 스크롤 바 */
+		.map-category .map-select::-webkit-scrollbar-track{background-color:#fff;} /* 스크롤 바 밑의 배경 */
+		.map-category .map-select::-webkit-scrollbar-thumb{background: #ddd; border-radius:100px;} /* 실질적 스크롤 바 */
+		.map-category .map-select::-webkit-scrollbar-thumb:hover{background: #404040;} /* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
+		.map-category .map-select::-webkit-scrollbar-thumb:active{background: #808080;} /* 실질적 스크롤 바를 클릭할 때 */
+		.map-category .map-select::-webkit-scrollbar-button{display: none;} /* 스크롤 바 상 하단 버튼 */
+		@keyframes clickEffect{
+			0%{opacity:0;}
+			100%{opacity:1;}
+		}
+		@keyframes clickHeight{
+			0%{max-height:0;}
+			100%{max-height:250px;}
+		}
+	</style>
+	<script type="text/javascript">
+		var sido;
+		var searchVal;
+		var isSearch = false;
+
+		$(document).ready(function($) {
+			var selectText = $('.map-select .selected').text();
+			$('.area-name').text(selectText);
+			$('.area-name').on('click', function(){
+				$(this).parent().toggleClass('on');
+			});
+			$('.map-select > a').on('click', function(){
+				var selectText = $(this).text();
+				$(this).addClass('selected').siblings().removeClass('selected');
+				$(this).closest('.map-category').removeClass('on');
+				$('.area-name').addClass('on').text(selectText);
+			});
+
+			$("#btnTypingSearch").on("click", function() {
+				// 페이지 초기화
+				$("#pageNo").val(1);
+
+				// 검색어
+				sido = $("div.map-select > a.selected").text();
+				if("지역명" == sido) {
+					sido = "";
+				}
+				searchVal = $("#txtTypingSearch").val();
+
+				var varData = {
+					sido : sido
+					, searchVal : searchVal
+					, pageNo : $("#pageNo").val()
+				};
+
+				$.ajax({
+				  url : "/direct/getVndrList.json"
+					, data : varData
+					, type : "post"
+					, contentType : 'application/x-www-form-urlencoded;charset=UTF-8'
+					, cache : false
+					, success: function(data){
+						data = JSON.parse(data);
+						$("ul.store-info-list").empty();
+						var vndrCnt = data.vndrCnt;
+						if(0 == vndrCnt) {
+							$("ul.store-info-list").html("<li>검색하신 GS매장이 없습니다.</li>");
+							$("#moreBtn").hide();
+						} else {
+							var gsstorList = data.gsstorList;
+							var bf = new Array();
+							for (var i = 0 ; i < gsstorList.length ; i++) {
+								bf.push('<li>');
+								bf.push('	<a href="javascript:void(0);" class="store_tit">'+gsstorList[i].gsstoreNm+'</a>');
+								bf.push('	<p class="store_addr">'+gsstorList[i].gsstoreAdr+'</p>');
+								bf.push('</li>');
+							}
+							$("ul.store-info-list").html(bf.join(''));
+							var lowCnt = $("ul.store-info-list > li").length;
+							$("#moreBtn").text("더보기("+lowCnt+" / "+vndrCnt+")");
+							if(lowCnt == vndrCnt) {
+								$("#moreBtn").hide();
+							} else {
+								$("#moreBtn").show();
+							}
+
+							// 첫 로딩 후 조회 시 첫번째 대리점 선택 처리
+							if($("a.store_tit").eq(0).length > 0 && isSearch) {
+								//$("a.store_tit").eq(0).trigger("click");
+							}
+							isSearch = true;
+						}
+					}
+				});
+			});
+
+			// 대리점 리스트 조회
+			$("#btnTypingSearch").trigger("click");
+
+			// 더보기
+			$("#moreBtn").on("click", function() {
+				var pageNo = $("#pageNo").val();
+				pageNo = parseInt(pageNo)+1;
+				$("#pageNo").val(pageNo);
+
+				var varData = {
+					sido : sido
+					, searchVal : searchVal
+					, pageNo : pageNo
+				};
+
+				$.ajax({
+				  url : "/direct/getVndrList.json"
+					, data : varData
+					, type : "post"
+					, contentType : 'application/x-www-form-urlencoded;charset=UTF-8'
+					, cache : false
+					, success: function(data){
+						data = JSON.parse(data);
+
+						var vndrCnt = data.vndrCnt;
+
+						var gsstorList = data.gsstorList;
+						var bf = new Array();
+						for (var i = 0 ; i < gsstorList.length ; i++) {
+							bf.push('<li>');
+							bf.push('	<a href="javascript:void(0);" class="store_tit">'+gsstorList[i].gsstoreNm+'</a>');
+							bf.push('	<p class="store_addr">'+gsstorList[i].gsstoreAdr+'</p>');
+							bf.push('</li>');
+						}
+						$("ul.store-info-list").append(bf.join(''));
+						var lowCnt = $("ul.store-info-list > li").length;
+						$("#moreBtn").text("더보기("+lowCnt+" / "+vndrCnt+")");
+						if(lowCnt == vndrCnt) {
+							$("#moreBtn").hide();
+						} else {
+							$("#moreBtn").show();
+						}
+					}
+				});
+
+			});
+		});
+
+		$(window).on("load", function() {
+			// 내부망을 위해 테스트
+			if("object" == typeof daum) {
+				// 지도 만들기
+				var mapContainer = $("#map-wrap")[0];
+				var mapOption;
+				var map;
+
+				mapOption = {
+						center: new daum.maps.LatLng(33.450701, 126.570667) // 임의의 지도 중심좌표 , 제주도 다음본사로 잡아봤다.
+						, level: 4 // 지도의 확대 레벨
+					};
+				// 지도 생성
+				map = new daum.maps.Map(mapContainer, mapOption);
+
+				$(document).on("click", "a.store_tit", function (e) {
+					var addr = $(this).next().text();
+
+					// 주소-좌표 변환 객체를 생성
+					var geocoder = new daum.maps.services.Geocoder();
+
+					// 주소로 좌표를 검색
+					geocoder.addressSearch(addr, function(result, status) {
+						// 정상적으로 검색이 완료됐으면,
+						if (status == daum.maps.services.Status.OK) {
+							var coords = new daum.maps.LatLng(result[0].y, result[0].x);
+
+							// 결과값으로 받은 위치를 마커로 표시합니다.
+							var marker = new daum.maps.Marker({
+								map: map,
+								position: coords
+							});
+
+							marker.setMap(map);
+
+							/* 인포윈도우로 장소에 대한 설명표시
+							var infowindow = new daum.maps.InfoWindow({
+								content: '<div class="num-box">A</div>'
+							});
+
+							infowindow.open(map,marker);
+							*/
+
+							// 지도 중심을 이동
+							map.setCenter(coords);
+						}
+					});
+				});
+			} else {
+				$(document).on("click", "a.store_tit", function (e) {
+					alert($(this).next().text());
+				});
+			}
+
+			// 대리점이 존재하면 첫번쨰 대리점 선택
+			if($("a.store_tit").eq(0).length > 0) {
+				//$("a.store_tit").eq(0).trigger("click");
+			}
+		});
+	</script>
+</head>
+<body>
+	<div class="popup-gsmap">
+		<input type="hidden" id="pageNo" value="1" />
+		<div class="map-search-wrap">
+			<div class="map-category arrows arrows-down">
+				<a href="#" class="area-name"></a>
+				<div class="select-wrap">
+					<div class="map-select" tabindex="0">
+						<a href="javascript:void(0);" class="selected">지역명</a>
+						<a href="javascript:void(0);">서울</a>
+						<a href="javascript:void(0);">경기</a>
+						<a href="javascript:void(0);">인천</a>
+						<a href="javascript:void(0);">강원</a>
+						<a href="javascript:void(0);">충북</a>
+						<a href="javascript:void(0);">충남</a>
+						<a href="javascript:void(0);">세종</a>
+						<a href="javascript:void(0);">대전</a>
+						<a href="javascript:void(0);">경북</a>
+						<a href="javascript:void(0);">경남</a>
+						<a href="javascript:void(0);">대구</a>
+						<a href="javascript:void(0);">부산</a>
+						<a href="javascript:void(0);">울산</a>
+						<a href="javascript:void(0);">광주</a>
+						<a href="javascript:void(0);">전북</a>
+						<a href="javascript:void(0);">전남</a>
+						<a href="javascript:void(0);">제주</a>
+					</div>
+				</div>
+			</div>
+			<div class="map-search">
+				<input type="text" id="txtTypingSearch" title="주소 또는 매장명 입력" placeholder="주소 또는 매장명 입력">
+				<button type="button" id="btnTypingSearch" class="btn"><span class="hidden">검색</span></button>
+			</div>
+		</div>
+		<div id="map-wrap" class="map-wrap"></div>
+		<div class="store-list-area">
+			<ul class="store-info-list">
+				<li>
+					<a href="#" class="store_tit"><span class="pos">A</span> 강남아트</a>
+					<p class="store_addr">서울 강남구 강남대로102길 40, 1층 (역삼동 618-3)</p>
+				</li>
+				<li>
+					<a href="#" class="store_tit"><span class="pos">B</span> 강남아트</a>
+					<p class="store_addr">서울 강남구 강남대로102길 40, 1층 (역삼동 618-3)</p>
+				</li>
+				<li>
+					<a href="#" class="store_tit"><span class="pos">C</span> 강남아트</a>
+					<p class="store_addr">서울 강남구 강남대로102길 40, 1층 (역삼동 618-3)</p>
+				</li>
+			</ul>
+			<button type="button" class="arrows arrows-down" id="moreBtn" style="">더보기(1 / 6)</button>
+		</div>
+	</div>
+</body>
+</html>
