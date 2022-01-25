@@ -143,3 +143,23 @@ function menuSub(){
 	})
 }
 
+$(window).on('scroll', function(){
+	scrNav();
+});
+
+function scrNav(){
+	var sTop = $(window).scrollTop() + 100;
+	var link = $('.depth02 > li');
+
+    $('section').each(function(e) {
+		var offset = $(this).offset().top-1,
+			height = $(this).height();
+		if(sTop >= offset && sTop < offset + height) {
+			link.removeClass('current');
+			$('.depth02 > li').eq(e).addClass('current');
+		}
+	});
+}
+
+
+

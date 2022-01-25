@@ -54,7 +54,7 @@
 				<ul class="depth01">
 					<li><a href="javascript:;">기본 정책 사항</a>
 						<ul class="depth02">
-							<li><a href="">기본 정책</a></li>
+							<li class="current"><a href="">기본 정책</a></li>
 							<li><a href="">퍼블리싱 규칙사항</a></li>
 							<li><a href="">Html 규칙사항</a></li>
 							<li><a href="">CSS 규칙사항</a></li>
@@ -87,7 +87,7 @@
 				</div>
 
 				<!-- 기본정책 -->
-				<section class="s_block">
+				<section id="section-1" class="s_block">
 					<div class="s_title">
 						<h3>기본정책</h3>
 					</div>
@@ -142,7 +142,7 @@
 				</section>
 
 				<!-- 퍼블리싱 규칙사항 -->
-				<section class="s_block">
+				<section id="section-2" class="s_block">
 					<div class="s_title">
 						<h3>퍼블리싱 규칙사항</h3>
 					</div>
@@ -186,7 +186,7 @@
 				</section>
 
 				<!-- Html 규칙사항 -->
-				<section class="s_block">
+				<section id="section-3" class="s_block">
 					<div class="s_title">
 						<h3>Html 규칙사항</h3>
 					</div>
@@ -212,7 +212,7 @@
 
 				<!-- Css 규칙사항 -->
 				<p style="font-size: 20px; color:#f00;">작업 여기서 부터 진행</p>
-				<section class="s_block">
+				<section id="section-4" class="s_block">
 					<div class="s_title">
 						<h3>Css 규칙사항</h3>
 					</div>
@@ -242,7 +242,7 @@
 
 				<!-- js 규칙사항 -->
 				<p>js는 기존 pub 하단에 작업 주석 내용 표기</p>
-				<section class="s_block">
+				<section id="section-5" class="s_block">
 					<div class="s_title">
 						<h3>Css 규칙사항</h3>
 					</div>
@@ -478,6 +478,13 @@
 						</div>
 					</div>
 
+					<div>
+						<h2 class="title">폰트 컬러 타입</h2>
+						<p class="color01">폰트 컬러 타입 :     color: #1DA8A5; font-weight: 500;</p>
+					</div>
+
+
+
 
 
 
@@ -542,6 +549,273 @@
 							</li>
 						</ul>
 					</div>
+
+
+					<div>
+						<h2 class="title">다이렉트 아이콘</h2>
+						<style>
+							.sample-direct-icon {display: flex; justify-content: space-between;}
+							.sample-direct-icon li {position: relative;}
+							.sample-direct-icon li:before {
+								content: '';
+								display: block;
+								width: 80px;
+								height: 80px;
+								margin: 0 auto 8px;
+								border-radius: 20px;
+								background: #E4F5F5;
+								background-repeat: no-repeat;
+								background-position: 50% 50%;
+								background-size: 56px 56px;
+							}
+							.sample-direct-icon li.icon-new:before {
+								background-image: url(/images//directShop/renew/icon_set_new.svg);
+							}
+							.sample-direct-icon li.icon-pay:before {
+								background-image: url(/images//directShop/renew/icon_set_pay.svg);
+							}
+							.sample-direct-icon li.icon-add:before {
+								background-image: url(/images//directShop/renew/icon_set_add.svg);
+							}
+							.sample-direct-icon li.icon-internet:before {
+								background-image: url(/images//directShop/renew/icon_set_internet.svg);
+							}
+							.sample-direct-icon li.icon-5g2:before {
+								background-image: url(/images//directShop/renew/icon_set_5g2.svg);
+							}
+							.sample-direct-icon li.icon-kt:before {
+								background-image: url(/images//directShop/renew/icon_set_kt.svg);
+							}
+							.sample-direct-icon li.icon-5g:before {
+								background-image: url(/images//directShop/renew/icon_set_5g1.svg);
+							}
+							.sample-direct-icon li.icon-9:before {
+								background-image: url(/images//directShop/renew/icon_set_9.svg);
+							}
+							.sample-direct-icon li.icon-lte:before {
+								background-image: url(/images//directShop/renew/icon_set_lte.svg);
+							}
+							.sample-direct-icon li.icon-lte2:before {
+								background-image: url(/images//directShop/renew/icon_set_lte2.svg);
+							}
+							.sample-direct-icon li.icon-smart:before {
+								background-image: url(/images//directShop/renew/icon_set_smart.svg);
+							}
+
+							.sample-direct-icon li.icon_watch_data:before {
+								background-image: url(/images//directShop/renew/icon_watch_data.svg);
+							}
+							.sample-direct-icon li.icon_watch_kt:before {
+								background-image: url(/images//directShop/renew/icon_watch_kt.svg);
+							}
+							.sample-direct-icon li.icon_watch_lte:before {
+								background-image: url(/images//directShop/renew/icon_watch_lte.svg);
+							}
+							.sample-direct-icon li.icon_watch_personal:before {
+								background-image: url(/images//directShop/renew/icon_watch_personal.svg);
+							}
+							.sample-direct-icon li.icon_watch_self:before {
+								background-image: url(/images//directShop/renew/icon_watch_self.svg);
+							}
+							.sample-direct-icon li.icon_watch_share:before {
+								background-image: url(/images//directShop/renew/icon_watch_share.svg);
+							}
+						</style>
+
+						<ul class="sample-direct-icon" style="display: flex;">
+							<li class="icon-new">icon_set_new.svg</li>
+							<li class="icon-pay">icon_set_pay.svg</li>
+							<li class="icon-add">icon_set_add.svg</li>
+							<li class="icon-internet">icon_set_internet.svg</li>
+							<li class="icon-5g">icon_set_new.svg</li>
+							<li class="icon-5g2">icon_set_5g2.svg</li>
+						</ul>
+						<ul class="sample-direct-icon" style="display: flex;">
+							<li class="icon-kt">icon_set_kt.svg</li>
+							<li class="icon-9">icon_set_9.svg</li>
+							<li class="icon-lte">icon_set_lte.svg</li>
+							<li class="icon-lte2">icon_set_lte2.svg</li>
+							<li class="icon-smart">icon_set_smart.svg</li>
+						</ul>
+						<ul class="sample-direct-icon" style="display: flex;">
+							<li class="icon_watch_data">icon_watch_data.svg</li>
+							<li class="icon_watch_kt">icon_watch_kt.svg</li>
+							<li class="icon_watch_lte">icon_watch_lte.svg</li>
+							<li class="icon_watch_personal">icon_watch_personal.svg</li>
+							<li class="icon_watch_self">icon_watch_self.svg</li>
+							<li class="icon_watch_share">icon_watch_share.svg</li>
+						</ul>
+					</div>
+
+					<h2 class="title">다이렉트 아이콘 - 메인 사용시</h2>
+					<div class="use-direct">
+						<ul>
+							<li class="icon-new">
+								새로 구입한 <br>
+								자급제폰 개통
+							</li>
+							<li class="icon-pay">
+								약정이 끝나 <br>
+								새로 요금제 가입
+							</li>
+							<li class="icon-add">
+								세컨폰 등 <br>
+								추가 번호 개통
+							</li>
+						</ul>
+					</div>
+
+					<h2 class="title">다이렉트 아이콘 - 콘텐츠 페이지 사용시</h2>
+					<div class="ktd-block ktd-self-sufficient">
+						<div class="self-use-direct">
+							<ul>
+								<li class="icon-new">
+									온/오프라인을 통해 구입한 <br>
+									<span class="color01">#자급제폰 #해외직구폰 #중고폰</span> <br>
+									개통이 필요할 때
+								</li>
+								<li class="icon-internet">
+									인터넷/tv와 결합을 위해 <br>
+									<span class="color01">#신규가입 #번호이동</span> 으로 <br>
+									개통이 필요할 때
+								</li>
+								<li class="icon-5g2">
+									공 단말, 사용하던 폰을 <br>
+									<span class="color01">#자녀폰 #부모님폰</span> 으로 <br>
+									개통이 필요할 때
+								</li>
+								<li class="icon-kt">
+									무인매장에서 구매한 <br>
+									<span class="color01">#자급제폰 #신규가입</span> 으로 <br>
+									개통이 필요할 때
+								</li>
+								<li class="icon-add">
+									추가 번호가 필요해서 <br>
+									<span class="color01">#신규유심(후불유심)</span> <br>
+									개통이 필요할 때
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<h2 class="title">블록 사이 구분 시</h2>
+					<div class="ktd-block">
+						상단 블록
+					</div>
+					<div class="ktd-block">
+						인접한 블록 시 상단 구분
+					</div>
+
+
+					<h2 class="title">dot list</h2>
+
+					<ul class="ktd-dot-list">
+                        <li>
+
+                            <dl>
+                                <dt>유심카드</dt>
+                                <dd>
+                                    유심카드 뒷면의 일련번호 미리 확인
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+
+                            <dl>
+                                <dt>신용카드</dt>
+                                <dd>
+                                    인증을 위해 본인 신용카드 미리 준비
+                                    <p class="fixed">
+                                        <em>※</em> 신용카드가 없는 경우, 핸드폰 인증 및 계좌이체로 인증 가능
+                                    </p>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>희망번호</dt>
+                                <dd>
+                                    신규가입 시 번호 뒷 4자리 미리 생각
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+
+					<h2 class="title">num round list</h2>
+					<ul class="ktd-numRound-list">
+						<li><span>1</span> 타사포함 통신요금 미납</li>
+						<li><span>2</span> 신용 조회 후 가입 불가 확인 시</li>
+						<li><span>3</span> 가입 가능 회선 초과</li>
+						<li><span>4</span> 번호이동 인증 실패 시</li>
+					</ul>
+
+					<ul class="ktd-chkRound-list">
+						<li>
+							<dl>
+								<dt>잔여 약정이 남아 있나요?</dt>
+								<dd>약정 해지 후 가입 가능</dd>
+							</dl>
+						</li>
+					</ul>
+
+					<h2 class="title">round box</h2>
+					<div class="ktd-round-box">
+						라운드 박스
+					</div>
+					<div class="ktd-round-box">
+						라운드 인접
+					</div>
+
+
+					<h2 class="title">셀프 링크</h2>
+					<div class="self_link">
+						<a href="#" onclick="trackClicks('');" role="button"><span>내부 링크</span></a>
+						<a href="#" target="_blank" title="새창열림" onclick="trackClicks('');" role="button"><span>외부 링크</span></a>
+					</div>
+
+
+					<h2 class="title">toggle</h2>
+					<ul class="toggle_box">
+						<li>
+							<div class="toggle_tit">
+								<button type="button" class="btn_toggle" aria-expanded="false" title="상세내용 열기">
+									<span>할인 가능 요금제 및 유의사항</span>
+								</button>
+							</div>
+							<div class="toggle_cont" style="display: none;">
+								<ul class="list-type-ast">
+									<li>아래 해당하는 요금제를 이용 중인 경우 5G 데이터쉐어링 1회선 할인이 가능합니다.
+										<ul>
+											<li>슈퍼플랜 초이스(에어팟) 2종 (프리미엄/스페셜)</li>
+											<li>슈퍼플랜 초이스(바디프랜드) 3종 (프리미엄/스페셜/베이직)</li>
+											<li>슈퍼플랜 초이스(시즌/지니) 3종 (프리미엄/스페셜/베이직)</li>
+											<li>슈퍼플랜 초이스(현대카드) 3종 (프리미엄/스페셜/베이직)</li>
+											<li>슈퍼플랜 초이스(넷플릭스) 3종 (프리미엄/스페셜/베이직)</li>
+											<li>슈퍼플랜 초이스 3종 (프리미엄/스페셜/베이직)</li>
+											<li>슈퍼플랜 스페셜 / Y 슈퍼플랜 스페셜</li>
+										</ul>
+									</li>
+									<li>슈퍼플랜 스페셜, Y 슈퍼플랜 스페셜 요금제는 5G 데이터쉐어링 or 스마트 기기 할인 중 택1 가능하며, 스마트 기기 할인 등록 시 5G 데이터쉐어링 할인은 불가합니다.<br>(Main 1회선에 공유된 5G 데이터쉐어링이 여러 회선인 경우 할인 가능한 회선은 별도 선택 불가)</li>
+									<li>고객에 따라 신청(추가) 가능한 최대 기기 수가 다를 수 있습니다.</li>
+									<li>하단 사유 중 1가지 이상 사유 발생시 쉐어링 할인 적용이 불가합니다.
+										<ul class="num-list">
+											<li>1) 할인 대상 회선 수 초과</li>
+											<li>2) 스마트기기할인 이용 중으로 중복할인 적용 불가</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+
+
+
+
+
+
+
+
+
 				</section>
 
 

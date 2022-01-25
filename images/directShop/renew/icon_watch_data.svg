@@ -1,0 +1,27 @@
+<svg id="_008_icon_56_01_etc_monthly_fee" data-name="008 icon/56/01 etc/monthly fee" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_22481" data-name="사각형 22481" width="56" height="56" transform="translate(10278 10279.168)" fill="#d8d8d8" stroke="#000" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="_008_icon_56_01_etc_monthly_fee-2" data-name="008 icon/56/01 etc/monthly fee" transform="translate(-10278 -10279.168)" clip-path="url(#clip-path)">
+    <g id="앞_데이터" transform="translate(10284.32 10282.324)">
+      <path id="패스_57787" data-name="패스 57787" d="M773.039,1555.35v10.328c0,4.013-7.861,7.262-17.558,7.262s-17.555-3.249-17.555-7.262V1555.35" transform="translate(-737.926 -1523.782)" fill="#fff" stroke="#1a1311" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="패스_57788" data-name="패스 57788" d="M773.039,1555.35v10.328c0,4.013-7.861,7.262-17.558,7.262s-17.555-3.249-17.555-7.262V1555.35" transform="translate(-737.926 -1535.316)" fill="#fff" stroke="#1a1311" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="패스_57789" data-name="패스 57789" d="M773.039,1555.35v10.328c0,4.013-7.861,7.262-17.558,7.262s-17.555-3.249-17.555-7.262V1555.35" transform="translate(-737.926 -1546.851)" fill="#fff" stroke="#1a1311" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="패스_57790" data-name="패스 57790" d="M773.039,1553.833c0,4.014-7.861,7.262-17.558,7.262s-17.555-3.249-17.555-7.262,7.861-7.262,17.555-7.262S773.039,1549.822,773.039,1553.833Z" transform="translate(-737.926 -1546.571)" fill="#fff" stroke="#1a1311" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+    <g id="그룹_25389" data-name="그룹 25389" transform="translate(10308.724 10310.765)">
+      <g id="사각형_22474" data-name="사각형 22474" transform="translate(0.276 1.403)" fill="#fff" stroke="#1a1311" stroke-width="2">
+        <rect width="22" height="20" rx="4" stroke="none"/>
+        <rect x="1" y="1" width="20" height="18" rx="3" fill="none"/>
+      </g>
+      <rect id="사각형_22475" data-name="사각형 22475" width="21.945" height="1.756" transform="translate(0 7.563)" fill="#1a1311"/>
+      <rect id="사각형_22476" data-name="사각형 22476" width="4.916" height="1.756" transform="translate(16.277 0) rotate(90)" fill="#1a1311"/>
+      <rect id="사각형_22477" data-name="사각형 22477" width="4.916" height="1.756" transform="translate(7.248 0) rotate(90)" fill="#1a1311"/>
+      <rect id="사각형_22478" data-name="사각형 22478" width="1.756" height="1.756" transform="translate(7.248 12.856) rotate(90)" fill="#1a1311"/>
+      <rect id="사각형_22479" data-name="사각형 22479" width="1.756" height="1.756" transform="translate(11.762 12.856) rotate(90)" fill="#1a1311"/>
+      <rect id="사각형_22480" data-name="사각형 22480" width="1.756" height="1.756" transform="translate(16.277 12.856) rotate(90)" fill="#1a1311"/>
+    </g>
+  </g>
+</svg>

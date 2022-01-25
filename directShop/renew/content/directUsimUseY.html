@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko" class="kt5g">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<title> [KT 공식] 요금은 비우고 혜택은 채웁니다. KT 다이렉트</title>
+
+	<!-- style -->
+	<link rel="stylesheet" href="/directShop/css/default.css">
+    <link rel="stylesheet" href="/directShop/css/contents.css">
+    <link rel="stylesheet" href="/directShop/css/popup.css">
+    <link rel="stylesheet" href="/directShop/css/swiper.css">
+
+    <!-- js -->
+    <script type="text/javascript"  src="/directShop/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="/directShop/js/ui/common_front.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/ui.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/pub.js" type="text/javascript"></script>
+	<script src="/directShop/js/lib/swiper.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="/oneMinute/js/oneMinuteCommon.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+	<!-- ktd : 추가 css -->
+    <link rel="stylesheet" href="/directShop/css/ktDirect.css">
+</head>
+<body>
+	<!-- ktd : Direct 안내 -->
+    <div class="ktd-directInfo">
+        <div class="info">
+            <h1>
+                지금 <br>
+                KT 다이렉트에서 <br>
+                요금제 <span>바로가입!</span>
+            </h1>
+        </div>
+        <div class="link-zone">
+            <h2><img src="/images/directShop/renew/thumb_kt.png" alt="KT 다이렉트"></h2>
+            <ul>
+                <li><a href="#">유심가입</a></li>
+                <li><a href="#">데이터 쉐어링 가입</a></li>
+                <li><a href="#">무약정플렌 요금제 변경</a></li>
+                <li><a href="#">셀프개통(유심보유)</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //ktd : Direct 안내 -->
+
+	<!-- ktd : 사이트 영역 -->
+    <div class="ktd-conWrap">
+        <!-- ktd : directShop>smart>directUsim.menu.jsp 메뉴영역 -->
+		<header>
+            <div>
+                <h1>
+                    <button type="button" name="button" id="" aria-label="가입신청, 이전화면으로 이동">가입신청</button>
+                </h1>
+                <button type="button" name="button" class="menu">메뉴</button>
+            </div>
+        </header>
+		<!-- side -->
+        <div id="menu">
+            <div class="inner">
+                <button type="button" name="button" class="menu-close">닫기</button>
+
+                <ul>
+                    <li><a href="https://direct.kt.com/directMain.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^홈');">홈</a></li>
+                    <li><a href="javascript:void(0);" class="btn-arrow" title="가입하기 메뉴 열기" role="button">가입하기</a>
+                        <ul class="sub">
+                            <li><a href="/direct/directUsimUseN.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^유심가입신규번호이동');">유심가입(신규/번호이동)</a></li>
+                            <li><a href="/direct/DirectUsimMemRate.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^무약정플랜요금제변경');">무약정플랜 요금제 변경</a></li>
+                            <li><a href="#" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^스마트워치요금제');">스마트워치요금제</a></li>
+                            <li><a href="/direct/directFaq.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^자주묻는질문');">자주 묻는 질문</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/direct/directUsimUseY.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^셀프개통유심보유');">셀프개통(유심보유)</a></li>
+                    <li><a href="/direct/directShare.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^데이터쉐어링가입');">데이터쉐어링 가입</a></li>
+                    <li><a href="javascript:void(0);" class="btn-arrow" title="중고/자급제폰 메뉴 열기" role="button">중고/자급제폰</a>
+                        <ul class="sub">
+                            <li><a href="/direct/directUsimSelfSuff.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^자급제폰');">자급제폰</a></li>
+                            <li><a href="/direct/directUsim.usedphone.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^중고폰');">중고폰</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);" class="btn-arrow" title="이벤트 메뉴 열기" role="button">이벤트</a>
+                        <ul class="sub">
+                            <li><a href="" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^진행중이벤트');">진행중 이벤트</a></li>
+                            <li><a href="" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^종료된이벤트');">종료된 이벤트</a></li>
+                            <li><a href="" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^당첨자발표');">당첨자 발표</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            $('#menu .btn-arrow').attr('aria-expanded', false);
+            $('#menu .btn-arrow').on('click',function(e){
+                if(!$(this).hasClass('selected')){
+                    $(this).addClass('selected').attr('aria-expanded', true);
+                    $(this).parent('li').find('.sub').slideDown();
+                    $(this).attr('title' , $(this).attr('title').replace('열기', '닫기'));
+                    return false;
+                }else{
+                    $(this).removeClass('selected').attr('aria-expanded', false);
+                    $(this).parent('li').find('.sub').slideUp();
+                    $(this).attr('title' , $(this).attr('title').replace('닫기', '열기'));
+                    return false;
+                };
+            });
+        </script>
+        <!-- //side -->
+		<!-- //ktd : directShop>smart>directUsim.menu.jsp 메뉴영역 -->
+
+		<!-- ktd : directShop>smart>directUsim.usimUseY.jsp 컨텐츠 -->
+		<div id="content" class="bodyContent">
+			<div class="tab_links_box">
+				<ul class="tab_links">
+					<li><a href="/direct/directUsimUseN.do"><span>가입신청 <br>(유심 미보유)</span></a></li>
+					<li class="active"><a href="/direct/directUsimUseY.do"><span>셀프개통 <br>(유심보유)</span></a></li>
+				</ul>
+			</div>
+
+			<div class="ktd-block">
+                <div class="step-top-msg2">
+                    <strong>셀프개통 (유심보유)</strong>
+                    <p>
+                        유심을 보유하신 고객님들은 바로 셀프개통이 가능합니다. <br>
+                        기존에 사용하시던 유심은 대리점에서 초기화하셔야 셀프개통이 가능합니다.
+                    </p>
+                </div>
+                <div>
+                    <a href="#" onclick="usimUseYcontroller.checkDirectUsimView();trackClicks('mKT direct-셀프개통(유심보유)', '^KT direct-셀프개통(유심보유)^상단^셀프개통하기');" class="btn fill">셀프 개통하기</a>
+                </div>
+            </div>
+
+			<div class="ktd-block ktd-self-sufficient">
+				<div class="self-use-time">
+					<h2>셀프개통 가능시간</h2>
+                    <p>셀프 개통 가능시간 내에만 개통가능합니다.</p>
+					<ul class="ktd-dot-list">
+                        <li>
+                            <dl>
+                                <dt>신규가입</dt>
+                                <dd>
+                                    평일 09시 ~ 21시, 토요일 10시 ~ 18시
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>번호이동</dt>
+                                <dd>
+                                    평일/토요일 10시 ~ 20시 <br>
+                                    (일요일, 신정/설/추석 당일 제외)
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+				</div>
+
+				<div class="self-use-movie">
+					<h2>영상으로 쉽게 배우는 <br>KT 다이렉트 셀프개통</h2>
+					<div class="youtube-movie-area">
+						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/zQ_2sJ2n7zQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="영상으로 쉽게 배우는 KT 다이렉트 셀프개통"></iframe>
+					</div>
+				</div>
+
+				<div class="self-use-ready">
+					<h2>유심 구매처 소개</h2>
+					<p>전국 KT 대리점, KT 셀프라운지, 편의점, 오픈마켓 등에서도 구매할 수 있습니다.</p>
+					<div class="self_link">
+						<a href="/direct/directEvent.do#div-section-1" onclick="trackClicks('mKT direct-셀프개통(유심보유)', '^KT direct-셀프개통(유심보유)^중간^가까운GS25편의점찾기');"><span>GS25 편의점 찾기</span></a>
+						<a href="https://shop.kt.com/accessory/accsProductView.do?prodNo=AC00051548" target="_blank" title="새창열림" onclick="trackClicks('mKT direct-셀프개통(유심보유)', '^KT direct-셀프개통(유심보유)^중간^KTShop유심구매');"><span>KT Shop 유심 구매</span></a>
+					</div>
+				</div>
+
+				<div class="self-use-guide">
+                    <h2>셀프개통 전 확인해주세요!</h2>
+					<p>아래 및 기타 사유로 인하여 셀프 개통이 불가한 경우,
+                        상담사가 안내전화를 드릴 예정입니다.</p>
+					<ul class="ktd-numRound-list">
+						<li><span>1</span> 타사포함 통신요금 미납</li>
+						<li><span>2</span> 신용 조회 후 가입 불가 확인 시</li>
+						<li><span>3</span> 가입 가능 회선 초과</li>
+						<li><span>4</span> 번호이동 인증 실패 시</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="ktd-block-gift">
+                <!-- 코너영역-가입혜택 -->
+                <div class="ktd-gift-section">
+                    <div class="section-head">
+                        <h2>가입혜택</h2>
+                        <p>
+                            KT다이렉트 신규/번호이동 <br>
+                            가입 고객이면 누구나!
+                        </p>
+                    </div>
+                    <div class="section-etc">
+                        <ul>
+                            <li><img src="/images/directShop/renew/img_gift_7.png" alt="KT다이렉트 쿠폰팩 7종"></li>
+                            <li><img src="/images/directShop/renew/img_gift_point.png" alt="Happy Point"></li>
+                        </ul>
+                        <p>※ 데이터쉐어링/무약정플랜 요금제 변경 고객 제외</p>
+                    </div>
+                    <div class="section-body">
+                        <div class="benefit-box">
+                            <div class="benefit-txt">
+                                <span>혜택 1</span>
+                            </div>
+                            <p class="headcopy">
+                                KT 다이렉트 쿠폰팩(택1)
+                            </p>
+                            <div class="benefit-list01">
+                                <ul>
+                                    <li><img src="/images/directShop/renew/coupon_g.png" alt="Gmarket"></li>
+                                    <li><img src="/images/directShop/renew/coupon_g9.png" alt="G9"></li>
+                                    <li><img src="/images/directShop/renew/coupon_auction.png" alt="AUCTION."></li>
+                                </ul>
+                                <dl>
+                                    <dt>대한민국 대표 오픈마켓</dt>
+                                    <dd>스마일캐시 증정</dd>
+                                </dl>
+                            </div>
+                            <div class="benefit-list01">
+                                <ul>
+                                    <li>
+                                        <img src="/images/directShop/renew/coupon_payco.png" alt="PAYCO">
+                                        <dl>
+                                            <dt>전국 38만여개 가맹점</dt>
+                                            <dd>페이코 포인트 증정</dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <img src="/images/directShop/renew/coupon_yogiyo.png" alt="요기요">
+                                        <dl>
+                                            <dt>대한민국 대표 배달 주문앱</dt>
+                                            <dd>요기요 할인쿠폰 증정</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="benefit-list01">
+                                <ul>
+                                    <li>
+                                        <img src="/images/directShop/renew/coupon_gs25.png" alt="GS25">
+                                        <dl>
+                                            <dt>대한민국 1위 편의점</dt>
+                                            <dd>
+                                                전국 GS25 <br>
+                                                사용 쿠폰 증정
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <img src="/images/directShop/renew/coupon_oliveyoung.png" alt="OLIVE YOUNG">
+                                        <dl>
+                                            <dt>NO1.헬스&amp;뷰티 스토어</dt>
+                                            <dd>기프트카드 증정</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="benefit-list01">
+                                <ul>
+                                    <li>
+                                        <img src="/images/directShop/renew/coupon_yes24.png" alt="YES24.COM">
+                                        <dl>
+                                            <dt>대한민국 대표 인터넷 서점</dt>
+                                            <dd>
+                                                Yes24 도서 <br>
+                                                상품권 증정
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <img src="/images/directShop/renew/coupon_petfriends.png" alt="펫프렌즈">
+                                        <dl>
+                                            <dt>반려동물 1등 쇼핑몰</dt>
+                                            <dd>
+                                                펫프렌즈앱 <br>
+                                                할인쿠폰 증정
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <ul class="toggle_box">
+                                <li>
+                                    <div class="toggle_tit">
+                                        <button type="button" class="btn_toggle" aria-expanded="false" title="상세내용 열기">
+                                            <span>KT 다이렉트 쿠폰팩이란?</span>
+                                        </button>
+                                    </div>
+                                    <div class="toggle_cont" style="display: none;">
+                                        <ul class="list-type-ast">
+                                            <li>제공 대상 : KT 다이렉트에서 신규/번호이동에 가입한 모든 고객</li>
+                                            <li>제공 기간 : 이용 기간 동안 매월 1회씩 제공 (약정 기간 동안 제공, 무약정일 경우 최대 24개월 까지 제공)</li>
+                                        </ul>
+                                        <p class="info-txt">※ 요금 납부한 익월부터 매달 5일 개통번호로 제공 (5일이 토/일/공휴일 일 경우 다음 영업일에 발송)</p>
+                                        <div class="gift_table">
+                                            <table class="tbl">
+                                                <colgroup>
+                                                    <col style="width:60%">
+                                                    <col style="width:40%">
+                                                </colgroup>
+                                                <caption>요금제별 할인쿠폰 금액</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">이용 요금(요금제별 월 정액 기준)</th>
+                                                        <th>할인쿠폰</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">110,000원 이상~</th>
+                                                        <td>9,000원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">90,000원 이상 ~ 110,000원 미만</th>
+                                                        <td>6,500원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">80,000원 이상 ~ 90,000원 미만</th>
+                                                        <td>5,000원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">67,000원 이상 ~ 80,000원 미만</th>
+                                                        <td>4,000원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">55,000원 이상 ~ 67,000원 미만</th>
+                                                        <td>2,500원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">37,000원 이상 ~ 55,000원 미만</th>
+                                                        <td>2,000원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="info-txt">예) 슈퍼플랜 스페셜 초이스(월 정액 110,000원) 이용 시, 9,000원 쿠폰 증정 <br>
+                                        예) 데이터 ON비디오(월 정액 69,000원) 이용 시, 4,000원 쿠폰 증정 <br>
+                                        예) 5G Y무약정플랜 (월 정액 55,000원) 이용 시, 2,500원 쿠폰 증정</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="toggle_tit">
+                                        <button type="button" class="btn_toggle" aria-expanded="false" title="상세내용 열기">
+                                            <span>KT 다이렉트 쿠폰팩 유의사항</span>
+                                        </button>
+                                    </div>
+                                    <div class="toggle_cont" style="display: none;">
+                                        <ul class="list-type-ast">
+                                            <li>KT 다이렉트 쿠폰팩은 5G, LTE 요금제에 신규/번호이동 가입하시는 고객님 대상이며 개통 및 이용 요금제가 상기 정액 요금 구간일 경우 제공됩니다.</li>
+                                            <li>기존 KT 고객님 중 약정만료 후 요금제 변경 및 자급제/중고폰으로 무약정,다이렉트 요금제 변경고객님은 제외됩니다.</li>
+                                            <li>선택하신 KT 다이렉트 쿠폰팩은 개통월 기준 다다음달 제공됩니다.(예, 5월 개통시 7월 제공)</li>
+                                            <li>개통 후 요금미납 혹은 정지, 해지시 제공되지 않습니다.(단 요금 미납 해소시 익월 한번에 제공)</li>
+                                            <li>약정기간 중 타 대리점으로 기기변경시 제공혜택은 중단됩니다.</li>
+                                            <li>KT샵 쿠폰은 약정기간동안 최대 24개월동안 매달 5일에 제공됩니다.(1년 약정시 최대 12개월 제공)<br>(5일이 토/일/공휴일 일 경우 다음 영업일에 발송됩니다.)</li>
+                                            <li>정지기간에 따른 혜택 제공기간은 연장되지 않습니다.</li>
+                                            <li>약정을 선택하지 않은 무약정 이용 고객의 경우 쿠폰은 이용기간 동안 제공되며, 최대 24개월간 제공됩니다.</li>
+                                            <li>KT 다이렉트 쿠폰팩은 양도불가하고 개통된 연락번호로만 발송됩니다. (수신 연락번호 변경 불가)</li>
+                                            <li>제공된 쿠폰은 발행월말까지 사용할 수 있으며 미사용분은 연장 및 환불 불가하며 자동소멸됩니다.</li>
+                                            <li>제휴사는 1곳만 선택 가능하고, 선택한 제휴사는 분기 단위 변경가능하며 3/6/9/12월말 변경 안내문자를 통해 변경 가능합니다.</li>
+                                            <li>KT 다이렉트 쿠폰팩은 제휴사별 사용 정책에 따라 사용하실 수 있습니다.</li>
+                                            <li>약정기간 중 요금제 변경시 변경된 요금 기준으로 쿠폰 금액은 변경 발행되며 요금차액에 따른 일할 정산은 적용되지 않습니다.</li>
+                                            <li>제공받은 쿠폰 분실시 동일 쿠폰번호로 재발행 가능합니다.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="benefit-box">
+                            <div class="benefit-txt">
+                                <span>혜택 2</span>
+                            </div>
+                            <p class="headcopy">
+                                이용할수록 커지는 해피포인트
+                            </p>
+                            <div class="benefit-list02">
+                                <ul>
+                                    <li>
+                                        <img src="/images/directShop/renew/gift01.png" alt="가입 즉시">
+                                        <span>가입즉시</span>
+                                        <span class="info">
+                                            유심크기 변환트레이 <br>
+                                            (유심 구매시)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <img src="/images/directShop/renew/gift02.png" alt="가입 1개월 차">
+                                        <span>가입 1개월 차</span>
+                                        <span class="info">
+                                            해피포인트 5,000포인트 + <br>
+                                            던킨도너츠 먼치킨컵 <br>
+                                            1+1 쿠폰
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="benefit-list02">
+                                <ul>
+                                    <li>
+                                        <img src="/images/directShop/renew/gift03.png" alt="가입 2개월 차">
+                                        <span>가입 2개월 차</span>
+                                        <span class="info">
+                                            해피포인트 <br>
+                                            10,000포인트
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <img src="/images/directShop/renew/gift04.png" alt="가입 3개월 차">
+                                        <span>가입 3개월 차</span>
+                                        <span class="info">
+                                            해피포인트 <br>
+                                            15,000포인트
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <ul class="toggle_box">
+                                <li>
+                                    <div class="toggle_tit">
+                                        <button type="button" class="btn_toggle" aria-expanded="false" title="상세내용 열기">
+                                            <span>사은품 제공 유의사항</span>
+                                        </button>
+                                    </div>
+                                    <div class="toggle_cont" style="display: none;">
+                                        <ul class="list-type-ast">
+                                            <li>KT 다이렉트에서 가입한 고객 전원에게 가입 후 익월 말/ 익익월 말/ 익익익월 말 가입 유지여부 확인 후 혜택이 지급됩니다. (데이터쉐어링 가입고객 제외, 무약정플랜 요금제 변경 고객 제외)</li>
+                                            <li>해피포인트 적립쿠폰 및 던킨도너츠 먼치킨컵 1+1쿠폰은 고객님의 핸드폰번호로 발송됩니다.</li>
+                                            <li>받으신 적립쿠폰(쿠폰번호)은 해피포인트 앱 또는 해피포인트 웹사이트에서 회원 가입 후, 쿠폰적립(등록)을 해야만 해피포인트 제휴가맹점에서 사용하실 수 있습니다.</li>
+                                            <li>쿠폰 적립 가능 기간은 발송일로부터 3개월째 되는 달의 말일까지이며, 기간이 지난 쿠폰은 소멸되어 기간 연장 및 환불이 불가합니다.</li>
+                                            <li>던킨도너츠 먼치킨컵 1+1쿠폰은 가입 1개월차 혜택(해피포인트 5,000포인트 쿠폰)과 함께 발송되며(최초 1회만) 매장에서 먼치킨컵(4,000원)제품 1개 구매시 쿠폰을 제시하면 1개를 추가로 무료 증정하는 1+1쿠폰 입니다. 먼치킨컵 쿠폰의 유효기간은 발송일로부터 3개월째 되는 달의 말일까지며, 기간이 지난 쿠폰은 기간연장 및 환불이 불가 합니다.</li>
+                                            <li>적립한 해피포인트의 사용 유효기간 및 사용방법 등은 해피포인트의 정책에 따릅니다.</li>
+                                            <li>자세한 사항은 해피포인트 앱 또는 해피포인트 웹사이트의 내용을 참고 하세요.</li>
+                                            <li>가입 혜택은 당사의 사정에 의해 예고 없이 변경 또는 중단될 수 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="toggle_tit">
+                                        <button type="button" class="btn_toggle" aria-expanded="false" title="상세내용 열기">
+                                            <span>KT 다이렉트 가입관련 유의사항</span>
+                                        </button>
+                                    </div>
+                                    <div class="toggle_cont" style="display: none;">
+                                        <ul class="list-type-ast">
+                                            <li>유심이 없는 고객의 경우 다이렉트 유심 가입 시 유심 비용(7,700원)은 후청구됩니다.</li>
+                                            <li>유심 구매 후 다이렉트에서 개통하신 고객님에 한하여 다이렉트 이벤트 혜택이 제공됩니다.</li>
+                                            <li>가입 혜택은 당사의 사정에 의해 예고없이 변경 또는 중단될 수 있습니다.</li>
+                                            <li>미납/회선 초과 등의 이유로 개통이 제한될 수 있으며 사전에 안내해 드립니다.</li>
+                                            <li>다이렉트 신규개통(신규/번호이동) 시 개통일 기준 다음날 24시까지 휴대폰 소액결제가 차단이 되며, 최초 소액 결제 선결제가 월 기준 100만원이 초과되는 경우 72시간 동안 추가 선결제가 차단됩니다.</li>
+                                            <li>KT다이렉트 이벤트는 Apple과는 무관하며, 어떠한 식으로든 관여하지 않습니다.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- //코너영역-가입혜택 -->
+            </div>
+        </div>
+        <!-- //ktd : directShop>smart>directUsim.usimUseY.jsp 컨텐츠 -->
+
+		<div class="footer">
+            <div>
+                <p class="award">
+                    <a href="https://www.naward.or.kr/winners/2020" target="_blank" title="새창"><img src="/images/directShop/renew/footer_andAwardWinner.svg" alt="& A.N.D AWARD WINNER 2020" /></a>
+                </p>
+                <p>
+                    <strong>KT 다이렉트</strong><br>
+                    (주)케이티 대표이사 구현모
+                </p>
+                <p>
+                    경기도 성남시 분당구 불정로 90 (정자동)<br>
+                    사업자등록번호 : 102-81-42945<br>
+                    통신판매업신고 : 2002-경기성남-0048<br>
+                    KT다이렉트 고객센터 : 1899-8245(유료)<br>
+                    상담시간 : 평일 9시~18시
+                </p>
+                <p class="copy">Copyright© 2021 kt corp. All rights reserved.</p>
+            </div>
+        </div>
+	</div>
+	<!-- //ktd : 사이트 영역 -->
+</body>
+</html>

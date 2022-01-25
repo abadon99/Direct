@@ -667,7 +667,7 @@ $(function(){
     TABDepth.init(swiperDepth);
 
     // 서브메뉴 펼침
-    var $btnSubMenuWrap  = $('.kktd-depthMenu'),
+    var $btnSubMenuWrap  = $('.ktd-depthMenu'),
         btnSubMenuWidth  =  $btnSubMenuWrap.find('.swiper-slide'),
         $btnSubMenu      = $btnSubMenuWrap.find('.btn-more');
     $(window).on('resize',function(){
