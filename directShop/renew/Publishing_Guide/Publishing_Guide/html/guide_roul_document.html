@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>KT 다이렉트 퍼블리싱가이드</title>
+
+	<link rel="apple-touch-icon" href="/images/mobile/favicon.png">
+	<link rel="shortcut icon" href="/images/mobile/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/directShop/css/default.css">
+    <link rel="stylesheet" href="/directShop/css/contents.css">
+    <link rel="stylesheet" href="/directShop/css/popup.css">
+    <link rel="stylesheet" href="/directShop/css/swiper.css">
+
+	<link rel="stylesheet" href="/directShop/css/ktDirect.css">
+
+    <link href="/directShop/renew/Publishing_Guide/Publishing_Guide/common/css/ini.min.css" rel="stylesheet">
+    <link href="/directShop/renew/Publishing_Guide/Publishing_Guide/common/css/guide.css" rel="stylesheet">
+    <link href="/directShop/renew/Publishing_Guide/Publishing_Guide/common/css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="/directShop/renew/Publishing_Guide/Publishing_Guide/common/css/shThemeRDark.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript"  src="/directShop/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="/directShop/js/ui/common_front.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/ui.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/pub.js" type="text/javascript"></script>
+	<script src="/directShop/js/lib/swiper.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shCore.js"></script>
+    <script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shBrushCss.js"></script>
+    <script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shBrushXml.js"></script>
+	<script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/guide.js"></script>
+
+
+    <script>
+        SyntaxHighlighter.all()
+    </script>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- Header -->
+		<header id="header">
+			<h1>KT 다이렉트 퍼블리싱가이드</h1>
+		</header>
+		<!-- //Header -->
+
+		<div id="container">
+			<!-- Lnb -->
+			<aside id="lnb">
+				<ul class="depth01">
+					<li><a href="guide_roul_intro.html">기본 정책 사항 가이드</a></li>
+					<li class="current"><a href="javascript:;">문서 구조 가이드</a>
+						<ul class="depth02">
+							<li><a href="">공통 사항</a></li>
+							<li><a href="">Main Page</a></li>
+							<li><a href="">Content Page</a></li>
+							<li><a href="">기타 사항</a></li>
+						</ul>
+					</li>
+					<li><a href="guide_roul_library.html">라이브러리 가이드</a></li>
+				</ul>
+			</aside>
+			<!-- //Lnb -->
+
+			<article class="content">
+				<div class="p_title">
+					<h2>문서 구조 가이드</h2>
+				</div>
+
+				<!-- css/js 폴더 구조 -->
+				<section class="s_block">
+					<div class="s_title">
+						class는 - 로<br>
+						<h3>css/js 폴더 구조</h3>
+					</div>
+					<div class="s_content">
+						<div class="code_box">
+							<pre class="brush: html">
+								// css folder
+								/inc/css/import.css                  // css 가져오기
+								/inc/css/ini.min.css                 // 스타일 초기화
+								/inc/css/common.css                  // 공통사항
+
+								// js folder
+								/inc/js/libs/jquery.min.js           // jQuery core
+								/inc/js/libs/html5shiv.js            // html5 호환성
+								/inc/js/libs/기타 플러그인 파일      // 외부 플러그인
+
+								/inc/js/pub/main.js                  // 메인 UI
+								/inc/js/pub/ui.js                    // 공통 UI
+							</pre>
+						</div>
+					</div>
+				</section>
+
+				<!-- 이미지 폴더 구조 -->
+				<section class="s_block">
+					<div class="s_title">
+						<h3>이미지 폴더 구조</h3>
+					</div>
+					<div class="s_content">
+						<div class="code_box">
+							<pre class="brush: html">
+								// image folder
+								/inc/img/common                  // 공통이미지
+								/inc/img/main                    // 메인페이지
+								/inc/img/sub                     // 서브페이지
+
+								* 이미지 폴더의 경우 필요시 카테고리 명으로 /inc/img/***** 위치에 생성하여 사용
+							</pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="s_block">
+					<style>
+						.ktd-guide-wrap-info {border:1px solid #ccc; padding:20px; font-size: 12px;}
+						.ktd-guide-wrap-info > div,
+						.ktd-guide-wrap-info > div div {border: 1px solid #ddd; padding:20px; margin:10px 0}
+					</style>
+					<div class="s_title">
+						<h3>메인 레이아웃</h3>
+					</div>
+					<div class="s_content">
+						<div class="ktd-guide-wrap-info">
+							body : class="ktd-wrap"
+							<div>
+								작업영역 : div class="ktd-conWrap"
+
+								<div>헤더 영역 : header</div>
+								<div>Lnb 메뉴 영역 : div class="ktd-depthMenu"</div>
+
+								<div>
+									메인 콘텐츠 영역 : div id="main-contents"
+									<div>메인 슬라이드 영역 : div class="main-swiper"</div>
+									<div>유심요금제 가입 영역 : div class="ktd-main-section-1"</div>
+									<div>추천 요금제 영역 : div class="ktd-main-section-2"</div>
+									<div>가입혜택 영역 : div class="ktd-gift-section"</div>
+									<div>중고폰, 자급제폰 영역 : div class="ktd-main-section-3"</div>
+								</div>
+								<div>푸터영역 : div class="footer"</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="s_block">
+					<div class="s_title">
+						<h3>콘텐츠 레이아웃</h3>
+					</div>
+					<div class="s_content">
+						<div class="ktd-guide-wrap-info">
+							body : class="ktd-wrap"
+							<div>
+								작업영역 : div class="ktd-conWrap"
+
+								<div>헤더 영역 : header</div>
+
+								<div>
+									Default 콘텐츠 영역 : div id="content" class="bodyContent"<br>
+									** 작업 성격에 따라 class가 상이함 ( 작업성격에 맞게 제작)
+									<div>메인 슬라이드 영역 : div class="main-swiper"</div>
+								</div>
+								<div>푸터영역 : div class="footer"</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="s_block">
+					<div class="s_title">
+						<h3>블록 사이 구분 시</h3>
+					</div>
+					<div class="s_content">
+						<div class="ktd-block">
+							상단 블록
+						</div>
+						<div class="ktd-block">
+							인접한 블록 시 상단 구분
+						</div>
+					</div>
+				</section>
+
+
+
+
+			</article>
+		</div>
+	</div>
+</body>
+</html>

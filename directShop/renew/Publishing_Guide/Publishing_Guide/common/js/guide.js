@@ -4,7 +4,7 @@ $(document).ready(function(){
 	select ();
 	customCheckbox ();
 	customRadio ();
-	lnbTab();
+	// lnbTab();
 	menuSub();
 });
 

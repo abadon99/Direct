@@ -6,9 +6,10 @@ html, body {width: 100%; height: 100%; min-width: 100%;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+body {font-size: 14px;}
 /* .bg-f4{background-color:#F4F4F4} */
 
-/* 공통요소 */
+/* as-is button reset */
 a.btn, button.btn, input.btn, label.btn, span.btn {
   width: 100%;
   display: inline-block;
@@ -45,14 +46,16 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
   font-size: 16px;
   border-radius: 8px;
   font-weight: 500;
+  min-width: 94px;
 }
 .btn.inline {width: auto; padding:0 16px;}
+.kt-btn-block {margin-top:32px; text-align: center;}
 
-/* 다이렉트 wrap class 추가 */
+/****************************** 다이렉트 wrap class 추가 ******************************/
 .ktd-wrap {position: relative;}
 .ktd-wrap .blind, .ktd-wrap .hide {position: absolute; display: block; border:0; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
 
-/* 다이렉트 안내 콘텐츠 */
+/****************************** 다이렉트 안내 콘텐츠 ******************************/
 .ktd-directInfo {width:312px; position: fixed; top:50%; right: calc(50% - -156px); transform: translateY(-50%);}
 .ktd-directInfo .info {height:356px; background:#78d0cc url('/images/directShop/renew/thumb_character.png') no-repeat 100% 100%; border-radius: 20px; box-sizing: border-box; padding:30px 20px}
 .ktd-directInfo .info h1,
@@ -70,19 +73,111 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-directInfo .link-zone li a {display: block; height:34px; line-height: 32px; border: 1px solid #ccc; color: #000; font-size: 13px; font-weight: 500; border-radius: 8px; box-sizing: border-box;}
 .ktd-directInfo .link-zone li a:hover {background: #78d0cc; border-color: #78d0cc;}
 
-/* 다이렉트 콘텐츠 영역 */
+/****************************** Common ******************************/
+.ktd-conWrap #content,
+.ktd-conWrap .bodyContent {width: 100%; max-width: 100%; padding: 0;}
+
+.ktd-block {position:relative; padding:40px 20px; background:#fff; color: #6F6F6F;}
+.ktd-block + .ktd-block {padding-top:52px}
+.ktd-block + .ktd-block:before {content: ''; position: absolute; top:0; left: 0; width: 100%; height:12px; background:#F4F4F4;}
+
+/* common - color */
+.color01 {color: #1DA8A5; font-weight: 500;}
+
+/* common - header */
+.ktd-block h2 {margin-bottom: 8px; line-height: 27px; font-size: 20px; font-weight: bold; color: #000;}
+.ktd-block h2 span {font-weight: bold;}
+
+/* common - roundBox */
+.ktd-round-box {margin-top:20px; padding: 24px; border:1px solid #1DA8A5; border-radius: 20px;}
+.ktd-round-box + .ktd-round-box {margin-top:16px}
+.ktd-round-box .title {margin-bottom:21px; line-height:21px; font-size: 16px; font-weight: bold; color: #000;}
+
+/* common - self link */
+.self_link {margin: 0;}
+.self_link a {display: block; height: auto; padding: 0; border-radius: 0; margin:0; text-align: left; background-color: transparent;}
+.self_link a + a {margin-top:12px}
+.self_link a span {position: relative; padding-right: 14px; height: auto; line-height: inherit; color: #1DA8A5; font-weight: 500;}
+.self_link a span:after {content: ""; position: absolute; width: 6px; height: 6px; top: calc(50% + 1px); right: 0; border: 2px solid #1DA8A5; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-135deg);}
+
+/* common - toggle */
+.ktd-conWrap .toggle_box {display: block; margin-top:40px; text-align: left; border-bottom: 0;}
+.benefit-list01 + .toggle_box {margin-top:12px;}
+.ktd-conWrap h2 + .ktd-dot-list {margin-top:12px;}
+.ktd-conWrap h2 + .toggle_box {margin-top:24px;}
+
+.ktd-conWrap .toggle_tit > button span {color: #000;}
+.ktd-conWrap .toggle_cont {padding-bottom: 24px;}
+
+.ktd-conWrap .list-type-ast li {margin-top:16px; padding-left: 16px;}
+.ktd-conWrap .list-type-ast li ul {margin-left: -16px;}
+.ktd-conWrap .list-type-ast > li:first-child {margin-top:0}
+.ktd-conWrap .list-type-ast > li:after {content: ''; position: absolute; top: 8px; left: 5px; width: 4px; height: 4px; border-radius: 50%; background: #6F6F6F;}
+
+.ktd-conWrap .toggle_box > li:last-child .toggle_cont {padding-bottom: 0;}
+.ktd-conWrap .toggle_box > li .sublist_2 {margin-left: -10px;}
+.ktd-conWrap .toggle_box > li .sublist_2 > li {margin-top:8px;}
+
+/* common - dot list */
+.ktd-dot-list {margin-top: 32px;}
+.ktd-dot-list li + li {margin-top:16px}
+.ktd-dot-list li > span,
+.ktd-dot-list dt {position:relative; margin-bottom: 4px; padding-left: 16px; font-size: 16px; color: #000; font-weight: 500;}
+.ktd-dot-list li > span:before,
+.ktd-dot-list dt:before {content: ''; position: absolute; top:10px; left:5px; width:4px; height: 4px; border-radius: 50%; background: #000;}
+.ktd-dot-list dd {margin-bottom: 0;}
+
+.ktd-noti-list {margin-top:12px;}
+.ktd-noti-list li {position:relative; padding-left:16px; line-height: 21px;}
+.ktd-noti-list li + li {margin-top:16px}
+.ktd-noti-list li:before {content: ''; position: absolute; top:8px; left:5px; width:4px; height: 4px; border-radius: 50%; background: #6F6F6F;}
+
+/* common - num round list */
+.ktd-numRound-list {margin-top: 32px}
+.ktd-numRound-list li {position: relative; padding-left: 26px; line-height: 21px; font-size: 16px; font-weight: 500; color: #000;}
+.ktd-numRound-list li + li {margin-top:18px}
+.ktd-numRound-list li span {position: absolute; top:2px; left: 0; width: 18px; height: 18px; line-height: 17px; border-radius: 50%; text-align: center; font-size: 11px; font-weight: bold; color: #fff; background:#000;}
+
+/* common - check round list */
+.ktd-chkRound-list {margin-top: 32px}
+.ktd-chkRound-list li {position: relative; padding-left: 26px; }
+.ktd-chkRound-list li + li {margin-top:20px}
+.ktd-chkRound-list li:before {content:''; position: absolute; top:2px; left: 0; width: 18px; height: 18px; line-height: 17px; border-radius: 50%; text-align: center; font-size: 11px; font-weight: bold; color: #fff;
+  background:#000;
+  background-image: url('/images/directShop/renew/icon_check.svg');
+  background-size: auto 8px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.ktd-chkRound-list li dt {line-height: 21px; font-size: 16px; font-weight: 500; color: #000;}
+.ktd-chkRound-list li dd {margin-top:2px; color: #6F6F6F;}
+
+/* common - tab */
+.ktd-tab {display: flex;}
+.ktd-tab li {flex: 1;}
+.ktd-tab li + li {border-left:1px solid #D9D9D9}
+.ktd-tab li a {display: block;}
+.ktd-tab li a span {display: block; padding: 7px 0; min-height: 40px; font-size: 16px; color: #6F6F6F; border-top: 2px solid transparent; border-bottom: 1px solid #D9D9D9;}
+.ktd-tab li.active a span {font-weight: bold; color: #000; border-top-color: #5DDFDE; border-bottom-color:transparent; background:#fff;}
+
+.ktd-tab.line li + li {border-left: none;}
+.ktd-tab.line li a {display: table; width: 100%;}
+.ktd-tab.line li a span {display: table-cell; height: 40px; padding: 0 2px; border-top:none; background-color: #fff; font-size: 14px; vertical-align: middle;}
+.ktd-tab.line li.active a span {border-bottom: 2px solid #000;}
+
+/****************************** 다이렉트 콘텐츠 영역 ******************************/
 .ktd-conWrap {width: 480px;min-height: 100vh;position: relative;margin-left: 50%;border: 1px solid #ccc;border-top:none;border-bottom: none;}
 .ktd-conWrap * {word-break: keep-all;}
 
-/* header */
+/* 헤더 */
 .ktd-conWrap header {position: sticky;height:64px;padding-top: 22px;background:#fff;}
 .ktd-conWrap header > div {margin-top: 0;padding:0 20px;max-width: 100%;}
 .ktd-conWrap header h1 {width: 100px; height: 20px; background: none;}
 .ktd-conWrap header h1 a {background: url('/images/directShop/renew/kt_logo.svg') 0 0 no-repeat;}
-.ktd-conWrap header h1 button {position: absolute; top:1px;}
+.ktd-conWrap header h1 button {position: absolute; top:1px; color: #121619;}
 .ktd-conWrap header h1 button:before {content: ""; position: absolute; width: 10px; height: 10px; top: 50%; right: 4px; border: 2px solid #000; border-top: 0; border-right: 0; transform: translateY(-50%) rotate(45deg); background:none;}
 
-/* menu */
+/* 메뉴 */
 .ktd-conWrap header .menu {position: absolute; top: 50%; right: 20px; width: 24px; height: 24px; text-indent: -9999px; overflow: hidden; background: url('/images/directShop/renew/main_menu.svg') 0 0 no-repeat; background-size: 100%; transform: translateY(-50%);}
 
 .ktd-conWrap #menu {position: absolute;overflow: hidden;}
@@ -94,7 +189,7 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-depthMenu-wrap {position:relative;box-sizing: border-box;min-height: 40px;padding: 6px 40px 6px 0;}
 .ktd-depthMenu-wrap ul {width: 100%; padding-left: 8px;}
 .ktd-depthMenu-wrap ul li {display: inline-block; width: auto; vertical-align: top; word-break: keep-all;}
-.ktd-depthMenu-wrap ul li a {display:block;padding:0 12px;height: 28px;line-height: 28px;font-size: 14px;color: #161616;}
+.ktd-depthMenu-wrap ul li a {display:block;padding:0 12px;height: 28px;line-height: 28px;color: #161616;}
 .ktd-depthMenu-wrap ul li.on a {color:#01A69F; font-weight: bold;}
 
 .ktd-depthMenu-wrap .btn-more {position: absolute; top:0; right: 0; width:40px; height:40px; border-left: 1px solid #ccc; box-sizing: border-box; background:#fff; z-index: 1;}
@@ -103,7 +198,7 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-depthMenu.on ul {transform: none !important; display: block;}
 .ktd-depthMenu.on .ktd-depthMenu-wrap .btn-more:after {transform: translate(-50%, -50%) rotate(-45deg);}
 
-/****************************** 메인 Page ******************************/
+/****************************** 메인 페이지 ******************************/
 .ktd-conWrap #main-contents {display:inline-block; width:100%; max-width: 100%; padding:0}
 
 @media all and (max-width: 1024px) {
@@ -127,7 +222,7 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-conWrap #main-contents .main-swiper p.t-3 {color:#fff}
 .ktd-conWrap #main-contents .main-swiper p.t {margin-bottom:17px; font-size: 32px; line-height: 38px; font-weight: bold;}
 .ktd-conWrap #main-contents .main-swiper p.t-2,
-.ktd-conWrap #main-contents .main-swiper p.t-3 {font-size: 14px; font-weight: 500;}
+.ktd-conWrap #main-contents .main-swiper p.t-3 {font-weight: 500;}
 .ktd-conWrap #main-contents .main-swiper .opt {bottom:24px; left: 20px; width:auto; background:rgba(0, 0, 0, 0.5); border-radius: 5px; padding:1px 7px 3px; z-index: 1; min-width: 58px;}
 .ktd-conWrap #main-contents .swiper-pagination-fraction,
 .ktd-conWrap #main-contents .swiper-pagination-custom,
@@ -141,24 +236,18 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 
 /* 메인 */
 .ktd-conWrap #main-contents h2 {font-size: 28px; font-weight: 500; line-height: 36px;}
-.ktd-conWrap .section-head h2 + p {margin-top:9px; font-size: 14px; color: #6F6F6F;}
+.ktd-conWrap .section-head h2 + p {margin-top:9px; color: #6F6F6F;}
 
 /* 메인 - 유심요금제 가입 */
 .ktd-main-section-1 {padding:40px 0 0; background:#F4F4F4;}
 .ktd-main-section-1 .section-head {margin-bottom: 13px; text-align: center;}
 .ktd-main-section-1 .section-head h2 {font-size: 24px; line-height: 35px;}
 
-.ktd-main-section-1 .tab {display: flex;}
-.ktd-main-section-1 .tab li {flex: 1;}
-.ktd-main-section-1 .tab li + li {border-left:1px solid #D9D9D9}
-.ktd-main-section-1 .tab li a {display: block; height: 40px; line-height: 38px; font-size: 16px; color: #6F6F6F; border-top: 2px solid transparent; border-bottom: 1px solid #D9D9D9;}
-.ktd-main-section-1 .tab li.active a {font-weight: bold; color: #000; border-top-color: #5DDFDE; border-bottom-color:#fff; background:#fff;}
-
 .ktd-main-section-1 .tab-content {margin-top:0; padding:40px 20px; background:#fff;}
-.ktd-main-section-1 .youtube-movie-area{position:relative;width:100%;height:0;padding-bottom:56.25%; border-radius: 20px;}
+.ktd-main-section-1 .youtube-movie-area{position:relative;width:100%;height:0;padding-bottom:56.25%; border-radius: 20px; margin-top:0}
 .ktd-main-section-1 .youtube-movie-area iframe{position:absolute;top:0;left:0;width:100%;height:100%;border-radius: 20px;}
 
-.ktd-main-section-1 .top-txt {margin-bottom:40px; font-size: 14px; color:#161616}
+.ktd-main-section-1 .top-txt {margin-bottom:40px; color:#161616}
 
 .ktd-main-section-1 .top-message {margin:0 0 20px; text-align: center; font-size: 16px; font-weight: 500;}
 .ktd-main-section-1 .top-message strong {color: #1DA8A5; font-weight: 500;}
@@ -223,7 +312,7 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .usim-buy-find h3 {font-size: 24px; font-weight: 500;}
 .usim-buy-find ul {margin-top:33px; display: flex; justify-content: space-between; width: 100%;}
 
-.usim-buy-find li {text-align: center; font-size: 14px;}
+.usim-buy-find li {text-align: center;}
 .usim-buy-find li a {position:relative; color:#6F6F6F;}
 .usim-buy-find li a:before {content: ''; display:block; width:68px; height: 68px; margin: 0 auto 8px; border-radius: 20px; border: 1px solid #D9D9D9; background:#fff; background-repeat: no-repeat; background-position: 50% 50%; background-size: auto 44px;}
 
@@ -273,7 +362,7 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 }
 
 .ktd-main-section-3 .section-body > div > a {position: absolute; bottom: 24px; left:24px; color: #fff;}
-.ktd-main-section-3 .section-body > div > a span {position: relative; padding-right: 15px; font-size: 14px; font-weight: 500;}
+.ktd-main-section-3 .section-body > div > a span {position: relative; padding-right: 15px; font-weight: 500;}
 .ktd-main-section-3 .section-body > div > a span:after {content: ''; position: absolute; top: 50%; right: 0; transform: translateY(calc(-50% - -1px)) rotate(45deg); width: 5px; height: 5px; border-top: 2px solid #fff; border-right: 2px solid #fff; display: inline-block;}
 
 .ktd-main-section-3 .section-body .flag + .headcopy {margin-top: 10px;}
@@ -283,93 +372,11 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 
 .ktd-main-section-3 .section-body .headcopy {font-size:20px; font-weight: bold; color: #fff;}
 
-
-
-
 /****************************** 콘텐츠 페이지 ******************************/
-.ktd-conWrap #content,
-.ktd-conWrap .bodyContent {width: 100%; max-width: 100%; padding: 0;}
-
-.ktd-block {position:relative; padding:40px 20px; background:#fff; color: #6F6F6F;}
-.ktd-block + .ktd-block {padding-top:52px}
-.ktd-block + .ktd-block:before {content: ''; position: absolute; top:0; left: 0; width: 100%; height:12px; background:#F4F4F4;}
-
-/* common - color */
-.color01 {color: #1DA8A5; font-weight: 500;}
-
-/* common - header */
-.ktd-block h2 {margin-bottom: 8px; line-height: 27px; font-size: 20px; font-weight: bold; color: #000;}
-.ktd-block h2 span {font-weight: bold;}
-.ktd-block h2 + p {font-size: 14px;}
-
-/* common - roundBox */
-.ktd-round-box {margin-top:20px; padding: 24px; border:1px solid #1DA8A5; border-radius: 20px;}
-.ktd-round-box + .ktd-round-box {margin-top:16px}
-.ktd-round-box .title {margin-bottom:21px; line-height:21px; font-size: 16px; font-weight: bold; color: #000;}
-
-/* common - self link */
-.self_link {margin: 0;}
-.self_link a {display: block; height: auto; padding: 0; border-radius: 0; margin:0; text-align: left;}
-.self_link a + a {margin-top:12px}
-.self_link a span {position: relative; padding-right: 14px; height: auto; line-height: inherit; color: #1DA8A5; font-weight: 500;}
-.self_link a span:after {content: ""; position: absolute; width: 6px; height: 6px; top: calc(50% + 1px); right: 0; border: 2px solid #1DA8A5; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-135deg);}
-
-/* common - toggle */
-.ktd-conWrap .toggle_box {display: block; margin-top:40px; text-align: left; border-bottom: 0;}
-.benefit-list01 + .toggle_box {margin-top:12px;}
-.ktd-conWrap .toggle_tit > button span {font-size: 14px;}
-.ktd-conWrap .list-type-ast li {margin-top:16px; padding-left: 16px;}
-.ktd-conWrap .list-type-ast > li:first-child {margin-top:0}
-.ktd-conWrap .list-type-ast > li:after {content: ''; position: absolute; top: 8px; left: 5px; width: 4px; height: 4px; border-radius: 50%; background: #6F6F6F;}
-
-/* common - dot list */
-.ktd-dot-list {margin-top: 32px;}
-.ktd-dot-list li + li {margin-top:16px}
-.ktd-dot-list  dt {position:relative; margin-bottom: 4px; padding-left: 16px; font-size: 16px; color: #000; font-weight: 500;}
-.ktd-dot-list dt:before {content: ''; position: absolute; top:10px; left:5px; width:4px; height: 4px; border-radius: 50%; background: #000;}
-.ktd-dot-list dd {margin-bottom: 0;}
-
-.ktd-noti-list {margin-top:12px;}
-.ktd-noti-list li {position:relative; padding-left:16px; font-size: 14px; line-height: 21px;}
-.ktd-noti-list li + li {margin-top:16px}
-.ktd-noti-list li:before {content: ''; position: absolute; top:8px; left:5px; width:4px; height: 4px; border-radius: 50%; background: #6F6F6F;}
-
-
-/* common - num round list */
-.ktd-numRound-list {margin-top: 32px}
-.ktd-numRound-list li {position: relative; padding-left: 26px; line-height: 21px; font-size: 16px; font-weight: 500; color: #000;}
-.ktd-numRound-list li + li {margin-top:18px}
-.ktd-numRound-list li span {position: absolute; top:2px; left: 0; width: 18px; height: 18px; line-height: 17px; border-radius: 50%; text-align: center; font-size: 11px; font-weight: bold; color: #fff; background:#000;}
-
-/* common - check round list */
-.ktd-chkRound-list {margin-top: 32px}
-.ktd-chkRound-list li {position: relative; padding-left: 26px; }
-.ktd-chkRound-list li + li {margin-top:20px}
-.ktd-chkRound-list li:before {content:''; position: absolute; top:2px; left: 0; width: 18px; height: 18px; line-height: 17px; border-radius: 50%; text-align: center; font-size: 11px; font-weight: bold; color: #fff;
-  background:#000;
-  background-image: url('/images/directShop/renew/icon_check.svg');
-  background-size: auto 8px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-.ktd-chkRound-list li dt {line-height: 21px; font-size: 16px; font-weight: 500; color: #000;}
-.ktd-chkRound-list li dd {margin-top:2px; color: #6F6F6F;}
-
-
-
-
-
-
-
-
-
-
-
-
 /* 상단 헤드 콘텐츠 */
 .ktd-block .step-top-msg2 {padding-top: 0; margin-bottom: 40px;}
 .ktd-block .step-top-msg2 strong {font-size: 24px; color: #000;}
-.ktd-block .step-top-msg2 p {margin-top:9px; font-size: 14px; color:#6F6F6F;}
+.ktd-block .step-top-msg2 p {margin-top:9px; color:#6F6F6F;}
 .ktd-block .step-top-msg2 + .self_link {margin-top:-27px;}
 .ktd-block .self_link + div {margin-top:40px;}
 
@@ -384,19 +391,20 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-conWrap .tab_links li.active span {color:#000; border-top-color: #5DDFDE; border-bottom-color: transparent;}
 
 /****************************** 가입신청 페이지 ******************************/
-.ktd-self-sufficient {font-size: 14px; line-height: 21px; color: #6F6F6F;}
+.ktd-self-sufficient {line-height: 21px; color: #6F6F6F;}
 .ktd-self-sufficient > div + div {margin-top:64px}
 
 /* 가입신청 - 이럴때 다이렉트가 필요합니다 */
-.self-use-direct li {position: relative; padding:28px 0 20px 96px; min-height: 120px; color: #000;}
-.self-use-direct li:before {content: ''; position:absolute; top:20px; left:0; width:80px; height: 80px; margin: 0 auto 8px; border-radius: 20px; background:#9CE5E3;background-repeat: no-repeat; background-position: 50% 50%; background-size: 56px 56px;}
-.self-use-direct li + li {border-top:1px solid #EBEBEB;}
+.ktd-info-list li {position: relative; display: table; width: 100%; padding:20px 0 20px 96px; min-height: 120px; color: #000;}
+.ktd-info-list li > div {display: table-cell; vertical-align: middle;}
+.ktd-info-list li:before {content: ''; position:absolute; top:20px; left:0; width:80px; height: 80px; margin: 0 auto 8px; border-radius: 20px; background:#9CE5E3;background-repeat: no-repeat; background-position: 50% 50%; background-size: 56px 56px;}
+.ktd-info-list li + li {border-top:1px solid #EBEBEB;}
 
-.self-use-direct li.icon-new:before {background-image: url('/images//directShop/renew/icon_set_new.svg');}
-.self-use-direct li.icon-internet:before {background-image: url('/images//directShop/renew/icon_set_internet.svg');}
-.self-use-direct li.icon-5g2:before {background-image: url('/images//directShop/renew/icon_set_5g2.svg');}
-.self-use-direct li.icon-kt:before {background-image: url('/images//directShop/renew/icon_set_kt.svg');}
-.self-use-direct li.icon-add:before {background-image: url('/images//directShop/renew/icon_set_add.svg');}
+.ktd-info-list li.icon-new:before {background-image: url('/images//directShop/renew/icon_set_new.svg');}
+.ktd-info-list li.icon-internet:before {background-image: url('/images//directShop/renew/icon_set_internet.svg');}
+.ktd-info-list li.icon-5g2:before {background-image: url('/images//directShop/renew/icon_set_5g2.svg');}
+.ktd-info-list li.icon-kt:before {background-image: url('/images//directShop/renew/icon_set_kt.svg');}
+.ktd-info-list li.icon-add:before {background-image: url('/images//directShop/renew/icon_set_add.svg');}
 
 /* 가입신청 - 개통을 위한 준비 사항 */
 .ktd-self-sufficient > div + div.self-use-ready {margin-top:44px;}
@@ -413,14 +421,13 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .self-use-ready {}
 .self-use-ready .self_link {margin:12px 0 0;}
 
-
 /****************************** 데이터쉐어링 페이지 ******************************/
 .ktd-sharing {padding-bottom: 0;}
 .ktd-sharing > div {margin-top:64px;}
 .ktd-sharing > div:first-child {margin-top:0;}
 
 /* 데이터쉐어링 - 요금안내 */
-.ktd-info-box {display: table; width: 100%; clear: both; font-size: 14px; margin-top:32px}
+.ktd-info-box {display: table; width: 100%; clear: both; margin-top:32px}
 .ktd-info-box > div {display: table-cell; text-align: center;}
 .ktd-info-box > div:before {content: ''; display: block; width: 80px; height: 80px; margin: 0 auto 8px; border-radius: 20px; background: #F4F4F4; background-repeat: no-repeat; background-position: 50% 50%; background-size: 56px 56px;}
 .ktd-info-box > div:nth-child(1):before {background-image: url('/images//directShop/renew/icon_set_5g1.svg');}
@@ -442,9 +449,6 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-sharing-data .ktd-info-box > div:nth-child(1):before {background-image: url('/images//directShop/renew/icon_set_5g2.svg');}
 .ktd-sharing-data .ktd-info-box > div:nth-child(3):before {background-image: url('/images//directShop/renew/icon_set_smart.svg');}
 
-/* 데이터쉐어링 - 데이터쉐어링이란? */
-.ktd-sharing-faq .toggle_box {margin-top:24px;}
-
 /****************************** 무약정플랜 요금제 변경 페이지 ******************************/
 .ktd-uncontracted {padding-bottom: 0;}
 .ktd-uncontracted-view {padding-bottom:40px;}
@@ -454,7 +458,6 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-uncontracted .ktd-rate-check {margin:48px -20px 0; padding:40px 20px; background-color: #F3F7FA;}
 .ktd-uncontracted .ktd-noti {margin-top:40px;}
 .ktd-uncontracted .ktd-payment-info {margin-top: 64px;}
-.ktd-uncontracted .ktd-payment-info .toggle_box {margin-top: 24px;}
 
 .ktd-rate-visual {height: 200px; padding: 40px 20px 0; color: #fff;
   background-color: #12BAFB;
@@ -465,10 +468,60 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 }
 .ktd-rate-visual .tip span {display:inline-block; height: 24px; line-height: 24px; padding: 0 8px; background-color: #FDE9A2; border-radius: 4px; color: #1DA8A5; font-size: 12px;}
 .ktd-rate-visual .tit {margin-top: 4px; font-size: 24px; line-height: 38px; font-weight: bold;}
-.ktd-rate-visual p {margin-top:9px; font-size: 14px;}
+.ktd-rate-visual p {margin-top:9px;}
 
 .ktd-rate-tit {margin-bottom: 64px;}
 .ktd-rate-tit .self_link {margin-top:24px;}
+
+/****************************** 스마트 워치 전용 요금제 페이지 ******************************/
+.ktd-watch {padding-bottom: 0;}
+.ktd-watch > div {margin-top:40px;}
+.ktd-watch > div:first-child {margin-top:0;}
+
+.ktd-info-box.watch > div:before {background-color: #9CE5E3;}
+
+.ktd-info-box.watch > div:nth-child(1):before {background-image: url('/images//directShop/renew/icon_watch_data.svg');}
+.ktd-info-box.watch > div:nth-child(2):after {display: none;}
+.ktd-info-box.watch > div:nth-child(2):before {display:block; background-image: url('/images//directShop/renew/icon_watch_share.svg');}
+.ktd-info-box.watch > div:nth-child(3):before {background-image: url('/images//directShop/renew/icon_watch_lte.svg');}
+
+.ktd-watch-info {margin:0 -20px; padding:40px 20px; background-color: #F3F7FA;}
+.ktd-watch-info .ktd-info-list li:last-child {border-bottom:1px solid #EBEBEB}
+.ktd-watch-info .ktd-info-list li:before {background-color: #fff;}
+.ktd-watch-info .icon-watch-kt:before {background-image: url('/images//directShop/renew/icon_watch_kt.svg');}
+.ktd-watch-info .icon-watch-self:before {background-image: url('/images//directShop/renew/icon_watch_self.svg');}
+.ktd-watch-info .icon-watch-personal:before {background-image: url('/images//directShop/renew/icon_watch_personal.svg');}
+
+.ktd-watch-info .self_link {margin-top: 32px;}
+
+.ktd-watch-setting .toggle_cont .step-area > li + li {margin-top:48px;}
+.ktd-watch-setting .step {display: inline-block; margin-bottom: 18px; padding: 0 15px; height: 30px; line-height: 30px; font-weight: bold; background-color: #1DA8A5; border-radius: 16px; color: #fff;}
+.ktd-watch-setting .title {font-size: 16px; font-weight: 500; color: #000;}
+.ktd-watch-setting .title + p {margin-top: 4px;}
+
+.ktd-watch-setting .img {margin-top:24px;}
+.ktd-watch-setting .img > div + div {margin-top:20px;}
+.ktd-watch-setting .img {text-align: center;}
+.ktd-watch-setting .img img {width:100%; max-width: 320px;}
+
+.ktd-watch-setting .num {margin-top:24px;}
+.ktd-watch-setting .num li + li {margin-top:16px;}
+
+.ktd-watch-inquiry .ktd-dot-list li + li {margin-top:8px;}
+.ktd-watch-inquiry .fixed {margin-top: 8px;}
+
+/****************************** 이벤트 페이지 ******************************/
+/* 진행중인 이벤트 */
+
+
+
+/* 종료된 이벤트 */
+
+
+/* 당첨자 발표 */
+
+
+
 
 
 
@@ -492,12 +545,12 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 
 .payment-slide .payment-tit {font-size: 20px; font-weight: bold; color: #000;}
 .payment-slide ul {display:flex; align-items: center; margin-top: 14px; border-top: 1px solid #D9D9D9; border-bottom: 1px solid #D9D9D9; padding:8px 0;}
-.payment-slide ul li {flex:1; padding:0 5px; font-size: 14px; color:#6F6F6F;}
+.payment-slide ul li {flex:1; padding:0 5px; color:#6F6F6F;}
 .payment-slide ul li + li {border-left:1px solid #D9D9D9}
 .payment-slide ul li p em {margin-left:5px; color: #161616; font-weight: 500;}
 .payment-slide ul li span {font-size: 12px; color: #A8A8A8;}
-.payment-slide .discount {margin-top:12px; font-size:14px; color:#f00}
-.payment-slide .price {margin-top:2px; font-size: 14px;}
+.payment-slide .discount {margin-top:12px; color:#f00}
+.payment-slide .price {margin-top:2px;}
 .payment-slide .price strong {font-size: 20px; color: #000; font-weight: 500;}
 
 .payment-slide-wrap h2 + .swiper-container {margin:20px -20px 0;}
@@ -515,7 +568,7 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .benefit-box + .benefit-box {margin-top:16px;}
 
 .benefit-box .benefit-txt {text-align: center;}
-.benefit-box .benefit-txt span {display: inline-block; height: 30px; line-height: 28px; padding: 0 18px; min-width: 72px; border-radius: 15px; font-size: 14px; font-weight: bold; color: #fff; background:#1da8a5;}
+.benefit-box .benefit-txt span {display: inline-block; height: 30px; line-height: 28px; padding: 0 18px; min-width: 72px; border-radius: 15px; font-weight: bold; color: #fff; background:#1da8a5;}
 
 .benefit-box .headcopy {margin:12px 0 24px; font-size: 16px; font-weight: 500;}
 
@@ -527,7 +580,7 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 
 .benefit-list01 dl {margin-bottom: 20px;}
 .benefit-list01 dt {font-size: 12px; color: #6F6F6F;}
-.benefit-list01 dd {margin-top: 5px; font-size: 14px; font-weight: 500;}
+.benefit-list01 dd {margin-top: 5px; font-weight: 500;}
 
 .benefit-list02 li {display: table-cell; width: 50%; text-align: center;}
 .benefit-list02 li img {max-width: 96px;}
@@ -540,7 +593,7 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-gift-section .btn-gift a span {padding:0 16px; font-size: 16px; font-weight: bold; color: #fff;}
 
 /* 가입혜택 - 콘텐츠 */
-.ktd-block-gift {padding:40px 20px 48px; margin-top: 8px; margin-bottom: -64px; background:#F3F7FA;}
+.ktd-block-gift {padding:40px 20px 64px; margin-top: 8px; margin-bottom: -64px; background:#F3F7FA; color: #6f6f6f;}
 
 .ktd-block-gift .ktd-gift-section {padding: 0; background: none;}
 .ktd-block-gift .section-head h2 {font-size: 16px; color: #1DA8A5; font-weight: 500;}
@@ -551,7 +604,7 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-block-gift .section-etc ul {display: flex; justify-content: center;}
 .ktd-block-gift .section-etc li + li {padding-left:44px;}
 .ktd-block-gift .section-etc li img {max-width: 100%; max-height: 90px;}
-.ktd-block-gift .section-etc p {margin-top:5px; font-size: 14px; opacity: 0.47;}
+.ktd-block-gift .section-etc p {margin-top:5px; opacity: 0.47;}
 .ktd-block-gift .section-body {margin-top:40px}
 
 .ktd-block-gift .headcopy + .benefit-list01 li {width: 33.3333%;}
@@ -606,28 +659,5 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* sample 확인 후 삭제 */
+.ktd-tab.line + .tab-content.sampleTab {margin-top:0;}

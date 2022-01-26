@@ -30,7 +30,7 @@ body {-webkit-font-smoothing: antialiased;}
 #lnb a {text-align: left;}
 #lnb .depth01 > li {padding: 50px 15px 0; font-size: 16px; font-weight: bold;}
 #lnb .depth01 > li > a {display: block; position: relative;}
-#lnb .depth01 > li > a:after {content: ''; position: absolute; top: 30%; right: 0; margin-top: -1px; width: 6px; height: 6px; border: 1px solid #000; border-width: 1px 1px 0 0; transform: rotate(135deg);}
+#lnb .depth01 > li.current > a:after {content: ''; position: absolute; top: 30%; right: 0; margin-top: -1px; width: 6px; height: 6px; border: 1px solid #000; border-width: 1px 1px 0 0; transform: rotate(135deg);}
 
 #lnb .depth01 li a:hover,
 #lnb .depth01 li a:focus,
@@ -45,7 +45,7 @@ body {-webkit-font-smoothing: antialiased;}
 #lnb .depth02 li.current a:after {content: ''; border-color: #000;}
 
 /* content */
-.content {padding: 60px 0 0 200px; transition: all 0.3s;}
+.content {padding: 60px 0 400px 200px; transition: all 0.3s;}
 .content.full_width {padding-left:0;}
 
 .p_title {padding:50px 50px 30px;}
@@ -56,7 +56,8 @@ body {-webkit-font-smoothing: antialiased;}
 
 .s_block .s_title {padding-bottom:15px; border-bottom: 1px solid #ddd;}
 .s_block .s_title h3 {font-size: 18px; font-family: 'Noto Sans KR'; font-weight: bold;}
-.s_block .s_subTitle01 {margin: 25px 0 10px;}
+.s_block .s_subTitle01 {margin: 40px 0 10px;}
+.s_block .s_title + .s_subTitle01 {margin: 20px 0 10px;}
 .s_block .s_subTitle01:first-child {margin: 0 0 10px;}
 
 .s_block .s_content {margin: 20px 0 0;}
@@ -110,8 +111,8 @@ body {-webkit-font-smoothing: antialiased;}
 .tbl_type01 table td.chk_prog.on2 {}
 
 /* tab menu */
-.tab_block {border: 1px solid #eee; border-radius: 5px;}
-.tab_wrap {padding:7px 5px; background-color: #eee;}
+.tab_block {border: 1px solid #ccc; border-radius: 10px; margin-top:20px;}
+.tab_wrap {padding:7px 5px; border-radius: 10px 10px 0 0; background-color: #eee;}
 .tab_wrap ul {margin-top:-2px; text-align: right;}
 .tab_wrap ul li {display: inline-block;}
 .tab_wrap ul li a {padding: 2px 5px; background-color: #999; font-size: 11px; color: #fff; border-radius: 3px;}

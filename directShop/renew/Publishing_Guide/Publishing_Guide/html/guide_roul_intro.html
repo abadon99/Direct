@@ -52,7 +52,7 @@
 			<!-- Lnb -->
 			<aside id="lnb">
 				<ul class="depth01">
-					<li><a href="javascript:;">기본 정책 사항</a>
+					<li class="current"><a href="javascript:;">기본 정책 사항 가이드</a>
 						<ul class="depth02">
 							<li class="current"><a href="">기본 정책</a></li>
 							<li><a href="">퍼블리싱 규칙사항</a></li>
@@ -62,32 +62,19 @@
 							<li><a href="">Images 규칙사항</a></li>
 						</ul>
 					</li>
-					<li><a href="javascript:;">문서 구조</a>
-						<ul class="depth02">
-							<li><a href="">공통 사항</a></li>
-							<li><a href="">Main Page</a></li>
-							<li><a href="">Content Page</a></li>
-							<li><a href="">기타 사항</a></li>
-						</ul>
-					</li>
-					<li><a href="javascript:;">라이브러리</a>
-						<ul class="depth02">
-							<li><a href="">Table</a></li>
-							<li><a href="">Form</a></li>
-							<li><a href="">Tab</a></li>
-						</ul>
-					</li>
+					<li><a href="guide_roul_document.html">문서 구조 가이드</a></li>
+					<li><a href="guide_roul_library.html">라이브러리 가이드</a></li>
 				</ul>
 			</aside>
 			<!-- //Lnb -->
 
 			<article class="content">
 				<div class="p_title">
-					<h2>기본 정책 사항</h2>
+					<h2>기본 정책 사항 가이드</h2>
 				</div>
 
 				<!-- 기본정책 -->
-				<section id="section-1" class="s_block">
+				<section class="s_block">
 					<div class="s_title">
 						<h3>기본정책</h3>
 					</div>
@@ -142,7 +129,7 @@
 				</section>
 
 				<!-- 퍼블리싱 규칙사항 -->
-				<section id="section-2" class="s_block">
+				<section class="s_block">
 					<div class="s_title">
 						<h3>퍼블리싱 규칙사항</h3>
 					</div>
@@ -186,7 +173,7 @@
 				</section>
 
 				<!-- Html 규칙사항 -->
-				<section id="section-3" class="s_block">
+				<section class="s_block">
 					<div class="s_title">
 						<h3>Html 규칙사항</h3>
 					</div>
@@ -212,7 +199,7 @@
 
 				<!-- Css 규칙사항 -->
 				<p style="font-size: 20px; color:#f00;">작업 여기서 부터 진행</p>
-				<section id="section-4" class="s_block">
+				<section class="s_block">
 					<div class="s_title">
 						<h3>Css 규칙사항</h3>
 					</div>
@@ -242,7 +229,7 @@
 
 				<!-- js 규칙사항 -->
 				<p>js는 기존 pub 하단에 작업 주석 내용 표기</p>
-				<section id="section-5" class="s_block">
+				<section class="s_block">
 					<div class="s_title">
 						<h3>Css 규칙사항</h3>
 					</div>
@@ -305,518 +292,6 @@
 
 
 
-				<!-- css/js 폴더 구조 -->
-				<section class="s_block">
-					<div class="s_title">
-						class는 - 로<br>
-						<h3>css/js 폴더 구조</h3>
-					</div>
-					<div class="s_content">
-						<div class="code_box">
-							<pre class="brush: html">
-								// css folder
-								/inc/css/import.css                  // css 가져오기
-								/inc/css/ini.min.css                 // 스타일 초기화
-								/inc/css/common.css                  // 공통사항
-
-								// js folder
-								/inc/js/libs/jquery.min.js           // jQuery core
-								/inc/js/libs/html5shiv.js            // html5 호환성
-								/inc/js/libs/기타 플러그인 파일      // 외부 플러그인
-
-								/inc/js/pub/main.js                  // 메인 UI
-								/inc/js/pub/ui.js                    // 공통 UI
-							</pre>
-						</div>
-					</div>
-				</section>
-
-				<!-- 이미지 폴더 구조 -->
-				<section class="s_block">
-					<div class="s_title">
-						<h3>이미지 폴더 구조</h3>
-					</div>
-					<div class="s_content">
-						<div class="code_box">
-							<pre class="brush: html">
-								// image folder
-								/inc/img/common                  // 공통이미지
-								/inc/img/main                    // 메인페이지
-								/inc/img/sub                     // 서브페이지
-
-								* 이미지 폴더의 경우 필요시 카테고리 명으로 /inc/img/***** 위치에 생성하여 사용
-							</pre>
-						</div>
-					</div>
-				</section>
-
-
-				<section class="s_block">
-					<style>
-						.ktd-guide-wrap-info {border:1px solid #ccc; padding:20px; font-size: 12px;}
-						.ktd-guide-wrap-info > div,
-						.ktd-guide-wrap-info > div div {border: 1px solid #ddd; padding:20px; margin:10px 0}
-					</style>
-					메인 레이아웃
-					<div class="ktd-guide-wrap-info">
-						body : class="ktd-wrap"
-						<div>
-							작업영역 : div class="ktd-conWrap"
-
-							<div>헤더 영역 : header</div>
-							<div>Lnb 메뉴 영역 : div class="ktd-depthMenu"</div>
-
-							<div>
-								메인 콘텐츠 영역 : div id="main-contents"
-								<div>메인 슬라이드 영역 : div class="main-swiper"</div>
-								<div>유심요금제 가입 영역 : div class="ktd-main-section-1"</div>
-								<div>추천 요금제 영역 : div class="ktd-main-section-2"</div>
-								<div>가입혜택 영역 : div class="ktd-gift-section"</div>
-								<div>중고폰, 자급제폰 영역 : div class="ktd-main-section-3"</div>
-							</div>
-							<div>푸터영역 : div class="footer"</div>
-						</div>
-					</div>
-
-					콘텐츠 레이아웃 01
-					<div class="ktd-guide-wrap-info">
-						body : class="ktd-wrap"
-						<div>
-							작업영역 : div class="ktd-conWrap"
-
-							<div>헤더 영역 : header</div>
-
-							<div>
-								Default 콘텐츠 영역 : div id="content" class="bodyContent"<br>
-								** 작업 성격에 따라 class가 상이함 ( 작업성격에 맞게 제작)
-								<div>메인 슬라이드 영역 : div class="main-swiper"</div>
-							</div>
-							<div>푸터영역 : div class="footer"</div>
-						</div>
-					</div>
-
-					버튼타입
-					<div>
-						Default - Full size - height 48px
-						<div>
-							<div>
-								<a href="#" class="btn" role="button">a type</a>
-								<a href="#" class="btn gray" role="button">a type</a>
-								<button type="button" class="btn">button type</button>
-								<button type="button" class="btn gray">button type</button>
-								<button type="button" class="btn" disabled>button type</button>
-							</div>
-							<div class="code_box">
-								<pre class="brush: html">
-									<a href="#" class="btn" role="button">a type</a>
-									<a href="#" class="btn gray" role="button">a type</a>
-									<button type="button" class="btn">button type</button>
-									<button type="button" class="btn gray">button type</button>
-									<button type="button" class="btn" disabled>button type</button>
-								</pre>
-							</div>
-						</div>
-
-						Default - Auto size - height 48px
-						<div>
-							<div style="text-align: center;">
-								<a href="#" class="btn inline" role="button">a type</a>
-								<a href="#" class="btn inline gray" role="button">a type</a>
-								<button type="button" class="btn inline">button type</button>
-								<button type="button" class="btn inline gray">button type</button>
-								<button type="button" class="btn inline" disabled>button type</button>
-							</div>
-							<div class="code_box">
-								<pre class="brush: html">
-									<a href="#" class="btn inline" role="button">a type</a>
-									<a href="#" class="btn inline gray" role="button">a type</a>
-									<button type="button" class="btn inline">button type</button>
-									<button type="button" class="btn inline gray">button type</button>
-									<button type="button" class="btn inline" disabled>button type</button>
-								</pre>
-							</div>
-						</div>
-
-						Midium - Full size - height 40px
-						<div>
-							<div>
-								<a href="#" class="btn medium" role="button">a type</a>
-								<a href="#" class="btn medium gray" role="button">a type</a>
-								<button type="button" class="btn medium">button type</button>
-								<button type="button" class="btn medium gray">button type</button>
-								<button type="button" class="btn medium" disabled>button type</button>
-							</div>
-							<div class="code_box">
-								<pre class="brush: html">
-									<a href="#" class="btn medium" role="button">a type</a>
-									<a href="#" class="btn medium gray" role="button">a type</a>
-									<button type="button" class="btn medium">button type</button>
-									<button type="button" class="btn medium gray">button type</button>
-									<button type="button" class="btn medium" disabled>button type</button>
-								</pre>
-							</div>
-						</div>
-
-						Midium - Auto size - height 40px
-						<div>
-							<div style="text-align: center;">
-								<a href="#" class="btn medium inline" role="button">a type</a>
-								<a href="#" class="btn medium inline gray" role="button">a type</a>
-								<button type="button" class="btn medium inline">button type</button>
-								<button type="button" class="btn medium inline gray">button type</button>
-								<button type="button" class="btn medium inline" disabled>button type</button>
-							</div>
-							<div class="code_box">
-								<pre class="brush: html">
-									<a href="#" class="btn medium inline" role="button">a type</a>
-									<a href="#" class="btn medium inline gray" role="button">a type</a>
-									<button type="button" class="btn medium inline">button type</button>
-									<button type="button" class="btn medium inline gray">button type</button>
-									<button type="button" class="btn medium inline" disabled>button type</button>
-								</pre>
-							</div>
-						</div>
-					</div>
-
-					<div>
-						<h2 class="title">폰트 컬러 타입</h2>
-						<p class="color01">폰트 컬러 타입 :     color: #1DA8A5; font-weight: 500;</p>
-					</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<div class="join-link">
-						<a href="#">
-							<dl class="join-data">
-								<dt>
-									데이터 <br>
-									쉐어링 가입
-								</dt>
-								<dd>
-									다양한 스마트 기기를 <br>
-									함께 사용하고 싶다면
-								</dd>
-							</dl>
-						</a>
-						<a href="#">
-							<dl class="join-plan">
-								<dt>
-									무약정플랜 <br>
-									요금제 변경
-								</dt>
-								<dd>
-									KT 다이렉트에서만 <br>
-									가입이 가능한
-								</dd>
-							</dl>
-						</a>
-					</div>
-
-					<div class="usim-buy-find">
-						<h3>유심 구매처 안내</h3>
-						<ul>
-							<li class="seller-gs25">
-								<a href="https://direct.kt.com/direct/directEvent.do#div-section-1" role="button">
-									<span>GS25</span>
-								</a>
-							</li>
-							<li class="seller-kt">
-								<a href="https://shop.kt.com:444/accessory/accsProductView.do?prodNo=AC00051548" target="_blank" title="새창열림" role="button">
-									<span>KT Shop</span>
-								</a>
-							</li>
-							<li class="seller-coupang">
-								<a href="https://www.coupang.com/vp/products/4353623438?itemId=5110980269&amp;vendorItemId=72420516921&amp;pickType=COU_PICK&amp;q=KT%EC%9C%A0%EC%8B%AC&amp;itemsCount=36&amp;searchId=9e64b4d1c80145bfbb879a18f58cf1e1&amp;rank=1&amp;isAddedCart=" target="_blank" title="새창열림" role="button">
-									<span>쿠팡</span>
-								</a>
-							</li>
-							<li class="seller-naver">
-								<a href="https://smartstore.naver.com/ktdirect/products/5584809660" target="_blank" title="새창열림" role="button">
-									<span>N스토어</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-
-
-					<div>
-						<h2 class="title">다이렉트 아이콘</h2>
-						<style>
-							.sample-direct-icon {display: flex; justify-content: space-between;}
-							.sample-direct-icon li {position: relative;}
-							.sample-direct-icon li:before {
-								content: '';
-								display: block;
-								width: 80px;
-								height: 80px;
-								margin: 0 auto 8px;
-								border-radius: 20px;
-								background: #E4F5F5;
-								background-repeat: no-repeat;
-								background-position: 50% 50%;
-								background-size: 56px 56px;
-							}
-							.sample-direct-icon li.icon-new:before {
-								background-image: url(/images//directShop/renew/icon_set_new.svg);
-							}
-							.sample-direct-icon li.icon-pay:before {
-								background-image: url(/images//directShop/renew/icon_set_pay.svg);
-							}
-							.sample-direct-icon li.icon-add:before {
-								background-image: url(/images//directShop/renew/icon_set_add.svg);
-							}
-							.sample-direct-icon li.icon-internet:before {
-								background-image: url(/images//directShop/renew/icon_set_internet.svg);
-							}
-							.sample-direct-icon li.icon-5g2:before {
-								background-image: url(/images//directShop/renew/icon_set_5g2.svg);
-							}
-							.sample-direct-icon li.icon-kt:before {
-								background-image: url(/images//directShop/renew/icon_set_kt.svg);
-							}
-							.sample-direct-icon li.icon-5g:before {
-								background-image: url(/images//directShop/renew/icon_set_5g1.svg);
-							}
-							.sample-direct-icon li.icon-9:before {
-								background-image: url(/images//directShop/renew/icon_set_9.svg);
-							}
-							.sample-direct-icon li.icon-lte:before {
-								background-image: url(/images//directShop/renew/icon_set_lte.svg);
-							}
-							.sample-direct-icon li.icon-lte2:before {
-								background-image: url(/images//directShop/renew/icon_set_lte2.svg);
-							}
-							.sample-direct-icon li.icon-smart:before {
-								background-image: url(/images//directShop/renew/icon_set_smart.svg);
-							}
-
-							.sample-direct-icon li.icon_watch_data:before {
-								background-image: url(/images//directShop/renew/icon_watch_data.svg);
-							}
-							.sample-direct-icon li.icon_watch_kt:before {
-								background-image: url(/images//directShop/renew/icon_watch_kt.svg);
-							}
-							.sample-direct-icon li.icon_watch_lte:before {
-								background-image: url(/images//directShop/renew/icon_watch_lte.svg);
-							}
-							.sample-direct-icon li.icon_watch_personal:before {
-								background-image: url(/images//directShop/renew/icon_watch_personal.svg);
-							}
-							.sample-direct-icon li.icon_watch_self:before {
-								background-image: url(/images//directShop/renew/icon_watch_self.svg);
-							}
-							.sample-direct-icon li.icon_watch_share:before {
-								background-image: url(/images//directShop/renew/icon_watch_share.svg);
-							}
-						</style>
-
-						<ul class="sample-direct-icon" style="display: flex;">
-							<li class="icon-new">icon_set_new.svg</li>
-							<li class="icon-pay">icon_set_pay.svg</li>
-							<li class="icon-add">icon_set_add.svg</li>
-							<li class="icon-internet">icon_set_internet.svg</li>
-							<li class="icon-5g">icon_set_new.svg</li>
-							<li class="icon-5g2">icon_set_5g2.svg</li>
-						</ul>
-						<ul class="sample-direct-icon" style="display: flex;">
-							<li class="icon-kt">icon_set_kt.svg</li>
-							<li class="icon-9">icon_set_9.svg</li>
-							<li class="icon-lte">icon_set_lte.svg</li>
-							<li class="icon-lte2">icon_set_lte2.svg</li>
-							<li class="icon-smart">icon_set_smart.svg</li>
-						</ul>
-						<ul class="sample-direct-icon" style="display: flex;">
-							<li class="icon_watch_data">icon_watch_data.svg</li>
-							<li class="icon_watch_kt">icon_watch_kt.svg</li>
-							<li class="icon_watch_lte">icon_watch_lte.svg</li>
-							<li class="icon_watch_personal">icon_watch_personal.svg</li>
-							<li class="icon_watch_self">icon_watch_self.svg</li>
-							<li class="icon_watch_share">icon_watch_share.svg</li>
-						</ul>
-					</div>
-
-					<h2 class="title">다이렉트 아이콘 - 메인 사용시</h2>
-					<div class="use-direct">
-						<ul>
-							<li class="icon-new">
-								새로 구입한 <br>
-								자급제폰 개통
-							</li>
-							<li class="icon-pay">
-								약정이 끝나 <br>
-								새로 요금제 가입
-							</li>
-							<li class="icon-add">
-								세컨폰 등 <br>
-								추가 번호 개통
-							</li>
-						</ul>
-					</div>
-
-					<h2 class="title">다이렉트 아이콘 - 콘텐츠 페이지 사용시</h2>
-					<div class="ktd-block ktd-self-sufficient">
-						<div class="self-use-direct">
-							<ul>
-								<li class="icon-new">
-									온/오프라인을 통해 구입한 <br>
-									<span class="color01">#자급제폰 #해외직구폰 #중고폰</span> <br>
-									개통이 필요할 때
-								</li>
-								<li class="icon-internet">
-									인터넷/tv와 결합을 위해 <br>
-									<span class="color01">#신규가입 #번호이동</span> 으로 <br>
-									개통이 필요할 때
-								</li>
-								<li class="icon-5g2">
-									공 단말, 사용하던 폰을 <br>
-									<span class="color01">#자녀폰 #부모님폰</span> 으로 <br>
-									개통이 필요할 때
-								</li>
-								<li class="icon-kt">
-									무인매장에서 구매한 <br>
-									<span class="color01">#자급제폰 #신규가입</span> 으로 <br>
-									개통이 필요할 때
-								</li>
-								<li class="icon-add">
-									추가 번호가 필요해서 <br>
-									<span class="color01">#신규유심(후불유심)</span> <br>
-									개통이 필요할 때
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<h2 class="title">블록 사이 구분 시</h2>
-					<div class="ktd-block">
-						상단 블록
-					</div>
-					<div class="ktd-block">
-						인접한 블록 시 상단 구분
-					</div>
-
-
-					<h2 class="title">dot list</h2>
-
-					<ul class="ktd-dot-list">
-                        <li>
-
-                            <dl>
-                                <dt>유심카드</dt>
-                                <dd>
-                                    유심카드 뒷면의 일련번호 미리 확인
-                                </dd>
-                            </dl>
-                        </li>
-                        <li>
-
-                            <dl>
-                                <dt>신용카드</dt>
-                                <dd>
-                                    인증을 위해 본인 신용카드 미리 준비
-                                    <p class="fixed">
-                                        <em>※</em> 신용카드가 없는 경우, 핸드폰 인증 및 계좌이체로 인증 가능
-                                    </p>
-                                </dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>희망번호</dt>
-                                <dd>
-                                    신규가입 시 번호 뒷 4자리 미리 생각
-                                </dd>
-                            </dl>
-                        </li>
-                    </ul>
-
-					<h2 class="title">num round list</h2>
-					<ul class="ktd-numRound-list">
-						<li><span>1</span> 타사포함 통신요금 미납</li>
-						<li><span>2</span> 신용 조회 후 가입 불가 확인 시</li>
-						<li><span>3</span> 가입 가능 회선 초과</li>
-						<li><span>4</span> 번호이동 인증 실패 시</li>
-					</ul>
-
-					<ul class="ktd-chkRound-list">
-						<li>
-							<dl>
-								<dt>잔여 약정이 남아 있나요?</dt>
-								<dd>약정 해지 후 가입 가능</dd>
-							</dl>
-						</li>
-					</ul>
-
-					<h2 class="title">round box</h2>
-					<div class="ktd-round-box">
-						라운드 박스
-					</div>
-					<div class="ktd-round-box">
-						라운드 인접
-					</div>
-
-
-					<h2 class="title">셀프 링크</h2>
-					<div class="self_link">
-						<a href="#" onclick="trackClicks('');" role="button"><span>내부 링크</span></a>
-						<a href="#" target="_blank" title="새창열림" onclick="trackClicks('');" role="button"><span>외부 링크</span></a>
-					</div>
-
-
-					<h2 class="title">toggle</h2>
-					<ul class="toggle_box">
-						<li>
-							<div class="toggle_tit">
-								<button type="button" class="btn_toggle" aria-expanded="false" title="상세내용 열기">
-									<span>할인 가능 요금제 및 유의사항</span>
-								</button>
-							</div>
-							<div class="toggle_cont" style="display: none;">
-								<ul class="list-type-ast">
-									<li>아래 해당하는 요금제를 이용 중인 경우 5G 데이터쉐어링 1회선 할인이 가능합니다.
-										<ul>
-											<li>슈퍼플랜 초이스(에어팟) 2종 (프리미엄/스페셜)</li>
-											<li>슈퍼플랜 초이스(바디프랜드) 3종 (프리미엄/스페셜/베이직)</li>
-											<li>슈퍼플랜 초이스(시즌/지니) 3종 (프리미엄/스페셜/베이직)</li>
-											<li>슈퍼플랜 초이스(현대카드) 3종 (프리미엄/스페셜/베이직)</li>
-											<li>슈퍼플랜 초이스(넷플릭스) 3종 (프리미엄/스페셜/베이직)</li>
-											<li>슈퍼플랜 초이스 3종 (프리미엄/스페셜/베이직)</li>
-											<li>슈퍼플랜 스페셜 / Y 슈퍼플랜 스페셜</li>
-										</ul>
-									</li>
-									<li>슈퍼플랜 스페셜, Y 슈퍼플랜 스페셜 요금제는 5G 데이터쉐어링 or 스마트 기기 할인 중 택1 가능하며, 스마트 기기 할인 등록 시 5G 데이터쉐어링 할인은 불가합니다.<br>(Main 1회선에 공유된 5G 데이터쉐어링이 여러 회선인 경우 할인 가능한 회선은 별도 선택 불가)</li>
-									<li>고객에 따라 신청(추가) 가능한 최대 기기 수가 다를 수 있습니다.</li>
-									<li>하단 사유 중 1가지 이상 사유 발생시 쉐어링 할인 적용이 불가합니다.
-										<ul class="num-list">
-											<li>1) 할인 대상 회선 수 초과</li>
-											<li>2) 스마트기기할인 이용 중으로 중복할인 적용 불가</li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-
-
-
-
-
-
-
-
-
-				</section>
 
 
 
