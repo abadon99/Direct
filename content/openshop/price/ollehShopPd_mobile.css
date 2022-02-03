@@ -1,0 +1,100 @@
+#priceDtlInfo{  height: 100%; overflow: auto;   -webkit-overflow-scrolling: touch;}
+#getInformation .tit_priceWrap{margin 0 10px !important; width:auto !important}
+#getInformation h2, #getInformation h3{margin-top: 18px;font-size:12px}
+#getInformation a.underline{text-decoration: underline;}
+#getInformation .bold{color:#df2428}  
+#getInformation p{margin:0 10px}
+#getInformation img{max-width:100%}
+#getInformation .header{height: 40px; line-height: 40px;text-align:center; font-weight:bold;color:#000; border-bottom: 1px solid #e5e5e5;margin-bottom: 10px;} 
+#getInformation .header {position: relative;}
+#getInformation .header h1{font-size: 16px;;  color:#333; line-height: 40px;border-bottom:0;  line-height:inherit;     font-weight: bold;}
+#getInformation .header > a {display:block;position:absolute;left:15px;top:50%;z-index:10;margin-top:-5.5px;width:15px;height:11px;background:url(/images/mobile/common/btn_back.png) no-repeat;background-size:100% 100%; z-index:100}
+#getInformation .topStxt01{  margin: 10px 0 0 0 !important;   font-weight: bold;     font-size: 14px;  color: #000;   background-color: #f3f3f3;  padding: 10px; border-top: 1px solid #e5e5e5;}
+
+   
+  
+
+ 
+#priceWrap{font-family:sans-serif;  -webkit-overflow-scrolling:touch; font-size:13px}
+#priceWrap{width:100%;  height: auto; overflow-y: auto; box-sizing:border-box;}
+#priceWrap .topStxt{padding-bottom:5px;}
+#priceWrap .tableType01{margin-bottom:20px;}
+#priceWrap .tableType01 table{width:100%;border:1px solid #cacaca;border-width:1px 0 0 1px;} 
+#priceWrap .tableType01 th{padding:10px 15px;border:1px solid #cacaca; background:#f9f9f9;text-align:left;font-weight:normal;}
+#priceWrap .tableType01 td{padding:10px 5px;border:1px solid #cacaca; }
+#priceWrap td, #priceWrap th{font-size:13px}
+#priceWrap .infoBox{margin-top:20px;padding:15px;background:#fcfcfc; }
+#priceWrap .infoBox .topStxt01{font-weight:bold; font-size:14px;color:#000} 
+#priceWrap .infoBox .contFee{display:none;}
+#priceWrap .infoBox .contFee ol{padding:5px 0 0 0;}
+#priceWrap .infoBox .contFee .conList li,
+#priceWrap .summary_list li{margin-bottom:5px; line-height:1.3;padding-left:10px;background:url("/content/openshop/price/images/bul_dot_red.png") no-repeat 0 7px;color:#6d6d6d;}
+#priceWrap .summary_list{margin-top:10px}
+#priceWrap .infoBox .contFee .conList li img{margin-bottom:5px;}
+#priceWrap .infoBox .contFee .conListNum{margin-left:15px;}
+#priceWrap .infoBox .contFee .conListNum li{line-height: 1.5;   text-indent: -15px;    margin: 4px 0;}
+#priceWrap .infoBox .contFee .conListNum li img{margin-bottom:5px;}
+#priceWrap .infoBox .contFee h4{font-size: 14px;font-weight: bold;color: #656565;margin: 15px 0 10px;}
+#priceWrap .infoBox .contFee em.tit{font-size:12px;color:#656565;font-weight:bold; display:block;}
+#priceWrap .infoBox .contFee table{width:100%;margin:10px 0;}
+#priceWrap .infoBox .contFee table th{font-weight:normal;padding: 5px;color:#333;border:1px solid #cacaca;border-top:3px solid #efefef; text-indent: 0;background-color:#f9f9f9;text-align:center;}
+#priceWrap .infoBox .contFee table td{padding: 15px 5px 12px 5px; text-indent: 0;border: 1px solid #cacaca;text-align: center;background:#fff;}
+#priceWrap .infoBox .contFee table tbody{border:1px solid #cacaca} 
+#priceWrap .infoBox .contFee a.btn{padding-right:7px; background:url('/content/openshop/price/images/bl_arr_org.gif') right center no-repeat;} 
+.conListline{margin:5px 0 0 10px}
+.conListline li{text-indent: -10px;  }
+.conListline ul{margin:10px 0 0 10px}
+.conListNum .conListline {margin-left: 10px;} 
+#priceWrap .infoBox .contFee .conListNum .conListline li{text-indent: -11px;} 
+#priceWrap .infoBox .contFee .conListline li{background-image:none;color:#6d6d6d}
+#priceWrap .infoBox .contFee .conList .conListline{margin: 0; }
+#priceWrap .infoBox .contFee .conList .conListNum {margin:0 0 0 5px; padding:0}
+#priceWrap .infoBox .contFee .conList .conListNum li{background-image:none}
+#priceWrap .tableType01,#priceWrap .infoBox .topStxt01,
+#priceWrap .topStxt{margin-left:10px; margin-right:10px;margin-bottom:10px;font-size:13px }
+
+#priceWrap table{width:auto}
+#priceWrap .tableType01 th{ width:40%;}
+#priceWrap .tableType01 thead th{width:auto;text-align:center; padding:5px 10px}
+#priceWrap .tableType01 th,
+#priceWrap .infoBox .contFee th{font-size:13px}
+#priceWrap .tableType01 td,
+#priceWrap .infoBox .contFee td{padding:5px;font-size:13px}
+#priceWrap .tableType01 td p{padding-left: 0;}
+#priceWrap .tableType02{margin: 0 10px 20px 10px;}
+#priceWrap .tableType02 table{width:100%;border:1px solid #cacaca;border-width:1px 0 0 1px;}
+#priceWrap .tableType02 th{padding:0 15px;height:36px;border:1px solid #cacaca;border-width:0 1px 1px 0;background:#f9f9f9;text-align:center;font-weight:normal;}
+#priceWrap .tableType02 td{padding:9px 5px;border:1px solid #cacaca;border-width:0 1px 1px 0;text-align:center;}
+#priceWrap .tableType02 td p{padding:0 0 0 25px;}
+#priceWrap .tableType02 sup {font-size:12px;}
+#priceWrap .tableType02 .star {color:#df2428 !important;}
+#priceWrap  ul.supInfo {margin-top:22px;}
+#priceWrap  ul.supInfo li {line-height:22px; color:#6d6d6d;}
+#priceWrap  ul.supInfo li strong {color:#333;}
+#priceWrap  ul.supInfo li li {padding-left:21px; text-indent:-10px;}
+#priceWrap .infoBox{padding:0; background-color: #fff;} 
+#priceWrap .infoBox .btnBlock{border-top: 1px solid #e5e5e5;}
+#priceWrap .infoBox .btnBlock > a{display:block; height: auto;border-bottom: 1px solid #e5e5e5;position: relative; padding: 10px 0 10px 11px;min-height: 20px; line-height: 20px; background-image:none;}
+#priceWrap .infoBox .btnBlock > a span, 
+#priceWrap .infoBox .btnBlock > a.select span{color:#000; text-decoration: none; padding:0; display:block;margin-right:10px; font-size:13px; }
+#priceWrap .infoBox .btnBlock > a span {background: url(/common/mobile/olleh2.0/img/common/ico_arrow_down.png) right center no-repeat;background-size:9px 5px}
+#priceWrap .infoBox .btnBlock > a.select span{background:url(/common/mobile/olleh2.0/img/common/ico_arrow_up.png) right center no-repeat;background-size:9px 5px}
+#priceWrap .infoBox .contFee{padding:10px;border-bottom: 1px solid #e5e5e5;}
+ 
+#priceWrap  ul.supInfo {margin-top:22px;}
+#priceWrap  ul.supInfo li {line-height:22px; color:#6d6d6d;}
+#priceWrap  ul.supInfo li strong {color:#333;}
+#priceWrap  ul.supInfo li li {padding-left:21px; text-indent:-10px;}
+.hidden{position:absolute !important;left:0;top:0;width:0;height:0;z-index:-1;overflow: hidden;}
+ 
+@media screen and (max-width:767px) {
+ 
+.scroll_box table{table-layout: fixed; width:767px !important}
+ .scroll_box {overflow-x:auto}
+}
+
+#priceWrap .top-txt-area .topStxt { float:none; }
+#priceWrap .top-txt-area .top-txt {  float:none; display:block;  margin:0 10px 5px;  }
+
+.red-point {  color:red;  }
+.skyblue-point {  color:skyblue;  }

@@ -23,10 +23,6 @@ a.btn, button.btn, input.btn, label.btn, span.btn {
   font-weight: 500;
 }
 
-a.btn:disabled, button.btn:disabled, input.btn:disabled, label.btn:disabled, span.btn:disabled {
-  background: #F4F4F4;
-}
-
 a.btn.fill, button.btn.fill, input.btn.fill, label.btn.fill, span.btn.fill {
   background-color: #000;
   color: #fff;
@@ -36,8 +32,8 @@ a.btn.gray, button.btn.gray, input.btn.gray, label.btn.gray, span.btn.gray {
   color: #fff;
 }
 a.btn:disabled, button.btn:disabled, input.btn:disabled, label.btn:disabled, span.btn:disabled {
-  background-color: #f4f4f4;
-  color: #dcdddc;
+  background-color: #E0E0E0;
+  color: #A8A8A8;
 }
 
 a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.medium {
@@ -50,6 +46,34 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 }
 .btn.inline {width: auto; padding:0 16px;}
 .kt-btn-block {margin-top:32px; text-align: center;}
+
+form a.btn.fill,
+form button.btn.fill,
+form input.btn.fill,
+form label.btn.fill,
+form span.btn.fill {
+  background-color: #3ACCC8;
+  color: #141414;
+}
+
+form a.btn.gray,
+form button.btn.gray,
+form input.btn.gray,
+form label.btn.gray,
+form span.btn.gray {
+  background-color: #bcbcbc;
+  color: #fff;
+}
+
+form a.btn:disabled,
+form button.btn:disabled,
+form input.btn:disabled,
+form label.btn:disabled,
+form span.btn:disabled {
+  background-color: #E0E0E0;
+  color: #A8A8A8;
+}
+
 
 /****************************** 다이렉트 wrap class 추가 ******************************/
 .ktd-wrap {position: relative;}
@@ -94,11 +118,11 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-round-box .title {margin-bottom:21px; line-height:21px; font-size: 16px; font-weight: bold; color: #000;}
 
 /* common - self link */
-.self_link {margin: 0;}
-.self_link a {display: block; height: auto; padding: 0; border-radius: 0; margin:0; text-align: left; background-color: transparent;}
-.self_link a + a {margin-top:12px}
-.self_link a span {position: relative; padding-right: 14px; height: auto; line-height: inherit; color: #1DA8A5; font-weight: 500;}
-.self_link a span:after {content: ""; position: absolute; width: 6px; height: 6px; top: calc(50% + 1px); right: 0; border: 2px solid #1DA8A5; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-135deg);}
+.ktd-selfLink {margin: 0;}
+.ktd-selfLink a {display: block; height: auto; padding: 0; border-radius: 0; margin:0; text-align: left; background-color: transparent;}
+.ktd-selfLink a + a {margin-top:12px}
+.ktd-selfLink a span {position: relative; padding-right: 14px; height: auto; line-height: inherit; color: #1DA8A5; font-weight: 500;}
+.ktd-selfLink a span:after {content: ""; position: absolute; width: 6px; height: 6px; top: calc(50% + 1px); right: 0; border: 2px solid #1DA8A5; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-135deg);}
 
 /* common - toggle */
 .ktd-conWrap .toggle_box {display: block; margin-top:40px; text-align: left; border-bottom: 0;}
@@ -165,6 +189,17 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-tab.line li a span {display: table-cell; height: 40px; padding: 0 2px; border-top:none; background-color: #fff; font-size: 14px; vertical-align: middle;}
 .ktd-tab.line li.active a span {border-bottom: 2px solid #000;}
 
+/* common - select */
+.ktd-selectMenu {position: absolute; top:0; right: 0; font-size: 14px; color: #121619;}
+.ktd-selectMenu .ui-btnMenu {position: relative; padding-right: 24px;}
+.ktd-selectMenu .ui-btnMenu:before {content: ""; position: absolute; width: 6px; height: 6px; top: calc(50% + -1px); right: 0; border: 2px solid #000; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-45deg); transition: all 0.3s;}
+.ktd-selectMenu .ui-btnMenu.active:before {top: calc(50% + 4px); transform: translateY(-50% ) rotate(135deg);}
+
+.ktd-selectMenu .ui-dropBox {display:none; position: absolute; top:25px; right: 0; padding:10px 20px; border:1px solid #d9d9d9; border-radius: 6px; background: #fff; z-index: 1;}
+
+.ktd-selectMenu .ui-dropBox li + li {margin-top:7px;}
+.ktd-selectMenu .ui-btnList {white-space: nowrap; font-size: 13px;}
+
 /****************************** 다이렉트 콘텐츠 영역 ******************************/
 .ktd-conWrap {width: 480px;min-height: 100vh;position: relative;margin-left: 50%;border: 1px solid #ccc;border-top:none;border-bottom: none;}
 .ktd-conWrap * {word-break: keep-all;}
@@ -190,6 +225,9 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-depthMenu-wrap ul {width: 100%; padding-left: 8px;}
 .ktd-depthMenu-wrap ul li {display: inline-block; width: auto; vertical-align: top; word-break: keep-all;}
 .ktd-depthMenu-wrap ul li a {display:block;padding:0 12px;height: 28px;line-height: 28px;color: #161616;}
+.ktd-depthMenu-wrap ul li a:hover,
+.ktd-depthMenu-wrap ul li a:focus,
+.ktd-depthMenu-wrap ul li a:active,
 .ktd-depthMenu-wrap ul li.on a {color:#01A69F; font-weight: bold;}
 
 .ktd-depthMenu-wrap .btn-more {position: absolute; top:0; right: 0; width:40px; height:40px; border-left: 1px solid #ccc; box-sizing: border-box; background:#fff; z-index: 1;}
@@ -374,11 +412,11 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 
 /****************************** 콘텐츠 페이지 ******************************/
 /* 상단 헤드 콘텐츠 */
-.ktd-block .step-top-msg2 {padding-top: 0; margin-bottom: 40px;}
-.ktd-block .step-top-msg2 strong {font-size: 24px; color: #000;}
-.ktd-block .step-top-msg2 p {margin-top:9px; color:#6F6F6F;}
-.ktd-block .step-top-msg2 + .self_link {margin-top:-27px;}
-.ktd-block .self_link + div {margin-top:40px;}
+.ktd-block .block-top {padding-top: 0; margin-bottom: 40px;}
+.ktd-block .block-top strong {font-size: 24px; color: #000;}
+.ktd-block .block-top p {margin-top:9px; color:#6F6F6F;}
+.ktd-block .block-top + .ktd-selfLink {margin-top:-27px;}
+.ktd-block .ktd-selfLink + div {margin-top:40px;}
 
 /* 탭 메뉴 */
 .ktd-conWrap .tab_links_box {border-radius: 0;}
@@ -419,7 +457,7 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 
 /* 가입신청 - 유심 구매처 소개 */
 .self-use-ready {}
-.self-use-ready .self_link {margin:12px 0 0;}
+.self-use-ready .ktd-selfLink {margin:12px 0 0;}
 
 /****************************** 데이터쉐어링 페이지 ******************************/
 .ktd-sharing {padding-bottom: 0;}
@@ -471,7 +509,7 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-rate-visual p {margin-top:9px;}
 
 .ktd-rate-tit {margin-bottom: 64px;}
-.ktd-rate-tit .self_link {margin-top:24px;}
+.ktd-rate-tit .ktd-selfLink {margin-top:24px;}
 
 /****************************** 스마트 워치 전용 요금제 페이지 ******************************/
 .ktd-watch {padding-bottom: 0;}
@@ -492,7 +530,7 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-watch-info .icon-watch-self:before {background-image: url('/images//directShop/renew/icon_watch_self.svg');}
 .ktd-watch-info .icon-watch-personal:before {background-image: url('/images//directShop/renew/icon_watch_personal.svg');}
 
-.ktd-watch-info .self_link {margin-top: 32px;}
+.ktd-watch-info .ktd-selfLink {margin-top: 32px;}
 
 .ktd-watch-setting .toggle_cont .step-area > li + li {margin-top:48px;}
 .ktd-watch-setting .step {display: inline-block; margin-bottom: 18px; padding: 0 15px; height: 30px; line-height: 30px; font-weight: bold; background-color: #1DA8A5; border-radius: 16px; color: #fff;}
@@ -511,14 +549,72 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 .ktd-watch-inquiry .fixed {margin-top: 8px;}
 
 /****************************** 이벤트 페이지 ******************************/
-/* 진행중인 이벤트 */
+.ktd-eventWrap {margin-top:0; padding: 32px 20px 0;}
+.ktd-eventList {margin-top:24px;}
+
+.ktd-eventWrap .topInfo {position: relative;}
+.ktd-eventWrap .topInfo strong {font-size: 16px; font-weight: bold;}
+.ktd-eventWrap .topInfo strong span {color: #1DA8A5; font-weight: bold;}
+.ktd-eventWrap .topInfo .subject {font-size: 16px; font-weight: 500;}
+.ktd-eventWrap .topInfo .date {color:#000;}
+.ktd-eventWrap .topInfo .subject + .date {margin-top:8px; color: #6F6F6F;}
+
+.ktd-eventWrap .topInfo .sort-area {position: absolute; top: 0; right: 0;}
+.ktd-eventWrap .topInfo .sort-area .select-area > a {padding-right: 24px; font-size: 14px; color: #121619; line-height: normal;}
+.ktd-eventWrap .topInfo .sort-area .select-area > a:after {content: ""; position: absolute; width: 6px; height: 6px; top: calc(50% + -1px); right: 2px; border: 2px solid #000; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-45deg); transition: all 0.3s; background:none;}
+.ktd-eventWrap .topInfo .select-area ul {top:35px; left: inherit; right: -15px;}
 
 
 
-/* 종료된 이벤트 */
+.ktd-eventList > .item + .item {margin-top:32px;}
+.ktd-eventList .item > a {display: block;}
+.ktd-eventList .item > a img {width: 100%; max-width: 100%;}
+.ktd-eventList .info {margin-top:8px;}
+.ktd-eventList .date {color:#6F6F6F;}
+.ktd-eventList .ktd-selfLink {margin-top: 4px;}
+.ktd-eventList .ktd-selfLink span {color: #121619;}
+.ktd-eventList .ktd-selfLink span:after {border-color: #121619;}
 
+.ktd-eventList .kt-btn-block button {height: 40px; line-height: 40px; padding: 0 12px 0 16px; border: 1px solid #ccc; border-radius: 8px;}
+.ktd-eventList .kt-btn-block button span {display: block; position: relative; padding-right: 28px; font-size: 16px; font-weight: 500;}
+.ktd-eventList .kt-btn-block button span:before {content: ""; position: absolute; width: 10px; height: 10px; top: calc(50% + -2px); right: 5px; border: 2px solid #000; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-45deg);}
+.ktd-eventList .kt-btn-block button span em {font-size: 14px; color: #6F6F6F; font-weight: 500;}
+
+/* 이벤트 상세 */
+.ktd-eventView {margin:16px -20px 0;}
+.ktd-eventView img {width: 100%; max-width: 100%;}
 
 /* 당첨자 발표 */
+.ktd-winnerList {}
+.ktd-winnerList li {padding:20px 0; border-top:1px solid #D9D9D9;}
+.ktd-winnerList li:first-child {padding-top:0; border-top:0;}
+.ktd-winnerList li a {font-size:16px; font-weight: 500; color: #000;}
+.ktd-winnerList li .date {margin-top:8px;}
+
+.ktd-eventWinner .thumb {padding: 24px 0 20px; border-bottom: 1px solid #D9D9D9;}
+.ktd-eventWinner .thumb img {width: 100%; max-width: 100%;}
+
+.ktd-eventWinner .winnerList {margin-top:20px}
+.ktd-eventWinner .winnerList dl + dl {margin-top:40px;}
+.ktd-eventWinner .winnerList dt {color: #6F6F6F;}
+.ktd-eventWinner .winnerList dd {margin-top:8px;}
+
+.ktd-eventWinner .winnerList ul:after {content: ''; display: block; clear: both;}
+.ktd-eventWinner .winnerList li {float: left; width:50%; padding:0 5px 0 0; font-weight: 500; color: #000;}
+.ktd-eventWinner .winnerList li:nth-child(n+3) {margin-top:16px;}
+
+@media all and (max-width: 460px) {
+  .ktd-eventWinner .winnerList li {float: none; width: 100%;}
+  .ktd-eventWinner .winnerList li + li {margin-top:16px;}
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -640,12 +736,7 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
   .benefit-list01 li img {max-width: 77px;}
 }
 
-
-
-
-
-
-/* footer */
+/****************************** Footer ******************************/
 .ktd-conWrap .footer {margin-top:64px; padding:32px 24px 40px; line-height: 1.6; font-size: 14px; color:#ccc; background-color: #393939;}
 .ktd-conWrap .footer br {display: block;}
 .ktd-conWrap .footer p strong {font-size: 16px;}
@@ -659,5 +750,224 @@ a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.me
 
 
 
-/* sample 확인 후 삭제 */
-.ktd-tab.line + .tab-content.sampleTab {margin-top:0;}
+/****************************** as-is modify ******************************/
+#contents.new-contents {padding-top: 0;}
+#contents.new-contents h1 {position: relative; height: 64px; line-height: normal; margin:0; padding: 22px 20px 0; background:#fff}
+#contents.new-contents h1 button {margin-top:1px; vertical-align: top;}
+h1 button:before, h2.tit button:before {content: "";position: absolute;width: 10px;height: 10px;top: 50%;right: 4px;border: 2px solid #000;border-top: 0;border-right: 0;transform: translateY(-50%) rotate(45deg);background: none;}
+
+
+
+
+
+#content-recommend {padding:0 20px;}
+.btn-bottom{padding:33px 24px !important}
+
+/* popup */
+.ui-popup {min-width: auto; max-width: 478px; left: inherit; margin-left: -20px;}
+.ui-popup .content>.btn-close{display:block;width: 24px;height: 24px;overflow:hidden;text-indent:-9999px;background:url('/images/directShop/renew/btn-popupClose.svg') 0 0 no-repeat;background-size:100%;position:absolute;top:36px;right:30px;}
+
+.ui-popup.toast-popup .content {padding:0 20px 24px;}
+.ui-popup.toast-popup .content>.btn-close{position:absolute;top:35px;right:20px;z-index:1}
+.ui-popup.toast-popup .header{font-size:20px;text-align:left;font-weight:bold;letter-spacing:-.64px;padding: 32px 45px 12px 20px;height: 74px;width:100%;position:absolute;left:0;top:0;background-color:#fff;overflow:hidden;z-index:1;border-radius:20px 20px 0 0;}
+
+.ui-popup.toast-popup .body{padding:73px 0 0; height:auto;line-height:1.5; color: #6F6F6F;}
+
+@media all and (max-width: 768px) {
+  .ui-popup {max-width: 100%;}
+}
+
+.step-top-msg{position:relative;padding-top:0;margin:0 0 33px 0;font-size: 24px;line-height: 32px;letter-spacing: -1.08px;font-weight: 500;}
+
+
+
+
+
+/* 요금제 선택 */
+[class*=list-charge] .area {margin-bottom:16px; border-color: #D9D9D9;}
+[class*=list-charge] .area:last-child {margin-bottom: 0;}
+[class*=list-charge] .area:after {top:24px; right:24px; width:20px; height:20px; background-image: url('/images/directShop/renew/icon_check_off.svg'); background-size: 20px;}
+[class*=list-charge] .area.selected:after {background-image: url('/images/directShop/renew/icon_check_on.svg')}
+
+[class*=list-charge] .area label,
+[class*=list-charge] .area input {cursor: pointer;}
+
+[class*=list-charge] .area .box {padding:24px}
+[class*=list-charge] .area .box div + div {margin-top: 12px; margin-bottom: 0;}
+[class*=list-charge] .area .box div + div.opt {margin-top:2px;}
+[class*=list-charge] .area .price {margin-top:12px; padding-top:12px; height: auto; text-align: right; color: #000; border-top: 1px solid #D9D9D9;}
+
+[class*=list-charge] .choice-area {margin:24px 24px 0; padding: 20px 0 0; border-top: 1px solid #D9D9D9; background-color: #fff;}
+[class*=list-charge] .choice-area li .checkbox-1 {top:20px; right:20px; width: 20px; height: 20px; border-radius: 0; background: transparent url('/images/directShop/renew/icon_check_off.svg') center center no-repeat; background-size: 20px;}
+[class*=list-charge] .choice-area li .checkbox-1:checked {background-image:url('/images/directShop/renew/icon_check2_on.svg');}
+[class*=list-charge] .choice-area .float-list li .checkbox-1 {top:20px; right:20px; width: 20px; height: 20px; border-radius: 0; background: transparent url('/images/directShop/renew/icon_check2_off.svg') center center no-repeat; background-size: 20px;}
+
+
+[class*=list-charge] .choice-area .title {margin-bottom:20px; font-size: 16px; font-weight: 500;}
+
+
+[class*=list-charge] .choice-area li {margin:0; padding: 20px; border: 1px solid #D9D9D9; border-radius: 12px;}
+[class*=list-charge] .choice-area li + li {margin-top:16px;}
+[class*=list-charge] .choice-area .t {color: #6F6F6F;}
+[class*=list-charge] .choice-area .m {color: #A8A8A8;}
+
+[class*=list-charge] .choice-area li.on {border-color: #1DA8A5;}
+[class*=list-charge] .choice-area li.on .t {color: #000;}
+
+
+[class*=list-charge] .choice-area .float-list li {border-color: #1DA8A5;}
+[class*=list-charge] .choice-area .float-list li .t {font-size: 16px; color: #000;}
+[class*=list-charge] .choice-area .float-list label,
+[class*=list-charge] .choice-area .float-list input {cursor: default;}
+
+
+[class*=list-charge] .choice-area ul + .title {margin-top:32px; margin-bottom: 4px;}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 더보기 버튼 */
+.expend-block {position:relative; margin-top:-8px; z-index: 30;}
+.expend-block button {padding: 0 0 12px; width: 100%; text-align: center;}
+.expend-block button span {position: relative; display: inline-block; width: 20px; height: 20px; text-indent: -9999em;}
+.expend-block button span:after {content: ""; position: absolute; width: 10px; height: 10px; top: calc(50% + -1px); left: 50%; border: 2px solid #000; border-top: 0; border-right: 0; transform: translate(-50%, -50% ) rotate(-45deg); transition: all 0.3s; background: none;}
+[class*=list-charge] .area.selected .expend-block {margin-top:16px;}
+[class*=list-charge] .area.selected .expend-block button span:after {top: calc(50% + 2px); transform: translateY(-50% ) rotate(135deg);}
+
+
+
+
+
+
+
+[class*=list-charge] dt, a.btn-re-charge{height:56px;line-height:54px;font-size:16px;border-radius: 5px;font-weight: 500;}
+dl[class*=list-charge] {color: #6f6f6f;}
+dl[class*=list-charge] dt{margin-bottom: 0;letter-spacing: -1.28px;cursor: pointer;}
+dl[class*=list-charge] dt{padding: 0;height: auto;line-height: normal;position: relative;text-align:left;background-color:#fff;border: none;font-size: 16px;font-weight: bold;color: #000;}
+dl[class*=list-charge] dt:after{content:"";position:absolute;width:8px;height:8px;top:calc(50% - 3px);right:20px;border:2px solid #000; border-top:0; border-left:0;transition: transform ease 0.3s;transform:  translateY(-50%) rotate(45deg) ;}
+dl[class*=list-charge] dt > a{display:block;text-align:left;color:#00a2be;font-weight:500;vertical-align:top;padding-right:26px;}
+dl[class*=list-charge] dt > .checkbox-1{position:absolute;right:17px;top:50%;transform:translateY(-50%);z-index:5;}
+dl[class*=list-charge] .area .box{padding:10px 25px 30px}
+dl[class*=list-charge] .choice-area{display:block;padding-left:25px; padding-right:25px}
+dl[class*=list-charge] .area:after{display:none}
+
+dl[class*=list-charge] dt.selected{margin-bottom:0;border-bottom-color:#fff;border-bottom-right-radius: 0;border-bottom-left-radius: 0;}
+dl[class*=list-charge] dt dd {display:none}
+dl[class*=list-charge] dt.selected + dd{display:block;border:1px solid #00a2be;border-top:0;border-radius: 0;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;}
+dl[class*=list-charge] dd .btn-area{padding:0 25px 30px 25px;background-color:#f8f8f8}
+dl[class*=list-charge] dd .btn-area button.fill{display:block;height:35px;line-height:35px; border:0; background-color:#000;font-size:13px;letter-spacing: -0.52px;font-weight: normal;}
+dl[class*=list-charge] .choice-area li .checkbox-1{right:20px}
+a.btn-re-charge{margin:30px 0 20px;text-align:left;padding: 0 20px;background-color:#00a2be;color:#fff}
+.btn-charge-go{height: 19px;line-height: 19px;margin-bottom:40px;position: relative; padding-right: 12px;font-size:14px;font-weight:500;color:#1DA8A5;margin-left: 0;}
+.btn-charge-go:after{content:"";display:inline-block; width:6px;height:6px; margin-left:5px;border-top:1px solid #1DA8A5;border-right:1px solid #1DA8A5;transform: rotate(45deg) translateY(-2px);}
+
+dl[class*=list-charge] dt, dl[class*=list-charge] dd {padding:24px; border:1px solid #bbb;}
+dl[class*=list-charge] dt {padding-bottom:0; border-bottom: none; border-radius: 12px 12px 0 0;}
+dl[class*=list-charge] dd.area-top, dl[class*=list-charge] dd.area {padding:0 24px; border-top:none; border-bottom: none;}
+dl[class*=list-charge] dd.area-btm {padding-top:24px; border-top:none; border-radius: 0 0 12px 12px; background-color: #fff;}
+
+dl[class*=list-charge] dd.area-top .add-discount {margin-bottom: 8px; padding-top:8px; font-weight: 500;color: #161616;}
+
+dl[class*=list-charge] dt.selected + dd{border:1px solid #bbb;border-top:none;border-bottom:none;border-radius: 0;border-bottom-right-radius: 0;border-bottom-left-radius: 0;background-color: #fff;}
+dl[class*=list-charge] dt.selected + dd + .area {display: block; margin:0; border-radius: 0; border-right: 1px solid #bbb; border-left: 1px solid #bbb;}
+dl[class*=list-charge] .area .box {padding:12px 0 0}
+
+[class*=list-charge] .area .line,
+[class*=list-charge] .area .opt > span {font-size: 14px;}
+[class*=list-charge] .area .b {color: #000;}
+[class*=list-charge] .area .opt > span {color: #000;}
+
+[class*=list-charge] .area .line > span {padding:0;}
+
+[class*=list-charge] .area .box > .summary + a.go-charge {margin-top:12px;}
+[class*=list-charge] .area .box > a.go-charge {position: relative;top: 0px;right: inherit;left:0;z-index: 20;line-height: normal;font-size: 14px;font-weight: 500;color: #6F6F6F; margin-bottom: 16px;}
+[class*=list-charge] .area .box > a.go-charge:after {content: "";height: 6px;width: 6px;border: 2px solid #A8A8A8;border-top: 0;border-left: 0;transform: rotate(-45deg) translate(0,-2px);display: inline-block;margin-left: 6px;}
+[class*=list-charge] .area .box > a.go-charge + .line {padding-top:12px; border-top: 1px solid #D9D9D9;}
+
+dl[class*=list-charge] dd.area-btm .btn-area {padding: 0; background-color: transparent;}
+dl[class*=list-charge] dd.area-btm .btn-area button {height:38px; line-height: 38px; font-size: 16px; font-weight: 500; color: #000; background-color: #3ACCC8;}
+
+dl[class*=list-charge] dd + dt {margin-top:16px;}
+.boxRecommTxt {margin-top:32px;}
+a.btn-re-charge {margin:32px 0 24px; height: 48px; line-height: 48px; background-color: #000; color: #fff; text-align: center; font-weight: bold; border-radius: 8px;}
+/* //요금제 선택 */
+
+/* 전체요금제 */
+#other-plan .ktd-noti-list li {color: #161616;}
+#other-plan .ktd-noti-list li:before {background-color: #161616;}
+
+.tab-charge{margin:0 -20px; padding:0; display: flex;}
+.tab:after{content:"";display:block;clear:both}
+.tab-charge li{float: none; width: auto; flex: 1;}
+.tab-charge li:nth-of-type(2){float:none}
+.tab-charge li:nth-of-type(1) a{border-top-left-radius:0;border-bottom-left-radius:0}
+.tab-charge li:nth-of-type(2) a{border-top-right-radius:0;border-bottom-right-radius:0}
+.tab-charge li a{display:block;height:40px;line-height:40px;text-align:center;font-size:16px;font-weight:500;background-color:#fff;color:#6F6F6F; border-bottom: 1px solid #D9D9D9;}
+.tab-charge li.active a{background-color:#fff;color:#000;font-weight:bold;border-bottom: 2px solid #000;}
+
+.tab-charge + .tab-content {margin-top:0;}
+.tab-payment {margin: 0 -20px; padding:0 16px 0 8px; background: #fff;}
+.tab-payment .select-charge li {width: auto; word-break: keep-all;}
+.tab-payment .select-charge li + li:before {content: ''; position: absolute; top:50%; left:0; transform: translateY(-50%); width: 1px; height: 12px; background: #D9D9D9;}
+.tab-payment .select-charge li a {display: block; height: 52px; line-height: 52px; padding:0 15px; margin:0; border-radius: 0; font-size: 14px; color: #6F6F6F; background-color: transparent;}
+.tab-payment .select-charge li a.active {font-weight: bold; color: #1DA8A5;}
+
+.sort-area.charge-table .select-area > a {padding-right: 24px; font-size: 14px; color: #000;}
+.sort-area.charge-table .select-area > a:after {content: ""; position: absolute; width: 6px; height: 6px; top: calc(50% + -1px); right: 2px; border: 2px solid #000; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-45deg); transition: all 0.3s; background:none;}
+.sort-area.charge-table .select-area > a.open:after {top: calc(50% + 2px); transform: translateY(-50% ) rotate(135deg);}
+
+.ktd-noti-list {margin:16px -20px 10px; padding:0 20px 16px; border-bottom: 1px solid #D9D9D9;}
+
+
+/* 전체 요금제 관련 폰트 여백 등 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*이동전화 사기판매 주의 안내*/
+#con-notice-pop .content{max-height:90%;padding-bottom:0;}
+#con-notice-pop .con-notice-list{margin-top: 40px;padding: 0;border: none;}
+#con-notice-pop .con-notice-list li{position:relative;margin-top: 24px;padding-left: 0px;color:#666;}
+#con-notice-pop .con-notice-list li:first-child{margin-top:0;}
+#con-notice-pop .con-notice-list li strong{display:block;color:#000;font-size: 16px;font-weight: 500;padding-left: 16px;}
+#con-notice-pop .con-notice-list li .num{position:absolute;left:0;top:0;}
+
+#con-notice-pop .btn-bottom {text-align: center;}
+#con-notice-pop .btn-bottom button {width:auto; height: 40px; line-height: 38px; font-size: 16px; border-radius: 8px; font-weight: 500; min-width: 94px;}
+
+.toast-popup .content{height:auto !important;max-height:90% !important;}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 확인용 - 작업후 삭제 */
+.setp-area {display:block}

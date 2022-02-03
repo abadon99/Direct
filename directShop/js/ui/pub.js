@@ -664,7 +664,7 @@ $(function(){
             hide: true,
         },
     });
-    TABDepth.init(swiperDepth);
+    //TABDepth.init(swiperDepth);
 
     // 서브메뉴 펼침
     var $btnSubMenuWrap  = $('.ktd-depthMenu'),
@@ -692,18 +692,131 @@ $(function(){
             $(this).find('span').text('메뉴 접기')
             $btnSubMenuWrap.addClass('on')
         }
-
-
     });
+
+    // Select Dropdown Menu
+    if($('.ktd-selectMenu').length > 0){
+        //ktdSelectMenu();
+    };
+
+    // 전체요금제
+    $('a[name="other-plan_system"]').on('click', function(e){
+        e.preventDefault();
+        if($('#other-plan').is(':visible')){
+            $('.ktd-conWrap').addClass('bg-f8');
+        }
+
+        var swiperTabPayment5g = new Swiper('.tab-payment5g', {
+            slidesPerView: 'auto',
+            freeMode: true,
+            loop: false,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+                hide: true,
+            },
+        });
+        TABDepth.init(swiperTabPayment5g);
+
+        var swiperTabPaymentLte = new Swiper('.tab-paymentLte', {
+            slidesPerView: 'auto',
+            freeMode: true,
+            loop: false,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+                hide: true,
+            },
+        });
+        TABDepth.init(swiperTabPaymentLte);
+
+        $('#other-plan .tab-charge li a').on('click', function(){
+            if($('#tab-con1').is(':visible')){
+                swiperTabPayment5g.update();
+                TABDepth.init(swiperTabPayment5g);
+            };
+            if($('#tab-con2').is(':visible')){
+                swiperTabPaymentLte.update();
+                TABDepth.init(swiperTabPaymentLte);
+            };
+        });
+    });
+
+    // 전체요금제 - 펼처보기
+    $('button.btn-expend').on('click', function(e) {
+        var expendArea = $(this).closest('div.area');
+
+        if(expendArea.hasClass('selected')){
+            expendArea.removeClass('selected');
+            $(this).find('span').text('자세히 보기');
+        } else {
+            expendArea.find('.box > a.go').trigger('click');
+            $(this).find('span').text('자세히 보기 닫기');
+        }
+    });
+
+    $('input[name="seeznAddItem"]').change(function(){
+        var value = $(this).val();
+        var checked = $(this).prop('checked', true);
+        if(checked){
+            // $(this).parent('li').siblings('li').removeClass('on').find('input').prop('checked', false);
+            $(this).parent('li').addClass('on');
+        } else {
+            $(this).parent('li').removeClass('on');
+        }
+    })
+
+    // if($('#other-plan').is(':visible')){
+    //     $('.ktd-conWrap').addClass('bg-f8');
+
+    //     var swiperTabPayment5g = new Swiper('.tab-payment5g', {
+    //         slidesPerView: 'auto',
+    //         freeMode: true,
+    //         loop: false,
+    //         scrollbar: {
+    //             el: '.swiper-scrollbar',
+    //             draggable: true,
+    //             hide: true,
+    //         },
+    //     });
+    //     TABDepth.init(swiperTabPayment5g);
+
+    //     var swiperTabPaymentLte = new Swiper('.tab-paymentLte', {
+    //         slidesPerView: 'auto',
+    //         freeMode: true,
+    //         loop: false,
+    //         scrollbar: {
+    //             el: '.swiper-scrollbar',
+    //             draggable: true,
+    //             hide: true,
+    //         },
+    //     });
+    //     TABDepth.init(swiperTabPaymentLte);
+
+    //     $('#other-plan .tab-charge li a').on('click', function(){
+    //         if($('#tab-con1').is(':visible')){
+    //             swiperTabPayment5g.update();
+    //             TABDepth.init(swiperTabPayment5g);
+    //         };
+    //         if($('#tab-con2').is(':visible')){
+    //             swiperTabPaymentLte.update();
+    //             TABDepth.init(swiperTabPaymentLte);
+    //         };
+    //     });
+
+    //     console.log (1)
+    //     swiperTabPayment5g.update();
+    //     swiperTabPaymentLte.update();
+    // }
 });
 
 var TABDepth = {
     init: function( ins ){
-        var $tab = $('.ktd-depthMenu-wrap'),
+        var $tab = $('.tab-payment'),
             $anchor = $tab.find('a');
 
         $anchor.on('click', function(){
-            var $siblings = $(this).closest('li').siblings(),
+            var $siblings = $(this).closest('li').siblings().find('a'),
                 activeIndex = ins.clickedIndex,
                 grid = ins.snapGrid,
                 limitX = grid[grid.length - 1],
@@ -712,9 +825,9 @@ var TABDepth = {
                 gridX = ins.slidesGrid[activeIndex] - widthHalf + itemWidthHalf,
                 translateX = gridX > limitX ? limitX : gridX < 0 ? 0 : gridX;
 
-            $siblings.removeClass('on');
+            $siblings.removeClass('active');
             $siblings.find('a').attr({'title':''});
-            $(this).attr({'title':'선택됨'}).parent('li').addClass('on');
+            $(this).attr({'title':'선택됨'}).addClass('active');
 
             ins.setTransition(500);
             ins.setTranslate(-translateX);
@@ -722,4 +835,48 @@ var TABDepth = {
     },
 }
 
+function ktdSelectMenu() {
+	dropMenu = $(".ktd-selectMenu");
+	dropMenu.each(function() {
+		var This = $(this);
+		btnDropMenu = This.find(".ui-btnMenu");
+		uiDropBox = This.find(".ui-dropBox");
+		uiBtnLst = uiDropBox.find(".ui-btnList");
 
+		btnDropMenu.click(function(){
+			var This = $(this);
+			var MenuLst = This.siblings(".ui-dropBox");
+
+			if($(this).hasClass("active")){
+				$(this).removeClass("active");
+				MenuLst.css("display","none");
+				This.attr("aria-expanded", "false");
+				MenuLst.attr("aria-expanded", "true");
+			}else{
+				dropMenu.find(".ui-btnMenu").removeClass("active");
+				$(this).addClass("active");
+				dropMenu.find(".ui-dropBox").css("display","none");
+				MenuLst.css("display","block");
+				This.attr("aria-expanded", "true");
+				MenuLst.attr("aria-expanded", "false");
+			}
+		}); //드랍메뉴 버튼 클릭
+
+		uiBtnLst.click(function(){
+			var This = $(this);
+			var thisTxt= This.text();
+			var thisDropBox = This.closest(".ui-dropBox");
+			var thisbtnMenu = thisDropBox.siblings(".ui-btnMenu")
+
+			thisDropBox.css("display","none");
+			thisbtnMenu.removeClass("active");
+
+			This.closest(".ui-dropList").find(".ui-btnList").removeAttr("aria-expanded").removeAttr("title");
+			This.attr("aria-expanded", "false").attr("title","선택됨");
+
+			thisbtnMenu.text(thisTxt);
+
+			thisbtnMenu.focus();
+		}); //드랍메뉴 목록 버튼 클릭
+	});
+}

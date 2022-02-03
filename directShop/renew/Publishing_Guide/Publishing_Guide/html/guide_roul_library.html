@@ -573,7 +573,7 @@
 						<h3>셀프 링크</h3>
 					</div>
 					<div class="s_content">
-						<div class="self_link">
+						<div class="ktd-selfLink">
 							<a href="#" onclick="trackClicks('');" role="button"><span>내부 링크</span></a>
 							<a href="#" target="_blank" title="새창열림" onclick="trackClicks('');" role="button"><span>외부 링크</span></a>
 						</div>
@@ -610,15 +610,53 @@
 									</ul>
 								</div>
 							</li>
+							<li>
+								<div class="toggle_tit">
+									<button type="button" class="btn_toggle" aria-expanded="false" title="상세내용 열기">
+										<span>제목</span>
+									</button>
+								</div>
+								<div class="toggle_cont" style="display: none;">
+									<ul class="list-type-ast">
+										<li>내용 1
+											<ul>
+												<li>내용 1-2</li>
+												<li>내용 1-2</li>
+											</ul>
+										</li>
+										<li>내용 1</li>
+										<li>내용 1
+											<ul class="sublist_1">
+												<li>하이픈 스타일</li>
+												<li>하이픈 스타일</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</li>
 						</ul>
 					</div>
 				</section>
 
 				<section class="s_block">
 					<div class="s_title">
-						<h3>콘텐츠 레이아웃</h3>
+						<h3>UI select </h3>
 					</div>
 					<div class="s_content">
+						<style>
+							.sort-area  {position: relative; display: inline-block;}
+							.sort-area  + .sort-area  {margin-left: 30px;}
+						</style>
+						<div class="sort-area charge-table boxPplSelect">
+                            <div class="area select-area">
+                                <a href="#sortProdLy_5g" class="">전체</a>
+                                <ul id="sortProdLy_5g" class="sortflog">
+                                    <li><a href="javascript:void(0);" data-sort-prod="">전체 </a></li>
+                                    <li><a href="javascript:void(0);" data-sort-prod="">항목1</a></li>
+                                    <li><a href="javascript:void(0);" data-sort-prod="">항목2</a></li>
+                                </ul>
+                            </div>
+                        </div>
 					</div>
 				</section>
 

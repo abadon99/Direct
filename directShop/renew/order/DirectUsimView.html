@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="ko" class="kt5g">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<title> [KT 공식] 요금은 비우고 혜택은 채웁니다. KT 다이렉트</title>
+
+	<!-- style -->
+	<link rel="stylesheet" href="/directShop/css/default.css">
+    <link rel="stylesheet" href="/directShop/css/contents.css">
+    <link rel="stylesheet" href="/directShop/css/popup.css">
+    <link rel="stylesheet" href="/directShop/css/swiper.css">
+
+    <!-- js -->
+	<script type="text/javascript"  src="/directShop/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="/directShop/js/ui/common_front.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/ui.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/pub.js" type="text/javascript"></script>
+	<script src="/directShop/js/lib/swiper.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="/oneMinute/js/oneMinuteCommon.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+	<!-- ktd : 추가 css -->
+    <link rel="stylesheet" href="/directShop/css/ktDirect.css">
+
+	<!-- as-is -->
+	<script>
+		$(document).on("click",".btnPopClose.tout",function() {
+			$("#sessionWrap").hide();
+		});
+		$(document).on("click",".line_benner .close",function() {
+			$('.line_benner').slideUp();
+			return false;
+		});
+
+		$(document).on("click",".searchEng",function() {
+			if ($.trim($("#SearchCommon").val()).length == 0) {
+				alert("검색어를 입력해주세요.");
+				return;
+			}
+			location.href="https://m.search.kt.com/search.asp?c=MOL000&r=02&f=&o=&e=&k="+encodeURI($('#SearchCommon').val());
+		});
+
+		$(window).bind("pageshow", function(event) {
+			if ( event.originalEvent && event.originalEvent.persisted) {
+				$("#SearchCommon").val('');
+				$("a.ollehSearch").show();
+				$("a.ollehSearchClose").hide();
+				$("header fieldset").removeClass("on").hide();
+			}
+		});
+	</script>
+
+	<!-- <script type="text/javascript" src="/js/mobile/common/product.common.js"></script>
+	<script type="text/javascript" src="/js/mobile/smart/agncy/dlvrAgncySearch.popList.js"></script>
+	<script type="text/javascript" src="/directShop/js/smart/product.usim.view.js"></script> -->
+
+	<link rel="stylesheet" type="text/css" href="/content/openshop/price/ollehShopPd_mobile.css" />
+	<!-- //as-is -->
+</head>
+<body>
+	<!-- ktd : Direct 안내 -->
+    <div class="ktd-directInfo">
+        <div class="info">
+            <h1>
+                지금 <br>
+                KT 다이렉트에서 <br>
+                요금제 <span>바로가입!</span>
+            </h1>
+        </div>
+        <div class="link-zone">
+            <h2><img src="/images/directShop/renew/thumb_kt.png" alt="KT 다이렉트"></h2>
+            <ul>
+                <li><a href="#">유심가입</a></li>
+                <li><a href="#">데이터 쉐어링 가입</a></li>
+                <li><a href="#">무약정플렌 요금제 변경</a></li>
+                <li><a href="#">셀프개통(유심보유)</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //ktd : Direct 안내 -->
+
+	<!-- ktd : 사이트 영역 -->
+    <div class="ktd-conWrap">
+		<form id="prodViewForm"  name="prodViewForm" method="post" action="/direct/DirectUsimOrderForm.do">
+			<div id="contents" class="new-contents footer-bottom"> <!-- ktd수정 : bg-f8 class 삭제 -->
+				<style>
+					div.directShopInfo {height:250px; font-size:14px; font-weight:bold;}
+					div.directShopInfo h4 {height:30px; font-size:15px; font-weight:bold;}
+					div.buyProcWrap {padding:30px; font-size:15px; font-weight:bold;}
+					ul.buyProc li {float:left; width:20%; margin:0 5px;font-size:12px;text-align:center;vertical-align:center;}
+					ul.buyProc li div {width:100%;height:40px;border:1px solid #cccccc;text-align:center;vertical-align:center;}
+				</style>
+
+				<h1><button type="button" name="button" id="titleNm">서비스 선택</button></h1>
+
+				<!-- content-recommend -->
+				<div id="content-recommend" >
+					<!-- wrapStep1 -->
+					<div id="wrapStep1" class="wrapStep">
+						<p class="step-top-msg" id="subTitleTxt">다이렉트에서만  <br>가입이 가능한 무약정플랜</p>
+						<dl id="boxRecommPpl" class="list-charge list-charge-2">
+							<dt tabindex="0" role="button" pplid="0817" pplgroupdivcd="500" title="열기" aria-expanded="false">5G 다이렉트 55</dt>
+							<dd class="area-top"><!-- ktd수정 : area-top 추가 -->
+								<p class="add-discount">Y고객 5,500 추가 할인</p>
+								<p>데이터 200GB (5Mbps속도제한)ㅣ테더링 10GB | 로밍 0 ㅣ음성 집/이동전화 무제한 ㅣ문자 무제한</p>
+							</dd>
+							<dd class="area" tabindex="0">
+								<div class="box">
+									<a role="button" href="https://product.kt.com/wDic/productDetail.do?ItemCode=1431" class="go-charge" title="새창 열기" target="_blank">자세히 보기</a><!-- ktd수정 : "자세히보기" 위치 이동 -->
+
+									<div class="line">
+										<span class="a">데이터</span>
+										<span class="b">200GB</span>
+									</div>
+									<div class="opt">
+										<span>5Mbps속도제한</span>
+									</div>
+									<div class="line">
+										<span class="a">테더링</span>
+										<span class="b">10GB</span>
+									</div>
+									<div class="line">
+										<span class="a">로밍</span>
+										<span class="b">0</span>
+									</div>
+									<div class="line">
+										<span class="a">음성/문자</span>
+										<span class="b">집/이동전화 무제한 / 무제한<br> Y고객 5,500 추가 할인</span>
+									</div>
+									<div class="price">
+										월 55,000원<!--(부가세 포함)-->
+									</div>
+								</div>
+							</dd>
+							<dd class="area-btm"><!-- ktd수정 : area-btm 추가 "가입하기" 버튼 위치 이동 -->
+								<div class="btn-area">
+									<button type="button" class="btn fill" data-target="#Ys-plan">가입하기</button>
+								</div>
+							</dd>
+
+							<dt tabindex="0" role="button" pplid="0787" pplgroupdivcd="500" title="열기" aria-expanded="false">5G 다이렉트 67</dt>
+							<dd class="area-top">
+								<p class="add-discount">Y고객 5,500 추가 할인</p>
+								<p>데이터 200GB (5Mbps속도제한)ㅣ테더링 10GB | 로밍 0 ㅣ음성 집/이동전화 무제한 ㅣ문자 무제한</p>
+							</dd>
+							<dd class="area" tabindex="0">
+								<div class="box">
+									<a role="button" href="https://product.kt.com/wDic/productDetail.do?ItemCode=1381&amp;CateCode=6002&amp;filter_code=81&amp;option_code=109&amp;pageSize=10" class="go-charge" title="새창 열기" target="_blank">자세히 보기</a>
+
+									<div class="line">
+										<span class="a">데이터</span>
+										<span class="b">완전 무제한</span>
+									</div>
+									<div class="opt">
+										<span>데이터 완전 무제한</span>
+									</div>
+									<div class="line">
+										<span class="a">테더링</span>
+										<span class="b">0</span>
+									</div>
+									<div class="line">
+										<span class="a">로밍</span>
+										<span class="b">0</span>
+									</div>
+									<div class="line">
+										<span class="a">음성/문자</span>
+										<span class="b">집/이동전화 무제한 / 기본제공</span>
+									</div>
+									<div class="price">
+										월 67,000원<!--(부가세 포함)-->
+									</div>
+								</div>
+							</dd>
+							<dd class="area-btm">
+								<div class="btn-area">
+									<button type="button" class="btn fill">가입하기</button>
+								</div>
+							</dd>
+
+							<dt tabindex="0" role="button" pplid="0819" pplgroupdivcd="500" title="열기" aria-expanded="false">5G 다이렉트 67</dt>
+							<dd class="area-top">
+								<p class="add-discount">Y고객 5,500 추가 할인</p>
+								<p>데이터 200GB (5Mbps속도제한)ㅣ테더링 10GB | 로밍 0 ㅣ음성 집/이동전화 무제한 ㅣ문자 무제한</p>
+							</dd>
+							<dd class="area" tabindex="0">
+								<div class="box">
+									<a role="button" href="https://product.kt.com/wDic/productDetail.do?ItemCode=1431" class="go-charge" title="새창 열기" target="_blank">자세히 보기</a>
+
+									<div class="line">
+										<span class="a">데이터</span>
+										<span class="b">10GB</span>
+									</div>
+									<div class="opt">
+										<span>1Mbps 속도제한</span>
+									</div>
+									<div class="line">
+										<span class="a">테더링</span>
+										<span class="b">10GB</span>
+									</div>
+									<div class="line">
+										<span class="a">로밍</span>
+										<span class="b">0</span>
+									</div>
+									<div class="line">
+										<span class="a">음성/문자</span>
+										<span class="b">집/이동전화 무제한 / 무제한</span>
+									</div>
+									<div class="price">
+										월 37,000원<!--(부가세 포함)-->
+									</div>
+								</div>
+							</dd>
+							<dd class="area-btm">
+								<div class="btn-area">
+									<button type="button" class="btn fill" data-target="#Ys-plan">가입하기</button>
+								</div>
+							</dd>
+
+							<dt tabindex="0" role="button" pplid="0818" pplgroupdivcd="500" title="열기" aria-expanded="false">LTE 다이렉트 45</dt>
+							<dd class="area-top">
+								<p class="add-discount">Y고객 5,500 추가 할인</p>
+								<p>데이터 200GB (5Mbps속도제한)ㅣ테더링 10GB | 로밍 0 ㅣ음성 집/이동전화 무제한 ㅣ문자 무제한</p>
+							</dd>
+							<dd class="area" tabindex="0">
+								<div class="box">
+									<a role="button" href="https://product.kt.com/wDic/productDetail.do?ItemCode=1432" class="go-charge" title="새창 열기" target="_blank">자세히 보기</a>
+
+									<div class="line">
+										<span class="a">데이터</span>
+										<span class="b">100GB</span>
+									</div>
+									<div class="opt">
+										<span>5Mbps속도제한</span>
+									</div>
+									<div class="line">
+										<span class="a">음성</span>
+										<span class="b">집/이동전화 무제한</span>
+									</div>
+									<div class="opt">
+										<span>영상부가 300분</span>
+									</div>
+									<div class="line">
+										<span class="a">문자</span>
+										<span class="b">무제한<br> Y고객 5,500 추가 할인</span>
+									</div>
+									<div class="price">
+										월 45,000원<!--(부가세 포함)-->
+									</div>
+								</div>
+							</dd>
+							<dd class="area-btm">
+								<div class="btn-area">
+									<button type="button" class="btn fill" data-target="#Ys-plan">가입하기</button>
+								</div>
+							</dd>
+						</dl>
+						<p class="boxRecommTxt mb20">
+							<span class="stxt">* 5G단말을 사용하시는 고객님의 경우 5G요금제만, LTE단말을 사용하시는 고객님의 경우 LTE요금제만 가입이 가능합니다.</span>
+						</p>
+						<a href="#" name="recomm-plan_system" class="btn btn-re-charge recommTag" data-target="#recomm-plan">조건 선택하고 요금제 추천받기</a>
+						<a href="#" name="other-plan_system" class="btn-charge-go recommTag" data-target="#other-plan">전체 요금제 보기</a>
+
+						<div id="con-notice-pop" class="ui-popup toast-popup active" tabindex="0" aria-hidden="false" style="display:none;"> <!-- ktd수정 : block으로 -->
+							<div class="content">
+								<div class="header">이동전화 사기판매 주의 안내</div>
+								<button type="button" class="btn-close">닫기</button>
+								<div class="body">
+									<p>이동전화 가입 시 일부 불·편법영업 행위에 의한 사기판매 피해가 우려되어, 이용자 여러분의 각별한 주의가 요구됩니다.</p>
+									<ul class="con-notice-list">
+										<li>
+											<strong><span class="num">1.</span> 소액대출(내구제 대출 등) 용도로 개통</strong>
+											현금성 대출을 받기 위해 카드/인증서/계좌번호 등의 개인정보를 요구하는 경우
+										</li>
+										<li>
+											<strong><span class="num">2.</span> 선입금 요구, 잔여할부금 면제</strong>
+											추후 잔여할부금을 면제하는 조건으로 선입금을 요구하는 경우
+										</li>
+										<li>
+											<strong><span class="num">3.</span> 신분증 전달 요구</strong>
+											온라인 가입 시 가입자의 신분증을 택배 등으로 전달할 것을 요구하는 경우
+										</li>
+										<li>
+											<strong><span class="num">4.</span> 비공식계약서 작성</strong>
+											불법지원금 제공(현금지급, 할부금 면제 등) 조건을 별도의 계약서로 작성하는 경우
+										</li>
+									</ul>
+									<p class="alert"><em>i</em>불법지원금 제공과 불법 대출인 것을 알고도 이에 동조하는 경우 발생하는 피해에 대해서는 법적으로 보호를 받을 수 없습니다.</p>
+								</div>
+								<div class="btn-bottom">
+									<button type="button" name="button" class="btn fill bottom btn-close" id="">확인</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //wrapStep1 -->
+
+					<!-- wrapStep2 -->
+					<div id="wrapStep2" class="wrapStep">
+						<p class="step0">
+							고객님은 개통할<br> USIM을 가지고 계신가요?
+							<span class="stxt">* 5G/LTE Y무약정플랜, 5G 무약정플랜 슬림 <br>신규/번호이동 가입 고객님에 한해 유심카드가 무료제공 됩니다.</span>
+							<span class="stxt">* 그 외 요금제를 가입하시는 경우 유심 미보유 고객에 한해 유심카드비용(7,700원)은 후청구 됩니다</span>
+						</p>
+						<div class="btn-wrap step0">
+							<button type="button" class="btn fill" data-yn="N">새로운 유심(USIM)이 필요해요</button>
+							<button type="button" class="btn fill" data-yn="Y">개통할 유심(USIM)이 있어요</button>
+						</div>
+					</div>
+					<!-- //wrapStep2 -->
+
+					<!-- wrapStep3 -->
+					<div id="wrapStep3" class="wrapStep">
+						<p class="step-top-msg">
+							약정기간을 설정하시면 <br>
+							월 요금 할인을 받으실 수<br>
+							있습니다.
+						</p>
+						<div class="select-date-title">약정기간 선택</div>
+						<div id="select-period" class="select-date">
+							<button type="button" data-engt="04" data-support="02">24개월</button>
+							<button type="button" data-engt="02" data-support="02">12개월</button>
+							<button type="button" data-engt="01" data-support="01">무약정</button>
+						</div>
+						<div class="result-price"></div>
+						<div class="result-price-total"></div>
+						<div class="btn-bottom">
+							<button type="button" class="btn fill" disabled>가입하기</button>
+						</div>
+					</div>
+					<!-- //wrapStep3 -->
+
+					<!-- wrapStep4 -->
+					<div id="wrapStep4" class="wrapStep">
+						<p class="step0">어떤 유형의 가입을<br>원하시나요?</p>
+						<div class="btn-wrap step0 line1">
+							<a href="#" class="btn fill ui-popup-call " name="set" data-target="#popup-phone-new" setNm="sbscTypeCd" setCd="01" dlvrMethCd="01">신규가입</a>
+							<a href="#" class="btn fill ui-popup-call " name="set" data-target="#popup-phone-move" setNm="sbscTypeCd" setCd="02" dlvrMethCd="01">번호이동</a>
+						</div>
+					</div>
+					<!-- //wrapStep4 -->
+
+					<!-- 고객유형선택 추가 -->
+					<div id="wrapStep5" class="wrapStep">
+						<p class="step0">신규가입<br>본인인증을 시작합니다.</p>
+						<div class="btn-wrap step0 line1">
+							<a id="userTypeATag01" href="#" class="btn fill" name="" data-target="" setnm="" setcd="01" dlvrmethcd="" role="button">개인</a>
+							<a id="userTypeATag02" href="#" class="btn fill" name="" data-target="" setnm="" setcd="02" dlvrmethcd="" role="button">미성년자</a>
+						</div>
+					</div>
+					<!-- //고객유형선택 추가 -->
+
+					<!-- 다른 요금제 선택 -->
+					<script>
+						$(function(){
+							$('#wrapStep1').hide();
+							$('#wrapStep2').hide();
+							$('#wrapStep3').hide();
+							$('#wrapStep4').hide();
+							$('#wrapStep5').hide();
+							$('#other-plan').show();
+							$('#recomm-plan').hide();
+							$('#Ys-plan').hide();
+							$('#stepCoupon').hide();
+							$('#coupon-useguide').hide();
+							$('#chooseGenerationDiv').hide();
+
+							$('#login').hide();
+							$('#popup-phone-new').hide();
+							$('#popup-phone-move').hide();
+							$('#popup-good-more').hide();
+							$('#popup-plan-change').hide();
+							$('#popup-ys-plan-sale').hide();
+
+							$('a[name="other-plan_system"]').trigger('click')
+						})
+					</script>
+					<div id="other-plan" class="wrapStep">
+						<ul class="tab tab-charge" data-effect="tab"><!-- ktd수정 : 탭 메뉴명 -->
+							<li class="active"><a href="#tab-con1" role="button" data-ppl-group="5g" data-prod-cgt-cd="30">5G 요금제</a></li>
+							<li><a href="#tab-con2" role="button" data-ppl-group="lte" data-prod-cgt-cd="15">LTE 요금제</a></li>
+						</ul>
+						<div class="tab-content">
+							<div id="tab-con1" class="active">
+								<div class="swiper-container tab-payment tab-payment5g"><!-- ktd수정 : 슬라이드 클래스 추가 -->
+									<ul class="tab select-charge swiper-wrapper">
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class="active " data-group-cd="140">5G 슈퍼플랜 초이스</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="92">5G 슈퍼플랜</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="95">5G Y 슈퍼플랜</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="93">5G 일반</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="145">5G 주니어</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="96">5G 청소년</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" data-group-cd="500" class="pplDirect" style="">다이렉트전용</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" data-group-cd="140,92,95,93,145,96,500">전체</a></li>
+									</ul>
+									<div class="swiper-scrollbar"></div>
+								</div>
+								<ul class="ktd-noti-list"><!-- ktd수정 : ktd-noti-list 변경 -->
+									<li>"자세히 보기"는 kt.com으로 새창 이동하여 요금상세설명을 확인하실 수 있습니다.</li>
+									<li>가입을 위한 요금제 선택은 "현재(다이렉트)페이지"에서 진행해주세요.</li>
+								</ul>
+								<div class="sort-area charge-table boxPplSelect">
+									<div class="area select-area">
+										<a href="#sortProdLy_5g" class="">데이터 많은순 </a>
+										<ul id="sortProdLy_5g" class="sortflog" style="width: 106px; display: none;">
+											<li><a href="javascript:void(0);" data-sort-prod="dataDesc">데이터 많은순 </a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="dataAsc">데이터 적은순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="amtDesc">높은 가격순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="amtAsc">낮은가격순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="tlkDesc">음성 많은순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="tlkAsc">음성 적은순</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="list-charge" id="pplList_5g">
+									<div class="area">
+										<div class="box">
+											<div class="title">슈퍼플랜 프리미엄 초이스(시즌/지니)</div>
+											<div class="summary"></div>
+											<a role="button" href="https://product.kt.com/wDic/productDetail.do?ItemCode=1372&amp;CateCode=6002&amp;filter_code=81&amp;option_code=109&amp;pageSize=5" class="go-charge" title="새창 열기" target="_blank">자세히 보기</a><!-- ktd수정 : "자세히보기" 위치 이동 -->
+											<div class="line">
+												<span class="a">데이터</span>
+												<span class="b">완전 무제한</span>
+											</div>
+											<div class="opt">
+												<span>데이터 완전 무제한</span>
+											</div>
+											<div class="line">
+												<span class="a">테더링</span>
+												<span class="b">100GB</span>
+											</div>
+											<div class="line">
+												<span class="a">로밍</span>
+												<span class="b">3Mbps무제한</span>
+											</div>
+											<div class="line">
+												<span class="a">음성/문자</span>
+												<span class="b">집/이동전화 무제한 / 기본제공</span>
+											</div>
+											<div class="price">
+												월 130,000원<!--(부가세 포함)-->
+											</div>
+											<a href="javascript:void(0);" class="go aPplOk" soc="PL216U618" pplgroupdivcd="140" pplid="0827" pplnm="슈퍼플랜 프리미엄 초이스&amp;#40;시즌&amp;#x2F;지니&amp;#41;" data="완전 무제한" tlk="집&amp;#x2F;이동전화 무제한" char="기본제공" chguseyn="Y" tngrpplyn="N" onlinefrmuseyn="N" senioryn="N" prsnlshare="100GB" roaming="3Mbps무제한">요금제 선택</a>
+										</div>
+										<div class="choice-area">
+											<div class="title">기본제공</div>
+											<ul class="float-list">
+												<li>
+													<label for="list-superPlan2">
+														<span class="t">시즌 플레인 + 지니 스마트 음악감상 + 블라이스 스토리</span>
+													</label>
+													<input type="checkbox" id="list-superPlan2" class="checkbox-1" name="list-superPlan2" value="" checked="checked" disabled="disabled">
+												</li>
+											</ul>
+											<div class="title">시즌 초이스를 선택해주세요</div>
+											<p>다양한 콘텐츠 중 매월 1가지 골라 즐길 수 있는 부가서비스 입니다.</p>
+											<ul>
+												<li>
+													<label for="list-0827-choice-1">
+														<span class="t">시즌믹스</span>
+														<span class="m">실시간 TV부터 최신 영화, 드라마까지 고화질로 즐기는 영상</span>
+													</label>
+													<input type="checkbox" id="list-0827-choice-1" class="checkbox-1" name="seeznAddItem" value="PL2026804" onclick="validSeeznBoxItem(this);" pplid="0827" pplgroupdivcd="140">
+												</li>
+												<li>
+													<label for="list-0827-choice-5">
+														<span class="t">게임박스</span>
+														<span class="m">100개 이상의 콘솔/PC 고사양 게임을 별도 구매없이, 모바일에서 즐길 수 있는 스트리밍 게임 서비스</span>
+													</label>
+													<input type="checkbox" id="list-0827-choice-5" class="checkbox-1" name="seeznAddItem" value="PL2024788" onclick="validSeeznBoxItem(this);" pplid="0827" pplgroupdivcd="140">
+												</li>
+											</ul>
+										</div>
+										<div class="expend-block"><!-- ktd수정 : expend-block 추가 -->
+											<button type="button" class="btn-expend"><span>자세히 보기</span></button>
+										</div>
+									</div>
+
+									<div class="area">
+										<div class="box">
+											<div class="title">슈퍼플랜 스페셜 초이스(시즌/지니)</div>
+											<div class="summary"></div>
+											<a role="button" href="https://product.kt.com/wDic/productDetail.do?ItemCode=1372&amp;CateCode=6002&amp;filter_code=81&amp;option_code=109&amp;pageSize=5" class="go-charge" title="새창 열기" target="_blank">자세히 보기</a><!-- ktd수정 : "자세히보기" 위치 이동 -->
+											<div class="line">
+												<span class="a">데이터</span>
+												<span class="b">완전 무제한</span>
+											</div>
+											<div class="opt">
+												<span>데이터 완전 무제한</span>
+											</div>
+											<div class="line">
+												<span class="a">테더링</span>
+												<span class="b">70GB</span>
+											</div>
+											<div class="line">
+												<span class="a">로밍</span>
+												<span class="b">100Kbps 무제한</span>
+											</div>
+											<div class="line">
+												<span class="a">음성/문자</span>
+												<span class="b">집/이동전화 무제한 / 기본제공</span>
+											</div>
+											<div class="price">
+												월 110,000원<!--(부가세 포함)-->
+											</div>
+											<a href="javascript:void(0);" class="go aPplOk" soc="PL216U617" pplgroupdivcd="140" pplid="0828" pplnm="슈퍼플랜 스페셜 초이스&amp;#40;시즌&amp;#x2F;지니&amp;#41;" data="완전 무제한" tlk="집&amp;#x2F;이동전화 무제한" char="기본제공" chguseyn="Y" tngrpplyn="N" onlinefrmuseyn="N" senioryn="N" prsnlshare="70GB" roaming="100Kbps 무제한">요금제 선택</a>
+										</div>
+										<div class="choice-area">
+											<div class="title">기본제공</div>
+											<ul class="float-list">
+												<li>
+													<label for="list-superPlan2">
+														<span class="t">시즌 플레인 + 지니 스마트 음악감상 + 블라이스 스토리</span>
+													</label>
+													<input type="checkbox" id="list-superPlan2" class="checkbox-1" name="list-superPlan2" value="" checked="checked" disabled="disabled">
+												</li>
+											</ul>
+											<div class="title">시즌 초이스를 선택해주세요</div>
+											<p>다양한 콘텐츠 중 매월 1가지 골라 즐길 수 있는 부가서비스 입니다.</p>
+											<ul>
+												<li>
+													<label for="list-0828-choice-1">
+														<span class="t">시즌믹스</span>
+														<span class="m">실시간 TV부터 최신 영화, 드라마까지 고화질로 즐기는 영상</span>
+													</label>
+													<input type="checkbox" id="list-0828-choice-1" class="checkbox-1" name="seeznAddItem" value="PL2026804" onclick="validSeeznBoxItem(this);" pplid="0828" pplgroupdivcd="140">
+												</li>
+												<li>
+													<label for="list-0828-choice-5">
+														<span class="t">게임박스</span>
+														<span class="m">100개 이상의 콘솔/PC 고사양 게임을 별도 구매없이, 모바일에서 즐길 수 있는 스트리밍 게임 서비스</span>
+													</label>
+													<input type="checkbox" id="list-0828-choice-5" class="checkbox-1" name="seeznAddItem" value="PL2024788" onclick="validSeeznBoxItem(this);" pplid="0828" pplgroupdivcd="140">
+												</li>
+											</ul>
+										</div>
+										<div class="expend-block"><!-- ktd수정 : expend-block 추가 -->
+											<button type="button" class="btn-expend"><span>자세히 보기</span></button>
+										</div>
+									</div>
+								</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<div class="btn-bottom">
+									<button type="button" class="btn fill popupSelPpl" disabled>요금제 선택</button>
+									<button type="button" class="btn fill popupSelPpl">요금제 선택</button>
+								</div>
+							</div>
+
+							<div id="tab-con2">
+								<div class="swiper-container tab-payment tab-paymentLte"><!-- ktd수정 : 슬라이드 클래스 추가 -->
+									<ul class="tab select-charge swiper-wrapper">
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class="active " data-group-cd="90">데이터ON</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="91">Y데이터 ON </a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="240">LTE Y틴&#40;청소년&#41;</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="242">LTE 주니어</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="114">LTE 일반</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="31">LTE 복지</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="110">LTE 시니어</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="247">순 선택형&#40;LTE&#41;</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="248">순 망내무한 선택형&#40;LTE&#41;</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" data-group-cd="500" class="pplDirect" style="">다이렉트전용</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" data-group-cd="90,91,240,242,114,31,110,247,248,500">전체</a></li>
+									</ul>
+									<div class="swiper-scrollbar"></div>
+								</div>
+								<ul class="ktd-noti-list"><!-- ktd수정 : ktd-noti-list 변경 -->
+									<li>"자세히 보기"는 kt.com으로 새창 이동하여 요금상세설명을 확인하실 수 있습니다.</li>
+									<li>가입을 위한 요금제 선택은 "현재(다이렉트)페이지"에서 진행해주세요.</li>
+								</ul>
+								<div class="sort-area charge-table boxPplSelect">
+									<div class="area select-area">
+										<a href="#sortProdLy_lte" class="">데이터 많은순 </a>
+										<ul id="sortProdLy_lte" class="sortflog" style="width: 106px; display: none;">
+											<li><a href="javascript:void(0);" data-sort-prod="dataDesc">데이터 많은순 </a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="dataAsc">데이터 적은순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="amtDesc">높은 가격순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="amtAsc">낮은가격순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="tlkDesc">음성 많은순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="tlkAsc">음성 적은순</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="list-charge" id="pplList_lte"></div>
+								<div class="btn-bottom">
+									<button type="button" class="btn fill popupSelPpl">요금제 선택</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //다른 요금제 선택 -->
+
+					<!-- recomm-plan -->
+					<div id="recomm-plan" class="wrapStep">
+						<div class="page-num"></div>
+						<!---lte 요금제 -->
+						<div id="setp-1" class="setp-area LTE-area" style="display:block" >
+							<div class="content">
+								<p class="step-top-msg">
+									연령대가<br>
+									어떻게 되시나요?
+								</p>
+								<!-- data-pos : 위치값 , value= 값 -->
+								<div class="new-range-area LTE-values">
+									<div class="track" ><em class="bar"></em></div>
+									<input type="radio" name="pplAge" id="a-1" value="18">
+									<label data-pos ="15" for="a-1">청소년 <em>(만18세)</em></label>
+									<input type="radio" name="pplAge" id="a-2"  value="29">
+									<label data-pos ="38" for="a-2" >Y <em>(만19~29세)</em></label>
+									<input type="radio" name="pplAge"  id="a-3"  value="65">
+									<label data-pos ="61" for="a-3" >성인<em>(만30세~64세)</em></label>
+									<input type="radio" name="pplAge" id="a-4"  value="9999">
+									<label data-pos ="84" for="a-4" >시니어<em>(만65세이상)</em></label>
+								</div>
+							</div>
+							<div class="btn-bottom">
+								<button type="button" class="btn fill" onclick="nextSetp('next')">선택</button>
+							</div>
+						</div>
+						<!---lte 요금제 -->
+
+						<div id="setp-2" class="setp-area LTE-area 5G-area">
+							<div class="content">
+								<p class="step-top-msg">
+									월 데이터<br>
+									이용량이 얼마나 되시나요?
+								</p>
+								<!-- 5G 요금제 -->
+								<div class="new-range-area 5G-values">
+									<div class="track" ><em class="bar"></em></div>
+									<input type="radio" name="pplData" id="b-1" value="9">
+									<label data-pos ="20" for="b-1">0~9GB 미만</label>
+									<input type="radio" name="pplData" id="b-2"  value="9999">
+									<label data-pos ="80" for="b-2" >9GB~무제한</label>
+								</div>
+
+								<dl class="setp-msg 5G-values">
+									<dt>※ 안내</dt>
+									<dd>
+										<ul>
+											<li>평균적으로 초고화질(4K) 영상 1시간 보는데 소요되는<br> 데이터는 약 9GB정도 입니다.</li>
+											<li>초고화질 영상, 게임, SNS, 음악 등 다양한 활동을<br> 많이 하신다면 9GB~무제한을 추천합니다.</li>
+										</ul>
+									</dd>
+								</dl>
+								<!-- 5G 요금제 -->
+
+								<!-- LTE 요금제 -->
+								<div class="new-range-area LTE-values">
+									<div class="track" data-min="1" data-max="100"><em class="bar"></em></div>
+									<input type="radio" name="pplData" id="c-1" value="3">
+									<label data-pos ="20" for="c-1">0~3GB 미만</label>
+									<input type="radio" name="pplData" id="c-2"  value="7">
+									<label data-pos ="50" for="c-2" >3GB~7GB 미만</label>
+									<input type="radio" name="pplData" id="c-3"  value="9999">
+									<label data-pos ="80" for="c-3" >7GB~무제한</label>
+								</div>
+
+								<dl class="setp-msg LTE-values">
+									<dt>※ 안내</dt>
+									<dd>
+										<ul>
+											<li>평균적으로 초고화질(4K) 영상 1시간 보는데 소요되는<br> 데이터는 약 1GB정도 입니다.</li>
+											<li>동영상, 게임, SNS, 음악 등 다양한 활동을 많이<br> 하신다면 7GB~무제한을 추천합니다.</li>
+										</ul>
+									</dd>
+								</dl>
+								<!-- LTE 요금제 -->
+							</div>
+							<div class="btn-bottom">
+								<button type="button" class="btn fill" onclick="nextSetp('next')">선택</button>
+							</div>
+						</div>
+
+						<div id="setp-3" class="setp-area LTE-area 5G-area">
+							<div class="content">
+								<p class="step-top-msg">
+									원하시는<br>
+									월 요금은 얼마나 되시나요?
+								</p>
+
+								<!-- 5G 요금제 -->
+								<div class="new-range-area 5G-values">
+									<div class="track"><em class="bar"></em></div>
+									<input type="radio" name="pplPrice" id="d-1" value="6">
+									<label data-pos ="20" for="d-1">6만원 미만</label>
+									<input type="radio" name="pplPrice" id="d-2"  value="9999">
+									<label data-pos ="80" for="d-2" >6만원 이상</label>
+								</div>
+								<!-- //5G 요금제 -->
+
+								<!-- LTE 요금제 -->
+								<div class="new-range-area LTE-values">
+									<div class="track"><em class="bar"></em></div>
+									<input type="radio" name="pplPrice" id="e-1" value="4">
+									<label data-pos ="20" for="e-1">4만원 미만</label>
+									<input type="radio" name="pplPrice" id="e-2"  value="7">
+									<label data-pos ="50" for="e-2" >4~7만원 이하</label>
+									<input type="radio" name="pplPrice" id="e-3"  value="9999">
+									<label data-pos ="80" for="e-3" >7만원 초과</label>
+								</div>
+								<!-- //LTE 요금제 -->
+							</div>
+							<div class="btn-bottom">
+								<button type="button" class="btn fill"  onclick="nextSetp('next')">선택</button>
+							</div>
+						</div>
+
+						<div id="setp-4" class="setp-area LTE-area 5G-area">
+							<div  class="content">
+								<p class="step-top-msg">
+									원하시는<br>
+									혜택을 고르세요
+									<a  href="#" role="button" class="btn btn-next" onclick="nextSetp('skip')">건너뛰기</a>
+								</p>
+								<ul class="benefit-check-list">
+									<!-- 5G-->
+									<li class="5Gbenefit">
+										<input type="checkbox" class="checkbox" name="5Gbenefit" id="benefit-1">
+										<label for="benefit-1">해외에서도 마음껏 톡 이용하기</label>
+									</li>
+									<li class="5Gbenefit">
+										<input type="checkbox" class="checkbox" name="5Gbenefit" id="benefit-2">
+										<label for="benefit-2">단말보험 멤버십 포인트로 납부하기</label>
+									</li>
+									<li class="5Gbenefit">
+										<input type="checkbox" class="checkbox" name="5Gbenefit" id="benefit-3">
+										<label for="benefit-3">스마트기기 1회선 무료로 이용하기</label>
+									</li>
+									<li class="5Gbenefit">
+										<input type="checkbox" class="checkbox" name="5Gbenefit" id="benefit-4">
+										<label for="benefit-4">멤버십 VIP받기<span>(12만P 제공, 영화무료, 스타벅스무료,<br> 던킨도너츠 무료 등)</span></label>
+									</li>
+									<li class="5Gbenefit">
+										<input type="checkbox" class="checkbox" name="5Gbenefit" id="benefit-5">
+										<label for="benefit-5">멤버십 VVIP받기<span>(15만P 제공, CGV 1Day 프리패스, <br>아웃백 할인, 서울랜드 이용권 등)</span></label>
+									</li>
+									<li class="5Gbenefit">
+										<input type="checkbox" class="checkbox" name="5Gbenefit" id="benefit-6">
+										<label for="benefit-6">영상, 음악, 게임, 웹소설&#x2F;웹툰, VR 컨텐츠 이용혜택</label>
+									</li>
+									<li class="5Gbenefit">
+										<input type="checkbox" class="checkbox" name="5Gbenefit" id="benefit-7">
+										<label for="benefit-7">데이터쉐어링 1회선 무료</label>
+									</li>
+									<!-- //5G-->
+									<!-- lte-->
+									<li class="LTEbenefit">
+										<input type="checkbox" class="checkbox" name="LTEbenefit" id="benefit-11">
+										<label for="benefit-11">멤버십 VIP받기<span>(12만P 제공, 영화무료, 스타벅스 무료, 던킨도너츠 무료 등)</span></label>
+									</li>
+									<li class="LTEbenefit">
+										<input type="checkbox" class="checkbox" name="LTEbenefit" id="benefit-12">
+										<label for="benefit-12">단말보험을 멤버십 포인트&#40;4,500&#41;로 납부하기</label>
+									</li>
+									<li class="LTEbenefit">
+										<input type="checkbox" class="checkbox" name="LTEbenefit" id="benefit-13">
+										<label for="benefit-13">스마트기기 1회선 무료로 이용하기</label>
+									</li>
+									<li class="LTEbenefit">
+										<input type="checkbox" class="checkbox" name="LTEbenefit" id="benefit-14">
+										<label for="benefit-14">음악&#x2F;동영상을 마음껏 볼 수 있는 미디어팩 무료로 이용하기</label>
+									</li>
+									<li class="LTEbenefit">
+										<input type="checkbox" class="checkbox" name="LTEbenefit" id="benefit-15">
+										<label for="benefit-15">시즌과 전용 데이터까지 무료로 이용하기</label>
+									</li>
+									<!-- //lte-->
+								</ul>
+							</div>
+							<div class="btn-bottom">
+								<button type="button" class="btn fill"  onclick="nextSetp('search')">조회하기</button>
+							</div>
+						</div>
+
+						<div id="setp-5" class="setp-area LTE-area 5G-area">
+							<div class="content">
+								<p class="step-top-msg">
+									고객님이 선택하신<br>
+									조건에 맞는 요금제 입니다.
+								</p>
+								<div class="list-charge" id="popupPplList">
+								</div>
+							</div>
+							<div class="btn-bottom btn-2">
+								<button type="button" class="btn fill gray" onclick="nextSetp('reset')" >다시선택</button>
+								<button type="button" class="btn fill popupSelPpl">선택완료</button>
+							</div>
+						</div>
+					</div>
+					<!-- //recomm-plan -->
+
+					<!-- Ys-plan -->
+					<div id="Ys-plan" class="wrapStep">
+						<div id="setp-1" class="setp-area">
+							<div  class="content">
+								<p class="step-top-msg">
+									이용하실  <br>
+									콘텐츠를 선택하세요
+									<a  href="#" role="button" class="btn btn-next" onclick="fnToppingPick('skip')">건너뛰기</a>
+								</p>
+								<dl id="boxYsPpl" class="list-charge-ys list-charge-2">
+									<dt>
+										<a href="#">시즌초이스 (+11,000원)</a>
+										<input type="checkbox" class="checkbox-1" id="diySeeznItem" name="diySeeznItem" title="시즌초이스 (+11,000원)">
+									</dt>
+									<dd class="area">
+										<div class="choice-area">
+											<div class="title">시즌 초이스를 선택해주세요</div>
+											<p>다양한 콘텐츠 중 매월 2가지 골라 즐길 수 있는 부가서비스 입니다.</p>
+											<ul>
+												<li>
+													<label for="recomm-diy-choice-1">
+														<span class="t">시즌믹스</span>
+														<span class="m">실시간 TV부터 최신 영화, 드라마까지 초고화질로 즐기는 영상<br>(매달 VOD용 코코(11,000©)와 콘텐츠팩 코코(11,000©) 제공)</span>
+													</label>
+													<input type="checkbox" id="recomm-diy-choice-1" class="checkbox-1" name="diySeeznAddItem" value="PL19C6566" onclick="validDiySeeznBoxItem(this);">
+												</li>
+												<li>
+													<label for="recomm-diy-choice-2">
+														<span class="t">지니 스마트 음악감상</span>
+														<span class="m">무손실 원음의 실시간 음악 스트리밍</span>
+													</label>
+													<input type="checkbox" id="recomm-diy-choice-2" class="checkbox-1" name="diySeeznAddItem" value="PL19C6565" onclick="validDiySeeznBoxItem(this);">
+												</li>
+												<li>
+													<label for="recomm-diy-choice-4">
+														<span class="t">블라이스 스토리</span>
+														<span class="m">인기 웹소설·웹툰 무제한 감상<br>로맨스부터 시크릿까지 장르별로 즐기는 콘텐츠</span>
+													</label>
+													<input type="checkbox" id="recomm-diy-choice-4" class="checkbox-1" name="diySeeznAddItem" value="PL2043265" onclick="validDiySeeznBoxItem(this);">
+													</li>
+												<li>
+													<label for="recomm-diy-choice-5">
+														<span class="t">게임박스</span>
+														<span class="m">100개 이상의 콘솔/PC 고사양 게임을 별도 구매 없이, 모바일에서 즐길 수 있는 스트리밍 게임 서비스</span>
+													</label>
+													<input type="checkbox" id="recomm-diy-choice-5" class="checkbox-1" name="diySeeznAddItem" value="PL2024787" onclick="validDiySeeznBoxItem(this);">
+												</li>
+											</ul>
+										</div>
+									</dd>
+									<dt>
+										<a href="#">넷플릭스 (가입 후 과금)</a>
+										<input type="checkbox" class="checkbox-1" id="recomm-diy-netflixChoice01" name="diyNetflixAddItem" value="PL211R774" title="넷플릭스 (가입 후 과금)">
+									</dt>
+								</dl>
+								<p class="stxt">* 넷플릭스 콘텐츠 선택 시 발송되는 MMS를 통해 별도 가입해주셔야 하며, 가입 완료 확인 후 선택하신 넷플릭스 멤버십에 따라 통합 청구됩니다.</p>
+							</div>
+							<div class="btn-bottom">
+								<button type="button" class="btn fill" onclick="fnToppingPick('choice')">선택완료</button>
+							</div>
+						</div>
+
+						<div id="setp-2" class="setp-area">
+							<div class="content">
+								<p class="step-top-msg">
+									선택하신 콘텐츠와  <br>
+									월 통신요금을 확인해주세요
+								</p>
+								<div class="result-price" style="">
+									<div class="row">
+										<div class="td">월정액</div>
+										<div class="td" id="monthUseChageTxt">95,000원</div>
+									</div>
+									<div class="row point" id="seeznUseChageArea">
+										<div class="td">시즌초이스</div>
+										<div class="td">+11,000원</div>
+									</div>
+									<div class="row point" id="netFlixUseChageArea">
+										<div class="td">넷플릭스</div>
+										<div class="td">가입 후 과금</div>
+									</div>
+									<div class="row total">
+										<div class="td">월 통신요금</div>
+										<div class="td" id="totalMonthUseChageTxt">95,000원</div>
+									</div>
+								</div>
+							</div>
+							<div class="btn-bottom btn-2">
+								<button type="button" class="btn fill gray" onclick="fnToppingReset();" >다시선택</button>
+								<button type="button" class="btn fill" onclick="goNextStep('#stepCoupon', this);">선택완료</button>
+							</div>
+						</div>
+					</div>
+					<!-- //Ys-plan -->
+
+					<!-- stepCoupon 210819 쿠폰팩 -->
+					<div id="stepCoupon" class="wrapStep"></div>
+					<!-- stepCoupon 210819 쿠폰팩 -->
+
+
+					<!-- layer -->
+					<!-- 제휴쿠폰 이용안내 -->
+					<div id="coupon-useguide" class="ui-popup toast-popup coupon-guide"> <!-- active 클래스 추가로 활성화 popup-type-2 -->
+						<div class="content">
+							<div class="header">제휴쿠폰 이용안내</div>
+							<button type="button" class="btn-close">닫기</button>
+							<div class="body">
+								<ul class="jum-list">
+									<li> 선택하신 요금제에 따라 혜택 금액은 달라지며 개통월기준 2달 후(요금납부 확인 후) 개통연락처로 쿠폰이 제공됩니다. </li>
+									<li> 쿠폰은 약정기간 중 매월 1회 제공되며 제공된 쿠폰은 재발행되지 않습니다. </li>
+									<li> 약정기간 중 요금제 변경의 경우 변경된 요금기준으로 쿠폰 금액이 변경, 발행됩니다. </li> <li> 쿠폰 변경은 3월, 6월, 9월, 12월 변경기간내에서 만 가능하며 변경 기간은 쿠폰 문자 발송 시 안내예정 입니다. </li>
+									<li> 쿠폰 발행 연락처는 변경할 수 없습니다.(최초 개통 연락처로 약정기간 중 발행됩니다.) </li>
+									<li> 발행된 쿠폰의 유효기간은 매달 말일까지 사용가능하며 미사용 시 소멸됩니다.(쿠폰 발행 시 유효기간이 안내되어 있으니 꼭 확인하시기 바랍니다.) </li>
+									<li> 쿠폰은 요금납부 확인 후 매달 5일 발행될 예정입니다.(5일이 토/일/공휴일 일 경우 다음 영업일에 발송)</li>
+									<li> 발행된 쿠폰은 타인에게 양도 불가합니다. </li>
+									<li> 쿠폰 분실 시 재발행은 불가합니다. </li>
+								</ul>
+							</div>
+							<div class="btn-bottom">
+								<button type="button" name="button" class="btn fill bottom btn-close" id="">확인</button>
+							</div>
+						</div>
+					</div>
+					<!-- // 제휴쿠폰 이용안내 -->
+
+					<!-- //210819 -->
+					<div id="chooseGenerationDiv" class="wrapStep" style="display:none;">
+						<p class="step0">어떤<br>핸드폰을 사용하시나요 ?</p>
+						<div id="boxPplDiv" class="btn-wrap step0">
+							<button type="button" class="btn fill">5G</button>
+							<button type="button" class="btn fill">LTE</button>
+						</div>
+						<p class="step0 pt0">
+							<span class="stxt">* 5G단말을 사용하시는 고객은 5G요금제만, LTE 단말을 사용하시는 고객은 LTE요금제만 가입이 가능합니다.</span>
+						</p>
+					</div>
+				</div>
+				<!-- //content-recommend -->
+
+				<!-- 로그인// -->
+				<div id="login" class="ui-popup toast-popup login">
+					<div class="content">
+						<div class="header">로그인</div>
+						<button type="button" class="btn-close">닫기</button>
+						<div class="body">
+						</div>
+
+						<div class="btn-wrap">
+							<a href="#" onclick="prodLogin();" class="btn fill" onclick="trackClicks('mKT direct-가입유형', '^KT direct-가입유형^로그인');">로그인</a>
+							<a href="#" onclick="nonMembers();" class="btn" onclick="trackClicks('mKT direct-가입유형', '^KT direct-가입유형^비회원');">비회원</a>
+						</div>
+					</div>
+				</div>
+				<!-- //로그인 -->
+
+
+				<!-- 신규가입 개통 안내 -->
+				<div id="popup-phone-new" class="ui-popup popup-type-2">
+					<div class="content">
+						<div class="header">신규가입 개통 안내</div>
+						<div class="body">
+							<p class="msg-type-1">지금은 개통 예약만<br> 가능합니다.</p>
+							<p class="msg-type-2">자동 개통 후 문자로 알려드립니다.</p>
+							<div class="open-time">
+								<dt>※ 셀프개통 가능시간</dt>
+								<dd>
+									<ul>
+										<li><span class="d">평일</span> 09시~21시</li>
+										<li><span class="d">토요일</span> 10시~18시 <br>(일요일, 신정/설/추석 당일 제외)</li>
+									</ul>
+									<p class="info-txt-mark mt15">이외의 시간은 개통 예약만 가능하며 자동 개통 후 문자로 알려드립니다.</p>
+								</dd>
+							</div>
+						</div>
+						<div class="btn-bottom">
+							<button type="button" class="btn fill btn-close">확인</button>
+						</div>
+						<button type="button" class="btn-close">닫기</button>
+					</div>
+				</div>
+				<!-- //신규가입 개통 안내 -->
+
+
+				<!-- 번호이동 개통 안내 -->
+				<div id="popup-phone-move" class="ui-popup  popup-type-2">
+					<div class="content">
+						<div class="header">번호이동 개통 안내</div>
+						<div class="body">
+							<p class="msg-type-1">지금은 번호이동 바로개통<br>가능한 시간이 아닙니다.</p>
+							<p class="msg-type-2">
+								가입 신청서 작성을 완료해주시면<br>
+								개통 가능한 시간에 상담원이<br>
+								개통해 드립니다.<br>
+							</p>
+							<div class="open-time">
+								<dt>※ 셀프개통 가능시간</dt>
+								<dd>
+									<ul>
+										<li><span>평일/토요일</span> 10시~20시<br>(일요일, 신정/설/추석 당일 제외)</li>
+									</ul>
+									<p class="info-txt-mark mt15">이외의 시간은 개통 예약만 가능하며 자동 개통 후 문자로 알려드립니다.</p>
+								</dd>
+							</div>
+						</div>
+						<div class="btn-bottom">
+							<button type="button" class="btn fill btn-close">확인</button>
+						</div>
+						<button type="button" class="btn-close">닫기</button>
+					</div>
+				</div>
+				<!-- 번호이동 개통 안내 -->
+
+				<!-- 상품 자세히 보기-->
+				<div id="popup-good-more" class="ui-popup popup-type-2">
+					<div class="content" style="height: auto;">
+						<div class="header tac" >요금제</div>
+						<button type="button" class="btn-close">닫기</button>
+						<iframe src="" frameborder="0"></iframe>
+					</div>
+				</div>
+				<!-- //상품 자세히 보기-->
+
+				<!-- 요금제 변경시 유의사항 팝업 -->
+				<div id="popup-plan-change" class="ui-popup toast-popup plan-change-noti">
+					<div class="content">
+						<div class="header">요금제 변경시 유의사항</div>
+						<button type="button" class="btn-close">닫기</button>
+						<div class="body">
+							<!-- 위약금 부과/유예 케이스 -->
+							<p id="pplChgFailText">
+							</p>
+							<!-- //위약금 부과/유예 케이스 -->
+
+							<!-- 0406 : 위약금 없음. 요금제 유의사항 안내 -->
+							<div class="wscroll" id="pplChgPassText">
+								<div class="inscroll" tabindex="0">
+									<ul class="com-list-dot">
+										<li class="info-txt-mark">요금제는 월 1회만 변경 가능하며 변경한 달에는 다른 요금제로 변경할 수 없습니다.</li>
+										<li class="info-txt-mark">단, 신청 당일에는 1회에 한하여 변경 전 요금제로 재변경이 가능하며, 처음 변경 신청하였던 요금제를 제외한 다른 요금제로 변경 신청하실 수 있습니다.</li>
+										<li class="info-txt-mark">요금제 변경 예약 신청 고객님은 예약 신청을 먼저 취소한 후 요금제를 변경해주세요.</li>
+										<li class="info-txt-mark">휴대폰 정지 상태에서는 요금제를 변경할 수 없습니다.</li>
+										<li class="info-txt-mark">요금제를 변경하면 변경 전 요금제의 부가 및 이월 혜택은 이용할 수 없으나 아래와 같은 경우 혜택이 유지됩니다.
+											<ul class="com-list-dot minus">
+												<li class="info-txt-mark">번호변경이나 동일 계열의 요금제로 변경한 경우</li>
+												<li class="info-txt-mark">이월 가능 요금제 간 변경일 경우</li>
+											</ul>
+										</li>
+										<li class="info-txt-mark">요금제 변경 시점부터 요금제 월정액 및 무료제공 혜택이 각각 일할 적용됩니다.</li>
+										<li class="info-txt-mark">신규 가입이 제한된 요금제는 다른 요금제로 변경할 경우 기존 요금제로 재변경이 불가능합니다.</li>
+										<li class="info-txt-mark">가입자 또는 실사용자가 미성년자인 경우, 부모님(법정대리인)의 동의 후 변경할 수 있습니다.</li>
+									</ul>
+									<!-- 5G Y 무약정 플랜 -->
+									<ul class="com-list-dot caution" id="pplTypeA" style="display:none;">
+										<li class="info-txt-mark">음성통화량이 일600분을 초과하는 횟수가 월 3회를 넘거나, 당월 총 음성 통화량이 1만분을 초과하는 경우, 수신처 1,000곳 초과할 경우, 상업적 목적으로 이용하는 경우 등의 사유가 발생시 과금</li>
+										<li class="info-txt-mark">문자 메세지 일150건 초과 발송일이 10일을 초과하거나, 수신처 3,000곳 초과할 경우, 상업적 목적으로 이용하는 경우 등의 사유가 발생시 과금</li>
+										<li class="info-txt-mark">세금(부가세), 국제전화, KT114 직접연결수수료 및 통화료, KT114 전화번호 안내 서비스, 수신자 부담(콜렉트콜), 소액결제 이용료, 060 등 정보 이용료, 유료 부가서비스 월 이용료 등은 별도로 청구됩니다.</li>
+									</ul>
+									<!-- //5G Y 무약정 플랜 -->
+									<!-- LTE Y 무약정 플랜 -->
+									<ul class="com-list-dot caution" id="pplTypeB" style="display:none;">
+										<li class="info-txt-mark">음성통화량이 일600분을 초과하는 횟수가 월 3회를 넘거나, 당월 총 음성 통화량이 1만분을 초과하는 경우, 수신처 1,000곳 초과할 경우, 상업적 목적으로 이용하는 경우 등의 사유가 발생시 과금</li>
+										<li class="info-txt-mark">문자 메세지 일150건 초과 발송일이 10일을 초과하거나, 수신처 3,000곳 초과할 경우, 상업적 목적으로 이용하는 경우 등의 사유가 발생시 과금</li>
+										<li class="info-txt-mark">세금(부가세), 국제전화, KT114 직접연결수수료 및 통화료, KT114 전화번호 안내 서비스, 수신자 부담(콜렉트콜), 소액결제 이용료, 060 등 정보 이용료, 유료 부가서비스 월 이용료 등은 별도로 청구됩니다.</li>
+									</ul>
+									<!-- //LTE Y 무약정 플랜 -->
+									<!-- 5G 다이렉트 -->
+									<ul class="com-list-dot caution" id="pplTypeC" style="display:none;">
+										<li class="info-txt-mark">음성통화량이 일600분을 초과하는 횟수가 월 3회를 넘거나, 당월 총 음성 통화량이 10,000분을 초과하는 경우, 수신처 1,000곳 초과할 경우, 상업적 목적으로 이용하는 경우 등의 사유가 발생시 과금</li>
+										<li class="info-txt-mark">1일 500건을 초과하는 문자메시지를 발송하거나 1일 150건을 초과하는 문자메시지를 월 10회 초과 발송한 경우, 문자메시지를 광고성 스팸 메시지 발송과 같이 상업적 목적으로 이용하거나, 물리적 장치 또는 자동 발송 프로그램을 이용하는 경우(수신처가 월 2,000개 회선을 초과) 등의 사유 발생시 기본제공 혜택 제한하며 제한 시점부터 사용량에 대하여 정상요금 부가 혹은 차단될 수 있습니다.</li>
+										<li class="info-txt-mark">세금(부가세), 국제전화, KT114 직접연결수수료 및 통화료, KT114 전화번호 안내 서비스, 수신자 부담(콜렉트콜), 소액결제 이용료, 060 등 정보 이용료, 유료 부가서비스 월 이용료 등은 별도로 청구됩니다.</li>
+									</ul>
+									<!-- //5G 다이렉트 -->
+									<p>예) LTE 데이터 선택 32.8 요금제 이용 고객의 경우</p>
+									<div class="com_table">
+										<table class="tbl">
+											<colgroup>
+												<col style="width:40%">
+												<col style="width:60%">
+											</colgroup>
+											<caption>요금제별 예시</caption>
+											<tbody>
+												<tr>
+													<th scope="row">변경 전 이용기간</th>
+													<td>4월 1일 ~ 4월 20일 (20일)</td>
+												</tr>
+												<tr>
+													<th scope="row">변경 전 이용량<br>(데이터)</th>
+													<td>300MB</td>
+												</tr>
+												<tr>
+													<th scope="row">일할 기본제공량<br>(데이터)</th>
+													<td>200MB <br>= 300MB X 20일 / 30일</td>
+												</tr>
+												<tr>
+													<th scope="row">초과분(데이터)</th>
+													<td>100MB <br>(요금:0.5KB당 0.011원)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- 0406 : 위약금 없음. 요금제 유의사항 안내 -->
+						</div>
+						<div class="btn-foot">
+							<button type="button" name="button" class="btn fill btn-close" id="pplChgNoti">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- //요금제 변경시 유의사항 팝업 -->
+
+				<!-- 202101 반영예정 :  Y’s 요금제 -->
+				<div id="popup-ys-plan-sale" class="ui-popup toast-popup">
+					<div class="content">
+						<div class="header">Y 고객님만의 더 큰 혜택</div>
+						<button type="button" class="btn-close">닫기</button>
+						<div class="body">
+							<p class="p-col1">고객님, Y고객님이시군요! <br>Y 고객님께는 특별 추가 할인 혜택이 적용됩니다.</p>
+							<p class="mt10">만 29세 이하 고객의 경우 선택하신 요금제 월정액에서 월 5,500원 자동 할인 적용되며,  할인금액은 요금 청구서에서 확인하실 수 있습니다.</p>
+						</div>
+						<div class="bottom-btn">
+							<button type="button" class="btn fill" onclick="pplChgYsPlanOk();">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- //202101 반영예정 :  Y’s 요금제 -->
+			</div>
+		</form>
+	</div>
+	<!-- //ktd : 사이트 영역 -->
+</body>
+</html>

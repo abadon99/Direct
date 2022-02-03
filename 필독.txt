@@ -1,0 +1,11 @@
+신규
+    /directShop/css/ktDirect.css
+    /directShop/renew/
+    /images/directShop/renew/
+
+수정
+    /directShop/js/ui/pub.js
+
+** 그외 파일들은 모두 as-is
+ 
+

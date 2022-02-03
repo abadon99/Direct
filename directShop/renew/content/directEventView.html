@@ -56,7 +56,7 @@
 		<header>
             <div>
                 <h1>
-                    <button type="button" name="button" id="" aria-label="이벤트, 이전화면으로 이동">이벤트</button>
+                    <button type="button" name="button" id="" aria-label="이벤트 상세, 이전화면으로 이동">이벤트 상세</button>
                 </h1>
                 <button type="button" name="button" class="menu">메뉴</button>
             </div>
@@ -113,7 +113,7 @@
         <!-- //side -->
 		<!-- //ktd : directShop>smart>directUsim.menu.jsp 메뉴영역 -->
 
-		<!-- ktd : directShop>smart>directEvent.jsp 컨텐츠 -->
+		<!-- ktd : directShop>smart>directEventView 컨텐츠 -->
 		<div id="content">
 			<ul class="ktd-tab line">
 				<li class="active"><a href="directEvent.html"><span>진행중인 이벤트</span></a></li>
@@ -122,48 +122,33 @@
 			</ul>
 
 			<div class="ktd-eventWrap">
-				<!-- 진행중인 이벤트 -->
-				<div class="ktd-eventIng">
-					<div class="topInfo">
-						<strong class="total">총 <span>25</span>개</strong>
-					</div>
-					<div class="ktd-eventList">
-						<div class="item">
-							<a href="directEventView.html"><img src="/images/directShop/renew/thumb/thumb_eventList01.png" alt="2022년 선물 100% 다 드려범"></a>
-							<ul class="info">
-								<li>
-									<div class="date">2021.10.12 ~ 2021.11.30</div>
-								</li>
-								<li>
-									<div class="ktd-selfLink">
-										<a href="directEventWinner.html" onclick="trackClicks('');" role="button"><span>당첨자 확인</span></a>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="item">
-							<a href="directEventView.html"><img src="/images/directShop/renew/thumb/thumb_eventList02.png" alt="GS25 USIM 구매처"></a>
-							<ul class="info">
-								<li>
-									<div class="date">2021.10.12 ~ 2021.11.30</div>
-								</li>
-								<li>
-									<div class="ktd-selfLink">
-										<a href="directEventWinner.html" onclick="trackClicks('');" role="button"><span>당첨자 확인</span></a>
-									</div>
-								</li>
-							</ul>
-						</div>
-
-						<div class="kt-btn-block">
-							<button type="button"><span>더보기 <em>10/43</em></span></button>
-						</div>
-					</div>
+				<div class="topInfo">
+					<p class="date">이벤트 기간: 2021.10.12 - 2022.01.01</p>
 				</div>
-				<!-- //진행중인 이벤트 -->
+				<div class="ktd-eventView">
+					<img src="/images/directShop/renew/thumb/thumb_eventView.png" alt="">
+				</div>
+				<div class="kt-btn-block">
+					<a href="#" onclick="" class="btn medium inline" role="button">목록</a>
+				</div>
 			</div>
+
+			<script>
+				// 유의사항 toggle
+				$('.evt_notice_tit a').on('click', function(e){
+					e.preventDefault();
+					var evtNoticeCont = $(this).parent().next();
+					if ( !$(this).hasClass('current') ) {
+						$(this).addClass('current').attr('title','내용닫기');
+						$(evtNoticeCont).slideDown();
+					} else {
+						$(this).removeClass('current').attr('title','내용열기');
+						$(evtNoticeCont).slideUp();
+					}
+				});
+			</script>
 		</div>
-		<!-- //ktd : directShop>smart>directEvent.jsp 컨텐츠 -->
+		<!-- //ktd : directShop>smart>directEventView 컨텐츠 -->
 
 		<div class="footer">
             <div>
