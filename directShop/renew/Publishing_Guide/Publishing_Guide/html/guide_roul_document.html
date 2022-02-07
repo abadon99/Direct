@@ -45,6 +45,7 @@
 		<!-- Header -->
 		<header id="header">
 			<h1>KT 다이렉트 퍼블리싱가이드</h1>
+			<a href="guide_coding_list.html">코딩리스트 바로가기</a>
 		</header>
 		<!-- //Header -->
 
@@ -56,8 +57,8 @@
 					<li class="current"><a href="javascript:;">문서 구조 가이드</a>
 						<ul class="depth02">
 							<li><a href="">공통 사항</a></li>
-							<li><a href="">Main Page</a></li>
-							<li><a href="">Content Page</a></li>
+							<li><a href="">메인 문서 구조</a></li>
+							<li><a href="">콘텐츠 문서 구조</a></li>
 							<li><a href="">기타 사항</a></li>
 						</ul>
 					</li>
@@ -71,51 +72,6 @@
 					<h2>문서 구조 가이드</h2>
 				</div>
 
-				<!-- css/js 폴더 구조 -->
-				<section class="s_block">
-					<div class="s_title">
-						class는 - 로<br>
-						<h3>css/js 폴더 구조</h3>
-					</div>
-					<div class="s_content">
-						<div class="code_box">
-							<pre class="brush: html">
-								// css folder
-								/inc/css/import.css                  // css 가져오기
-								/inc/css/ini.min.css                 // 스타일 초기화
-								/inc/css/common.css                  // 공통사항
-
-								// js folder
-								/inc/js/libs/jquery.min.js           // jQuery core
-								/inc/js/libs/html5shiv.js            // html5 호환성
-								/inc/js/libs/기타 플러그인 파일      // 외부 플러그인
-
-								/inc/js/pub/main.js                  // 메인 UI
-								/inc/js/pub/ui.js                    // 공통 UI
-							</pre>
-						</div>
-					</div>
-				</section>
-
-				<!-- 이미지 폴더 구조 -->
-				<section class="s_block">
-					<div class="s_title">
-						<h3>이미지 폴더 구조</h3>
-					</div>
-					<div class="s_content">
-						<div class="code_box">
-							<pre class="brush: html">
-								// image folder
-								/inc/img/common                  // 공통이미지
-								/inc/img/main                    // 메인페이지
-								/inc/img/sub                     // 서브페이지
-
-								* 이미지 폴더의 경우 필요시 카테고리 명으로 /inc/img/***** 위치에 생성하여 사용
-							</pre>
-						</div>
-					</div>
-				</section>
-
 				<section class="s_block">
 					<style>
 						.ktd-guide-wrap-info {border:1px solid #ccc; padding:20px; font-size: 12px;}
@@ -123,7 +79,43 @@
 						.ktd-guide-wrap-info > div div {border: 1px solid #ddd; padding:20px; margin:10px 0}
 					</style>
 					<div class="s_title">
-						<h3>메인 레이아웃</h3>
+						<h3>공통 사항</h3>
+					</div>
+					<div class="code_box">
+						<pre class="brush: html">
+							&lt;!DOCTYPE html&gt;
+							&lt;html lang=&quot;ko&quot;&gt;
+							&lt;head&gt;
+								as-is
+
+								&lt;!-- ktd : 추가 css --&gt;
+								&lt;link rel=&quot;stylesheet&quot; href=&quot;/directShop/css/ktDirect.css&quot;&gt;
+							&lt;/head&gt;
+							&lt;body&gt;
+								&lt;!-- ktd : Direct 안내 --&gt;
+								&lt;div class=&quot;ktd-directInfo&quot;&gt;Direct 안내 신규 영역&lt;/div&gt;
+								&lt;!-- //ktd : Direct 안내 --&gt;
+
+								&lt;!-- ktd : 사이트 영역 --&gt;
+								&lt;div class=&quot;ktd-conWrap&quot;&gt;
+									&lt;header&gt;Header 영역&lt;/header&gt;
+
+									&lt;div id=&quot;menu&quot;&gt;Menu 영역&lt;/div&gt;
+
+									&lt;div id=&quot;content&quot;&gt;Content 영역&lt;/div&gt;
+
+									&lt;div class=&quot;footer&quot;&gt;Footer 영역&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;!-- //ktd : 사이트 영역 --&gt;
+							&lt;/body&gt;
+							&lt;/html&gt;
+						</pre>
+					</div>
+				</section>
+
+				<section class="s_block">
+					<div class="s_title">
+						<h3>메인 문서 구조</h3>
 					</div>
 					<div class="s_content">
 						<div class="ktd-guide-wrap-info">
@@ -150,7 +142,7 @@
 
 				<section class="s_block">
 					<div class="s_title">
-						<h3>콘텐츠 레이아웃</h3>
+						<h3>콘텐츠 문서 구조</h3>
 					</div>
 					<div class="s_content">
 						<div class="ktd-guide-wrap-info">
@@ -173,21 +165,21 @@
 
 				<section class="s_block">
 					<div class="s_title">
-						<h3>블록 사이 구분 시</h3>
+						<h3>기타 사항</h3>
 					</div>
 					<div class="s_content">
-						<div class="ktd-block">
-							상단 블록
-						</div>
-						<div class="ktd-block">
-							인접한 블록 시 상단 구분
+						<h4 class="s_subTitle01">01. 블록 구분</h4>
+						<p>상단영역과 인접 영역 블록 구분선 필요 경우</p>
+						<div style="border: 1px solid #ddd; margin-top: 20px;">
+							<div class="ktd-block">
+								상단 블록
+							</div>
+							<div class="ktd-block">
+								인접 블록 - 상단 구분선
+							</div>
 						</div>
 					</div>
 				</section>
-
-
-
-
 			</article>
 		</div>
 	</div>
