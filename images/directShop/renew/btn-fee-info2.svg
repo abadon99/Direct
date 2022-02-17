@@ -1,0 +1,14 @@
+<svg id="_008_icon_16_03_etc_help" data-name="008 icon/16/03 etc/help" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_22618" data-name="사각형 22618" width="16" height="16" transform="translate(1273 1206.171)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="_008_icon_16_03_etc_help-2" data-name="008 icon/16/03 etc/help" transform="translate(-1273 -1206.171)" clip-path="url(#clip-path)">
+    <g id="패스_57798" data-name="패스 57798" transform="translate(1273.808 1206.808)" fill="none">
+      <path d="M7.277,0A7.277,7.277,0,1,1,0,7.277,7.277,7.277,0,0,1,7.277,0Z" stroke="none"/>
+      <path d="M 7.276739597320557 1 C 3.815729141235352 1 1 3.815729141235352 1 7.276739597320557 C 1 10.73774909973145 3.815729141235352 13.55347919464111 7.276739597320557 13.55347919464111 C 10.73774909973145 13.55347919464111 13.55347919464111 10.73774909973145 13.55347919464111 7.276739597320557 C 13.55347919464111 3.815729141235352 10.73774909973145 1 7.276739597320557 1 M 7.276739597320557 0 C 11.29556941986084 0 14.55347919464111 3.257909774780273 14.55347919464111 7.276739597320557 C 14.55347919464111 11.29556941986084 11.29556941986084 14.55347919464111 7.276739597320557 14.55347919464111 C 3.257909774780273 14.55347919464111 0 11.29556941986084 0 7.276739597320557 C 0 3.257909774780273 3.257909774780273 0 7.276739597320557 0 Z" stroke="none" fill="#6f6f6f"/>
+    </g>
+    <text id="_" data-name="?" transform="translate(1281 1218.171)" fill="#6f6f6f" font-size="11" font-family="NotoSansCJKkr-Medium, Noto Sans CJK KR" font-weight="500" letter-spacing="-0.02em"><tspan x="-2.701" y="0">?</tspan></text>
+  </g>
+</svg>

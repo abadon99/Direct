@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko" class="kt5g">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<title> [KT 공식] 요금은 비우고 혜택은 채웁니다. KT 다이렉트</title>
+
+	<!-- style -->
+	<link rel="stylesheet" href="/directShop/css/default.css">
+    <link rel="stylesheet" href="/directShop/css/contents.css">
+    <link rel="stylesheet" href="/directShop/css/popup.css">
+    <link rel="stylesheet" href="/directShop/css/swiper.css">
+
+    <!-- js -->
+	<script type="text/javascript"  src="/directShop/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="/directShop/js/ui/common_front.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/ui.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/pub.js" type="text/javascript"></script>
+	<script src="/directShop/js/lib/swiper.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="/oneMinute/js/oneMinuteCommon.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+	<!-- ktd : 추가 css -->
+    <link rel="stylesheet" href="/directShop/css/ktDirect.css">
+
+	<!-- as-is -->
+	<script>
+		$(document).on("click",".btnPopClose.tout",function() {
+			$("#sessionWrap").hide();
+		});
+		$(document).on("click",".line_benner .close",function() {
+			$('.line_benner').slideUp();
+			return false;
+		});
+
+		$(document).on("click",".searchEng",function() {
+			if ($.trim($("#SearchCommon").val()).length == 0) {
+				alert("검색어를 입력해주세요.");
+				return;
+			}
+			location.href="https://m.search.kt.com/search.asp?c=MOL000&r=02&f=&o=&e=&k="+encodeURI($('#SearchCommon').val());
+		});
+
+		$(window).bind("pageshow", function(event) {
+			if ( event.originalEvent && event.originalEvent.persisted) {
+				$("#SearchCommon").val('');
+				$("a.ollehSearch").show();
+				$("a.ollehSearchClose").hide();
+				$("header fieldset").removeClass("on").hide();
+			}
+		});
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="/content/openshop/price/ollehShopPd_mobile.css" />
+	<!-- //as-is -->
+</head>
+<body>
+	<!-- ktd : Direct 안내 -->
+    <div class="ktd-directInfo">
+        <div class="info">
+            <h1>
+                지금 <br>
+                KT 다이렉트에서 <br>
+                요금제 <span>바로가입!</span>
+            </h1>
+        </div>
+        <div class="link-zone">
+            <h2><img src="/images/directShop/renew/thumb_kt.png" alt="KT 다이렉트"></h2>
+            <ul>
+                <li><a href="#">유심가입</a></li>
+                <li><a href="#">데이터 쉐어링 가입</a></li>
+                <li><a href="#">무약정플렌 요금제 변경</a></li>
+                <li><a href="#">셀프개통(유심보유)</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //ktd : Direct 안내 -->
+
+	<!-- ktd : 사이트 영역 -->
+    <div class="ktd-conWrap">
+		<form id="prodViewForm"  name="prodViewForm" method="post" action="/direct/DirectUsimOrderForm.do">
+			<div id="contents" class="new-contents footer-bottom"> <!-- ktd수정 : bg-f8 class 삭제 -->
+				<style>
+					div.directShopInfo {height:250px; font-size:14px; font-weight:bold;}
+					div.directShopInfo h4 {height:30px; font-size:15px; font-weight:bold;}
+					div.buyProcWrap {padding:30px; font-size:15px; font-weight:bold;}
+					ul.buyProc li {float:left; width:20%; margin:0 5px;font-size:12px;text-align:center;vertical-align:center;}
+					ul.buyProc li div {width:100%;height:40px;border:1px solid #cccccc;text-align:center;vertical-align:center;}
+				</style>
+
+				<h1><button type="button" name="button" id="titleNm">요금제 선택</button></h1>
+
+				<!-- content-recommend -->
+				<div id="content-recommend" >
+
+
+
+
+
+
+
+
+
+
+					<!-- wrapStep1 -->
+					<div id="wrapStep1" class="wrapStep">
+						<p class="step-top-msg" id="subTitleTxt">다이렉트에서만  <br>가입이 가능한 무약정플랜</p>
+						<dl id="boxRecommPpl" class="list-charge list-charge-2">
+							<dt tabindex="0" role="button" pplid="0817" pplgroupdivcd="500" title="열기" aria-expanded="false">5G 다이렉트 55</dt>
+							<dd class="area-top"><!-- ktd수정 : area-top 추가 -->
+								<p class="add-discount">Y고객 5,500 추가 할인</p>
+								<p>데이터 200GB (5Mbps속도제한)ㅣ테더링 10GB | 로밍 0 ㅣ음성 집/이동전화 무제한 ㅣ문자 무제한</p>
+							</dd>
+							<dd class="area" tabindex="0">
+								<div class="box">
+									<a role="button" href="https://product.kt.com/wDic/productDetail.do?ItemCode=1431" class="go-charge" title="새창 열기" target="_blank">자세히 보기</a><!-- ktd수정 : "자세히보기" 위치 이동 -->
+
+									<div class="line">
+										<span class="a">데이터</span>
+										<span class="b">200GB</span>
+									</div>
+									<div class="opt">
+										<span>5Mbps속도제한</span>
+									</div>
+									<div class="line">
+										<span class="a">테더링</span>
+										<span class="b">10GB</span>
+									</div>
+									<div class="line">
+										<span class="a">로밍</span>
+										<span class="b">0</span>
+									</div>
+									<div class="line">
+										<span class="a">음성/문자</span>
+										<span class="b">집/이동전화 무제한 / 무제한<br> Y고객 5,500 추가 할인</span>
+									</div>
+									<div class="price">
+										월 55,000원<!--(부가세 포함)-->
+									</div>
+								</div>
+							</dd>
+							<dd class="area-btm"><!-- ktd수정 : area-btm 추가 "가입하기" 버튼 위치 이동 -->
+								<div class="btn-area">
+									<button type="button" class="btn fill" data-target="#Ys-plan">가입하기</button>
+								</div>
+							</dd>
+
+							<dt tabindex="0" role="button" pplid="0787" pplgroupdivcd="500" title="열기" aria-expanded="false">5G 다이렉트 67</dt>
+							<dd class="area-top">
+								<p class="add-discount">Y고객 5,500 추가 할인</p>
+								<p>데이터 200GB (5Mbps속도제한)ㅣ테더링 10GB | 로밍 0 ㅣ음성 집/이동전화 무제한 ㅣ문자 무제한</p>
+							</dd>
+							<dd class="area" tabindex="0">
+								<div class="box">
+									<a role="button" href="https://product.kt.com/wDic/productDetail.do?ItemCode=1381&amp;CateCode=6002&amp;filter_code=81&amp;option_code=109&amp;pageSize=10" class="go-charge" title="새창 열기" target="_blank">자세히 보기</a>
+
+									<div class="line">
+										<span class="a">데이터</span>
+										<span class="b">완전 무제한</span>
+									</div>
+									<div class="opt">
+										<span>데이터 완전 무제한</span>
+									</div>
+									<div class="line">
+										<span class="a">테더링</span>
+										<span class="b">0</span>
+									</div>
+									<div class="line">
+										<span class="a">로밍</span>
+										<span class="b">0</span>
+									</div>
+									<div class="line">
+										<span class="a">음성/문자</span>
+										<span class="b">집/이동전화 무제한 / 기본제공</span>
+									</div>
+									<div class="price">
+										월 67,000원<!--(부가세 포함)-->
+									</div>
+								</div>
+							</dd>
+							<dd class="area-btm">
+								<div class="btn-area">
+									<button type="button" class="btn fill">가입하기</button>
+								</div>
+							</dd>
+
+							<dt tabindex="0" role="button" pplid="0819" pplgroupdivcd="500" title="열기" aria-expanded="false">5G 다이렉트 67</dt>
+							<dd class="area-top">
+								<p class="add-discount">Y고객 5,500 추가 할인</p>
+								<p>데이터 200GB (5Mbps속도제한)ㅣ테더링 10GB | 로밍 0 ㅣ음성 집/이동전화 무제한 ㅣ문자 무제한</p>
+							</dd>
+							<dd class="area" tabindex="0">
+								<div class="box">
+									<a role="button" href="https://product.kt.com/wDic/productDetail.do?ItemCode=1431" class="go-charge" title="새창 열기" target="_blank">자세히 보기</a>
+
+									<div class="line">
+										<span class="a">데이터</span>
+										<span class="b">10GB</span>
+									</div>
+									<div class="opt">
+										<span>1Mbps 속도제한</span>
+									</div>
+									<div class="line">
+										<span class="a">테더링</span>
+										<span class="b">10GB</span>
+									</div>
+									<div class="line">
+										<span class="a">로밍</span>
+										<span class="b">0</span>
+									</div>
+									<div class="line">
+										<span class="a">음성/문자</span>
+										<span class="b">집/이동전화 무제한 / 무제한</span>
+									</div>
+									<div class="price">
+										월 37,000원<!--(부가세 포함)-->
+									</div>
+								</div>
+							</dd>
+							<dd class="area-btm">
+								<div class="btn-area">
+									<button type="button" class="btn fill" data-target="#Ys-plan">가입하기</button>
+								</div>
+							</dd>
+
+							<dt tabindex="0" role="button" pplid="0818" pplgroupdivcd="500" title="열기" aria-expanded="false">LTE 다이렉트 45</dt>
+							<dd class="area-top">
+								<p class="add-discount">Y고객 5,500 추가 할인</p>
+								<p>데이터 200GB (5Mbps속도제한)ㅣ테더링 10GB | 로밍 0 ㅣ음성 집/이동전화 무제한 ㅣ문자 무제한</p>
+							</dd>
+							<dd class="area" tabindex="0">
+								<div class="box">
+									<a role="button" href="https://product.kt.com/wDic/productDetail.do?ItemCode=1432" class="go-charge" title="새창 열기" target="_blank">자세히 보기</a>
+
+									<div class="line">
+										<span class="a">데이터</span>
+										<span class="b">100GB</span>
+									</div>
+									<div class="opt">
+										<span>5Mbps속도제한</span>
+									</div>
+									<div class="line">
+										<span class="a">음성</span>
+										<span class="b">집/이동전화 무제한</span>
+									</div>
+									<div class="opt">
+										<span>영상부가 300분</span>
+									</div>
+									<div class="line">
+										<span class="a">문자</span>
+										<span class="b">무제한<br> Y고객 5,500 추가 할인</span>
+									</div>
+									<div class="price">
+										월 45,000원<!--(부가세 포함)-->
+									</div>
+								</div>
+							</dd>
+							<dd class="area-btm">
+								<div class="btn-area">
+									<button type="button" class="btn fill" data-target="#Ys-plan">가입하기</button>
+								</div>
+							</dd>
+						</dl>
+						<p class="boxRecommTxt mb20">
+							<span class="stxt">* 5G단말을 사용하시는 고객님의 경우 5G요금제만, LTE단말을 사용하시는 고객님의 경우 LTE요금제만 가입이 가능합니다.</span>
+						</p>
+						<a href="#" name="recomm-plan_system" class="btn btn-re-charge recommTag" data-target="#recomm-plan">조건 선택하고 요금제 추천받기</a>
+						<a href="#" name="other-plan_system" class="btn-charge-go recommTag" data-target="#other-plan">전체 요금제 보기</a>
+
+						<div id="con-notice-pop" class="ui-popup toast-popup active" tabindex="0" aria-hidden="false" style="display:block;">
+							<div class="content">
+								<div class="header">이동전화 사기판매 주의 안내</div>
+								<button type="button" class="btn-close">닫기</button>
+								<div class="body">
+									<p>이동전화 가입 시 일부 불·편법영업 행위에 의한 사기판매 피해가 우려되어, 이용자 여러분의 각별한 주의가 요구됩니다.</p>
+									<ul class="con-notice-list">
+										<li>
+											<strong><span class="num">1.</span> 소액대출(내구제 대출 등) 용도로 개통</strong>
+											현금성 대출을 받기 위해 카드/인증서/계좌번호 등의 개인정보를 요구하는 경우
+										</li>
+										<li>
+											<strong><span class="num">2.</span> 선입금 요구, 잔여할부금 면제</strong>
+											추후 잔여할부금을 면제하는 조건으로 선입금을 요구하는 경우
+										</li>
+										<li>
+											<strong><span class="num">3.</span> 신분증 전달 요구</strong>
+											온라인 가입 시 가입자의 신분증을 택배 등으로 전달할 것을 요구하는 경우
+										</li>
+										<li>
+											<strong><span class="num">4.</span> 비공식계약서 작성</strong>
+											불법지원금 제공(현금지급, 할부금 면제 등) 조건을 별도의 계약서로 작성하는 경우
+										</li>
+									</ul>
+									<p class="alert"><em>i</em>불법지원금 제공과 불법 대출인 것을 알고도 이에 동조하는 경우 발생하는 피해에 대해서는 법적으로 보호를 받을 수 없습니다.</p>
+								</div>
+								<div class="btn-bottom">
+									<button type="button" name="button" class="btn fill bottom btn-close" id="">확인</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //wrapStep1 -->
+
+
+
+
+
+
+
+
+
+
+				</div>
+				<!-- //content-recommend -->
+			</div>
+		</form>
+	</div>
+	<!-- //ktd : 사이트 영역 -->
+</body>
+</html>

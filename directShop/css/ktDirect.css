@@ -6,81 +6,14 @@ html, body {width: 100%; height: 100%; min-width: 100%;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-body {font-size: 14px;}
-/* .bg-f4{background-color:#F4F4F4} */
-
-/* as-is button reset */
-a.btn, button.btn, input.btn, label.btn, span.btn {
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  background-color: #000;
-  color: #fff;
-  height: 48px;
-  border-radius: 8px;
-  line-height: 46px;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-a.btn.fill, button.btn.fill, input.btn.fill, label.btn.fill, span.btn.fill {
-  background-color: #000;
-  color: #fff;
-}
-a.btn.gray, button.btn.gray, input.btn.gray, label.btn.gray, span.btn.gray {
-  background-color: #bcbcbc;
-  color: #fff;
-}
-a.btn:disabled, button.btn:disabled, input.btn:disabled, label.btn:disabled, span.btn:disabled {
-  background-color: #E0E0E0;
-  color: #A8A8A8;
-}
-
-a.btn.medium, button.btn.medium, input.btn.medium, label.btn.medium, span.btn.medium {
-  height: 40px;
-  line-height: 38px;
-  font-size: 16px;
-  border-radius: 8px;
-  font-weight: 500;
-  min-width: 94px;
-}
-.btn.inline {width: auto; padding:0 16px;}
-.kt-btn-block {margin-top:32px; text-align: center;}
-
-form a.btn.fill,
-form button.btn.fill,
-form input.btn.fill,
-form label.btn.fill,
-form span.btn.fill {
-  background-color: #3ACCC8;
-  color: #141414;
-}
-
-form a.btn.gray,
-form button.btn.gray,
-form input.btn.gray,
-form label.btn.gray,
-form span.btn.gray {
-  background-color: #bcbcbc;
-  color: #fff;
-}
-
-form a.btn:disabled,
-form button.btn:disabled,
-form input.btn:disabled,
-form label.btn:disabled,
-form span.btn:disabled {
-  background-color: #E0E0E0;
-  color: #A8A8A8;
-}
-
 
 /****************************** 다이렉트 wrap class 추가 ******************************/
-.ktd-wrap {position: relative;}
-.ktd-wrap .blind, .ktd-wrap .hide {position: absolute; display: block; border:0; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
+body.ktd-wrap {position: relative; font-size: 14px;}
+.ktd-wrap .blind,
+.ktd-wrap .hide {position: absolute; display: block; border:0; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
 
 /****************************** 다이렉트 안내 콘텐츠 ******************************/
-.ktd-directInfo {width:312px; position: fixed; top:50%; right: calc(50% - -156px); transform: translateY(-50%);}
+.ktd-directInfo {width:312px; position: fixed; top:50%; right: calc(50% - -140px); transform: translateY(-50%);}
 .ktd-directInfo .info {height:356px; background:#78d0cc url('/images/directShop/renew/thumb_character.png') no-repeat 100% 100%; border-radius: 20px; box-sizing: border-box; padding:30px 20px}
 .ktd-directInfo .info h1,
 .ktd-directInfo .info h1 * {font-size: 32px; font-weight: bold; letter-spacing: -2px;}
@@ -97,16 +30,78 @@ form span.btn:disabled {
 .ktd-directInfo .link-zone li a {display: block; height:34px; line-height: 32px; border: 1px solid #ccc; color: #000; font-size: 13px; font-weight: 500; border-radius: 8px; box-sizing: border-box;}
 .ktd-directInfo .link-zone li a:hover {background: #78d0cc; border-color: #78d0cc;}
 
-/****************************** Common ******************************/
-.ktd-conWrap #content,
-.ktd-conWrap .bodyContent {width: 100%; max-width: 100%; padding: 0;}
+/* as-is button reset */
+.ktd-conWrap a.btn,
+.ktd-conWrap button.btn,
+.ktd-conWrap input.btn,
+.ktd-conWrap label.btn,
+.ktd-conWrap span.btn {width: 100%; display: inline-block; text-align: center; background-color: #000; color: #fff; height: 48px; border-radius: 8px; line-height: 46px; font-size: 16px; font-weight: 500;}
 
+.ktd-conWrap a.btn.fill,
+.ktd-conWrap button.btn.fill,
+.ktd-conWrap input.btn.fill,
+.ktd-conWrap label.btn.fill,
+.ktd-conWrap span.btn.fill {background-color: #000; color: #fff;}
+
+.ktd-conWrap a.btn.gray,
+.ktd-conWrap button.btn.gray,
+.ktd-conWrap input.btn.gray,
+.ktd-conWrap label.btn.gray, span.btn.gray {background-color: #bcbcbc; color: #fff;}
+
+.ktd-conWrap a.btn:disabled,
+.ktd-conWrap button.btn:disabled,
+.ktd-conWrap input.btn:disabled,
+.ktd-conWrap label.btn:disabled,
+.ktd-conWrap span.btn:disabled {background-color: #E0E0E0; color: #A8A8A8;}
+
+.ktd-conWrap a.btn.medium,
+.ktd-conWrap button.btn.medium,
+.ktd-conWrap input.btn.medium,
+.ktd-conWrap label.btn.medium,
+.ktd-conWrap span.btn.medium {height: 40px; line-height: 38px; font-size: 14px; border-radius: 8px; font-weight: 500; min-width: 94px;}
+
+.ktd-conWrap .btn.inline {width: auto; padding:0 16px;}
+.ktd-conWrap .ktd-btn-block {margin-top:40px; text-align: center;}
+.ktd-conWrap .ktd-btn-block .btn {min-width: 128px;}
+
+.ktd-more-block button {height: 40px; line-height: 40px; padding: 0 12px 0 16px; border: 1px solid #ccc; border-radius: 8px;}
+.ktd-more-block button span {display: block; position: relative; padding-right: 28px; font-size: 14px; font-weight: 500;}
+.ktd-more-block button span:before {content: ""; position: absolute; width: 10px; height: 10px; top: calc(50% + -2px); right: 5px; border: 2px solid #000; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-45deg);}
+.ktd-more-block button span em {font-size: 12px; color: #6F6F6F; font-weight: 500;}
+
+.ktd-conWrap  form a.btn.fill,
+.ktd-conWrap  form button.btn.fill,
+.ktd-conWrap  form input.btn.fill,
+.ktd-conWrap  form label.btn.fill,
+.ktd-conWrap  form span.btn.fill {background-color: #3ACCC8; color: #141414;}
+
+.ktd-conWrap  form a.btn.gray,
+.ktd-conWrap  form button.btn.gray,
+.ktd-conWrap  form input.btn.gray,
+.ktd-conWrap  form label.btn.gray,
+.ktd-conWrap  form span.btn.gray {background-color: #bcbcbc; color: #fff;}
+
+.ktd-conWrap  form a.btn:disabled,
+.ktd-conWrap  form button.btn:disabled,
+.ktd-conWrap  form input.btn:disabled,
+.ktd-conWrap  form label.btn:disabled,
+.ktd-conWrap  form span.btn:disabled {background-color: #E0E0E0; color: #A8A8A8;}
+
+.ktd-conWrap  form a.btn.white,
+.ktd-conWrap  form button.btn.white,
+.ktd-conWrap  form input.btn.white,
+.ktd-conWrap  form label.btn.white,
+.ktd-conWrap  form span.btn.white {background-color: #fff; color: #000; border:1px solid #A8A8A8;}
+
+
+
+/****************************** Common ******************************/
 .ktd-block {position:relative; padding:40px 20px; background:#fff; color: #6F6F6F;}
 .ktd-block + .ktd-block {padding-top:52px}
 .ktd-block + .ktd-block:before {content: ''; position: absolute; top:0; left: 0; width: 100%; height:12px; background:#F4F4F4;}
 
 /* common - color */
-.color01 {color: #1DA8A5; font-weight: 500;}
+.ktd-conWrap .color01 {color: #1DA8A5; font-weight: 500;}
 
 /* common - header */
 .ktd-block h2 {margin-bottom: 8px; line-height: 27px; font-size: 20px; font-weight: bold; color: #000;}
@@ -133,10 +128,10 @@ form span.btn:disabled {
 .ktd-conWrap .toggle_tit > button span {color: #000;}
 .ktd-conWrap .toggle_cont {padding-bottom: 24px;}
 
-.ktd-conWrap .list-type-ast li {margin-top:16px; padding-left: 16px;}
-.ktd-conWrap .list-type-ast li ul {margin-left: -16px;}
+.ktd-conWrap .list-type-ast li {margin-top:16px; padding-left: 10px;}
+.ktd-conWrap .list-type-ast li ul {margin-left: -10px;}
 .ktd-conWrap .list-type-ast > li:first-child {margin-top:0}
-.ktd-conWrap .list-type-ast > li:after {content: ''; position: absolute; top: 8px; left: 5px; width: 4px; height: 4px; border-radius: 50%; background: #6F6F6F;}
+.ktd-conWrap .list-type-ast > li:after {content: ''; position: absolute; top: 8px; left: 0; width: 4px; height: 4px; border-radius: 50%; background: #6F6F6F;}
 
 .ktd-conWrap .toggle_box > li:last-child .toggle_cont {padding-bottom: 0;}
 .ktd-conWrap .toggle_box > li .sublist_2 {margin-left: -10px;}
@@ -146,15 +141,23 @@ form span.btn:disabled {
 .ktd-dot-list {margin-top: 32px;}
 .ktd-dot-list li + li {margin-top:16px}
 .ktd-dot-list li > span,
-.ktd-dot-list dt {position:relative; margin-bottom: 4px; padding-left: 16px; font-size: 16px; color: #000; font-weight: 500;}
+.ktd-dot-list dt {position:relative; margin-bottom: 4px; padding-left: 10px; font-size: 16px; color: #000; font-weight: 500;}
 .ktd-dot-list li > span:before,
-.ktd-dot-list dt:before {content: ''; position: absolute; top:10px; left:5px; width:4px; height: 4px; border-radius: 50%; background: #000;}
+.ktd-dot-list dt:before {content: ''; position: absolute; top:10px; left:0; width:4px; height: 4px; border-radius: 50%; background: #000;}
 .ktd-dot-list dd {margin-bottom: 0;}
 
 .ktd-noti-list {margin-top:12px;}
-.ktd-noti-list li {position:relative; padding-left:16px; line-height: 21px;}
+.ktd-noti-list li {position:relative; padding-left:10px; line-height: 21px;}
 .ktd-noti-list li + li {margin-top:16px}
-.ktd-noti-list li:before {content: ''; position: absolute; top:8px; left:5px; width:4px; height: 4px; border-radius: 50%; background: #6F6F6F;}
+.ktd-noti-list li:before {content: ''; position: absolute; top:8px; left:0; width:4px; height: 4px; border-radius: 50%; background: #6F6F6F;}
+
+.ktd-noti-list .tooltipHelp{position:relative; margin-left: 2px; top: -2px; width: 16px; height: 16px; background: url('/images/directShop/renew/btn-fee-info2.svg') 0 0 no-repeat; background-size: 100%; color: transparent; font-size: 1px; overflow: hidden; vertical-align: bottom;}
+
+.ktd-noti-list .tooltipArticle {display:none; margin-top: 12px; margin-bottom: 4px;}
+.ktd-noti-list .user-auth-img {margin: 0; max-width: 300px; width: 100%;}
+
+
+
 
 /* common - num round list */
 .ktd-numRound-list {margin-top: 32px}
@@ -181,8 +184,8 @@ form span.btn:disabled {
 .ktd-tab li {flex: 1;}
 .ktd-tab li + li {border-left:1px solid #D9D9D9}
 .ktd-tab li a {display: block;}
-.ktd-tab li a span {display: block; padding: 7px 0; min-height: 40px; font-size: 16px; color: #6F6F6F; border-top: 2px solid transparent; border-bottom: 1px solid #D9D9D9;}
-.ktd-tab li.active a span {font-weight: bold; color: #000; border-top-color: #5DDFDE; border-bottom-color:transparent; background:#fff;}
+.ktd-tab li a span {display: block; padding: 7px 0; min-height: 40px; font-size: 16px; color: #6F6F6F; border-top: 2px solid transparent; border-bottom: 1px solid #D9D9D9; background-color: #f4f4f4;}
+.ktd-tab li.active a span {font-weight: 500; color: #000; border-top-color: #5DDFDE; border-bottom-color:transparent; background:#fff;}
 
 .ktd-tab.line li + li {border-left: none;}
 .ktd-tab.line li a {display: table; width: 100%;}
@@ -201,8 +204,30 @@ form span.btn:disabled {
 .ktd-selectMenu .ui-btnList {white-space: nowrap; font-size: 13px;}
 
 /****************************** 다이렉트 콘텐츠 영역 ******************************/
-.ktd-conWrap {width: 480px;min-height: 100vh;position: relative;margin-left: 50%;border: 1px solid #ccc;border-top:none;border-bottom: none;}
+.ktd-conWrap {display:table;table-layout: fixed;width: 360px;height: 100%;position: relative;margin-left: 50%;border: 1px solid #ccc;border-top:none;border-bottom: none; zoom:1.201;}
+/* .ktd-conWrap {width: 480px;min-height: 100%;position: relative;margin-left: 50%;border: 1px solid #ccc;border-top:none;border-bottom: none;} */
 .ktd-conWrap * {word-break: keep-all;}
+
+.ktd-conWrap #content,
+.ktd-conWrap .bodyContent {width: 100%; max-width: 100%; padding: 0;}
+
+@media all and (max-width: 1024px) {
+  .ktd-directInfo {display: none;}
+  .ktd-conWrap {margin: 0 auto;}
+}
+@media all and (max-width: 768px) {
+  /* .ktd-conWrap {width:100%;margin: 0;transform: none;border: none;} */
+  .ktd-conWrap #menu {transition: all 0.4s ease-in-out;}
+  .ktd-conWrap #menu .inner {transition: all 0.4s ease-in-out;transform: translateX(100%);}
+  .ktd-conWrap #menu.active .inner {transform: translateX(0%);}
+}
+/* @media all and (max-width: 480px) {
+  .ktd-conWrap {width:100%;margin: 0;transform: none;border: none;}
+} */
+@media all and (max-width: 450px) {
+  .ktd-conWrap {width:100%;margin: 0;transform: none;border: none; zoom:inherit}
+}
+
 
 /* 헤더 */
 .ktd-conWrap header {position: sticky;height:64px;padding-top: 22px;background:#fff;}
@@ -237,18 +262,7 @@ form span.btn:disabled {
 .ktd-depthMenu.on .ktd-depthMenu-wrap .btn-more:after {transform: translate(-50%, -50%) rotate(-45deg);}
 
 /****************************** 메인 페이지 ******************************/
-.ktd-conWrap #main-contents {display:inline-block; width:100%; max-width: 100%; padding:0}
-
-@media all and (max-width: 1024px) {
-  .ktd-directInfo {display: none;}
-  .ktd-conWrap {margin: 0 auto;}
-}
-@media all and (max-width: 768px) {
-  .ktd-conWrap {width:100%;margin: 0;transform: none;border: none;}
-  .ktd-conWrap #menu {transition: all 0.4s ease-in-out;}
-  .ktd-conWrap #menu .inner {transition: all 0.4s ease-in-out;transform: translateX(100%);}
-  .ktd-conWrap #menu.active .inner {transform: translateX(0%);}
-}
+.ktd-conWrap #main-contents {display:inline-block; width:100%; max-width: 100%; padding:0;}
 
 /* 메인 - 슬라이드 */
 .ktd-conWrap .main-swiper .swiper-wrapper > div {border-radius:0;}
@@ -258,7 +272,7 @@ form span.btn:disabled {
 .ktd-conWrap #main-contents .main-swiper p.t,
 .ktd-conWrap #main-contents .main-swiper p.t-2,
 .ktd-conWrap #main-contents .main-swiper p.t-3 {color:#fff}
-.ktd-conWrap #main-contents .main-swiper p.t {margin-bottom:17px; font-size: 32px; line-height: 38px; font-weight: bold;}
+.ktd-conWrap #main-contents .main-swiper p.t {margin-bottom:16px; font-size: 32px; line-height: 38px; font-weight: bold;}
 .ktd-conWrap #main-contents .main-swiper p.t-2,
 .ktd-conWrap #main-contents .main-swiper p.t-3 {font-weight: 500;}
 .ktd-conWrap #main-contents .main-swiper .opt {bottom:24px; left: 20px; width:auto; background:rgba(0, 0, 0, 0.5); border-radius: 5px; padding:1px 7px 3px; z-index: 1; min-width: 58px;}
@@ -301,65 +315,66 @@ form span.btn:disabled {
 #usim-yes .top-message {margin-top:24px;}
 #usim-no .top-message {margin-bottom: 24px;}
 
-.self-step ul {display: table; width: 100%;}
-.self-step li {display: table-cell; position: relative; width: 33.3333%; font-size: 12px; text-align: center; color: #6F6F6F;}
-.self-step li:before {content: ''; position: absolute; top:-25px; left: 50%; transform: translateX(-50%); width:8px; height: 8px; border-radius: 50%; background: #fff;}
-.self-step li strong {display: block; margin-bottom: 5px; color: #1DA8A5; font-weight: bold;}
+.ktd-conWrap .self-step ul {display: table; width: 100%;}
+.ktd-conWrap .self-step li {display: table-cell; position: relative; width: 33.3333%; font-size: 12px; text-align: center; color: #6F6F6F;}
+.ktd-conWrap .self-step li:before {content: ''; position: absolute; top:-25px; left: 50%; transform: translateX(-50%); width:8px; height: 8px; border-radius: 50%; background: #fff;}
+.ktd-conWrap .self-step li strong {display: block; margin-bottom: 5px; color: #1DA8A5; font-weight: bold;}
 
-.use-direct ul {display: table; width: 100%;}
-.use-direct li {display: table-cell; position: relative; width: 33.3333%; font-size: 12px; text-align: center; color: #6F6F6F;}
-.use-direct li:before {content: ''; display:block; width:80px; height: 80px; margin: 0 auto 8px; border-radius: 20px; background:#E4F5F5;background-repeat: no-repeat; background-position: 50% 50%; background-size: 56px 56px;}
+.ktd-conWrap .use-direct ul {display: table; width: 100%;}
+.ktd-conWrap .use-direct li {display: table-cell; position: relative; width: 33.3333%; font-size: 12px; text-align: center; color: #6F6F6F;}
+.ktd-conWrap .use-direct li:before {content: ''; display:block; width:80px; height: 80px; margin: 0 auto 8px; border-radius: 20px; background:#E4F5F5;background-repeat: no-repeat; background-position: 50% 50%; background-size: 56px 56px;}
 
-.use-direct li.icon-new:before {background-image: url('/images//directShop/renew/icon_set_new.svg');}
-.use-direct li.icon-pay:before {background-image: url('/images//directShop/renew/icon_set_pay.svg');}
-.use-direct li.icon-add:before {background-image: url('/images//directShop/renew/icon_set_add.svg');}
+.ktd-conWrap .use-direct li.icon-new:before {background-image: url('/images//directShop/renew/icon_set_new.svg');}
+.ktd-conWrap .use-direct li.icon-pay:before {background-image: url('/images//directShop/renew/icon_set_pay.svg');}
+.ktd-conWrap .use-direct li.icon-add:before {background-image: url('/images//directShop/renew/icon_set_add.svg');}
 
 .ktd-main-section-1 .tac {margin-top:40px;}
 
-.join-link {margin-top:48px; display: flex;}
-.join-link > a {position: relative; flex: 1; text-align: left;}
-.join-link > a + a {margin-left: 16px;}
-.join-link dl {position: relative; flex: 1; padding: 16px; border-radius: 20px; color: #fff;}
-.join-link dt {font-size: 16px; font-weight: bold;}
-.join-link dd {font-size: 12px; margin-top:8px;}
+.ktd-conWrap .join-link {margin-top:48px; display: flex;}
+.ktd-conWrap .join-link > a {position: relative; flex: 1; text-align: left;}
+.ktd-conWrap .join-link > a + a {margin-left: 16px;}
+.ktd-conWrap .join-link dl {position: relative; flex: 1; padding: 16px; border-radius: 20px; color: #fff;}
+.ktd-conWrap .join-link dt {font-size: 16px; font-weight: bold;}
+.ktd-conWrap .join-link dd {font-size: 12px; margin-top:8px;}
 
-.join-link .join-data {
+.ktd-conWrap .join-link .join-data {
   background: rgb(172,158,237);
   background: -moz-linear-gradient(left,  rgba(172,158,237,1) 0%, rgba(131,116,211,1) 100%);
   background: -webkit-linear-gradient(left,  rgba(172,158,237,1) 0%,rgba(131,116,211,1) 100%);
   background: linear-gradient(to right,  rgba(172,158,237,1) 0%,rgba(131,116,211,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ac9eed', endColorstr='#8374d3',GradientType=1 );
 }
-.join-link .join-data:before {content: ''; display: inline-block; margin-bottom:16px; width: 24px; height: 24px; background: url('/images/directShop/renew/bg_join_data.svg') no-repeat 0 0; background-size: auto auto;}
+.ktd-conWrap .join-link .join-data:before {content: ''; display: inline-block; margin-bottom:16px; width: 24px; height: 24px; background: url('/images/directShop/renew/bg_join_data.svg') no-repeat 0 0; background-size: auto auto;}
 
-.join-link .join-plan {
+.ktd-conWrap .join-link .join-plan {
   background: rgb(133,221,218);
   background: -moz-linear-gradient(left,  rgba(133,221,218,1) 0%, rgba(58,204,200,1) 100%);
   background: -webkit-linear-gradient(left,  rgba(133,221,218,1) 0%,rgba(58,204,200,1) 100%);
   background: linear-gradient(to right,  rgba(133,221,218,1) 0%,rgba(58,204,200,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85ddda', endColorstr='#3accc8',GradientType=1 );
 }
-.join-link .join-plan:before {content: ''; display: inline-block; margin-bottom:16px; width: 24px; height: 24px; background: url('/images/directShop/renew/bg_join_plan.svg') no-repeat 0 0; background-size: auto auto;}
+.ktd-conWrap .join-link .join-plan:before {content: ''; display: inline-block; margin-bottom:16px; width: 24px; height: 24px; background: url('/images/directShop/renew/bg_join_plan.svg') no-repeat 0 0; background-size: auto auto;}
 
 @media all and (max-width: 360px) {
-  .join-link dd {font-size: 11px;}
+	.ktd-conWrap .join-link dd {font-size: 11px;}
 }
 
 /* 유심 구매처 안내 */
-.usim-buy-find {margin:65px 0 25px;}
-.usim-buy-find h3 {font-size: 24px; font-weight: 500;}
-.usim-buy-find ul {margin-top:33px; display: flex; justify-content: space-between; width: 100%;}
+.ktd-conWrap .usim-buy-find {margin:65px 0 25px;}
+.ktd-conWrap .usim-buy-find h3 {font-size: 24px; font-weight: 500;}
+.ktd-conWrap .usim-buy-find ul {margin-top:33px; display: flex; justify-content: space-between; width: 100%;}
 
-.usim-buy-find li {text-align: center;}
-.usim-buy-find li a {position:relative; color:#6F6F6F;}
-.usim-buy-find li a:before {content: ''; display:block; width:68px; height: 68px; margin: 0 auto 8px; border-radius: 20px; border: 1px solid #D9D9D9; background:#fff; background-repeat: no-repeat; background-position: 50% 50%; background-size: auto 44px;}
+.ktd-conWrap .usim-buy-find li {text-align: center;}
+.ktd-conWrap .usim-buy-find li a {position:relative; color:#6F6F6F;}
+.ktd-conWrap .usim-buy-find li a:before {content: ''; display:block; width:68px; height: 68px; margin: 0 auto 8px; border-radius: 20px; border: 1px solid #D9D9D9; background:#fff; background-repeat: no-repeat; background-position: 50% 50%; background-size: auto 44px;}
 
-.usim-buy-find li.seller-gs25 a:before {background-image: url('/images/directShop/renew/logo_seller_gs25.png');}
-.usim-buy-find li.seller-kt a:before {background-image: url('/images/directShop/renew/logo_seller_ktshop.png');}
-.usim-buy-find li.seller-coupang a:before {background-image: url('/images/directShop/renew/logo_seller_coupang.png');}
-.usim-buy-find li.seller-naver a:before {background-image: url('/images/directShop/renew/logo_seller_naver.png');}
+.ktd-conWrap .usim-buy-find li.seller-gs25 a:before {background-image: url('/images/directShop/renew/logo_seller_gs25.png');}
+.ktd-conWrap .usim-buy-find li.seller-kt a:before {background-image: url('/images/directShop/renew/logo_seller_ktshop.png');}
+.ktd-conWrap .usim-buy-find li.seller-coupang a:before {background-image: url('/images/directShop/renew/logo_seller_coupang.png');}
+.ktd-conWrap .usim-buy-find li.seller-naver a:before {background-image: url('/images/directShop/renew/logo_seller_naver.png');}
+
 @media all and (max-width: 360px) {
-  .usim-buy-find li a:before {width:58px; height: 58px; border-radius: 10px; background-size: auto 38px;}
+	.ktd-conWrap .usim-buy-find li a:before {width:58px; height: 58px; border-radius: 10px; background-size: auto 38px;}
 }
 
 /* 메인 - 추천 요금제 */
@@ -378,7 +393,7 @@ form span.btn:disabled {
   background-size: auto 190px;
 }
 .ktd-main-section-3 .section-body {margin-top:37px;}
-.ktd-main-section-3 .section-body > div {position:relative; height: 180px; padding:24px; border-radius: 10px;
+.ktd-main-section-3 .section-body > div {position:relative; height: 180px; padding:24px; border-radius: 20px;
   -webkit-box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.15);
   box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.15);
 }
@@ -416,6 +431,8 @@ form span.btn:disabled {
 .ktd-block .block-top strong {font-size: 24px; color: #000;}
 .ktd-block .block-top p {margin-top:9px; color:#6F6F6F;}
 .ktd-block .block-top + .ktd-selfLink {margin-top:-27px;}
+.ktd-block .block-top + .ktd-noti-list {margin-top:-23px; margin-bottom: 0; padding-bottom: 0;}
+.ktd-block .block-top + .ktd-noti-list li + li {margin-top:4px}
 .ktd-block .ktd-selfLink + div {margin-top:40px;}
 
 /* 탭 메뉴 */
@@ -448,16 +465,14 @@ form span.btn:disabled {
 .ktd-self-sufficient > div + div.self-use-ready {margin-top:44px;}
 
 /* 가입신청 - 셀프개통 가능시간 */
-.self-use-time {}
 
 /* 가입신청 - 영상으로 쉽게 배우는 KT 다이렉트 셀프개통 */
-.youtube-movie-area {margin-top:20px;}
-.youtube-movie-area{position:relative;width:100%;height:0;padding-bottom:56.25%;border-radius: 20px;}
-.youtube-movie-area iframe{position:absolute;top:0;left:0;width:100%;height:100%;border-radius: 20px;}
+.ktd-conWrap .youtube-movie-area {margin-top:20px;}
+.ktd-conWrap .youtube-movie-area{position:relative;width:100%;height:0;padding-bottom:56.25%;border-radius: 20px;}
+.ktd-conWrap .youtube-movie-area iframe{position:absolute;top:0;left:0;width:100%;height:100%;border-radius: 20px;}
 
 /* 가입신청 - 유심 구매처 소개 */
-.self-use-ready {}
-.self-use-ready .ktd-selfLink {margin:12px 0 0;}
+.ktd-conWrap .self-use-ready .ktd-selfLink {margin:12px 0 0;}
 
 /****************************** 데이터쉐어링 페이지 ******************************/
 .ktd-sharing {padding-bottom: 0;}
@@ -564,8 +579,6 @@ form span.btn:disabled {
 .ktd-eventWrap .topInfo .sort-area .select-area > a:after {content: ""; position: absolute; width: 6px; height: 6px; top: calc(50% + -1px); right: 2px; border: 2px solid #000; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-45deg); transition: all 0.3s; background:none;}
 .ktd-eventWrap .topInfo .select-area ul {top:35px; left: inherit; right: -15px;}
 
-
-
 .ktd-eventList > .item + .item {margin-top:32px;}
 .ktd-eventList .item > a {display: block;}
 .ktd-eventList .item > a img {width: 100%; max-width: 100%;}
@@ -575,11 +588,6 @@ form span.btn:disabled {
 .ktd-eventList .ktd-selfLink span {color: #121619;}
 .ktd-eventList .ktd-selfLink span:after {border-color: #121619;}
 
-.ktd-eventList .kt-btn-block button {height: 40px; line-height: 40px; padding: 0 12px 0 16px; border: 1px solid #ccc; border-radius: 8px;}
-.ktd-eventList .kt-btn-block button span {display: block; position: relative; padding-right: 28px; font-size: 16px; font-weight: 500;}
-.ktd-eventList .kt-btn-block button span:before {content: ""; position: absolute; width: 10px; height: 10px; top: calc(50% + -2px); right: 5px; border: 2px solid #000; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-45deg);}
-.ktd-eventList .kt-btn-block button span em {font-size: 14px; color: #6F6F6F; font-weight: 500;}
-
 /* 이벤트 상세 */
 .ktd-eventView {margin:16px -20px 0;}
 .ktd-eventView img {width: 100%; max-width: 100%;}
@@ -588,7 +596,7 @@ form span.btn:disabled {
 .ktd-winnerList {}
 .ktd-winnerList li {padding:20px 0; border-top:1px solid #D9D9D9;}
 .ktd-winnerList li:first-child {padding-top:0; border-top:0;}
-.ktd-winnerList li a {font-size:16px; font-weight: 500; color: #000;}
+.ktd-winnerList li a {font-size:16px; font-weight: 500; color: #000; text-align: left;}
 .ktd-winnerList li .date {margin-top:8px;}
 
 .ktd-eventWinner .thumb {padding: 24px 0 20px; border-bottom: 1px solid #D9D9D9;}
@@ -608,51 +616,32 @@ form span.btn:disabled {
   .ktd-eventWinner .winnerList li + li {margin-top:16px;}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /****************************** 공통 - 콘텐츠 ******************************/
 /* 요금제 슬라이드 */
-.payment-slide {padding:0 15px 0 16px;}
-.payment-slide .swiper-pagination {position:relative; bottom:inherit; left: inherit; text-align: center; margin:24px 0 0; height:6px;}
-.payment-slide .swiper-pagination .swiper-pagination-bullet {width: 6px; height: 6px; display: inline-block; border-radius: 100%; background: #fff; opacity: 0.6; vertical-align: top;}
-.payment-slide .swiper-pagination .swiper-pagination-bullet-active {width:20px; border-radius: 3px; opacity: 1;}
-.payment-slide .swiper-slide {}
-.payment-slide .swiper-slide > div {height:236px; padding: 24px; border:1px solid #D9D9D9; border-radius: 20px; text-align: center; background:#fff;}
-.payment-slide .swiper-slide a {display: block; width: 100%; height: 100%;}
+.ktd-conWrap .payment-slide {padding:0 15px 0 16px;}
+.ktd-conWrap .payment-slide .swiper-pagination {position:relative; bottom:inherit; left: inherit; text-align: center; margin:24px 0 0; height:6px;}
+.ktd-conWrap .payment-slide .swiper-pagination .swiper-pagination-bullet {width: 6px; height: 6px; display: inline-block; border-radius: 100%; background: #fff; opacity: 0.6; vertical-align: top;}
+.ktd-conWrap .payment-slide .swiper-pagination .swiper-pagination-bullet-active {width:20px; border-radius: 3px; opacity: 1;}
+.ktd-conWrap .payment-slide .swiper-slide > div {padding: 24px; border:1px solid #D9D9D9; border-radius: 20px; text-align: center; background:#fff;}
+.ktd-conWrap .payment-slide .swiper-slide a {display: block; width: 100%; height: 100%;}
 
-.payment-slide .flag {display:block; margin-bottom: 4px;}
-.payment-slide .flag span {display:inline-block; height: 24px; line-height: 22px; padding:0 8px; border: 1px solid #1DA8A5; border-radius: 3px; color: #1DA8A5; font-size: 12px; font-weight: 500; background:#D4FAF9;}
+.ktd-conWrap .payment-slide .flag {display:block; margin-bottom: 4px;}
+.ktd-conWrap .payment-slide .flag span {display:inline-block; height: 24px; line-height: 22px; padding:0 8px; border: 1px solid #1DA8A5; border-radius: 3px; color: #1DA8A5; font-size: 12px; font-weight: 500; background:#D4FAF9;}
 
-.payment-slide .payment-tit {font-size: 20px; font-weight: bold; color: #000;}
-.payment-slide ul {display:flex; align-items: center; margin-top: 14px; border-top: 1px solid #D9D9D9; border-bottom: 1px solid #D9D9D9; padding:8px 0;}
-.payment-slide ul li {flex:1; padding:0 5px; color:#6F6F6F;}
-.payment-slide ul li + li {border-left:1px solid #D9D9D9}
-.payment-slide ul li p em {margin-left:5px; color: #161616; font-weight: 500;}
-.payment-slide ul li span {font-size: 12px; color: #A8A8A8;}
-.payment-slide .discount {margin-top:12px; color:#f00}
-.payment-slide .price {margin-top:2px;}
-.payment-slide .price strong {font-size: 20px; color: #000; font-weight: 500;}
+.ktd-conWrap .payment-slide .payment-tit {font-size: 20px; font-weight: bold; color: #000;}
+.ktd-conWrap .payment-slide ul {display:flex; align-items: center; margin-top: 14px; border-top: 1px solid #D9D9D9; border-bottom: 1px solid #D9D9D9; padding:8px 0; min-height: 58px;}
+.ktd-conWrap .payment-slide ul li {flex:1; padding:0 5px; color:#6F6F6F;}
+.ktd-conWrap .payment-slide ul li + li {border-left:1px solid #D9D9D9}
+.ktd-conWrap .payment-slide ul li p em {margin-left:5px; color: #161616; font-weight: 500;}
+.ktd-conWrap .payment-slide ul li span {font-size: 12px; color: #A8A8A8;}
+.ktd-conWrap .payment-slide .discount {margin-top:12px; color:#f00}
+.ktd-conWrap .payment-slide .price {margin-top:2px;}
+.ktd-conWrap .payment-slide .price strong {font-size: 20px; color: #000; font-weight: 500;}
 
-.payment-slide-wrap h2 + .swiper-container {margin:20px -20px 0;}
-.payment-slide-wrap .payment-slide .swiper-slide > div {border-color: #1DA8A5;}
-.payment-slide-wrap .payment-slide .swiper-pagination .swiper-pagination-bullet {background-color: #D9D9D9;}
-.payment-slide-wrap .payment-slide .swiper-pagination .swiper-pagination-bullet-active {background-color: #6F6F6F;}
+.ktd-conWrap .payment-slide-wrap h2 + .swiper-container {margin:20px -20px 0;}
+.ktd-conWrap .payment-slide-wrap .payment-slide .swiper-slide > div {border-color: #1DA8A5;}
+.ktd-conWrap .payment-slide-wrap .payment-slide .swiper-pagination .swiper-pagination-bullet {background-color: #D9D9D9;}
+.ktd-conWrap .payment-slide-wrap .payment-slide .swiper-pagination .swiper-pagination-bullet-active {background-color: #6F6F6F;}
 
 /* 가입혜택 - 메인 */
 .ktd-gift-section {padding:45px 20px;
@@ -660,29 +649,30 @@ form span.btn:disabled {
   background-size: auto 190px;
 }
 .ktd-gift-section .section-body {margin-top:43px;}
-.benefit-box {padding:24px 24px 30px; border:1px solid #3accc8; border-radius: 10px; background:#fff; text-align: center;}
-.benefit-box + .benefit-box {margin-top:16px;}
 
-.benefit-box .benefit-txt {text-align: center;}
-.benefit-box .benefit-txt span {display: inline-block; height: 30px; line-height: 28px; padding: 0 18px; min-width: 72px; border-radius: 15px; font-weight: bold; color: #fff; background:#1da8a5;}
+.ktd-conWrap .benefit-box {padding:24px; border:1px solid #3accc8; border-radius: 10px; background:#fff; text-align: center;}
+.ktd-conWrap .benefit-box + .benefit-box {margin-top:16px;}
 
-.benefit-box .headcopy {margin:12px 0 24px; font-size: 16px; font-weight: 500;}
+.ktd-conWrap .benefit-box .benefit-txt {text-align: center;}
+.ktd-conWrap .benefit-box .benefit-txt span {display: inline-block; height: 30px; line-height: 28px; padding: 0 18px; min-width: 72px; border-radius: 15px; font-weight: bold; color: #fff; background:#1da8a5;}
 
-.benefit-box ul {display: table; width: 100%;}
+.ktd-conWrap .benefit-box .headcopy {margin:12px 0 24px; font-size: 16px; font-weight: 500; color: #000;}
 
-.benefit-list01 + .benefit-list01 {border-top:1px solid #ececec;}
-.benefit-list01 li {display:table-cell; padding:8px 2px; }
-.benefit-list01 li img {max-width: 86px;}
+.ktd-conWrap .benefit-box ul {display: table; width: 100%;}
+.ktd-conWrap .benefit-list01 + .benefit-list01 {border-top:1px solid #ececec;}
+.ktd-conWrap .benefit-list01 li {display:table-cell; padding:8px 2px; }
+.ktd-conWrap .benefit-list01 li img {max-width: 86px;}
 
-.benefit-list01 dl {margin-bottom: 20px;}
-.benefit-list01 dt {font-size: 12px; color: #6F6F6F;}
-.benefit-list01 dd {margin-top: 5px; font-weight: 500;}
+.ktd-conWrap .benefit-list01 dl {margin-bottom: 20px;}
+.ktd-conWrap .benefit-list01 dt {font-size: 12px; color: #6F6F6F;}
+.ktd-conWrap .benefit-list01 dd {margin-top: 5px; font-weight: 500; color: #000;}
 
-.benefit-list02 li {display: table-cell; width: 50%; text-align: center;}
-.benefit-list02 li img {max-width: 96px;}
-.benefit-list02 li span {display: block; margin-top: 4px;}
-.benefit-list02 li span.info {font-size: 12px; color: #6F6F6F;}
-.benefit-list02 li:nth-child(n+3) {margin-top:20px;}
+.ktd-conWrap .benefit-list02 + .benefit-list02 {margin-top:20px;}
+.ktd-conWrap .benefit-list02 li {display: table-cell; width: 50%; text-align: center;}
+.ktd-conWrap .benefit-list02 li img {max-width: 96px;}
+.ktd-conWrap .benefit-list02 li span {display: block; margin-top: 4px; color:#6f6f6f}
+.ktd-conWrap .benefit-list02 li span.info {font-size: 12px; color: #6F6F6F;}
+.ktd-conWrap .benefit-list02 li:nth-child(n+3) {margin-top:20px;}
 
 .ktd-gift-section .btn-gift {margin-top:32px; text-align: center;}
 .ktd-gift-section .btn-gift a {display:inline-block; height: 40px; line-height: 38px; background:#000; border-radius: 8px;}
@@ -705,88 +695,200 @@ form span.btn:disabled {
 
 .ktd-block-gift .headcopy + .benefit-list01 li {width: 33.3333%;}
 .ktd-block-gift .benefit-list01 li {width: 50%;}
+
 @media all and (max-width: 360px) {
   .ktd-block-gift .section-etc:before {top:30px}
 }
 
-.gift_table {margin:30px 0 10px;border-bottom:1px solid #D9D9D9;border-left:1px solid #D9D9D9;font-size:11px}
-.gift_table .tbl{text-align:center;border-collapse:separate;}
-.gift_table .tbl thead th {background:#EEEEEE;color:#000;}
-.gift_table .tbl thead td{background:#F4F4F4;color:#000;}
-.gift_table .tbl tbody th{color:#000000;}
-.gift_table .tbl tbody td{color:#959595;}
-.gift_table .tbl th, .gift_table .tbl td {padding:8px;border-top:1px solid #D9D9D9;border-right:1px solid #D9D9D9;}
-.info-txt {margin-top:10px;color:#666;}
-.gift-box .stit {margin-top:30px;}
-.gift-box .couponpack-img img {width:70%;}
-.toggle_tit > button:after,
-.toggle_tit > button.active:after {border-width: 1px;}
+.ktd-conWrap .gift_table {margin:30px 0 10px;border-bottom:1px solid #D9D9D9;border-left:1px solid #D9D9D9;font-size:11px}
+.ktd-conWrap .gift_table .tbl{text-align:center;border-collapse:separate;}
+.ktd-conWrap .gift_table .tbl thead th {background:#EEEEEE;color:#000;}
+.ktd-conWrap .gift_table .tbl thead td{background:#F4F4F4;color:#000;}
+.ktd-conWrap .gift_table .tbl tbody th{color:#000000;}
+.ktd-conWrap .gift_table .tbl tbody td{color:#959595;}
+.ktd-conWrap .gift_table .tbl th,
+.ktd-conWrap .gift_table .tbl td {padding:8px;border-top:1px solid #D9D9D9;border-right:1px solid #D9D9D9;}
+.ktd-conWrap .info-txt {margin-top:10px;color:#666;}
+.ktd-conWrap .gift-box .stit {margin-top:30px;}
+.ktd-conWrap .gift-box .couponpack-img img {width:70%;}
+.ktd-conWrap .toggle_tit > button:after,
+.ktd-conWrap .toggle_tit > button.active:after {border-width: 1px;}
 
 @media all and (max-width: 420px) {
-  .gift-section .gift-box .pic img{width:100%;}
+	.ktd-conWrap .gift-section .gift-box .pic img{width:100%;}
 }
 
-#main .ktd-gift-section .section-etc {display: none;}
-#main .ktd-gift-section dl {display: none;}
-#main .ktd-gift-section span.info {display:none}
+.ktd-conWrap #main .ktd-gift-section .section-etc {display: none;}
+.ktd-conWrap #main .ktd-gift-section dl {display: none;}
+.ktd-conWrap #main .ktd-gift-section span.info {display:none}
 
-@media all and (max-width: 480px) {
-}
 @media all and (max-width: 360px) {
-  .benefit-list01 li img {max-width: 77px;}
+	.ktd-conWrap .benefit-list01 li img {max-width: 77px;}
 }
-
-/****************************** Footer ******************************/
-.ktd-conWrap .footer {margin-top:64px; padding:32px 24px 40px; line-height: 1.6; font-size: 14px; color:#ccc; background-color: #393939;}
-.ktd-conWrap .footer br {display: block;}
-.ktd-conWrap .footer p strong {font-size: 16px;}
-.ktd-conWrap .footer p.award {position:relative; top:inherit; right: inherit; margin-bottom:25px;}
-.ktd-conWrap .footer p.award img {width:174px}
-.ktd-conWrap .footer p.award + p {color:#fff;}
-.ktd-conWrap .footer p + p {margin-top:15px;}
-.ktd-conWrap .footer p.copy {margin-top:15px; font-weight: 400;}
-
-
-
-
 
 /****************************** as-is modify ******************************/
-#contents.new-contents {padding-top: 0;}
-#contents.new-contents h1 {position: relative; height: 64px; line-height: normal; margin:0; padding: 22px 20px 0; background:#fff}
-#contents.new-contents h1 button {margin-top:1px; vertical-align: top;}
-h1 button:before, h2.tit button:before {content: "";position: absolute;width: 10px;height: 10px;top: 50%;right: 4px;border: 2px solid #000;border-top: 0;border-right: 0;transform: translateY(-50%) rotate(45deg);background: none;}
+.ktd-conWrap #contents.new-contents {padding-top: 0; color: #6F6F6F;}
+.ktd-conWrap #contents.new-contents h1 {position: relative; height: 64px; line-height: normal; margin:0; padding: 22px 20px 0; background:#fff;}
+.ktd-conWrap #contents.new-contents h1 button {margin-top:1px; vertical-align: top;}
+.ktd-conWrap h1 button:before,
+.ktd-conWrap h2.tit button:before {content: "";position: absolute;width: 10px;height: 10px;top: 50%;right: 4px;border: 2px solid #000;border-top: 0;border-right: 0;transform: translateY(-50%) rotate(45deg);background: none;}
 
-
-
-
-
-#content-recommend {padding:0 20px;}
-.btn-bottom{padding:33px 24px !important}
+.ktd-conWrap #content-recommend {padding:0 20px; height: calc(100% - 64px);}
+.ktd-conWrap .btn-bottom{padding:40px 24px !important}
 
 /* popup */
-.ui-popup {min-width: auto; max-width: 478px; left: inherit; margin-left: -20px;}
-.ui-popup .content>.btn-close{display:block;width: 24px;height: 24px;overflow:hidden;text-indent:-9999px;background:url('/images/directShop/renew/btn-popupClose.svg') 0 0 no-repeat;background-size:100%;position:absolute;top:36px;right:30px;}
+/* .ui-popup {min-width: auto; max-width: 478px; left: inherit; margin-left: -20px;} */
+.ktd-conWrap .ui-popup {min-width: auto; max-width: 360px; left: inherit;}
+.ktd-conWrap .ui-popup .content>.btn-close{display:block;width: 24px;height: 24px;overflow:hidden;text-indent:-9999px;background:url('/images/directShop/renew/btn-popupClose.svg') 50% 50% no-repeat;background-size:20px auto;position:absolute;top:36px;right:30px;}
 
-.ui-popup.toast-popup .content {padding:0 20px 24px;}
-.ui-popup.toast-popup .content>.btn-close{position:absolute;top:35px;right:20px;z-index:1}
-.ui-popup.toast-popup .header{font-size:20px;text-align:left;font-weight:bold;letter-spacing:-.64px;padding: 32px 45px 12px 20px;height: 74px;width:100%;position:absolute;left:0;top:0;background-color:#fff;overflow:hidden;z-index:1;border-radius:20px 20px 0 0;}
+.ktd-conWrap .ui-popup.toast-popup .content {padding:0 20px 24px;}
+.ktd-conWrap .ui-popup.toast-popup .content>.btn-close{position:absolute;top:26px;right:20px;z-index:1}
+.ktd-conWrap .ui-popup.toast-popup .header{font-size:20px;text-align:left;font-weight:bold;letter-spacing:-.64px;padding: 24px 45px 16px 20px;height: 66px;width:100%;position:absolute;left:0;top:0;background-color:#fff;overflow:hidden;z-index:1;border-radius:20px 20px 0 0;}
+.ktd-conWrap .ui-popup.toast-popup .body{padding:73px 0 0; height:auto;line-height:1.5; color: #6F6F6F;}
 
-.ui-popup.toast-popup .body{padding:73px 0 0; height:auto;line-height:1.5; color: #6F6F6F;}
-
-@media all and (max-width: 768px) {
-  .ui-popup {max-width: 100%;}
+@media all and (max-width: 450px) {
+	.ktd-conWrap .ui-popup {max-width: 100%;}
 }
 
-.step-top-msg{position:relative;padding-top:0;margin:0 0 33px 0;font-size: 24px;line-height: 32px;letter-spacing: -1.08px;font-weight: 500;}
+/* 조건 선택하고 요금제 추천받기 */
+.ktd-conWrap #prodViewForm {display: block;}
+.ktd-conWrap .step-topBlock {display:flex; justify-content: space-between; margin:0 -20px; padding:0 20px; height: 36px; line-height: 36px; color: #fff; background-color: #2C3548;}
+.ktd-conWrap .step-top-msg{position:relative;padding-top:0;margin:0 0 33px 0;font-size: 24px;line-height: 32px;letter-spacing: -1.08px;font-weight: 500;}
 
+.ktd-conWrap .setp-area {height: calc(100% - 150px);}
+.ktd-conWrap .setp-area .content {position: relative;}
+.ktd-conWrap .setp-area .step-top-msg{padding-top:40px}
 
+/* step check box */
+.ktd-checkBlock {display: flex; justify-content: space-between; flex-wrap: wrap;}
+.ktd-checkBlock > div {position: relative; width: calc(50% - 8px); height: 100px;}
+.ktd-checkBlock > div:nth-child(n+3) {margin-top:16px}
 
+.ktd-checkBlock > div label {display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%; font-size: 20px; color: #6F6F6F; border:1px solid #D9D9D9; border-radius: 12px; cursor: pointer;}
+.ktd-checkBlock > div label span,
+.ktd-checkBlock > div label em {font-size: 14px; color: #A8A8A8;}
+.ktd-checkBlock > div input {position:absolute; top:12px; right:12px; width: 20px; height: 20px; background-image: none; outline: none; background-size: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none; border:none;
+}
+.ktd-checkBlock > div input:checked {background-image: url('/images/directShop/renew/icon_check_on.svg')}
+.ktd-checkBlock > div input:checked + label {border-color: #000; border-width: 2px; color: #000; font-weight: 500;}
+.ktd-checkBlock > div input:checked + label span,
+.ktd-checkBlock > div input:checked + label em {color: #6F6F6F}
 
+.ktd-conWrap .benefit-check-list li {margin-bottom: 16px}
+.ktd-conWrap .benefit-check-list .checkbox {top:22px; right:20px;z-index:10; width:20px;height:20px; background-size:20px; background-image: none; transform: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none; border:none;
+}
+.ktd-conWrap .benefit-check-list label {padding:20px 45px 20px 20px; cursor: pointer; border: 1px solid #D9D9D9; border-radius: 12px;}
+
+.ktd-conWrap .benefit-check-list .checkbox + label {background-color: #fff; color: #6F6F6F;}
+.ktd-conWrap .benefit-check-list .checkbox + label span {color: #A8A8A8;}
+.ktd-conWrap .benefit-check-list .checkbox:checked + label {background-color: #fff; color: #000; border-color: #000; border-width: 2px; padding:19px 44px 19px 19px;}
+.ktd-conWrap .benefit-check-list .checkbox:checked + label span {color: #6F6F6F;}
+.ktd-conWrap .benefit-check-list .checkbox:checked {background-image: url('/images/directShop/renew/icon_check3_on.svg')}
+
+.ktd-conWrap .addSale {padding-right:8px; font-size: 14px; color: #F00;}
+
+/* step 1 */
+.ktd-conWrap .setp-area .content .step0.pt0 {position: absolute; bottom:0; padding:0;}
+/* .setp-msg {position: absolute; bottom:0; padding:0;} */
+
+/* 가입신청 */
+.ktd-join {position:relative; margin-top:32px; padding-bottom: 200px;}
+.ktd-section + .ktd-section {margin-top:48px}
+.ktd-section:last-child {padding-bottom: 48px;}
+
+.ktd-section .top {position: relative; margin-bottom: 20px;}
+.ktd-section .top h2 {width:calc(100% - 160px); font-size: 16px; font-weight: 500; color: #000;}
+.ktd-section .top h2 + a,
+.ktd-section .top h2 + button {position: absolute; top:2px; right: 0;}
+
+.ktd-section .top h2 + button {width:auto; padding-right: 20px;; color:#6F6F6F; font-size: 14px; background-image: url('/images/directShop/renew/btn-fee-info2.svg'); background-size: 16px auto; background-position: 100% 3px;}
+
+.ktd-conWrap .payment-box {padding:24px; border:1px solid #1DA8A5; border-radius:20px; background-color: #F3F7FA;}
+.ktd-conWrap .payment-box .tit {font-size: 20px; font-weight: bold;}
+.ktd-conWrap .payment-box .etc {margin-top:4px; color: #161616; line-height: 17px;}
+.ktd-conWrap .payment-box .data {margin-top:12px; color: #6F6F6F; line-height: 18px;}
+
+.ktd-select-box {display: flex; justify-content: space-between; flex-wrap: wrap;}
+.ktd-select-box > div {position: relative; width: calc(50% - 8px); height: 40px;}
+.ktd-select-box > div input {position:absolute; top:0; left:0; width: 1px; height: 1px; outline: none; background-size: 20px; clip: rect(0 0 0 0); overflow: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.ktd-select-box > div label {display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%; color: #6F6F6F; border: 1px solid #A8A8A8; border-radius: 20px; cursor: pointer;}
+.ktd-select-box > div label span {position:relative; font-size: 14px; color: #A8A8A8; font-weight: 500;}
+.ktd-select-box > div label span:before {display: inline-block; width:16px; height: 16px; margin-right: 4px; background: none; vertical-align: top;}
+.ktd-select-box > div input:checked + label {border-color: #000; background-color: #000; color: #fff;}
+.ktd-select-box > div input:checked + label span {color: #fff; font-weight: 700;}
+.ktd-select-box > div input:checked + label span:before {content: ''; background: url('/images/directShop/renew/icon_check.svg') no-repeat 50% 5px; background-size: 11px auto;}
+
+.ktd-checkbox {margin-top:20px; position: relative;}
+.ktd-checkbox > div {position: relative;}
+.ktd-checkbox > div + div {margin-top:16px;}
+.ktd-checkbox input[type="checkbox"] {-webkit-appearance: none; appearance: none; border: none; width: 20px; height: 20px; background: url('/images/directShop/renew/icon_check4.svg') 0 0 no-repeat; background-size: 100%; position: absolute; top: 50%; left: 0; transform: translateY(-50%);}
+.ktd-checkbox label {padding-left:28px; color:#6F6F6F; font-size: 16px; cursor: pointer;}
+.ktd-checkbox input[type="checkbox"]:checked {background-image: url('/images/directShop/renew/icon_check4_on.svg');}
+.ktd-checkbox input[type="checkbox"]:checked + label {color:#000; font-weight: 500;}
+
+.ktd-checkbox input[type="radio"] {-webkit-appearance: none; appearance: none; border: none; width: 20px; height: 20px; background: url('/images/directShop/renew/icon_check_off.svg') 0 0 no-repeat; background-size: 100%; position: absolute; top: 50%; left: 0; transform: translateY(-50%);}
+.ktd-checkbox label {padding-left:28px; color:#6F6F6F; font-size: 16px; cursor: pointer;}
+.ktd-checkbox input[type="radio"]:checked {background-image: url('/images/directShop/renew/icon_check2_on.svg');}
+.ktd-checkbox input[type="radio"]:checked + label {color:#000000}
+
+.ui-popup.ktd-estimated-payment {display: block; top: inherit; bottom: 0; height: 180px; background-color: transparent; transition:none; outline: none; z-index:900; margin-left: -20px;}
+.ui-popup.ktd-estimated-payment .content {border:1px solid #D9D9D9; border-radius: 24px 24px 0 0; transition: none;
+  -webkit-box-shadow: 0px -5px 10px 0px rgba(0,0,0,0.03);
+  box-shadow: 0px -5px 10px 0px rgba(0,0,0,0.03);
+}
+
+.ui-popup.ktd-estimated-payment .header {padding-top: 24px;}
+.ui-popup.ktd-estimated-payment .header span {font-size: 16px; color: #6F6F6F;}
+.ui-popup.ktd-estimated-payment .header strong {font-size: 28px; color: #000; font-weight: bold; letter-spacing: -2px; margin-left:10px;}
+.ui-popup.ktd-estimated-payment .header button {content: ""; position: absolute; width: 16px; height: 16px; top: 40px; right: 20px; border: 2px solid #000; border-top: 0; border-left: 0; transition: transform ease 0.3s; transform: translateY(-50%) rotate(-135deg);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.ui-popup.ktd-estimated-payment .payment-list {color: #6F6F6F; display: none; transition: transform ease 0.3s;}
+.payment-list + .payment-list {margin-top:20px; padding-top:20px; border-top: 1px solid #D9D9D9;}
+.payment-list li {display: flex; justify-content: space-between;}
+.payment-list li + li {margin-top:8px;}
+.payment-list li .item {width:40%; max-width: 140px; color: #6F6F6F;}
+.payment-list li .value {width:58%; text-align: right; color: #000; font-weight: 500;}
+.payment-list li strong {color: #000; font-weight: 500;}
+.payment-list li em {color: #1DA8A5; font-weight: 500;}
+
+.ui-popup.ktd-estimated-payment .btn-bottom {padding:12px 0 0 !important}
+
+.ui-popup.ktd-estimated-payment.on {height: calc(50% + 10px);}
+.ui-popup.ktd-estimated-payment.on .header button {top: 30px; transform: translateY(-50%) rotate(45deg);}
+.ui-popup.ktd-estimated-payment.on .payment-list {display: block;}
+.ui-popup.ktd-estimated-payment.on .btn-bottom {padding:24px 0 0 !important}
+
+.popup-payment-info {max-width: 360px; margin:0; background-color: rgba(0,0,0,0.8);}
+.popup-payment-info .content {top:50%; transform: translateY(-50%); width: calc(100% - 40px); height: auto; padding:24px; border-radius: 20px;}
+
+.popup-payment-info .content .header {font-size: 16px; font-weight: bold; color: #000; text-align: center;}
+.popup-payment-info .content .body {margin-top:16px; padding:20px; border-radius: 12px; background-color: #F4F4F4}
+.popup-payment-info .btn-bottom {padding:24px 0 0 !important}
+
+@media all and (max-width: 450px) {
+  .popup-payment-info {max-width: 100%;}
+}
 
 /* 요금제 선택 */
 [class*=list-charge] .area {margin-bottom:16px; border-color: #D9D9D9;}
 [class*=list-charge] .area:last-child {margin-bottom: 0;}
-[class*=list-charge] .area:after {top:24px; right:24px; width:20px; height:20px; background-image: url('/images/directShop/renew/icon_check_off.svg'); background-size: 20px;}
+[class*=list-charge] .area:after {top:24px; right:24px; width:20px; height:20px; background-image: url('/images/directShop/renew/icon_check_off.svg'); background-size: 100%; background-position: 0 0;}
 [class*=list-charge] .area.selected:after {background-image: url('/images/directShop/renew/icon_check_on.svg')}
 
 [class*=list-charge] .area label,
@@ -796,15 +898,22 @@ h1 button:before, h2.tit button:before {content: "";position: absolute;width: 10
 [class*=list-charge] .area .box div + div {margin-top: 12px; margin-bottom: 0;}
 [class*=list-charge] .area .box div + div.opt {margin-top:2px;}
 [class*=list-charge] .area .price {margin-top:12px; padding-top:12px; height: auto; text-align: right; color: #000; border-top: 1px solid #D9D9D9;}
+[class*=list-charge] .area.selected {border-width: 2px;}
+[class*=list-charge] .area.selected:after {top:23px; right: 23px;}
+[class*=list-charge] .area.selected .box {padding: 23px;}
+[class*=list-charge] .area .box .title {color:#000}
 
 [class*=list-charge] .choice-area {margin:24px 24px 0; padding: 20px 0 0; border-top: 1px solid #D9D9D9; background-color: #fff;}
-[class*=list-charge] .choice-area li .checkbox-1 {top:20px; right:20px; width: 20px; height: 20px; border-radius: 0; background: transparent url('/images/directShop/renew/icon_check_off.svg') center center no-repeat; background-size: 20px;}
+[class*=list-charge] .choice-area li .checkbox-1 {top:20px; right:20px; width: 20px; height: 20px; border-radius: 0; background: transparent url('/images/directShop/renew/icon_check_off.svg') center center no-repeat; background-size: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none; border:none;
+}
 [class*=list-charge] .choice-area li .checkbox-1:checked {background-image:url('/images/directShop/renew/icon_check2_on.svg');}
-[class*=list-charge] .choice-area .float-list li .checkbox-1 {top:20px; right:20px; width: 20px; height: 20px; border-radius: 0; background: transparent url('/images/directShop/renew/icon_check2_off.svg') center center no-repeat; background-size: 20px;}
-
+[class*=list-charge] .choice-area .float-list li .checkbox-1 {top:20px; right:20px; width: 20px; height: 20px; border-radius: 0; background: transparent url('/images/directShop/renew/icon_check4_off.svg') center center no-repeat; background-size: 20px;}
 
 [class*=list-charge] .choice-area .title {margin-bottom:20px; font-size: 16px; font-weight: 500;}
-
 
 [class*=list-charge] .choice-area li {margin:0; padding: 20px; border: 1px solid #D9D9D9; border-radius: 12px;}
 [class*=list-charge] .choice-area li + li {margin-top:16px;}
@@ -814,25 +923,15 @@ h1 button:before, h2.tit button:before {content: "";position: absolute;width: 10
 [class*=list-charge] .choice-area li.on {border-color: #1DA8A5;}
 [class*=list-charge] .choice-area li.on .t {color: #000;}
 
-
 [class*=list-charge] .choice-area .float-list li {border-color: #1DA8A5;}
 [class*=list-charge] .choice-area .float-list li .t {font-size: 16px; color: #000;}
 [class*=list-charge] .choice-area .float-list label,
 [class*=list-charge] .choice-area .float-list input {cursor: default;}
 
-
 [class*=list-charge] .choice-area ul + .title {margin-top:32px; margin-bottom: 4px;}
 
-
-
-
-
-
-
-
-
-
-
+[class*=list-charge] .area .title .recomm {display: block;}
+[class*=list-charge] .area .title .recomm span {display:inline-block; margin-bottom: 4px; height:24px; line-height: 22px; padding:0 8px; border:1px solid #1DA8A5; border-radius: 4px; font-size: 12px; font-weight: 500; color: #1DA8A5; background-color: #D4FAF9;}
 
 /* 더보기 버튼 */
 .expend-block {position:relative; margin-top:-8px; z-index: 30;}
@@ -842,17 +941,10 @@ h1 button:before, h2.tit button:before {content: "";position: absolute;width: 10
 [class*=list-charge] .area.selected .expend-block {margin-top:16px;}
 [class*=list-charge] .area.selected .expend-block button span:after {top: calc(50% + 2px); transform: translateY(-50% ) rotate(135deg);}
 
-
-
-
-
-
-
 [class*=list-charge] dt, a.btn-re-charge{height:56px;line-height:54px;font-size:16px;border-radius: 5px;font-weight: 500;}
 dl[class*=list-charge] {color: #6f6f6f;}
-dl[class*=list-charge] dt{margin-bottom: 0;letter-spacing: -1.28px;cursor: pointer;}
-dl[class*=list-charge] dt{padding: 0;height: auto;line-height: normal;position: relative;text-align:left;background-color:#fff;border: none;font-size: 16px;font-weight: bold;color: #000;}
-dl[class*=list-charge] dt:after{content:"";position:absolute;width:8px;height:8px;top:calc(50% - 3px);right:20px;border:2px solid #000; border-top:0; border-left:0;transition: transform ease 0.3s;transform:  translateY(-50%) rotate(45deg) ;}
+dl[class*=list-charge] dt{margin-bottom: 0;letter-spacing: -1.28px;cursor: pointer; padding: 0;height: auto;line-height: normal;position: relative;text-align:left;background-color:#fff;border: none;font-size: 16px;font-weight: bold;color: #000;}
+dl[class*=list-charge] dt:after{content:"";position:absolute;width:8px;height:8px;top:calc(50% - -10px);right:20px;border:2px solid #000; border-top:0; border-left:0;transition: transform ease 0.3s;transform:  translateY(-50%) rotate(45deg) ;}
 dl[class*=list-charge] dt > a{display:block;text-align:left;color:#00a2be;font-weight:500;vertical-align:top;padding-right:26px;}
 dl[class*=list-charge] dt > .checkbox-1{position:absolute;right:17px;top:50%;transform:translateY(-50%);z-index:5;}
 dl[class*=list-charge] .area .box{padding:10px 25px 30px}
@@ -893,70 +985,278 @@ dl[class*=list-charge] .area .box {padding:12px 0 0}
 [class*=list-charge] .area .box > a.go-charge + .line {padding-top:12px; border-top: 1px solid #D9D9D9;}
 
 dl[class*=list-charge] dd.area-btm .btn-area {padding: 0; background-color: transparent;}
-dl[class*=list-charge] dd.area-btm .btn-area button {height:38px; line-height: 38px; font-size: 16px; font-weight: 500; color: #000; background-color: #3ACCC8;}
+dl[class*=list-charge] dd.area-btm .btn-area button {height:40px; line-height: 40px; font-size: 14px; font-weight: 500; color: #000; background-color: #3ACCC8;}
 
-dl[class*=list-charge] dd + dt {margin-top:16px;}
-.boxRecommTxt {margin-top:32px;}
+dl[class*=list-charge] dd + dt,
+dl[class*=list-charge] dt + dt {margin-top:16px;}
+.boxRecommTxt {margin-top:40px; margin-bottom: 0 !important;}
 a.btn-re-charge {margin:32px 0 24px; height: 48px; line-height: 48px; background-color: #000; color: #fff; text-align: center; font-weight: bold; border-radius: 8px;}
+
+.ktd-join dl[class*=list-charge-2] dt {padding:20px 24px; border: 1px solid #D9D9D9; border-radius: 12px; cursor: default;}
+.ktd-join dl[class*=list-charge-2] dt:after {display: none;}
+.ktd-join dl[class*=list-charge-2] dt > a {font-size: 14px; color: #6F6F6F; font-weight: 400; outline: none;}
+.ktd-join dl[class*=list-charge-2] dt > .checkbox-1 {position:absolute; top: 30px; right: 24px; width: 20px; height: 20px; border-radius: 0; background: transparent url('/images/directShop/renew/icon_checkRound_off.svg') center center no-repeat; background-size: 20px; cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none; border:none;
+}
+.ktd-join dl[class*=list-charge-2] dt > .checkbox-1:checked {background-image: url('/images/directShop/renew/icon_checkRound_on.svg');}
+
+.ktd-join dl[class*=list-charge-2] dt.selected > a {color: #000; font-weight: 500;}
+.ktd-join dl[class*=list-charge-2] dt.selected {border:1px solid #000; border-radius: 12px;}
+.ktd-join dl[class*=list-charge-2] dt.selected:first-child {border-bottom: none; border-radius: 12px 12px 0 0;}
+.ktd-join dl[class*=list-charge-2] dt.selected + dd {border:1px solid #000; border-top:none; border-radius: 0 0 12px 12px;}
+
+.ktd-join dl[class*=list-charge-2] .choice-area {margin:8px 0 0; padding:0 0 20px; border-top: none;}
+.ktd-join dl[class*=list-charge-2] .choice-area .title {margin:0 0 4px; font-size: 16px; font-weight: 500; color: #000;}
+.ktd-join dl[class*=list-charge-2] .choice-area p {font-size: 14px; color: #6F6F6F;}
+.ktd-join dl[class*=list-charge-2] .choice-area .t {font-size: 16px; color: #6F6F6F;}
+.ktd-join dl[class*=list-charge-2] .choice-area .m {font-size: 14px; color: #A8A8A8;}
+.ktd-join dl[class*=list-charge-2] .choice-area p strong {font-weight: bold; color: #1DA8A5;}
+
+.ktd-join dl[class*=list-charge-2] .choice-area li {padding: 0; border: none; border-radius: 0;}
+.ktd-join dl[class*=list-charge-2] .choice-area li .checkbox-1 + label {padding: 20px; border: 1px solid #D9D9D9; border-radius: 12px;}
+.ktd-join dl[class*=list-charge-2] .choice-area li .checkbox-1:checked + label {border-color: #1DA8A5;}
+
+.ktd-join dl[class*=list-charge-2] .choice-area li .checkbox-1 {background-image: url('/images/directShop/renew/icon_check4.svg');}
+.ktd-join dl[class*=list-charge-2] .choice-area li .checkbox-1:checked {background-image: url('/images/directShop/renew/icon_check4_on.svg');}
+
+.ktd-join dl[class*=list-charge-2] .choice-area li .checkbox-1:checked + label .t {color: #000;}
+.ktd-join dl[class*=list-charge-2] .choice-area li .checkbox-1:checked + label .m {color: #6F6F6F;}
+
+.ktd-coupon-select ul {display: flex; justify-content: space-between; flex-wrap: wrap;}
+.ktd-coupon-select li {position: relative; width: calc(50% - 8px);}
+.ktd-coupon-select li:nth-child(n+3) {margin-top:16px;}
+.ktd-coupon-select li input {position:absolute; top:0; left:0; width: 1px; height: 1px; outline: none; background-size: 20px; clip: rect(0 0 0 0); overflow: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.ktd-coupon-select li label {display: block; height: 126px; padding: 18px; text-align: center; border: 1px solid #D9D9D9; border-radius: 12px; cursor: pointer;}
+.ktd-coupon-select li label img {max-width: 86px;}
+.ktd-coupon-select li label strong {display:block; margin-top:10px; font-weight: 500; color:#6F6F6F;}
+.ktd-coupon-select li label span {display:block; font-size: 12px; color: #A8A8A8;}
+
+.ktd-coupon-select li input:checked + label {padding-top:17px; border-color: #1DA8A5; border-width: 2px;}
+.ktd-coupon-select li input:checked + label strong {color: #000;}
+.ktd-coupon-select li input:checked + label span {color: #6F6F6F;}
+
+.ktd-conWrap .couponpack .ktd-checkbox button:before{content: ""; display: inline-block; width: 6px; height: 6px; margin-left: 5px; border-top: 2px solid #000; border-right: 2px solid #000; transform: rotate(45deg) translateY(-4px);}
 /* //요금제 선택 */
 
 /* 전체요금제 */
-#other-plan .ktd-noti-list li {color: #161616;}
-#other-plan .ktd-noti-list li:before {background-color: #161616;}
+.ktd-conWrap #other-plan {margin:0 -20px; padding:0 20px; background-color: #f8f8f8;}
+.ktd-conWrap #other-plan .ktd-noti-list li {color: #161616;}
+.ktd-conWrap #other-plan .ktd-noti-list li:before {background-color: #161616;}
 
-.tab-charge{margin:0 -20px; padding:0; display: flex;}
-.tab:after{content:"";display:block;clear:both}
-.tab-charge li{float: none; width: auto; flex: 1;}
-.tab-charge li:nth-of-type(2){float:none}
-.tab-charge li:nth-of-type(1) a{border-top-left-radius:0;border-bottom-left-radius:0}
-.tab-charge li:nth-of-type(2) a{border-top-right-radius:0;border-bottom-right-radius:0}
-.tab-charge li a{display:block;height:40px;line-height:40px;text-align:center;font-size:16px;font-weight:500;background-color:#fff;color:#6F6F6F; border-bottom: 1px solid #D9D9D9;}
-.tab-charge li.active a{background-color:#fff;color:#000;font-weight:bold;border-bottom: 2px solid #000;}
+.ktd-conWrap .tab-charge{margin:0 -20px; padding:0; display: flex;}
+.ktd-conWrap .tab:after{content:"";display:block;clear:both}
+.ktd-conWrap .tab-charge li{float: none; width: auto; flex: 1;}
+.ktd-conWrap .tab-charge li:nth-of-type(2){float:none}
+.ktd-conWrap .tab-charge li:nth-of-type(1) a{border-top-left-radius:0;border-bottom-left-radius:0}
+.ktd-conWrap .tab-charge li:nth-of-type(2) a{border-top-right-radius:0;border-bottom-right-radius:0}
+.ktd-conWrap .tab-charge li a{display:block;height:40px;line-height:40px;text-align:center;font-size:16px;font-weight:500;background-color:#fff;color:#6F6F6F; border-bottom: 1px solid #D9D9D9;}
+.ktd-conWrap .tab-charge li.active a{background-color:#fff;color:#000;font-weight:bold;border-bottom: 2px solid #000;}
 
-.tab-charge + .tab-content {margin-top:0;}
-.tab-payment {margin: 0 -20px; padding:0 16px 0 8px; background: #fff;}
-.tab-payment .select-charge li {width: auto; word-break: keep-all;}
-.tab-payment .select-charge li + li:before {content: ''; position: absolute; top:50%; left:0; transform: translateY(-50%); width: 1px; height: 12px; background: #D9D9D9;}
-.tab-payment .select-charge li a {display: block; height: 52px; line-height: 52px; padding:0 15px; margin:0; border-radius: 0; font-size: 14px; color: #6F6F6F; background-color: transparent;}
-.tab-payment .select-charge li a.active {font-weight: bold; color: #1DA8A5;}
+.ktd-conWrap .tab-charge + .tab-content {margin-top:0;}
+.ktd-conWrap .tab-payment {margin: 0 -20px; padding:0 16px 0 8px; background: #fff;}
+.ktd-conWrap .tab-payment .select-charge li {width: auto; word-break: keep-all;}
+.ktd-conWrap .tab-payment .select-charge li + li:before {content: ''; position: absolute; top:50%; left:0; transform: translateY(-50%); width: 1px; height: 12px; background: #D9D9D9;}
+.ktd-conWrap .tab-payment .select-charge li a {display: block; height: 52px; line-height: 52px; padding:0 15px; margin:0; border-radius: 0; font-size: 14px; color: #6F6F6F; background-color: transparent;}
+.ktd-conWrap .tab-payment .select-charge li a.active {font-weight: bold; color: #1DA8A5;}
 
-.sort-area.charge-table .select-area > a {padding-right: 24px; font-size: 14px; color: #000;}
-.sort-area.charge-table .select-area > a:after {content: ""; position: absolute; width: 6px; height: 6px; top: calc(50% + -1px); right: 2px; border: 2px solid #000; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-45deg); transition: all 0.3s; background:none;}
-.sort-area.charge-table .select-area > a.open:after {top: calc(50% + 2px); transform: translateY(-50% ) rotate(135deg);}
+.ktd-conWrap .sort-area.charge-table .select-area > a {padding-right: 24px; font-size: 14px; color: #000;}
+.ktd-conWrap .sort-area.charge-table .select-area > a:after {content: ""; position: absolute; width: 6px; height: 6px; top: calc(50% + -1px); right: 2px; border: 2px solid #000; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-45deg); transition: all 0.3s; background:none;}
+.ktd-conWrap .sort-area.charge-table .select-area > a.open:after {top: calc(50% + 2px); transform: translateY(-50% ) rotate(135deg);}
 
-.ktd-noti-list {margin:16px -20px 10px; padding:0 20px 16px; border-bottom: 1px solid #D9D9D9;}
-
-
-/* 전체 요금제 관련 폰트 여백 등 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.ktd-conWrap .ktd-noti-list {margin:16px -20px 10px; padding:0 20px 16px;}
+/* .ktd-noti-list {margin:16px -20px 10px; padding:0 20px 16px; border-bottom: 1px solid #D9D9D9;} */
 
 /*이동전화 사기판매 주의 안내*/
-#con-notice-pop .content{max-height:90%;padding-bottom:0;}
-#con-notice-pop .con-notice-list{margin-top: 40px;padding: 0;border: none;}
-#con-notice-pop .con-notice-list li{position:relative;margin-top: 24px;padding-left: 0px;color:#666;}
-#con-notice-pop .con-notice-list li:first-child{margin-top:0;}
-#con-notice-pop .con-notice-list li strong{display:block;color:#000;font-size: 16px;font-weight: 500;padding-left: 16px;}
-#con-notice-pop .con-notice-list li .num{position:absolute;left:0;top:0;}
+.ktd-conWrap #con-notice-pop {margin-left: -20px;}
+.ktd-conWrap #con-notice-pop .content{max-height:90%;padding-bottom:0;}
+.ktd-conWrap #con-notice-pop .con-notice-list{margin-top: 40px;padding: 0;border: none;}
+.ktd-conWrap #con-notice-pop .con-notice-list li{position:relative;margin-top: 24px;padding-left: 0px;color:#666;}
+.ktd-conWrap #con-notice-pop .con-notice-list li:first-child{margin-top:0;}
+.ktd-conWrap #con-notice-pop .con-notice-list li strong{display:block;color:#000;font-size: 16px;font-weight: 500;padding-left: 16px;}
+.ktd-conWrap #con-notice-pop .con-notice-list li .num{position:absolute;left:0;top:0;}
 
-#con-notice-pop .btn-bottom {text-align: center;}
-#con-notice-pop .btn-bottom button {width:auto; height: 40px; line-height: 38px; font-size: 16px; border-radius: 8px; font-weight: 500; min-width: 94px;}
+.ktd-conWrap #con-notice-pop .btn-bottom {text-align: center;}
+.ktd-conWrap #con-notice-pop .btn-bottom button {width:auto;height: 48px;line-height: 48px;font-size: 16px;border-radius: 8px;font-weight: bold;min-width: 128px;color: #fff;background-color: #000;}
 
-.toast-popup .content{height:auto !important;max-height:90% !important;}
+.ktd-conWrap .toast-popup .content{height:auto !important;max-height:90% !important;}
+
+/**************************************************************************/
+/******************************* 가입신청서 *******************************/
+/**************************************************************************/
+#orderForm .ktd-noti-list {margin: 24px 0 0; padding: 0;}
+#orderForm .ktd-noti-list li + li {margin-top:12px}
+
+#orderForm .ktd-checkbox input[type="checkbox"]:checked {background-image: url('/images/directShop/renew/icon_check4_onB.svg');}
+
+input[type=date],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=url],
+input[type=time] {font-size:16px; height: 40px; line-height: 40px; border-color: #D9D9D9;}
+
+input[type=date]:-ms-input-placeholder,
+input[type=email]:-ms-input-placeholder,
+input[type=number]:-ms-input-placeholder,
+input[type=password]:-ms-input-placeholder,
+input[type=search]:-ms-input-placeholder,
+input[type=tel]:-ms-input-placeholder,
+input[type=text]:-ms-input-placeholder,
+input[type=url]:-ms-input-placeholder,
+input[type=time]:-ms-input-placeholder {color: #A8A8A8;}
+
+input[type=date]::-webkit-input-placeholder,
+input[type=email]::-webkit-input-placeholder,
+input[type=number]::-webkit-input-placeholder,
+input[type=password]::-webkit-input-placeholder,
+input[type=search]::-webkit-input-placeholder,
+input[type=tel]::-webkit-input-placeholder,
+input[type=text]::-webkit-input-placeholder,
+input[type=url]::-webkit-input-placeholder,
+input[type=time]::-webkit-input-placeholder {color: #A8A8A8;}
+
+input[type=date]::-moz-placeholder,
+input[type=email]::-moz-placeholder,
+input[type=number]::-moz-placeholder,
+input[type=password]::-moz-placeholder,
+input[type=search]::-moz-placeholder,
+input[type=tel]::-moz-placeholder,
+input[type=text]::-moz-placeholder,
+input[type=url]::-moz-placeholder,
+input[type=time]::-moz-placeholder {color: #A8A8A8;}
+
+input[type=date]::placeholder,
+input[type=email]::placeholder,
+input[type=number]::placeholder,
+input[type=password]::placeholder,
+input[type=search]::placeholder,
+input[type=tel]::placeholder,
+input[type=text]::placeholder,
+input[type=url]::placeholder,
+input[type=time]::placeholder {opacity: 1; color: #A8A8A8;}
+
+select {height: 40px; line-height: 40px; font-size: 16px; border-color: #D9D9D9; background-image: url('/images/directShop/renew/icon-select.svg'); background-size: 20px 20px;}
+select.placeholder {color: #A8A8A8;}
+
+.select-input-wrap {margin-top: 32px;}
+.select-input-wrap .clearbleWrap {margin-top: 0;}
+
+.btn-input button:before, .arrow:after {width:20px; height:20px; background-image: url('/images/directShop/renew/icon-select.svg'); background-size: 20px 20px;}
+
+
+.ktd-conWrap .btn-input2 .btn {
+  display: block;
+  width: auto;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #bcbcbc;
+  font-size: 13px;
+  color: #fff;
+  padding: 0 15px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  overflow: hidden;
+}
+
+
+.user-auth.auth-type01 {margin-top:24px}
+
+.ktd-conWrap #contents.new-contents #content {padding:0 20px; min-height: calc(100% - 176px);}
+.ktd-conWrap .swiper-scrollbar {display:none;}
+.ktd-conWrap #contents.new-contents #content .ui-tab {margin:0}
+.ktd-conWrap .ui-tab.fixed{padding:0}
+
+.tab-nav, .tab-button {width: 100%; margin:0; margin-bottom: 32px; height: 40px;}
+.tab-nav li, .tab-button li {background-color: #fff; border:1px solid #D9D9D9; margin: 0;}
+.tab-nav li:first-child, .tab-button li:first-child {border-radius: 4px 0 0 4px;}
+.tab-nav li:last-child, .tab-button li:last-child {border-radius: 0 4px 4px 0;}
+.tab-nav li + li, .tab-button li + li {border-radius: 0; margin-left: -1px;}
+
+.tab-nav li.active, .tab-button li.active {background-color: #fff; font-weight: 500; border-color: #000; border-width: 2px;}
+.tab-nav li.active label, .tab-button li.active label,
+.tab-nav li.active a, .tab-button li.active a{color: #000; font-weight: 500; margin-top:-1px;}
+
+.tab-nav li a, .tab-nav li label,
+.tab-button li a, .tab-button li label {display: block; font-size: 14px; height: 40px; line-height: 38px; letter-spacing: -0.52px; color: #6F6F6F; position: relative; z-index:10; cursor: pointer;}
+
+.tab-nav li input, .tab-button li input {width: 100%; display: block; position: absolute; top: 0; left: 0; height: 100%; opacity: 0;}
+
+
+
+
+
+/* progress menu */
+.ktd-conWrap #top-tab {max-width: initial; margin:0 -20px; padding: 16px 20px 0;}
+.ktd-conWrap #top-tab>.tab-nav {display: flex; white-space: break-spaces; cursor: e-resize;}
+.ktd-conWrap #top-tab>.tab-nav li {margin:0; text-align: center; border: none;}
+.ktd-conWrap #top-tab>.tab-nav li + li {padding-left: 54px;}
+.ktd-conWrap #top-tab>.tab-nav li button,
+.ktd-conWrap #top-tab>.tab-nav li a {height: auto; line-height: 16px; color: #A8A8A8; padding: 0; position: relative; border-radius: 0; background-color: transparent; margin-right: 0; box-shadow: none; letter-spacing: -0.56px; border: none; min-width: 56px; outline: none; word-break: break-all;}
+
+.ktd-conWrap #top-tab>.tab-nav li:before {content:''; position: absolute; top: 9px; left: -15px; width: calc(100% - 28px); border: 1px solid #3ACCC8;}
+.ktd-conWrap #top-tab>.tab-nav li:first-child:before {display: none;}
+
+.ktd-conWrap #top-tab>.tab-nav li button,
+.ktd-conWrap #top-tab>.tab-nav li a {color:#1DA8A5}
+.ktd-conWrap #top-tab>.tab-nav li.active button,
+.ktd-conWrap #top-tab>.tab-nav li.active a {color: #000; background-color: transparent;}
+.ktd-conWrap #top-tab>.tab-nav li.active ~ li button,
+.ktd-conWrap #top-tab>.tab-nav li.active ~ li a {color: #A8A8A8; font-weight: 400;}
+
+.ktd-conWrap #top-tab>.tab-nav li button em,
+.ktd-conWrap #top-tab>.tab-nav li a em {position: absolute; top:2px; left: 50%; width: 20px; transform: translateX(-50%); text-align: center; font-size: 11px;}
+.ktd-conWrap #top-tab>.tab-nav li button em,
+.ktd-conWrap #top-tab>.tab-nav li a em {display:none;}
+.ktd-conWrap #top-tab>.tab-nav li.active ~ li button em,
+.ktd-conWrap #top-tab>.tab-nav li.active ~ li a em {display: block;}
+
+.ktd-conWrap #top-tab>.tab-nav li.active ~ li:before {border:1px dashed #D9D9D9}
+.ktd-conWrap #top-tab>.tab-nav li button:before,
+.ktd-conWrap #top-tab>.tab-nav li a:before {content: ''; display: block; width: 20px; height: 20px; margin: 0 auto 4px;
+  background: url('/images/directShop/renew/icon_progress_on2.svg') no-repeat 0 0;
+  background-size: 100%;
+}
+.ktd-conWrap #top-tab>.tab-nav li.active button,
+.ktd-conWrap #top-tab>.tab-nav li.active a {color: #000; background-color: transparent;}
+.ktd-conWrap #top-tab>.tab-nav li.active button:before,
+.ktd-conWrap #top-tab>.tab-nav li.active a:before {background-image: url('/images/directShop/renew/icon_progress_on.svg');}
+.ktd-conWrap #top-tab>.tab-nav li.active ~ li button:before,
+.ktd-conWrap #top-tab>.tab-nav li.active ~ li a:before  {background-image: url('/images/directShop/renew/icon_progress.svg');}
+
+
+.clearbleWrap {margin-top:32px;}
+.clearbleWrap:first-child {margin-top:0;}
+.clearbleDel {height:40px;}
+
+
+/* 내정보 */
+.tab-content {margin-top:35px}
+.parents-name h2, .foreign-name h2, .user-name h2 {font-size: 24px; line-height: 32px; font-weight: 500; color: #000; margin-bottom: 33px;}
+
+.parents-name h2 {font-size: 14px; line-height: 24px; color: #6F6F6F; margin-bottom: 0;}
+.parents-name h2 + .parent-user {margin-top:12px;}
+.parents-name h2 + .parent-user + h2 {margin-top:48px; margin-bottom: 16px;}
+
+
+
+#tab-userinfo-all .ktd-noti-list + .ktd-checkbox {margin-top:48px;}
+#tab-userinfo-all .btn-input {margin-top:32px}
 
 
 
@@ -969,5 +1269,21 @@ a.btn-re-charge {margin:32px 0 24px; height: 48px; line-height: 48px; background
 
 
 
-/* 확인용 - 작업후 삭제 */
-.setp-area {display:block}
+.ktd-conWrap footer {padding:40px 20px 24px;}
+
+
+
+
+
+
+
+
+/****************************** Footer ******************************/
+.ktd-conWrap .footer {margin-top:64px; padding:32px 24px 40px; line-height: 1.6; font-size: 14px; color:#ccc; background-color: #393939;}
+.ktd-conWrap .footer br {display: block;}
+.ktd-conWrap .footer p strong {font-size: 16px;}
+.ktd-conWrap .footer p.award {position:relative; top:inherit; right: inherit; margin-bottom:25px;}
+.ktd-conWrap .footer p.award img {width:174px}
+.ktd-conWrap .footer p.award + p {color:#fff;}
+.ktd-conWrap .footer p + p {margin-top:15px;}
+.ktd-conWrap .footer p.copy {margin-top:15px; font-weight: 400;}

@@ -699,12 +699,12 @@ $(function(){
         //ktdSelectMenu();
     };
 
-    // 전체요금제
+    // 전체요금제, 다른 요금제 선택하기
     $('a[name="other-plan_system"]').on('click', function(e){
         e.preventDefault();
-        if($('#other-plan').is(':visible')){
-            $('.ktd-conWrap').addClass('bg-f8');
-        }
+        // if($('#other-plan').is(':visible')){
+        //     $('.ktd-conWrap').addClass('bg-f8');
+        // }
 
         var swiperTabPayment5g = new Swiper('.tab-payment5g', {
             slidesPerView: 'auto',
@@ -765,49 +765,6 @@ $(function(){
             $(this).parent('li').removeClass('on');
         }
     })
-
-    // if($('#other-plan').is(':visible')){
-    //     $('.ktd-conWrap').addClass('bg-f8');
-
-    //     var swiperTabPayment5g = new Swiper('.tab-payment5g', {
-    //         slidesPerView: 'auto',
-    //         freeMode: true,
-    //         loop: false,
-    //         scrollbar: {
-    //             el: '.swiper-scrollbar',
-    //             draggable: true,
-    //             hide: true,
-    //         },
-    //     });
-    //     TABDepth.init(swiperTabPayment5g);
-
-    //     var swiperTabPaymentLte = new Swiper('.tab-paymentLte', {
-    //         slidesPerView: 'auto',
-    //         freeMode: true,
-    //         loop: false,
-    //         scrollbar: {
-    //             el: '.swiper-scrollbar',
-    //             draggable: true,
-    //             hide: true,
-    //         },
-    //     });
-    //     TABDepth.init(swiperTabPaymentLte);
-
-    //     $('#other-plan .tab-charge li a').on('click', function(){
-    //         if($('#tab-con1').is(':visible')){
-    //             swiperTabPayment5g.update();
-    //             TABDepth.init(swiperTabPayment5g);
-    //         };
-    //         if($('#tab-con2').is(':visible')){
-    //             swiperTabPaymentLte.update();
-    //             TABDepth.init(swiperTabPaymentLte);
-    //         };
-    //     });
-
-    //     console.log (1)
-    //     swiperTabPayment5g.update();
-    //     swiperTabPaymentLte.update();
-    // }
 });
 
 var TABDepth = {
@@ -880,3 +837,12 @@ function ktdSelectMenu() {
 		}); //드랍메뉴 목록 버튼 클릭
 	});
 }
+
+// 툴팁 토글 형태
+$(document).on('click', '[data-type="tooltipToggle"]', function(e) {
+    if($(this).next('div').is(':visible')){
+        $(this).attr('title','열기').next('div').slideUp();
+    } else {
+        $(this).attr('title','닫기').next('div').slideDown();
+    }
+});
