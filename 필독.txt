@@ -6,6 +6,13 @@
 수정
     /directShop/js/ui/pub.js
 
+
+계좌인증
+    /pc/common/openAccountPop.html
+    (/pc/common/accountAuthInfo.jsp)
+    /directShop/css/ktDaccount.css
+
+
 ** 그외 파일들은 모두 as-is
  
 

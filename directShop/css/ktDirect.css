@@ -35,7 +35,7 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-conWrap button.btn,
 .ktd-conWrap input.btn,
 .ktd-conWrap label.btn,
-.ktd-conWrap span.btn {width: 100%; display: inline-block; text-align: center; background-color: #000; color: #fff; height: 48px; border-radius: 8px; line-height: 46px; font-size: 16px; font-weight: 500;}
+.ktd-conWrap span.btn {width: 100%; display: inline-block; text-align: center; background-color: #000; color: #fff; height: 48px; border-radius: 8px; line-height: 46px; font-size: 16px; font-weight: bold;}
 
 .ktd-conWrap a.btn.fill,
 .ktd-conWrap button.btn.fill,
@@ -66,32 +66,32 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 
 .ktd-more-block button {height: 40px; line-height: 40px; padding: 0 12px 0 16px; border: 1px solid #ccc; border-radius: 8px;}
 .ktd-more-block button span {display: block; position: relative; padding-right: 28px; font-size: 14px; font-weight: 500;}
-.ktd-more-block button span:before {content: ""; position: absolute; width: 10px; height: 10px; top: calc(50% + -2px); right: 5px; border: 2px solid #000; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-45deg);}
+.ktd-more-block button span:before {content: ""; position: absolute; width: 8px; height: 8px; top: calc(50% + -3px); right: 5px; border: 2px solid #000; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-45deg);}
 .ktd-more-block button span em {font-size: 12px; color: #6F6F6F; font-weight: 500;}
 
-.ktd-conWrap  form a.btn.fill,
-.ktd-conWrap  form button.btn.fill,
-.ktd-conWrap  form input.btn.fill,
-.ktd-conWrap  form label.btn.fill,
-.ktd-conWrap  form span.btn.fill {background-color: #3ACCC8; color: #141414;}
+.ktd-conWrap form a.btn.fill,
+.ktd-conWrap form button.btn.fill,
+.ktd-conWrap form input.btn.fill,
+.ktd-conWrap form label.btn.fill,
+.ktd-conWrap form span.btn.fill {background-color: #3ACCC8; color: #141414;}
 
-.ktd-conWrap  form a.btn.gray,
-.ktd-conWrap  form button.btn.gray,
-.ktd-conWrap  form input.btn.gray,
-.ktd-conWrap  form label.btn.gray,
-.ktd-conWrap  form span.btn.gray {background-color: #bcbcbc; color: #fff;}
+.ktd-conWrap form a.btn.gray,
+.ktd-conWrap form button.btn.gray,
+.ktd-conWrap form input.btn.gray,
+.ktd-conWrap form label.btn.gray,
+.ktd-conWrap form span.btn.gray {background-color: #bcbcbc; color: #fff;}
 
-.ktd-conWrap  form a.btn:disabled,
-.ktd-conWrap  form button.btn:disabled,
-.ktd-conWrap  form input.btn:disabled,
-.ktd-conWrap  form label.btn:disabled,
-.ktd-conWrap  form span.btn:disabled {background-color: #E0E0E0; color: #A8A8A8;}
+.ktd-conWrap form a.btn:disabled,
+.ktd-conWrap form button.btn:disabled,
+.ktd-conWrap form input.btn:disabled,
+.ktd-conWrap form label.btn:disabled,
+.ktd-conWrap form span.btn:disabled {background-color: #E0E0E0; color: #A8A8A8;}
 
-.ktd-conWrap  form a.btn.white,
-.ktd-conWrap  form button.btn.white,
-.ktd-conWrap  form input.btn.white,
-.ktd-conWrap  form label.btn.white,
-.ktd-conWrap  form span.btn.white {background-color: #fff; color: #000; border:1px solid #A8A8A8;}
+.ktd-conWrap form a.btn.white,
+.ktd-conWrap form button.btn.white,
+.ktd-conWrap form input.btn.white,
+.ktd-conWrap form label.btn.white,
+.ktd-conWrap form span.btn.white {background-color: #fff; color: #000; border:1px solid #A8A8A8;}
 
 
 
@@ -204,7 +204,7 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-selectMenu .ui-btnList {white-space: nowrap; font-size: 13px;}
 
 /****************************** 다이렉트 콘텐츠 영역 ******************************/
-.ktd-conWrap {display:table;table-layout: fixed;width: 360px;height: 100%;position: relative;margin-left: 50%;border: 1px solid #ccc;border-top:none;border-bottom: none; zoom:1.201;}
+.ktd-conWrap {display:table;table-layout: fixed;width: 360px;height: 100%;position: relative;margin-left: 50%;border: 1px solid #ccc;border-top:none;border-bottom: none; zoom:1.25;}
 /* .ktd-conWrap {width: 480px;min-height: 100%;position: relative;margin-left: 50%;border: 1px solid #ccc;border-top:none;border-bottom: none;} */
 .ktd-conWrap * {word-break: keep-all;}
 
@@ -214,12 +214,6 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 @media all and (max-width: 1024px) {
   .ktd-directInfo {display: none;}
   .ktd-conWrap {margin: 0 auto;}
-}
-@media all and (max-width: 768px) {
-  /* .ktd-conWrap {width:100%;margin: 0;transform: none;border: none;} */
-  .ktd-conWrap #menu {transition: all 0.4s ease-in-out;}
-  .ktd-conWrap #menu .inner {transition: all 0.4s ease-in-out;transform: translateX(100%);}
-  .ktd-conWrap #menu.active .inner {transform: translateX(0%);}
 }
 /* @media all and (max-width: 480px) {
   .ktd-conWrap {width:100%;margin: 0;transform: none;border: none;}
@@ -240,14 +234,21 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 /* 메뉴 */
 .ktd-conWrap header .menu {position: absolute; top: 50%; right: 20px; width: 24px; height: 24px; text-indent: -9999px; overflow: hidden; background: url('/images/directShop/renew/main_menu.svg') 0 0 no-repeat; background-size: 100%; transform: translateY(-50%);}
 
-.ktd-conWrap #menu {position: absolute;overflow: hidden;}
+.ktd-conWrap #menu {width: 360px; right: inherit;}
 .ktd-conWrap #menu .inner::-webkit-scrollbar {display: none;}
 .ktd-conWrap #menu .inner {position: absolute; transition: none; padding-bottom: 40px; transform: translateX(0); height: 100vh; -webkit-text-size-adjust: none; -ms-overflow-style: none; scrollbar-width: none;}
 
+@media all and (max-width: 450px) {
+  .ktd-conWrap #menu {width: 100%;}
+  .ktd-conWrap #menu {transition: all 0.4s ease-in-out;}
+  .ktd-conWrap #menu .inner {transition: all 0.4s ease-in-out;transform: translateX(100%);}
+  .ktd-conWrap #menu.active .inner {transform: translateX(0%);}
+}
+
 /* 서브메뉴 */
 .ktd-depthMenu {display:block;position: sticky;top: 64px;background: #fff;z-index: 10;}
-.ktd-depthMenu-wrap {position:relative;box-sizing: border-box;min-height: 40px;padding: 6px 40px 6px 0;}
-.ktd-depthMenu-wrap ul {width: 100%; padding-left: 8px;}
+.ktd-depthMenu-wrap {position:relative;box-sizing: border-box;min-height: 40px;padding: 6px 40px 6px 8px;}
+.ktd-depthMenu-wrap ul {width: 100%;}
 .ktd-depthMenu-wrap ul li {display: inline-block; width: auto; vertical-align: top; word-break: keep-all;}
 .ktd-depthMenu-wrap ul li a {display:block;padding:0 12px;height: 28px;line-height: 28px;color: #161616;}
 .ktd-depthMenu-wrap ul li a:hover,
@@ -258,7 +259,7 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-depthMenu-wrap .btn-more {position: absolute; top:0; right: 0; width:40px; height:40px; border-left: 1px solid #ccc; box-sizing: border-box; background:#fff; z-index: 1;}
 .ktd-depthMenu-wrap .btn-more:after {content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(135deg); width: 8px; height: 8px; border-top: 2px solid #A8A8A8; border-right: 2px solid #A8A8A8; display: inline-block; transition: all 0.3s}
 
-.ktd-depthMenu.on ul {transform: none !important; display: block;}
+.ktd-depthMenu.on ul {transform: none !important; flex-wrap: wrap;}
 .ktd-depthMenu.on .ktd-depthMenu-wrap .btn-more:after {transform: translate(-50%, -50%) rotate(-45deg);}
 
 /****************************** 메인 페이지 ******************************/
@@ -295,7 +296,7 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-main-section-1 .section-head {margin-bottom: 13px; text-align: center;}
 .ktd-main-section-1 .section-head h2 {font-size: 24px; line-height: 35px;}
 
-.ktd-main-section-1 .tab-content {margin-top:0; padding:40px 20px; background:#fff;}
+.ktd-main-section-1 .tab-content {margin-top:0 !important; padding:40px 20px; background:#fff;}
 .ktd-main-section-1 .youtube-movie-area{position:relative;width:100%;height:0;padding-bottom:56.25%; border-radius: 20px; margin-top:0}
 .ktd-main-section-1 .youtube-movie-area iframe{position:absolute;top:0;left:0;width:100%;height:100%;border-radius: 20px;}
 
@@ -428,7 +429,7 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 /****************************** 콘텐츠 페이지 ******************************/
 /* 상단 헤드 콘텐츠 */
 .ktd-block .block-top {padding-top: 0; margin-bottom: 40px;}
-.ktd-block .block-top strong {font-size: 24px; color: #000;}
+.ktd-block .block-top strong {font-size: 24px; color: #000; font-weight: 500;}
 .ktd-block .block-top p {margin-top:9px; color:#6F6F6F;}
 .ktd-block .block-top + .ktd-selfLink {margin-top:-27px;}
 .ktd-block .block-top + .ktd-noti-list {margin-top:-23px; margin-bottom: 0; padding-bottom: 0;}
@@ -448,6 +449,36 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 /****************************** 가입신청 페이지 ******************************/
 .ktd-self-sufficient {line-height: 21px; color: #6F6F6F;}
 .ktd-self-sufficient > div + div {margin-top:64px}
+
+
+.ktd-self-join {margin-top:40px; display: flex;}
+.ktd-self-join > a {position: relative; flex: 1; text-align: left;}
+.ktd-self-join > a + a {margin-left: 16px;}
+.ktd-self-join div {position: relative; flex: 1; padding: 16px; border-radius: 12px; color: #fff;}
+.ktd-self-join div p {position:relative; font-size: 16px; font-weight: bold;}
+
+.ktd-self-join .self-usim {
+  background: rgb(133,221,218);
+  background: -moz-linear-gradient(left,  rgba(133,221,218,1) 0%, rgba(58,204,200,1) 100%);
+  background: -webkit-linear-gradient(left,  rgba(133,221,218,1) 0%,rgba(58,204,200,1) 100%);
+  background: linear-gradient(to right,  rgba(133,221,218,1) 0%,rgba(58,204,200,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85ddda', endColorstr='#3accc8',GradientType=1 );
+}
+.ktd-self-join .self-data {
+  background: rgb(172,158,237);
+  background: -moz-linear-gradient(left,  rgba(172,158,237,1) 0%, rgba(131,116,211,1) 100%);
+  background: -webkit-linear-gradient(left,  rgba(172,158,237,1) 0%,rgba(131,116,211,1) 100%);
+  background: linear-gradient(to right,  rgba(172,158,237,1) 0%,rgba(131,116,211,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ac9eed', endColorstr='#8374d3',GradientType=1 );
+}
+
+.ktd-self-join div p:after {content:''; position: absolute; top:50%; right: 0; transform: translateY(-50%); width:16px; height: 16px; background: url('/images/directShop/renew/icon_arrow_Usim.svg') no-repeat 0 0; background-size: 100%;}
+.ktd-self-join .self-data p:after {background-image: url('/images/directShop/renew/icon_arrow_Data.svg');}
+
+@media all and (max-width: 360px) {
+	.ktd-self-join div p {font-size: 14px;}
+}
+
 
 /* 가입신청 - 이럴때 다이렉트가 필요합니다 */
 .ktd-info-list li {position: relative; display: table; width: 100%; padding:20px 0 20px 96px; min-height: 120px; color: #000;}
@@ -495,6 +526,7 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-info-box.lte > div:nth-child(2):before {display:block; background-image: url('/images//directShop/renew/icon_set_lte2.svg');}
 .ktd-info-box.lte > div:nth-child(3):before {background-image: url('/images//directShop/renew/icon_set_9.svg');}
 
+.ktd-sharing-noti .ktd-noti-list {margin-bottom: 0 !important; padding-bottom: 0 !important;}
 /* 데이터쉐어링 - 유심 구매처 */
 .ktd-sharing-store .usim-buy-find {margin: 32px 0 0;}
 
@@ -523,8 +555,8 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-rate-visual .tit {margin-top: 4px; font-size: 24px; line-height: 38px; font-weight: bold;}
 .ktd-rate-visual p {margin-top:9px;}
 
-.ktd-rate-tit {margin-bottom: 64px;}
-.ktd-rate-tit .ktd-selfLink {margin-top:24px;}
+.ktd-rate-tit {margin-bottom: 40px;}
+.ktd-rate-tit .ktd-selfLink {margin-top:0 !important;}
 
 /****************************** 스마트 워치 전용 요금제 페이지 ******************************/
 .ktd-watch {padding-bottom: 0;}
@@ -584,7 +616,7 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-eventList .item > a img {width: 100%; max-width: 100%;}
 .ktd-eventList .info {margin-top:8px;}
 .ktd-eventList .date {color:#6F6F6F;}
-.ktd-eventList .ktd-selfLink {margin-top: 4px;}
+.ktd-eventList .ktd-selfLink {margin-top: 4px !important;}
 .ktd-eventList .ktd-selfLink span {color: #121619;}
 .ktd-eventList .ktd-selfLink span:after {border-color: #121619;}
 
@@ -670,7 +702,7 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-conWrap .benefit-list02 + .benefit-list02 {margin-top:20px;}
 .ktd-conWrap .benefit-list02 li {display: table-cell; width: 50%; text-align: center;}
 .ktd-conWrap .benefit-list02 li img {max-width: 96px;}
-.ktd-conWrap .benefit-list02 li span {display: block; margin-top: 4px; color:#6f6f6f}
+.ktd-conWrap .benefit-list02 li span {display: block; margin-top: 4px; color:#000}
 .ktd-conWrap .benefit-list02 li span.info {font-size: 12px; color: #6F6F6F;}
 .ktd-conWrap .benefit-list02 li:nth-child(n+3) {margin-top:20px;}
 
@@ -727,9 +759,11 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 }
 
 /****************************** as-is modify ******************************/
+.ktd-conWrap .alert {color: #EF3434; line-height: 18px; padding-left: 24px; margin-top: 12px;}
+.ktd-conWrap .alert em {width:16px; height:16px; border:none; background: url('/images/directShop/renew/icon_alert.svg') no-repeat 0 0; background-size: 16px; font-size: 1px; color: transparent;}
 .ktd-conWrap #contents.new-contents {padding-top: 0; color: #6F6F6F;}
 .ktd-conWrap #contents.new-contents h1 {position: relative; height: 64px; line-height: normal; margin:0; padding: 22px 20px 0; background:#fff;}
-.ktd-conWrap #contents.new-contents h1 button {margin-top:1px; vertical-align: top;}
+.ktd-conWrap #contents.new-contents h1 button {margin-top:1px; vertical-align: top; color: #121619;}
 .ktd-conWrap h1 button:before,
 .ktd-conWrap h2.tit button:before {content: "";position: absolute;width: 10px;height: 10px;top: 50%;right: 4px;border: 2px solid #000;border-top: 0;border-right: 0;transform: translateY(-50%) rotate(45deg);background: none;}
 
@@ -738,13 +772,13 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 
 /* popup */
 /* .ui-popup {min-width: auto; max-width: 478px; left: inherit; margin-left: -20px;} */
-.ktd-conWrap .ui-popup {min-width: auto; max-width: 360px; left: inherit;}
+.ktd-conWrap .ui-popup {min-width: auto; max-width: 358px; left: inherit;}
 .ktd-conWrap .ui-popup .content>.btn-close{display:block;width: 24px;height: 24px;overflow:hidden;text-indent:-9999px;background:url('/images/directShop/renew/btn-popupClose.svg') 50% 50% no-repeat;background-size:20px auto;position:absolute;top:36px;right:30px;}
 
 .ktd-conWrap .ui-popup.toast-popup .content {padding:0 20px 24px;}
 .ktd-conWrap .ui-popup.toast-popup .content>.btn-close{position:absolute;top:26px;right:20px;z-index:1}
-.ktd-conWrap .ui-popup.toast-popup .header{font-size:20px;text-align:left;font-weight:bold;letter-spacing:-.64px;padding: 24px 45px 16px 20px;height: 66px;width:100%;position:absolute;left:0;top:0;background-color:#fff;overflow:hidden;z-index:1;border-radius:20px 20px 0 0;}
-.ktd-conWrap .ui-popup.toast-popup .body{padding:73px 0 0; height:auto;line-height:1.5; color: #6F6F6F;}
+.ktd-conWrap .ui-popup.toast-popup .header{font-size:20px;text-align:left;font-weight:500;letter-spacing:-.64px;padding: 24px 45px 16px 20px;height: 66px;width:100%;position:absolute;left:0;top:0;background-color:#fff;overflow:hidden;z-index:1;border-radius:20px 20px 0 0;color:#000}
+.ktd-conWrap .ui-popup.toast-popup .body{padding:73px 0 0; margin-bottom: 40px; height:auto;line-height:1.5; color: #6F6F6F;}
 
 @media all and (max-width: 450px) {
 	.ktd-conWrap .ui-popup {max-width: 100%;}
@@ -753,7 +787,7 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 /* 조건 선택하고 요금제 추천받기 */
 .ktd-conWrap #prodViewForm {display: block;}
 .ktd-conWrap .step-topBlock {display:flex; justify-content: space-between; margin:0 -20px; padding:0 20px; height: 36px; line-height: 36px; color: #fff; background-color: #2C3548;}
-.ktd-conWrap .step-top-msg{position:relative;padding-top:0;margin:0 0 33px 0;font-size: 24px;line-height: 32px;letter-spacing: -1.08px;font-weight: 500;}
+.ktd-conWrap .step-top-msg{position:relative;padding-top:0;margin:0 0 33px 0;font-size: 24px;line-height: 32px;letter-spacing: -1.08px;font-weight: 500; color:#000}
 
 .ktd-conWrap .setp-area {height: calc(100% - 150px);}
 .ktd-conWrap .setp-area .content {position: relative;}
@@ -812,7 +846,7 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-section .top h2 + button {width:auto; padding-right: 20px;; color:#6F6F6F; font-size: 14px; background-image: url('/images/directShop/renew/btn-fee-info2.svg'); background-size: 16px auto; background-position: 100% 3px;}
 
 .ktd-conWrap .payment-box {padding:24px; border:1px solid #1DA8A5; border-radius:20px; background-color: #F3F7FA;}
-.ktd-conWrap .payment-box .tit {font-size: 20px; font-weight: bold;}
+.ktd-conWrap .payment-box .tit {font-size: 20px; font-weight: bold; color: #000;}
 .ktd-conWrap .payment-box .etc {margin-top:4px; color: #161616; line-height: 17px;}
 .ktd-conWrap .payment-box .data {margin-top:12px; color: #6F6F6F; line-height: 18px;}
 
@@ -843,7 +877,10 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-checkbox input[type="radio"]:checked {background-image: url('/images/directShop/renew/icon_check2_on.svg');}
 .ktd-checkbox input[type="radio"]:checked + label {color:#000000}
 
-.ui-popup.ktd-estimated-payment {display: block; top: inherit; bottom: 0; height: 180px; background-color: transparent; transition:none; outline: none; z-index:900; margin-left: -20px;}
+.ktc-termsChk label {position: relative; padding-right: 14px;}
+.ktc-termsChk label:after {content: ""; position: absolute; width: 6px; height: 6px; top: calc(50% + 1px); right: 0; border: 2px solid #6F6F6F; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-135deg);}
+
+.ui-popup.ktd-estimated-payment {display: block; top: inherit; bottom: 0; height: 180px; background-color: transparent; transition:none; outline: none; z-index:900; margin-left: -21px;}
 .ui-popup.ktd-estimated-payment .content {border:1px solid #D9D9D9; border-radius: 24px 24px 0 0; transition: none;
   -webkit-box-shadow: 0px -5px 10px 0px rgba(0,0,0,0.03);
   box-shadow: 0px -5px 10px 0px rgba(0,0,0,0.03);
@@ -852,11 +889,12 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ui-popup.ktd-estimated-payment .header {padding-top: 24px;}
 .ui-popup.ktd-estimated-payment .header span {font-size: 16px; color: #6F6F6F;}
 .ui-popup.ktd-estimated-payment .header strong {font-size: 28px; color: #000; font-weight: bold; letter-spacing: -2px; margin-left:10px;}
-.ui-popup.ktd-estimated-payment .header button {content: ""; position: absolute; width: 16px; height: 16px; top: 40px; right: 20px; border: 2px solid #000; border-top: 0; border-left: 0; transition: transform ease 0.3s; transform: translateY(-50%) rotate(-135deg);
+.ui-popup.ktd-estimated-payment .header button {content: ""; position: absolute; width: 16px; height: 16px; top: 44px; right: 20px; border: 2px solid #000; border-top: 0; border-left: 0; transition: transform ease 0.3s; transform: translateY(-50%) rotate(-135deg);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
+.ui-popup.ktd-estimated-payment .body {margin-bottom: 0 !important;}
 
 .ui-popup.ktd-estimated-payment .payment-list {color: #6F6F6F; display: none; transition: transform ease 0.3s;}
 .payment-list + .payment-list {margin-top:20px; padding-top:20px; border-top: 1px solid #D9D9D9;}
@@ -869,8 +907,8 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 
 .ui-popup.ktd-estimated-payment .btn-bottom {padding:12px 0 0 !important}
 
-.ui-popup.ktd-estimated-payment.on {height: calc(50% + 10px);}
-.ui-popup.ktd-estimated-payment.on .header button {top: 30px; transform: translateY(-50%) rotate(45deg);}
+.ui-popup.ktd-estimated-payment.on {height: calc(60% + 10px);}
+.ui-popup.ktd-estimated-payment.on .header button {top: 34px; transform: translateY(-50%) rotate(45deg);}
 .ui-popup.ktd-estimated-payment.on .payment-list {display: block;}
 .ui-popup.ktd-estimated-payment.on .btn-bottom {padding:24px 0 0 !important}
 
@@ -884,11 +922,12 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 @media all and (max-width: 450px) {
   .popup-payment-info {max-width: 100%;}
 }
+.menuLoop, .popLoop, .hideblind {z-index: -1;}
 
 /* 요금제 선택 */
 [class*=list-charge] .area {margin-bottom:16px; border-color: #D9D9D9;}
 [class*=list-charge] .area:last-child {margin-bottom: 0;}
-[class*=list-charge] .area:after {top:24px; right:24px; width:20px; height:20px; background-image: url('/images/directShop/renew/icon_check_off.svg'); background-size: 100%; background-position: 0 0;}
+[class*=list-charge] .area:after {top:28px; right:24px; width:20px; height:20px; background-image: url('/images/directShop/renew/icon_check_off.svg'); background-size: 100%; background-position: 0 0;}
 [class*=list-charge] .area.selected:after {background-image: url('/images/directShop/renew/icon_check_on.svg')}
 
 [class*=list-charge] .area label,
@@ -899,7 +938,7 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 [class*=list-charge] .area .box div + div.opt {margin-top:2px;}
 [class*=list-charge] .area .price {margin-top:12px; padding-top:12px; height: auto; text-align: right; color: #000; border-top: 1px solid #D9D9D9;}
 [class*=list-charge] .area.selected {border-width: 2px;}
-[class*=list-charge] .area.selected:after {top:23px; right: 23px;}
+[class*=list-charge] .area.selected:after {top:27px; right: 23px;}
 [class*=list-charge] .area.selected .box {padding: 23px;}
 [class*=list-charge] .area .box .title {color:#000}
 
@@ -943,8 +982,8 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 
 [class*=list-charge] dt, a.btn-re-charge{height:56px;line-height:54px;font-size:16px;border-radius: 5px;font-weight: 500;}
 dl[class*=list-charge] {color: #6f6f6f;}
-dl[class*=list-charge] dt{margin-bottom: 0;letter-spacing: -1.28px;cursor: pointer; padding: 0;height: auto;line-height: normal;position: relative;text-align:left;background-color:#fff;border: none;font-size: 16px;font-weight: bold;color: #000;}
-dl[class*=list-charge] dt:after{content:"";position:absolute;width:8px;height:8px;top:calc(50% - -10px);right:20px;border:2px solid #000; border-top:0; border-left:0;transition: transform ease 0.3s;transform:  translateY(-50%) rotate(45deg) ;}
+dl[class*=list-charge] dt{margin-bottom: 0;letter-spacing: -1.28px;padding: 0;height: auto;line-height: normal;position: relative;text-align:left;background-color:#fff;border: none;font-size: 20px;font-weight: bold;color: #000;}
+dl[class*=list-charge] dt:after{display: none;}
 dl[class*=list-charge] dt > a{display:block;text-align:left;color:#00a2be;font-weight:500;vertical-align:top;padding-right:26px;}
 dl[class*=list-charge] dt > .checkbox-1{position:absolute;right:17px;top:50%;transform:translateY(-50%);z-index:5;}
 dl[class*=list-charge] .area .box{padding:10px 25px 30px}
@@ -963,14 +1002,17 @@ a.btn-re-charge{margin:30px 0 20px;text-align:left;padding: 0 20px;background-co
 
 dl[class*=list-charge] dt, dl[class*=list-charge] dd {padding:24px; border:1px solid #bbb;}
 dl[class*=list-charge] dt {padding-bottom:0; border-bottom: none; border-radius: 12px 12px 0 0;}
-dl[class*=list-charge] dd.area-top, dl[class*=list-charge] dd.area {padding:0 24px; border-top:none; border-bottom: none;}
+dl[class*=list-charge] dd.area-top, dl[class*=list-charge] dd.area {padding:0 24px; border-top:none; border-bottom: none; display: block;}
 dl[class*=list-charge] dd.area-btm {padding-top:24px; border-top:none; border-radius: 0 0 12px 12px; background-color: #fff;}
 
-dl[class*=list-charge] dd.area-top .add-discount {margin-bottom: 8px; padding-top:8px; font-weight: 500;color: #161616;}
+dl[class*=list-charge] dd.area-top .add-discount {margin-bottom: 8px; padding-top:8px; color: #161616;}
 
 dl[class*=list-charge] dt.selected + dd{border:1px solid #bbb;border-top:none;border-bottom:none;border-radius: 0;border-bottom-right-radius: 0;border-bottom-left-radius: 0;background-color: #fff;}
 dl[class*=list-charge] dt.selected + dd + .area {display: block; margin:0; border-radius: 0; border-right: 1px solid #bbb; border-left: 1px solid #bbb;}
 dl[class*=list-charge] .area .box {padding:12px 0 0}
+
+dl[class*=list-charge] dd.area-top + .area {border-color: #bbb; border-radius: 0; margin-bottom: 0;}
+dl[class*=list-charge] dd.area-top + .area .price {margin-top: 0;}
 
 [class*=list-charge] .area .line,
 [class*=list-charge] .area .opt > span {font-size: 14px;}
@@ -980,8 +1022,8 @@ dl[class*=list-charge] .area .box {padding:12px 0 0}
 [class*=list-charge] .area .line > span {padding:0;}
 
 [class*=list-charge] .area .box > .summary + a.go-charge {margin-top:12px;}
-[class*=list-charge] .area .box > a.go-charge {position: relative;top: 0px;right: inherit;left:0;z-index: 20;line-height: normal;font-size: 14px;font-weight: 500;color: #6F6F6F; margin-bottom: 16px;}
-[class*=list-charge] .area .box > a.go-charge:after {content: "";height: 6px;width: 6px;border: 2px solid #A8A8A8;border-top: 0;border-left: 0;transform: rotate(-45deg) translate(0,-2px);display: inline-block;margin-left: 6px;}
+[class*=list-charge] .area .box > a.go-charge {position: relative;top: 0px;right: inherit;left:0;z-index: 20;line-height: normal;font-size: 14px;font-weight: 500;color: #1DA8A5; margin-bottom: 16px;}
+[class*=list-charge] .area .box > a.go-charge:after {content: "";height: 6px;width: 6px;border: 2px solid #1DA8A5;border-top: 0;border-left: 0;transform: rotate(-45deg) translate(0,-2px);display: inline-block;margin-left: 6px;}
 [class*=list-charge] .area .box > a.go-charge + .line {padding-top:12px; border-top: 1px solid #D9D9D9;}
 
 dl[class*=list-charge] dd.area-btm .btn-area {padding: 0; background-color: transparent;}
@@ -991,6 +1033,9 @@ dl[class*=list-charge] dd + dt,
 dl[class*=list-charge] dt + dt {margin-top:16px;}
 .boxRecommTxt {margin-top:40px; margin-bottom: 0 !important;}
 a.btn-re-charge {margin:32px 0 24px; height: 48px; line-height: 48px; background-color: #000; color: #fff; text-align: center; font-weight: bold; border-radius: 8px;}
+
+a.btn-re-charge span {position: relative; padding-right: 20px; font-size: 16px; font-weight: bold;}
+a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid #fff;border-top: 0;border-left: 0;transform: rotate(-45deg) translate(0,-2px);display: inline-block;margin-left: 6px;}
 
 .ktd-join dl[class*=list-charge-2] dt {padding:20px 24px; border: 1px solid #D9D9D9; border-radius: 12px; cursor: default;}
 .ktd-join dl[class*=list-charge-2] dt:after {display: none;}
@@ -1004,9 +1049,10 @@ a.btn-re-charge {margin:32px 0 24px; height: 48px; line-height: 48px; background
 .ktd-join dl[class*=list-charge-2] dt > .checkbox-1:checked {background-image: url('/images/directShop/renew/icon_checkRound_on.svg');}
 
 .ktd-join dl[class*=list-charge-2] dt.selected > a {color: #000; font-weight: 500;}
-.ktd-join dl[class*=list-charge-2] dt.selected {border:1px solid #000; border-radius: 12px;}
+.ktd-join dl[class*=list-charge-2] dt.selected {border:2px solid #000; border-radius: 12px; padding: 19px 23px;}
 .ktd-join dl[class*=list-charge-2] dt.selected:first-child {border-bottom: none; border-radius: 12px 12px 0 0;}
-.ktd-join dl[class*=list-charge-2] dt.selected + dd {border:1px solid #000; border-top:none; border-radius: 0 0 12px 12px;}
+.ktd-join dl[class*=list-charge-2] dt.selected > .checkbox-1 {top:29px; right: 23px;}
+.ktd-join dl[class*=list-charge-2] dt.selected + dd {border:2px solid #000; border-top:none; border-radius: 0 0 12px 12px;}
 
 .ktd-join dl[class*=list-charge-2] .choice-area {margin:8px 0 0; padding:0 0 20px; border-top: none;}
 .ktd-join dl[class*=list-charge-2] .choice-area .title {margin:0 0 4px; font-size: 16px; font-weight: 500; color: #000;}
@@ -1077,6 +1123,7 @@ a.btn-re-charge {margin:32px 0 24px; height: 48px; line-height: 48px; background
 /*이동전화 사기판매 주의 안내*/
 .ktd-conWrap #con-notice-pop {margin-left: -20px;}
 .ktd-conWrap #con-notice-pop .content{max-height:90%;padding-bottom:0;}
+.ktd-conWrap #con-notice-pop .content .body {margin-bottom: 0;}
 .ktd-conWrap #con-notice-pop .con-notice-list{margin-top: 40px;padding: 0;border: none;}
 .ktd-conWrap #con-notice-pop .con-notice-list li{position:relative;margin-top: 24px;padding-left: 0px;color:#666;}
 .ktd-conWrap #con-notice-pop .con-notice-list li:first-child{margin-top:0;}
@@ -1091,115 +1138,127 @@ a.btn-re-charge {margin:32px 0 24px; height: 48px; line-height: 48px; background
 /**************************************************************************/
 /******************************* 가입신청서 *******************************/
 /**************************************************************************/
+.tab-content>div {min-height: 200px;}
 #orderForm .ktd-noti-list {margin: 24px 0 0; padding: 0;}
 #orderForm .ktd-noti-list li + li {margin-top:12px}
 
 #orderForm .ktd-checkbox input[type="checkbox"]:checked {background-image: url('/images/directShop/renew/icon_check4_onB.svg');}
 
-input[type=date],
-input[type=email],
-input[type=number],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=text],
-input[type=url],
-input[type=time] {font-size:16px; height: 40px; line-height: 40px; border-color: #D9D9D9;}
+.ktd-conWrap input[type=date],
+.ktd-conWrap input[type=email],
+.ktd-conWrap input[type=number],
+.ktd-conWrap input[type=password],
+.ktd-conWrap input[type=search],
+.ktd-conWrap input[type=tel],
+.ktd-conWrap input[type=text],
+.ktd-conWrap input[type=url],
+.ktd-conWrap input[type=time] {font-size:16px; height: 40px; line-height: 40px; border-color: #D9D9D9; padding-left: 0;}
 
-input[type=date]:-ms-input-placeholder,
-input[type=email]:-ms-input-placeholder,
-input[type=number]:-ms-input-placeholder,
-input[type=password]:-ms-input-placeholder,
-input[type=search]:-ms-input-placeholder,
-input[type=tel]:-ms-input-placeholder,
-input[type=text]:-ms-input-placeholder,
-input[type=url]:-ms-input-placeholder,
-input[type=time]:-ms-input-placeholder {color: #A8A8A8;}
+.ktd-conWrap input[type=date]:-ms-input-placeholder,
+.ktd-conWrap input[type=email]:-ms-input-placeholder,
+.ktd-conWrap input[type=number]:-ms-input-placeholder,
+.ktd-conWrap input[type=password]:-ms-input-placeholder,
+.ktd-conWrap input[type=search]:-ms-input-placeholder,
+.ktd-conWrap input[type=tel]:-ms-input-placeholder,
+.ktd-conWrap input[type=text]:-ms-input-placeholder,
+.ktd-conWrap input[type=url]:-ms-input-placeholder,
+.ktd-conWrap input[type=time]:-ms-input-placeholder {color: #A8A8A8;}
 
-input[type=date]::-webkit-input-placeholder,
-input[type=email]::-webkit-input-placeholder,
-input[type=number]::-webkit-input-placeholder,
-input[type=password]::-webkit-input-placeholder,
-input[type=search]::-webkit-input-placeholder,
-input[type=tel]::-webkit-input-placeholder,
-input[type=text]::-webkit-input-placeholder,
-input[type=url]::-webkit-input-placeholder,
-input[type=time]::-webkit-input-placeholder {color: #A8A8A8;}
+.ktd-conWrap input[type=date]::-webkit-input-placeholder,
+.ktd-conWrap input[type=email]::-webkit-input-placeholder,
+.ktd-conWrap input[type=number]::-webkit-input-placeholder,
+.ktd-conWrap input[type=password]::-webkit-input-placeholder,
+.ktd-conWrap input[type=search]::-webkit-input-placeholder,
+.ktd-conWrap input[type=tel]::-webkit-input-placeholder,
+.ktd-conWrap input[type=text]::-webkit-input-placeholder,
+.ktd-conWrap input[type=url]::-webkit-input-placeholder,
+.ktd-conWrap input[type=time]::-webkit-input-placeholder {color: #A8A8A8;}
 
-input[type=date]::-moz-placeholder,
-input[type=email]::-moz-placeholder,
-input[type=number]::-moz-placeholder,
-input[type=password]::-moz-placeholder,
-input[type=search]::-moz-placeholder,
-input[type=tel]::-moz-placeholder,
-input[type=text]::-moz-placeholder,
-input[type=url]::-moz-placeholder,
-input[type=time]::-moz-placeholder {color: #A8A8A8;}
+.ktd-conWrap input[type=date]::-moz-placeholder,
+.ktd-conWrap input[type=email]::-moz-placeholder,
+.ktd-conWrap input[type=number]::-moz-placeholder,
+.ktd-conWrap input[type=password]::-moz-placeholder,
+.ktd-conWrap input[type=search]::-moz-placeholder,
+.ktd-conWrap input[type=tel]::-moz-placeholder,
+.ktd-conWrap input[type=text]::-moz-placeholder,
+.ktd-conWrap input[type=url]::-moz-placeholder,
+.ktd-conWrap input[type=time]::-moz-placeholder {color: #A8A8A8;}
 
-input[type=date]::placeholder,
-input[type=email]::placeholder,
-input[type=number]::placeholder,
-input[type=password]::placeholder,
-input[type=search]::placeholder,
-input[type=tel]::placeholder,
-input[type=text]::placeholder,
-input[type=url]::placeholder,
-input[type=time]::placeholder {opacity: 1; color: #A8A8A8;}
+.ktd-conWrap input[type=date]::placeholder,
+.ktd-conWrap input[type=email]::placeholder,
+.ktd-conWrap input[type=number]::placeholder,
+.ktd-conWrap input[type=password]::placeholder,
+.ktd-conWrap input[type=search]::placeholder,
+.ktd-conWrap input[type=tel]::placeholder,
+.ktd-conWrap input[type=text]::placeholder,
+.ktd-conWrap input[type=url]::placeholder,
+.ktd-conWrap input[type=time]::placeholder {opacity: 1; color: #A8A8A8;}
 
-select {height: 40px; line-height: 40px; font-size: 16px; border-color: #D9D9D9; background-image: url('/images/directShop/renew/icon-select.svg'); background-size: 20px 20px;}
-select.placeholder {color: #A8A8A8;}
+.ktd-conWrap select {height: 40px; line-height: 40px; font-size: 16px; border-color: #D9D9D9; background-image: url('/images/directShop/renew/icon-select.svg'); background-size: 20px 20px;}
+.ktd-conWrap select.placeholder {color: #A8A8A8;}
 
-.select-input-wrap {margin-top: 32px;}
-.select-input-wrap .clearbleWrap {margin-top: 0;}
+.ktd-conWrap .select-input-wrap {margin-top: 32px;}
+.ktd-conWrap .select-input-wrap .clearbleWrap {margin-top: 0;}
 
-.btn-input button:before, .arrow:after {width:20px; height:20px; background-image: url('/images/directShop/renew/icon-select.svg'); background-size: 20px 20px;}
+.ktd-conWrap .btn-input button:before,
+.ktd-conWrap .arrow:after {width:20px; height:20px; background-image: url('/images/directShop/renew/icon-select.svg'); background-size: 20px 20px;}
 
+.ktd-conWrap .input-number-wrap {}
+.ktd-conWrap .input-number-wrap h2 {margin-bottom:12px; font-size: 14px; font-weight: 500; line-height: 24px; color: #6F6F6F;}
 
-.ktd-conWrap .btn-input2 .btn {
-  display: block;
-  width: auto;
-  height: 27px;
-  line-height: 27px;
-  text-align: center;
-  border-radius: 5px;
-  background-color: #bcbcbc;
-  font-size: 13px;
-  color: #fff;
-  padding: 0 15px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  z-index: 1;
-  overflow: hidden;
-}
+.ktd-conWrap .btn-input2 + h2 {margin-top:48px;}
+.ktd-conWrap .btn-input2 {display:flex; margin-bottom: 0;}
+.ktd-conWrap .btn-input2 input {padding: 0;}
+.ktd-conWrap .btn-input2 input:focus {border-color: #000;}
+
+.ktd-conWrap .btn-input2 .btn {display: block;width: auto;height: 40px;line-height: 40px;text-align: center;border-radius: 8px;background-color: #000;font-size: 14px;font-weight:bold;color: #fff;padding: 0 16px;margin-left:16px;position: relative;top: inherit;right: inherit;transform: none;z-index: 1;overflow: hidden;min-width: 74px;}
+.ktd-conWrap .btn-input2 .btn:disabled {background-color: #E0E0E0; font-weight: 500; color: #A8A8A8;}
+.ktd-conWrap .btn-input2 .btn.btn02 {min-width: 94px;}
+
+.ktd-conWrap .ktd-selfLink {margin-top:40px;}
 
 
-.user-auth.auth-type01 {margin-top:24px}
+
+
+
+
+
+
+
+
+
+.ktd-conWrap .user-auth.auth-type01 {margin-top:24px}
 
 .ktd-conWrap #contents.new-contents #content {padding:0 20px; min-height: calc(100% - 176px);}
 .ktd-conWrap .swiper-scrollbar {display:none;}
 .ktd-conWrap #contents.new-contents #content .ui-tab {margin:0}
 .ktd-conWrap .ui-tab.fixed{padding:0}
 
-.tab-nav, .tab-button {width: 100%; margin:0; margin-bottom: 32px; height: 40px;}
-.tab-nav li, .tab-button li {background-color: #fff; border:1px solid #D9D9D9; margin: 0;}
-.tab-nav li:first-child, .tab-button li:first-child {border-radius: 4px 0 0 4px;}
-.tab-nav li:last-child, .tab-button li:last-child {border-radius: 0 4px 4px 0;}
-.tab-nav li + li, .tab-button li + li {border-radius: 0; margin-left: -1px;}
+.ktd-conWrap .tab-nav,
+.ktd-conWrap .tab-button {width: 100%; margin:0; margin-bottom: 32px; height: 40px;}
+.ktd-conWrap .tab-nav li,
+.ktd-conWrap .tab-button li {background-color: #fff; border:1px solid #D9D9D9; margin: 0;}
+.ktd-conWrap .tab-nav li:first-child,
+.ktd-conWrap .tab-button li:first-child {border-radius: 4px 0 0 4px;}
+.ktd-conWrap .tab-nav li:last-child,
+.ktd-conWrap .tab-button li:last-child {border-radius: 0 4px 4px 0;}
+.ktd-conWrap .tab-nav li + li,
+.ktd-conWrap .tab-button li + li {border-radius: 0; margin-left: -1px;}
 
-.tab-nav li.active, .tab-button li.active {background-color: #fff; font-weight: 500; border-color: #000; border-width: 2px;}
-.tab-nav li.active label, .tab-button li.active label,
-.tab-nav li.active a, .tab-button li.active a{color: #000; font-weight: 500; margin-top:-1px;}
+.ktd-conWrap .tab-nav li.active,
+.ktd-conWrap .tab-button li.active {background-color: #fff; font-weight: 500; border-color: #000; border-width: 2px;}
+.ktd-conWrap .tab-nav li.active label,
+.ktd-conWrap .tab-button li.active label,
+.ktd-conWrap .tab-nav li.active a,
+.ktd-conWrap .tab-button li.active a{color: #000; font-weight: 500; margin-top:-1px;}
 
-.tab-nav li a, .tab-nav li label,
-.tab-button li a, .tab-button li label {display: block; font-size: 14px; height: 40px; line-height: 38px; letter-spacing: -0.52px; color: #6F6F6F; position: relative; z-index:10; cursor: pointer;}
+.ktd-conWrap .tab-nav li a,
+.ktd-conWrap .tab-nav li label,
+.ktd-conWrap .tab-button li a,
+.ktd-conWrap .tab-button li label {display: block; font-size: 14px; height: 40px; line-height: 38px; letter-spacing: -0.52px; color: #6F6F6F; position: relative; z-index:10; cursor: pointer;}
 
-.tab-nav li input, .tab-button li input {width: 100%; display: block; position: absolute; top: 0; left: 0; height: 100%; opacity: 0;}
-
-
-
-
+.ktd-conWrap .tab-nav li input,
+.ktd-conWrap .tab-button li input {width: 100%; display: block; position: absolute; top: 0; left: 0; height: 100%; opacity: 0;}
 
 /* progress menu */
 .ktd-conWrap #top-tab {max-width: initial; margin:0 -20px; padding: 16px 20px 0;}
@@ -1209,7 +1268,7 @@ select.placeholder {color: #A8A8A8;}
 .ktd-conWrap #top-tab>.tab-nav li button,
 .ktd-conWrap #top-tab>.tab-nav li a {height: auto; line-height: 16px; color: #A8A8A8; padding: 0; position: relative; border-radius: 0; background-color: transparent; margin-right: 0; box-shadow: none; letter-spacing: -0.56px; border: none; min-width: 56px; outline: none; word-break: break-all;}
 
-.ktd-conWrap #top-tab>.tab-nav li:before {content:''; position: absolute; top: 9px; left: -15px; width: calc(100% - 28px); border: 1px solid #3ACCC8;}
+.ktd-conWrap #top-tab>.tab-nav li:before {content:''; position: absolute; top: 9px; left: -15px; width: calc(100% - 28px); height:1px; background-color: #3ACCC8;}
 .ktd-conWrap #top-tab>.tab-nav li:first-child:before {display: none;}
 
 .ktd-conWrap #top-tab>.tab-nav li button,
@@ -1226,7 +1285,12 @@ select.placeholder {color: #A8A8A8;}
 .ktd-conWrap #top-tab>.tab-nav li.active ~ li button em,
 .ktd-conWrap #top-tab>.tab-nav li.active ~ li a em {display: block;}
 
-.ktd-conWrap #top-tab>.tab-nav li.active ~ li:before {border:1px dashed #D9D9D9}
+.ktd-conWrap #top-tab>.tab-nav li.active ~ li:before {height:1px;
+  background: #fff;
+  background-image: radial-gradient(#D9D9D9 3px, transparent 0);
+  background-size: 6px auto;
+  background-position: 0px 0px;
+}
 .ktd-conWrap #top-tab>.tab-nav li button:before,
 .ktd-conWrap #top-tab>.tab-nav li a:before {content: ''; display: block; width: 20px; height: 20px; margin: 0 auto 4px;
   background: url('/images/directShop/renew/icon_progress_on2.svg') no-repeat 0 0;
@@ -1239,24 +1303,156 @@ select.placeholder {color: #A8A8A8;}
 .ktd-conWrap #top-tab>.tab-nav li.active ~ li button:before,
 .ktd-conWrap #top-tab>.tab-nav li.active ~ li a:before  {background-image: url('/images/directShop/renew/icon_progress.svg');}
 
-
-.clearbleWrap {margin-top:32px;}
-.clearbleWrap:first-child {margin-top:0;}
-.clearbleDel {height:40px;}
-
+.ktd-conWrap .clearbleWrap {margin-top:32px;}
+.ktd-conWrap .clearbleWrap:first-child {margin-top:0;}
+.ktd-conWrap .clearbleDel {height:40px;}
 
 /* 내정보 */
-.tab-content {margin-top:35px}
-.parents-name h2, .foreign-name h2, .user-name h2 {font-size: 24px; line-height: 32px; font-weight: 500; color: #000; margin-bottom: 33px;}
+.ktd-conWrap .tab-content {margin-top:35px}
+.ktd-conWrap .parents-name h2,
+.ktd-conWrap .foreign-name h2,
+.ktd-conWrap .user-name h2,
+.ktd-conWrap .ktd-title h2 {font-size: 24px; line-height: 32px; font-weight: 500; color: #000; margin-bottom: 32px;}
 
-.parents-name h2 {font-size: 14px; line-height: 24px; color: #6F6F6F; margin-bottom: 0;}
-.parents-name h2 + .parent-user {margin-top:12px;}
-.parents-name h2 + .parent-user + h2 {margin-top:48px; margin-bottom: 16px;}
+.ktd-conWrap .parents-name h2 {font-size: 14px; line-height: 24px; color: #6F6F6F; margin-bottom: 0;}
+.ktd-conWrap .parents-name h2 + .parent-user {margin-top:12px;}
+.ktd-conWrap .parents-name h2 + .parent-user + h2 {margin-top:48px; margin-bottom: 16px;}
+
+#orderForm .ktd-checkbox {margin-top:48px;}
+#orderForm .btn-input {margin-top:32px}
+
+/* 약관 동의 */
+.ktd-conWrap .ui-popup.terms-check .acc-head label {font-size: 16px; line-height: 23px; color: #6F6F6F;}
+.ktd-conWrap .ui-popup.terms-check .acc-head input:checked + label {color: #000; font-weight: 500;}
+
+.ktd-conWrap .ui-popup.terms-check .acc-head>button:before {content: ""; position: absolute; width: 8px; height: 8px; top: calc(50% + 1px); left: 50%; border: 2px solid #000; border-top: 0; border-right: 0; transform: translate(-50%, -50%) rotate(135deg); background:none;}
+.ktd-conWrap .ui-popup.terms-check .acc-item.active .acc-head>button:before {top: calc(50% + -3px); transform: translate(-50%, -50%) rotate(-45deg);}
+
+.ktd-conWrap .ui-popup.terms-check .body {padding-top:85px}
+.ktd-conWrap .ui-popup.terms-check .ui-accordion {border:1px solid #D9D9D9; border-radius: 12px; padding: 24px 20px;}
+
+.ktd-conWrap .ui-popup.terms-check .acc-cont {border-top:1px solid #D9D9D9; margin-top: 20px; padding-top:20px; height: auto; max-height: 200px;}
+.ktd-conWrap .ui-popup.terms-check .acc-cont ul + ul {margin-top: 15px}
+
+.ktd-conWrap .terms-list li:last-child {margin-bottom: 0 !important;}
+
+.ktd-conWrap .terms-list li input,
+.ktd-conWrap .checkbox input {width: 20px; height: 20px; background-image:url('/images/directShop/renew/icon_check4.svg');}
+.ktd-conWrap .radio input {width: 20px; height: 20px; background-image:url('/images/directShop/renew/icon_check_off.svg');}
+
+.ktd-conWrap .checkbox input:checked {background-image:url('/images/directShop/renew/icon_check4_onB.svg');}
+.ktd-conWrap .radio input:checked {background-image:url('/images/directShop/renew/icon_check2_on.svg');}
+
+.ktd-conWrap .terms-list li label,
+.ktd-conWrap .checkbox label,
+.ktd-conWrap .radio label {padding-left:34px;}
+
+.ktd-conWrap .terms-list li input,
+.ktd-conWrap .checkbox.small input {top:1px; left:0; transform: none; background-image:url('/images/directShop/renew/icon_check4_none.svg');}
+.ktd-conWrap .terms-list li input:checked,
+.ktd-conWrap .checkbox.small input:checked {top:1px; left:0; transform: none; background-image:url('/images/directShop/renew/icon_check4_on.svg');}
+
+.ktd-conWrap .terms-list li label {font-size: 14px; color: #6F6F6F; line-height: 21px;}
+
+.ktd-conWrap .terms-list li>a,
+.ktd-conWrap .terms-list li>button {top:-2px; transform: none;}
+.ktd-conWrap .terms-list li>a:before,
+.ktd-conWrap .terms-list li>button:before {content: ""; position: absolute; width: 5px; height: 5px; top: calc(50% + 1px); left: 50%; border: 2px solid #6F6F6F; border-top: 0; border-right: 0; transform: translate(-50%, -50%) rotate(-135deg); background:none;}
+
+/* popup popup-type-2 */
+.ktd-conWrap .ui-popup.select-card .content,
+.ktd-conWrap .ui-popup.popup-type-2 .content {padding:0; overflow-x: hidden;}
+
+.ktd-conWrap .ui-popup.select-card .header,
+.ktd-conWrap .ui-popup.popup-type-2 .header {height: 64px; line-height: 64px; padding: 0 20px;;}
+
+.ktd-conWrap .ui-popup.select-card .content>.btn-close,
+.ktd-conWrap .ui-popup.popup-type-2 .content>.btn-close {top:20px; right:20px;}
+
+.ktd-conWrap .ui-popup.popup-type-2 .body {min-height: calc(100% - 175px); padding:24px 20px 0}
+.ktd-conWrap .ui-popup.popup-type-2 .btn-bottom {padding:40px 20px 20px !important;}
+
+
+/* 국적선택 */
+.ktd-conWrap #select-nationality .select-list {margin-top:18px}
+.ktd-conWrap #select-nationality li + li {border-top: 1px solid #D9D9D9;}
+.ktd-conWrap #select-nationality .select-list + .ktd-more-block {margin-top:12px;}
+.ktd-conWrap #select-nationality .radio {height: 64px; line-height: 64px; padding-left: 28px;}
+.ktd-conWrap #select-nationality .radio label {height: 64px; line-height: 64px; padding-left: 0;}
+.ktd-conWrap #select-nationality .radio input {right: auto; left: 0; background-image: url('/images/directShop/renew/icon_check_off.svg');}
+.ktd-conWrap #select-nationality .radio input:checked {background-image: url('/images/directShop/renew/icon_check2_on.svg');}
+.ktd-conWrap #select-nationality .radio input:checked + label {font-weight: 500;}
+
+/* 카드사선택 */
+.ktd-conWrap .select-card-list li {margin-bottom: 0; padding: 20px 0;}
+.ktd-conWrap .select-card-list li:first-child {padding-top: 0;}
+
+.ktd-conWrap .select-card-list li + li {border-top: 1px solid #D9D9D9;}
+.ktd-conWrap .select-card-list .radio {display: block; height: 48px; line-height: 48px;}
+
+.ktd-conWrap .select-card-list .radio label {padding-left: 0; height: 48px; line-height: 48px; overflow: hidden; width: 100%;}
+
+.ktd-conWrap .select-card-list .radio label img {width: 48px; height: 48px; display: block; float: left; margin-right: 15px;}
+
+.ktd-conWrap .select-card-list .radio input,
+.ktd-conWrap .select-list .radio input {left: auto; right: 0;}
+.ktd-conWrap .select-card-list input + label{ display:block;color:#6F6F6F}
+.ktd-conWrap .select-card-list input:checked + label{font-weight:500;color:#000 !important}
+
+/* 희망번호 선택 */
+.ktd-conWrap #select-number .body {padding-top: 0;}
+.ktd-conWrap #select-number .select-list {margin-top:0; padding-top: 4px;}
+.ktd-conWrap #select-number li + li {border-top: 1px solid #D9D9D9;}
+.ktd-conWrap #select-number .select-list + .ktd-more-block {margin-top:12px;}
+.ktd-conWrap #select-number .radio {height: 64px; line-height: 64px; padding-left: 28px;}
+.ktd-conWrap #select-number .radio label {height: 64px; line-height: 64px; padding-left: 0;}
+.ktd-conWrap #select-number .radio input {right: auto; left: 0; background-image: url('/images/directShop/renew/icon_check_off.svg');}
+.ktd-conWrap #select-number .radio input:checked {background-image: url('/images/directShop/renew/icon_check2_on.svg');}
+.ktd-conWrap #select-number .radio input:checked + label {font-weight: 500;}
 
 
 
-#tab-userinfo-all .ktd-noti-list + .ktd-checkbox {margin-top:48px;}
-#tab-userinfo-all .btn-input {margin-top:32px}
+/* 계좌인증 팝업 */
+#popup-accountWindow {}
+#popup-accountWindow .content {top: 50%; transform: translateY(-50%); width: calc(100% - 40px); height: auto; padding: 24px; border-radius: 20px;}
+
+#popup-accountWindow .content .header {font-size: 16px; font-weight: bold; color: #000; text-align: center;}
+#popup-accountWindow .content .body {margin-top:16px;}
+#popup-accountWindow .content .body p {text-align: center; color: #6F6F6F;}
+#popup-accountWindow .btn-bottom {padding:32px 0 0 !important; text-align: center;}
+
+@media all and (max-width: 450px) {
+  #popup-accountWindow {max-width: 100%;}
+}
+
+/* ARS 인증 */
+.ktd-conWrap .ui-popup.ars-check .body p {text-align: left; color: #6F6F6F;}
+
+/* 희망번호 */
+.ktd-conWrap .open-number-area .box {margin:32px 0 12px; padding:24px; border: 1px solid #000; border-radius: 12px; background-color: #fff;}
+.ktd-conWrap .open-number-area .box .title {font-size: 14px; color: #6F6F6F;}
+
+/* 번호이동 */
+.ktd-conWrap #certifyWay {flex-basis:164px}
+
+.ktd-conWrap #popup-number-change-info p.msg {color: #161616;}
+.ktd-conWrap #popup-number-change-info .agree-block {margin:48px 0 0}
+.ktd-conWrap #popup-number-change-info .agree-block + .agree-block {margin-top:56px}
+.ktd-conWrap #popup-number-change-info .agree-block .agree-box {margin-bottom: 32px;}
+.ktd-conWrap #popup-number-change-info .agree-box h3 {margin-bottom: 12px;}
+.ktd-conWrap #popup-number-change-info .agree-box h3 span {display: inline-block; padding:0 14px; height: 30px; line-height: 30px; border-radius: 15px; background-color: #1DA8A5; font-size: 14px; font-weight: bold; color: #fff;}
+.ktd-conWrap #popup-number-change-info .agree-box h3 + p {font-size: 16px; font-weight: 500; color: #000;}
+
+.ktd-conWrap #popup-number-change-info .agree-box ul li:before {background-image: url('/images/directShop/renew/ex-img-1.png');}
+#popup-number-change-info .agree-box li:nth-child(3):before {background-position: -160px 0;}
+.ktd-conWrap #popup-number-change-info .agree-block2 .agree-box li:nth-child(2):before {background-position: -80px -80px;}
+
+.ktd-conWrap #popup-number-change-info .agree-box li span {font-size: 14px; color: #161616}
+.ktd-conWrap #popup-number-change-info .agree-list {font-size: 14px; color: #6F6F6F;}
+.ktd-conWrap #popup-number-change-info .agree-list li {padding-left: 10px; margin-bottom: 12px;}
+.ktd-conWrap #popup-number-change-info .agree-list li:before {background-color: #6F6F6F;}
+
+
 
 
 

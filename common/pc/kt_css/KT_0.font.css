@@ -1,0 +1,170 @@
+@charset "utf-8";
+@font-face {font-family:'Spoqa Han Sans';src: url(/common/pc/font/SpoqaHanSans-Regular.eot); /*IE9 호환성 보기*/src: url(/common/pc/font/SpoqaHanSans-Regular.eot?#iefix) format('embedded-opentype'), /*IE 6-8*/url(/common/pc/font/SpoqaHanSans-Regular.woff) format('woff'); /*표준 브라우저*/font-weight:normal;}
+@font-face {font-family:'Spoqa Han Sans';src: url(/common/pc/font/SpoqaHanSans-Bold.eot); /*IE9 호환성 보기*/src: url(/common/pc/font/SpoqaHanSans-Bold.eot?#iefix) format('embedded-opentype'), /*IE 6-8*/url(/common/pc/font/SpoqaHanSans-Bold.woff) format('woff'); /*표준 브라우저*/font-weight:bold;}
+ 
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: url("/common/pc/font/notosanskr/NotoSansKR-Thin.woff2") format('woff2'),
+       url("/common/pc/font/notosanskr/NotoSansKR-Thin.woff") format('woff'),
+       url("/common/pc/font/notosanskr/NotoSansKR-Thin.eot"),
+       url("/common/pc/font/notosanskr/NotoSansKR-Thin.eot?#iefix") format("embedded-opentype"),
+       url("/common/pc/font/notosanskr/NotoSansKR-Thin.otf") format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url("/common/pc/font/notosanskr/NotoSansKR-Light.woff2") format('woff2'),
+       url("/common/pc/font/notosanskr/NotoSansKR-Light.woff") format('woff'),
+       url("/common/pc/font/notosanskr/NotoSansKR-Light.eot"),
+       url("/common/pc/font/notosanskr/NotoSansKR-Light.eot?#iefix") format("embedded-opentype"),
+       url("/common/pc/font/notosanskr/NotoSansKR-Light.otf") format('opentype');
+}
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 400;
+   src: url("/common/pc/font/notosanskr/NotoSansKR-Regular.woff2") format('woff2'),
+        url("/common/pc/font/notosanskr/NotoSansKR-Regular.woff") format('woff'),
+        url("/common/pc/font/notosanskr/NotoSansKR-Regular.eot"),
+		url("/common/pc/font/notosanskr/NotoSansKR-Regular.eot?#iefix") format("embedded-opentype"),
+        url("/common/pc/font/notosanskr/NotoSansKR-Regular.otf") format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 500;
+   src: url("/common/pc/font/notosanskr/NotoSansKR-Medium.woff2") format('woff2'),
+        url("/common/pc/font/notosanskr/NotoSansKR-Medium.woff") format('woff'),
+        url("/common/pc/font/notosanskr/NotoSansKR-Medium.eot"),
+		url("/common/pc/font/notosanskr/NotoSansKR-Medium.eot?#iefix") format("embedded-opentype"),
+        url("/common/pc/font/notosanskr/NotoSansKR-Medium.otf") format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 700;
+   src: url("/common/pc/font/notosanskr/NotoSansKR-Bold.woff2") format('woff2'),
+        url("/common/pc/font/notosanskr/NotoSansKR-Bold.woff") format('woff'),
+        url("/common/pc/font/notosanskr/NotoSansKR-Bold.eot"),
+		url("/common/pc/font/notosanskr/NotoSansKR-Bold.eot?#iefix") format("embedded-opentype"),
+        url("/common/pc/font/notosanskr/NotoSansKR-Bold.otf") format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 900;
+   src: url("/common/pc/font/notosanskr/NotoSansKR-Black.woff2") format('woff2'),
+        url("/common/pc/font/notosanskr/NotoSansKR-Black.woff") format('woff'),
+        url("/common/pc/font/notosanskr/NotoSansKR-Black.eot"),
+		url("/common/pc/font/notosanskr/NotoSansKR-Black.eot?#iefix") format("embedded-opentype"),
+        url("/common/pc/font/notosanskr/NotoSansKR-Black.otf") format('opentype');
+ }
+@font-face{
+	font-family:MalgunGothic_web;
+	src:url('/common/pc/font/MALGUN.eot');
+	src:url('/common/pc/font/MALGUN.eot?#iefix')format('embedded-opentype'),url('/common/pc/font/MALGUN.woff')format('woff'),url('/common/pc/font/MALGUN.ttf')format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+    font-family:"맑은 고딕", "MalgunGothic", "Malgun Gothic", MalgunGothic_web;
+    src:url('/common/pc/font/MALGUN.eot');
+    src:url('/common/pc/font/MALGUN.woff') format('woff');
+    src:url('/common/pc/font/MALGUN.TTF') format('ttf');
+}
+
+@font-face {
+	font-family:"Noto Sans Light";
+	font-style:normal;
+	font-weight:normal;
+	src:url("/common/pc/font/NotoSans-Light.eot");
+	src:url("/common/pc/font/NotoSans-Light.eot?#iefix") format("embedded-opentype"),
+		url("/common/pc/font/NotoSans-Light.woff") format("woff"),
+		url("/common/pc/font/NotoSans-Light.woff2") format("woff2"),
+		url("/common/pc/font/NotoSans-Light.otf") format("opentype");
+}
+@font-face {
+	font-family:"Noto Sans";
+	font-style:normal;
+	font-weight:normal;
+	src:url("/common/pc/font/NotoSans-Regular.eot");
+	src:url("/common/pc/font/NotoSans-Regular.eot?#iefix") format("embedded-opentype"),
+		url("/common/pc/font/NotoSans-Regular.woff") format("woff"),
+		url("/common/pc/font/NotoSans-Regular.woff2") format("woff2"),
+		url("/common/pc/font/NotoSans-Regular.otf") format("opentype");
+}
+@font-face {
+	font-family:"Noto Sans Medium";
+	font-style:normal;
+	font-weight:normal;
+	src:url("/common/pc/font/NotoSansKR-Medium.eot");
+	src:url("/common/pc/font/NotoSansKR-Medium.eot?#iefix") format("embedded-opentype"),
+	url("/common/pc/font/NotoSansKR-Medium.woff") format("woff"),
+	url("/common/pc/font/NotoSansKR-Medium.woff2") format("woff2"),
+	url("/common/pc/font/NotoSansKR-Medium.otf") format("opentype");
+}
+@font-face {
+	font-family:"Noto Sans Bold";
+	font-style:normal;
+	font-weight:normal;
+	src:url("/common/pc/font/NotoSansKR-Bold.eot");
+	src:url("/common/pc/font/NotoSansKR-Bold.eot?#iefix") format("embedded-opentype"),
+		url("/common/pc/font/NotoSansKR-Bold.woff") format("woff"),
+		url("/common/pc/font/NotoSansKR-Bold.woff2") format("woff2"),
+		url("/common/pc/font/NotoSansKR-Bold.otf") format("opentype");
+}
+
+/* Roboto */
+@font-face{
+	font-family:"Roboto Regular";
+	font-style:normal;
+	font-weight:400;
+	src:url("/common/pc/font/Roboto-Regular.eot");
+	src:url("/common/pc/font/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+		url("/common/pc/font/Roboto-Regular.woff") format("woff"),
+		url("/common/pc/font/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face{
+	font-family:"Roboto Medium";
+	font-style:normal;
+	font-weight:500;
+	src:url("/common/pc/font/Roboto-Medium.eot");
+	src:url("/common/pc/font/Roboto-Medium.eot?#iefix") format("embedded-opentype"),
+		url("/common/pc/font/Roboto-Medium.woff") format("woff"),
+		url("/common/pc/font/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face{
+	font-family:"Roboto Bold";
+	font-style:normal;
+	font-weight:700;
+	src:url("/common/pc/font/Roboto-Bold.eot");
+	src:url("/common/pc/font/Roboto-Bold.eot?#iefix") format("embedded-opentype"),
+		url("/common/pc/font/Roboto-Bold.woff") format("woff"),
+		url("/common/pc/font/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+ font-family:"KTL";
+ font-style:normal;
+ src:url("/common/pc/fonts/KTL.eot");
+ src:local("KTL"),
+   url("/common/pc/font/KTL.eot?#iefix") format('embedded-opentype'),
+   url("/common/pc/font/KTL.woff") format('woff'),
+   url("/common/pc/font/KTL.woff2") format('woff2');
+}
+
+@font-face {
+ font-family:"KTB";
+ font-weight:bold;
+ src:url("/common/pc/font/KTB.eot");
+ src:local("KTB"),
+   url("/common/pc/font/KTB.eot?#iefix") format('embedded-opentype'),
+   url("/common/pc/font/KTB.woff") format('woff'),
+   url("/common/pc/font/KTB.woff2") format('woff2');
+}

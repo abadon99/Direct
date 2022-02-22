@@ -1,0 +1,141 @@
+@charset "utf-8";
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, textarea, select, p, button, i, div{
+        font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕',Helvetica,'Apple SD Gothic Neo',Dotum,'돋움',sans-serif; line-height: 1.4;
+        font-size:15px;font-weight: 400;box-sizing: border-box;     !important;       
+    } 
+    
+html, body, #wrap{height:100%}
+.step-area{display:none;height: calc(100% - 61px)}
+h1{line-height:60px;font-size:18px;background-color: #00a2be;color:#fff;text-align:center;height: auto;    border-top: 0;}
+ input[type=text], input[type=tel],input[type=number]{width:100%;height:48px;padding:0 10px;line-height:46px; border:1px solid #f1f1f1;color:#888}
+
+::-webkit-input-placeholder{color:#aaa !important;  }
+::-ms-input-placeholder{color:#aaa !important;  }
+::placeholder{color:#aaa !important; }         
+
+.content{min-height:calc(100% - 128px);padding:0 30px}   
+    
+.div-area{ height: calc(100% - 61px);}
+.flow-area{display:table;width:100%;padding:0 30px;border-bottom:1px solid #f1f1f1}
+.flow-area > div{display:table-cell; width:50%;line-height:60px;}
+.flow-area .num {text-align: right;}
+.flow-area .num span{display:inline-block;width:28px;height: 28px; margin-left:5px;line-height:26px; border-radius: 14px;background-color: #f6f6f6;border:1px solid #e0e0e0;text-align:center;font-size:13px;font-weight:500;}
+.flow-area .num span.current{color:#fff; background-color: #00a2be;border-color:#00a2be}
+
+.input{margin:10px 0}        
+.select-area {position:relative} 
+.select-area > a{position:relative;display:block;padding: 0 50px 0 20px; line-height:46px;border:1px solid #f1f1f1;color:#aaa}
+.select-area > a:after{content:"";position:absolute; top:50%; right:20px; width:17px;height:10px;
+background:url(/images/pc/uniteOrder/ico_arrow_2.png) 0 0 no-repeat; 
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+transition: transform 0.3s ease;
+}   
+.select-area > a.open:after{
+    transform: translateY(-50%) rotate(180deg);
+    -webkit-transform: translateY(-50%) rotate(180deg);
+}
+.select-area a[class*="f-"]{position:relative;padding-left:55px;color:#888}  
+.select-area a[class*="f-"]:before{
+    content:"";position:absolute;top:5px;left:7px;width:40px;height:40px;background:url(/images/pc/uniteOrder/ico_card_list.png) 0 0 no-repeat; background-size: 400px auto ;
+}   
+
+.select-area a.open + ul{display:block;}      
+.select-area ul {display: none;position: absolute;top: 46px;width: 100%;height: 40vw;border: 1px solid rgb(241, 241, 241);background-color: rgb(255, 255, 255);overflow: scroll;max-height: 240px;}
+.select-area ul li a{padding:0;display:block;line-height:46px;border-bottom:1px solid #f1f1f1}
+.select-area ul li:last-child{border-bottom:0}
+.f-keb:before,.f-hana-i:before{background-position:0 0 !important;}
+.f-sc:before{background-position:-40px 0 !important;} 
+.f-kb:before, .f-kbi:before{background-position:-80px 0 !important;}
+.f-ki:before{background-position:-120px 0 !important;}
+.f-nh:before, .f-nh2:before,
+.f-nh-i:before{background-position:-160px 0 !important;}
+.f-shinhan:before,.f-shinhan-i:before,
+.f-jeju:before{background-position:-200px 0 !important;}
+.f-woori:before{background-position:-240px 0 !important;}
+.f-kakao:before{background-position:-280px 0 !important;}
+.f-kbank:before{background-position:-320px 0 !important;}
+.f-city:before{background-position:-360px 0 !important;}
+.f-gyeongnam:before,
+.f-busan:before{background-position:0 -40px !important;}
+.f-gwangju:before,
+.f-jeonbug:before{background-position:-40px -40px !important;} 
+.f-daegu:before{background-position:-80px -40px !important;} 
+.f-saneob:before{background-position:-120px -40px !important;}
+.f-sangho:before{background-position:-160px -40px !important;} 
+.f-saemaeul:before{background-position:-200px -40px !important;} 
+.f-suhyeob:before{background-position:-240px -40px !important;} 
+.f-sinhyeob:before{background-position:-280px -40px !important;} 
+.f-post:before{background-position:-320px -40px !important;}  
+.f-sk:before{background-position:-360px -40px !important;}
+.f-kyobo:before{background-position:0 -80px !important;}
+.f-daesin:before{background-position:-40px -80px !important;}
+.f-dongbu:before{background-position:-80px -80px !important;}
+.f-mri:before{background-position:-120px -80px !important;}
+.f-asset:before{background-position:-160px -80px !important;}
+.f-bugug:before{background-position:-200px -80px !important;}
+.f-samsung:before{background-position:-240px -80px !important;}
+.f-yeong:before{background-position:-280px -80px !important;}
+.f-yuana:before{background-position:-320px -80px !important;}
+.f-yujin:before{background-position:-80px -160px !important;}
+.f-ebest:before{background-position:-360px -80px !important;}
+.f-kef:before{background-position:0 -120px !important;}
+.f-kium:before{background-position:-40px -120px !important;}
+.f-hai:before{background-position:-80px -120px !important;}
+.f-hangug:before{background-position:-120px -120px !important;}
+.f-hanwa:before{background-position:-160px -120px !important;}
+.f-hyeondae:before{background-position:-200px -120px !important;}
+.f-boa:before{background-position:-240px -120px !important;}
+.f-hsbc:before{background-position:-280px -120px !important;}
+.f-doichi:before{background-position:-320px -120px !important;}
+.f-sanlim:before{background-position:-360px -120px !important;}
+.f-jpm:before{background-position:0 -160px !important;}
+.f-china:before{background-position:-40px -160px !important;}
+.f-sbi:before{background-position:-80px -160px !important;}
+    .btn-area {padding:40px 0;text-align:center;}
+    button.btn{line-height:48px;width:140px;text-align:center;display:inline-block;font-weight: 500;color:#fff;border-radius: 4px;background-color: #fff;background-color: #00a2be;}
+    button.btn-cancel{background-color: #999;}
+    .msg-step-1{  
+        display:flex; align-items: center; justify-content: center;height: 38vw; max-height:200px; font-size: 16px;  color:#333; word-break: keep-all;text-align: center; ;
+    }
+    /*계좌인증 요청 실패*/
+    .msg-area{ padding-top:145px; font-weight: 300;text-align:center;color:#333;font-size:15px;  background:url(/images/pc/uniteOrder/ico_fail.png) center 60px no-repeat;word-break: keep-all;}
+    .msg-success{
+        background:url(/images/pc/uniteOrder/ico_success.png) center 55px no-repeat;
+    }
+    .msg-area .t{display:block;margin-bottom:20px; font-size:20px;font-weight: 400;color:#333;word-break: keep-all;}
+    #step-2-input .h{padding: 20px 0 10px;font-size:20px;text-align:center;word-break: keep-all;color:#333;}
+    #step-2-input .msg{margin-bottom:25px;padding-bottom: 86px;font-weight: 300;color:#333;text-align:center;background:url(/images/pc/uniteOrder/img_online.png) center bottom no-repeat;}
+    #step-2-input .msg .num{color:#00a2be}
+    #step-2-input .account{padding: 15px 0;border:1px solid #f1f1f1;color:#333;} 
+    #step-2-input .account .info{text-align:center}
+    #step-2-input .account .company{display:block;line-height:40px;margin-bottom:10px;height: 40px;font-size:14px;font-weight:700;}
+    #step-2-input .account .company:before{
+        content:"";display: inline-block; margin-right:5px;vertical-align: middle;
+        width:40px;height:40px;
+    }
+    #step-2-input .account .company[class*="f-"]:before{ 
+      background:url(/images/pc/uniteOrder/ico_card_list.png) 0 0 no-repeat; background-size: 400px auto ; 
+    }
+    #step-2-input .account .cert-num{display:table;width:100%;margin-top:25px;padding:0 30px;table-layout: fixed;}
+    #step-2-input .account .cert-num span{display:table-cell;max-width:50%;vertical-align: middle;}
+    #step-2-input .account .cert-num .input-cert-num{background-color: #f6f6f6;}
+    /*팝업*/
+    .mask{position:fixed;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,0.2);}
+    .popup{display:none;position:absolute; top:50%; left:50px;right:50px;background-color: #fff;z-index:10;
+        transform: translateY(-50%); -webkit-transform: translateY(-50%);
+        padding-top:110px;
+        text-align:center;
+        background:#fff url(/images/pc/uniteOrder/ico_fail.png) center 40px no-repeat;    
+    }
+   
+    .popup .btn-area{padding:25px 0 40px 0}
+    @media all and (max-width:360px) {
+        .msg-fail .t,#step-2-input .h{font-size:18px; }
+        #step-2-input .msg{font-size:14px}
+        #step-2-input .account .cert-num{padding:0 10px;font-size:13px} 
+        #step-2-input .account .cert-num input::-webkit-input-placeholder{font-size:13px; }
+        #step-2-input .account .cert-num input::-ms-input-placeholder{font-size:13px; }
+        #step-2-input .account .cert-num input::placeholder{font-size:13px; } 
+        .popup{left:20px;right:20px}
+    }
