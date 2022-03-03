@@ -14,21 +14,67 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 
 /****************************** 다이렉트 안내 콘텐츠 ******************************/
 .ktd-directInfo {width:312px; position: fixed; top:50%; right: calc(50% - -140px); transform: translateY(-50%);}
-.ktd-directInfo .info {height:356px; background:#78d0cc url('/images/directShop/renew/thumb_character.png') no-repeat 100% 100%; border-radius: 20px; box-sizing: border-box; padding:30px 20px}
-.ktd-directInfo .info h1,
-.ktd-directInfo .info h1 * {font-size: 32px; font-weight: bold; letter-spacing: -2px;}
-.ktd-directInfo .info h1 span {position: relative;
-  background: -webkit-linear-gradient(to top, transparent 20%, #4fb9b4 20%, #4fb9b4 40%, transparent 40%);
-  background: -moz-linear-gradient(to top, transparent 20%, #4fb9b4 20%, #4fb9b4 40%, transparent 40%);
-  background: linear-gradient(to top, transparent 20%, #4fb9b4 20%, #4fb9b4 40%, transparent 40%);
+.ktd-directInfo .info {height: 640px; background: url('/images/directShop/renew/directInfo_bg.svg') no-repeat 50% 100%;}
+.ktd-directInfo .info .info-box{height: 38px; line-height: 38px; margin:20px auto 35px; text-align:center; font-size: 20px; font-weight: 500; color: #fff; border-radius: 19px;
+  background: rgb(58,204,200);
+  background: linear-gradient(135deg, rgba(58,204,200,1) 0%, rgba(43,153,222,1) 100%);
 }
+.ktd-directInfo .info .info-txt {margin-bottom:10px; font-size: 18px; line-height: 26px; text-align: center;}
+.ktd-directInfo .info .info-copy {text-align: center;}
+.ktd-directInfo .info .info-copy img {max-width: 302px;}
 
-.ktd-directInfo .link-zone {margin-top:50px}
-.ktd-directInfo .link-zone ul:after {content: ''; display: block; clear: both;}
-.ktd-directInfo .link-zone li {float:left; width:calc(50% - 20px); margin:10px 0 0 10px;}
-.ktd-directInfo .link-zone li:nth-child(odd) {margin-left: 0;}
-.ktd-directInfo .link-zone li a {display: block; height:34px; line-height: 32px; border: 1px solid #ccc; color: #000; font-size: 13px; font-weight: 500; border-radius: 8px; box-sizing: border-box;}
-.ktd-directInfo .link-zone li a:hover {background: #78d0cc; border-color: #78d0cc;}
+.ktd-directInfo .link-zone {margin-top:40px}
+.ktd-directInfo .link-zone ul {display: flex; flex-wrap: wrap;}
+.ktd-directInfo .link-zone li {width: 50%;}
+.ktd-directInfo .link-zone li:nth-child(even) a {margin-left: 12px;}
+.ktd-directInfo .link-zone li:nth-child(n+3) {margin-top:12px}
+
+.ktd-directInfo .link-zone li a {position: relative; width: 100%; height:96px; padding: 12px; border: 1px solid #D9D9D9; border-radius: 8px; text-align: left; font-size: 12px; color: #6F6F6F;}
+.ktd-directInfo .link-zone li a span {position: relative; display: inline-block; line-height: 18px; font-size: 14px; font-weight: 500; color: #000;}
+.ktd-directInfo .link-zone li a em {display: block;}
+
+.ktd-directInfo .link-zone li a:after {content: ''; position: absolute; right: 12px; bottom: 12px; width:28px; height: 28px; background-repeat: no-repeat; background-size: 28px;}
+.ktd-directInfo .link-zone li:nth-child(1) a:after {background-image: url('/images/directShop/renew/directInfo_icon01.svg');}
+.ktd-directInfo .link-zone li:nth-child(2) a:after {background-image: url('/images/directShop/renew/directInfo_icon02.svg');}
+.ktd-directInfo .link-zone li:nth-child(3) a:after {background-image: url('/images/directShop/renew/directInfo_icon03.svg');}
+.ktd-directInfo .link-zone li:nth-child(4) a:after {background-image: url('/images/directShop/renew/directInfo_icon04.svg');}
+
+.ktd-directInfo .link-zone li a:hover,
+.ktd-directInfo .link-zone li a:focus,
+.ktd-directInfo .link-zone li a:active {border: none; padding:13px; color: #fff;
+  background: rgb(58,204,200);
+  background: linear-gradient(135deg, rgba(58,204,200,1) 0%, rgba(58,187,204,1) 100%);
+}
+.ktd-directInfo .link-zone li a:hover span,
+.ktd-directInfo .link-zone li a:focus span,
+.ktd-directInfo .link-zone li a:active span {color: #fff;}
+
+.ktd-directInfo .link-zone li a:hover span:after,
+.ktd-directInfo .link-zone li a:focus span:after,
+.ktd-directInfo .link-zone li a:active span:after {content: ""; position: relative; top: -1px; display: inline-block; width: 6px; height: 6px; border: 2px solid #fff; margin-left: 2px; border-top: 0; border-right: 0; transform: rotate(-135deg);}
+
+.ktd-directInfo .link-zone li:nth-child(1) a:hover:after,
+.ktd-directInfo .link-zone li:nth-child(1) a:focus:after,
+.ktd-directInfo .link-zone li:nth-child(1) a:active:after {background-image: url('/images/directShop/renew/directInfo_icon01_on.svg');}
+.ktd-directInfo .link-zone li:nth-child(2) a:hover:after,
+.ktd-directInfo .link-zone li:nth-child(2) a:focus:after,
+.ktd-directInfo .link-zone li:nth-child(2) a:active:after {background-image: url('/images/directShop/renew/directInfo_icon02_on.svg');}
+.ktd-directInfo .link-zone li:nth-child(3) a:hover:after,
+.ktd-directInfo .link-zone li:nth-child(3) a:focus:after,
+.ktd-directInfo .link-zone li:nth-child(3) a:active:after {background-image: url('/images/directShop/renew/directInfo_icon03_on.svg');}
+.ktd-directInfo .link-zone li:nth-child(4) a:hover:after,
+.ktd-directInfo .link-zone li:nth-child(4) a:focus:after,
+.ktd-directInfo .link-zone li:nth-child(4) a:active:after {background-image: url('/images/directShop/renew/directInfo_icon04_on.svg');}
+
+@media all and (max-height: 910px) {
+	.ktd-directInfo .info {max-height: 60vh; background-size: auto 90%;}
+  .ktd-directInfo .info .info-copy img {max-width: 80%;}
+  .ktd-directInfo .link-zone {margin-top:5vh}
+}
+@media all and (max-height: 680px) {
+  .ktd-directInfo .info .info-copy img {max-width: 70%;}
+  .ktd-directInfo .link-zone li a {height:60px}
+}
 
 /* as-is button reset */
 .ktd-conWrap a.btn,
@@ -52,7 +98,8 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-conWrap button.btn:disabled,
 .ktd-conWrap input.btn:disabled,
 .ktd-conWrap label.btn:disabled,
-.ktd-conWrap span.btn:disabled {background-color: #E0E0E0; color: #A8A8A8;}
+.ktd-conWrap span.btn:disabled,
+.ktd-conWrap a.btn.disabled {background-color: #E0E0E0; color: #A8A8A8; cursor: default;}
 
 .ktd-conWrap a.btn.medium,
 .ktd-conWrap button.btn.medium,
@@ -85,7 +132,8 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-conWrap form button.btn:disabled,
 .ktd-conWrap form input.btn:disabled,
 .ktd-conWrap form label.btn:disabled,
-.ktd-conWrap form span.btn:disabled {background-color: #E0E0E0; color: #A8A8A8;}
+.ktd-conWrap form span.btn:disabled,
+.ktd-conWrap form a.btn.disabled {background-color: #E0E0E0; color: #A8A8A8; cursor: default;}
 
 .ktd-conWrap form a.btn.white,
 .ktd-conWrap form button.btn.white,
@@ -118,6 +166,10 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-selfLink a + a {margin-top:12px}
 .ktd-selfLink a span {position: relative; padding-right: 14px; height: auto; line-height: inherit; color: #1DA8A5; font-weight: 500;}
 .ktd-selfLink a span:after {content: ""; position: absolute; width: 6px; height: 6px; top: calc(50% + 1px); right: 0; border: 2px solid #1DA8A5; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-135deg);}
+
+.ktd-selfLink .disabled {cursor: default;}
+.ktd-selfLink .disabled span {color: #A8A8A8;}
+.ktd-selfLink .disabled span:after {border-color: #A8A8A8;}
 
 /* common - toggle */
 .ktd-conWrap .toggle_box {display: block; margin-top:40px; text-align: left; border-bottom: 0;}
@@ -256,10 +308,12 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-depthMenu-wrap ul li a:active,
 .ktd-depthMenu-wrap ul li.on a {color:#01A69F; font-weight: bold;}
 
-.ktd-depthMenu-wrap .btn-more {position: absolute; top:0; right: 0; width:40px; height:40px; border-left: 1px solid #ccc; box-sizing: border-box; background:#fff; z-index: 1;}
+.ktd-depthMenu-wrap .btn-more {position: absolute;top: 50%;right: 0;transform: translateY(-50%);width:40px;height: calc(100% - 12px);box-sizing: border-box;background:#fff;z-index: 1;}
+.ktd-depthMenu-wrap .btn-more:before {content: ''; position: absolute; top:50%; left: 0; transform: translateY(-50%); width: 1px; height:calc(100% - 10px); background-color:#D9D9D9;}
 .ktd-depthMenu-wrap .btn-more:after {content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(135deg); width: 8px; height: 8px; border-top: 2px solid #A8A8A8; border-right: 2px solid #A8A8A8; display: inline-block; transition: all 0.3s}
 
 .ktd-depthMenu.on ul {transform: none !important; flex-wrap: wrap;}
+.ktd-depthMenu.on .ktd-depthMenu-wrap .btn-more:before {height:calc(100% - 22px);}
 .ktd-depthMenu.on .ktd-depthMenu-wrap .btn-more:after {transform: translate(-50%, -50%) rotate(-45deg);}
 
 /****************************** 메인 페이지 ******************************/
@@ -269,11 +323,11 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-conWrap .main-swiper .swiper-wrapper > div {border-radius:0;}
 .ktd-conWrap #main-contents .main-swiper {margin:0; padding-left: 0;}
 .ktd-conWrap #main-contents .main-swiper .swiper-container {padding-bottom: 0; box-sizing: content-box; height: 360px;}
-.ktd-conWrap #main-contents .main-swiper .swiper-slide a {padding: 40px 20px;}
+.ktd-conWrap #main-contents .main-swiper .swiper-slide a {padding: 32px 20px 24px;}
 .ktd-conWrap #main-contents .main-swiper p.t,
 .ktd-conWrap #main-contents .main-swiper p.t-2,
 .ktd-conWrap #main-contents .main-swiper p.t-3 {color:#fff}
-.ktd-conWrap #main-contents .main-swiper p.t {margin-bottom:16px; font-size: 32px; line-height: 38px; font-weight: bold;}
+.ktd-conWrap #main-contents .main-swiper p.t {margin-bottom:12px; font-size: 32px; line-height: 38px; font-weight: bold;}
 .ktd-conWrap #main-contents .main-swiper p.t-2,
 .ktd-conWrap #main-contents .main-swiper p.t-3 {font-weight: 500;}
 .ktd-conWrap #main-contents .main-swiper .opt {bottom:24px; left: 20px; width:auto; background:rgba(0, 0, 0, 0.5); border-radius: 5px; padding:1px 7px 3px; z-index: 1; min-width: 58px;}
@@ -421,8 +475,8 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 
 .ktd-main-section-3 .section-body .flag + .headcopy {margin-top: 10px;}
 .ktd-main-section-3 .section-body .flag span {display:inline-block; height: 20px; line-height: 20px; padding:0 5px; font-size: 10px; border-radius: 5px;}
-.flag01 {color:#fff; background:#EB6785;}
-.flag02 {color:#1DA8A5; background:#FFE9A2;}
+.ktd-main-section-3 .flag01 {color:#fff; background:#EB6785;}
+.ktd-main-section-3 .flag02 {color:#1DA8A5; background:#FFE9A2;}
 
 .ktd-main-section-3 .section-body .headcopy {font-size:20px; font-weight: bold; color: #fff;}
 
@@ -452,33 +506,14 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 
 
 .ktd-self-join {margin-top:40px; display: flex;}
-.ktd-self-join > a {position: relative; flex: 1; text-align: left;}
-.ktd-self-join > a + a {margin-left: 16px;}
-.ktd-self-join div {position: relative; flex: 1; padding: 16px; border-radius: 12px; color: #fff;}
-.ktd-self-join div p {position:relative; font-size: 16px; font-weight: bold;}
+.ktd-self-join > button {position: relative; flex: 1; text-align: left;}
+.ktd-self-join > button + button {margin-left: 16px;}
 
-.ktd-self-join .self-usim {
-  background: rgb(133,221,218);
-  background: -moz-linear-gradient(left,  rgba(133,221,218,1) 0%, rgba(58,204,200,1) 100%);
-  background: -webkit-linear-gradient(left,  rgba(133,221,218,1) 0%,rgba(58,204,200,1) 100%);
-  background: linear-gradient(to right,  rgba(133,221,218,1) 0%,rgba(58,204,200,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85ddda', endColorstr='#3accc8',GradientType=1 );
-}
-.ktd-self-join .self-data {
-  background: rgb(172,158,237);
-  background: -moz-linear-gradient(left,  rgba(172,158,237,1) 0%, rgba(131,116,211,1) 100%);
-  background: -webkit-linear-gradient(left,  rgba(172,158,237,1) 0%,rgba(131,116,211,1) 100%);
-  background: linear-gradient(to right,  rgba(172,158,237,1) 0%,rgba(131,116,211,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ac9eed', endColorstr='#8374d3',GradientType=1 );
-}
+.ktd-self-join span {position: relative; flex: 1; padding: 16px; border-radius: 12px; color: #fff; font-size: 16px; font-weight: bold; text-align: center; display: block; width: 100%; line-height: 21px;}
+.ktd-self-join span.self-usim {background-color: #3ACCC8;}
+.ktd-self-join span.self-data {background-color: #A092E6;}
 
-.ktd-self-join div p:after {content:''; position: absolute; top:50%; right: 0; transform: translateY(-50%); width:16px; height: 16px; background: url('/images/directShop/renew/icon_arrow_Usim.svg') no-repeat 0 0; background-size: 100%;}
-.ktd-self-join .self-data p:after {background-image: url('/images/directShop/renew/icon_arrow_Data.svg');}
-
-@media all and (max-width: 360px) {
-	.ktd-self-join div p {font-size: 14px;}
-}
-
+.ktd-self-join > button:disabled span {color:#A8A8A8; background-color: #E0E0E0; font-weight: 500;}
 
 /* 가입신청 - 이럴때 다이렉트가 필요합니다 */
 .ktd-info-list li {position: relative; display: table; width: 100%; padding:20px 0 20px 96px; min-height: 120px; color: #000;}
@@ -606,19 +641,27 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-eventWrap .topInfo .date {color:#000;}
 .ktd-eventWrap .topInfo .subject + .date {margin-top:8px; color: #6F6F6F;}
 
-.ktd-eventWrap .topInfo .sort-area {position: absolute; top: 0; right: 0;}
+.ktd-eventWrap .topInfo .sort-area {position: absolute; top: 0; right: 0; z-index: 10;}
 .ktd-eventWrap .topInfo .sort-area .select-area > a {padding-right: 24px; font-size: 14px; color: #121619; line-height: normal;}
 .ktd-eventWrap .topInfo .sort-area .select-area > a:after {content: ""; position: absolute; width: 6px; height: 6px; top: calc(50% + -1px); right: 2px; border: 2px solid #000; border-top: 0; border-right: 0; transform: translateY(-50% ) rotate(-45deg); transition: all 0.3s; background:none;}
 .ktd-eventWrap .topInfo .select-area ul {top:35px; left: inherit; right: -15px;}
 
 .ktd-eventList > .item + .item {margin-top:32px;}
 .ktd-eventList .item > a {display: block;}
-.ktd-eventList .item > a img {width: 100%; max-width: 100%;}
+.ktd-eventList .item > a img {width: 100%; max-width: 100%; border-radius: 12px;}
 .ktd-eventList .info {margin-top:8px;}
 .ktd-eventList .date {color:#6F6F6F;}
 .ktd-eventList .ktd-selfLink {margin-top: 4px !important;}
 .ktd-eventList .ktd-selfLink span {color: #121619;}
 .ktd-eventList .ktd-selfLink span:after {border-color: #121619;}
+
+/* 리스트 없는 경우 */
+.ktd-no-list {position: relative; padding: 116px 0; text-align: center;}
+.ktd-no-list:before {content: ''; display: inline-block; width: 80px; height: 80px; background-repeat: no-repeat; background-position: 0 0; background-size: 100% auto;}
+.ktd-no-list span {display: block; margin-top:20px; font-size: 16px; color: #6F6F6F;}
+.ktd-no-list.type01:before {background-image: url('/images/directShop/renew/icon_no-list01.svg');}
+.ktd-no-list.type02:before {background-image: url('/images/directShop/renew/icon_no-list02.svg');}
+.ktd-no-list.type03:before {background-image: url('/images/directShop/renew/icon_no-list03.svg');}
 
 /* 이벤트 상세 */
 .ktd-eventView {margin:16px -20px 0;}
@@ -686,7 +729,7 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-conWrap .benefit-box + .benefit-box {margin-top:16px;}
 
 .ktd-conWrap .benefit-box .benefit-txt {text-align: center;}
-.ktd-conWrap .benefit-box .benefit-txt span {display: inline-block; height: 30px; line-height: 28px; padding: 0 18px; min-width: 72px; border-radius: 15px; font-weight: bold; color: #fff; background:#1da8a5;}
+.ktd-conWrap .benefit-box .benefit-txt span {display: inline-block; height: 30px; line-height: 30px; padding: 0 18px; min-width: 72px; border-radius: 15px; font-weight: bold; color: #fff; background:#1da8a5;}
 
 .ktd-conWrap .benefit-box .headcopy {margin:12px 0 24px; font-size: 16px; font-weight: 500; color: #000;}
 
@@ -783,6 +826,14 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 @media all and (max-width: 450px) {
 	.ktd-conWrap .ui-popup {max-width: 100%;}
 }
+
+/*
+.ktd-conWrap .popup {left: inherit; max-width: 448px; transition: none;}
+.ktd-conWrap .popup.active {transform: none !important;}
+
+.ktd-conWrap .popup header {position: relative}
+.ktd-conWrap .popup header h1 {width: auto;}
+*/
 
 /* 조건 선택하고 요금제 추천받기 */
 .ktd-conWrap #prodViewForm {display: block;}
@@ -1002,7 +1053,8 @@ a.btn-re-charge{margin:30px 0 20px;text-align:left;padding: 0 20px;background-co
 
 dl[class*=list-charge] dt, dl[class*=list-charge] dd {padding:24px; border:1px solid #bbb;}
 dl[class*=list-charge] dt {padding-bottom:0; border-bottom: none; border-radius: 12px 12px 0 0;}
-dl[class*=list-charge] dd.area-top, dl[class*=list-charge] dd.area {padding:0 24px; border-top:none; border-bottom: none; display: block;}
+dl[class*=list-charge] dd.area-top, dl[class*=list-charge] dd.area {padding:0 24px; border-top:none; border-bottom: none; display: none;}
+dl[class*=list-charge] dd.area-top {display: block;}
 dl[class*=list-charge] dd.area-btm {padding-top:24px; border-top:none; border-radius: 0 0 12px 12px; background-color: #fff;}
 
 dl[class*=list-charge] dd.area-top .add-discount {margin-bottom: 8px; padding-top:8px; color: #161616;}
@@ -1011,7 +1063,7 @@ dl[class*=list-charge] dt.selected + dd{border:1px solid #bbb;border-top:none;bo
 dl[class*=list-charge] dt.selected + dd + .area {display: block; margin:0; border-radius: 0; border-right: 1px solid #bbb; border-left: 1px solid #bbb;}
 dl[class*=list-charge] .area .box {padding:12px 0 0}
 
-dl[class*=list-charge] dd.area-top + .area {border-color: #bbb; border-radius: 0; margin-bottom: 0;}
+dl[class*=list-charge] dd.area-top + .area {border-color: #bbb; border-radius: 0; margin-bottom: 0; display: block;}
 dl[class*=list-charge] dd.area-top + .area .price {margin-top: 0;}
 
 [class*=list-charge] .area .line,
@@ -1037,6 +1089,7 @@ a.btn-re-charge {margin:32px 0 24px; height: 48px; line-height: 48px; background
 a.btn-re-charge span {position: relative; padding-right: 20px; font-size: 16px; font-weight: bold;}
 a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid #fff;border-top: 0;border-left: 0;transform: rotate(-45deg) translate(0,-2px);display: inline-block;margin-left: 6px;}
 
+/* 가입신청 신규 */
 .ktd-join dl[class*=list-charge-2] dt {padding:20px 24px; border: 1px solid #D9D9D9; border-radius: 12px; cursor: default;}
 .ktd-join dl[class*=list-charge-2] dt:after {display: none;}
 .ktd-join dl[class*=list-charge-2] dt > a {font-size: 14px; color: #6F6F6F; font-weight: 400; outline: none;}
@@ -1152,7 +1205,7 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ktd-conWrap input[type=tel],
 .ktd-conWrap input[type=text],
 .ktd-conWrap input[type=url],
-.ktd-conWrap input[type=time] {font-size:16px; height: 40px; line-height: 40px; border-color: #D9D9D9; padding-left: 0;}
+.ktd-conWrap input[type=time] {font-size:16px; height: 40px; line-height: 40px; border-color: #D9D9D9; padding-left: 0; font-family: 'Noto Sans KR';}
 
 .ktd-conWrap input[type=date]:-ms-input-placeholder,
 .ktd-conWrap input[type=email]:-ms-input-placeholder,
@@ -1194,7 +1247,7 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ktd-conWrap input[type=url]::placeholder,
 .ktd-conWrap input[type=time]::placeholder {opacity: 1; color: #A8A8A8;}
 
-.ktd-conWrap select {height: 40px; line-height: 40px; font-size: 16px; border-color: #D9D9D9; background-image: url('/images/directShop/renew/icon-select.svg'); background-size: 20px 20px;}
+.ktd-conWrap select {height: 40px; line-height: 40px; font-size: 16px; border-color: #D9D9D9; background-image: url('/images/directShop/renew/icon-select.svg'); background-size: 20px 20px; margin-right:16px; padding-left: 0; font-family: 'Noto Sans KR';}
 .ktd-conWrap select.placeholder {color: #A8A8A8;}
 
 .ktd-conWrap .select-input-wrap {margin-top: 32px;}
@@ -1286,10 +1339,11 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ktd-conWrap #top-tab>.tab-nav li.active ~ li a em {display: block;}
 
 .ktd-conWrap #top-tab>.tab-nav li.active ~ li:before {height:1px;
-  background: #fff;
+  /* background: #fff;
   background-image: radial-gradient(#D9D9D9 3px, transparent 0);
   background-size: 6px auto;
-  background-position: 0px 0px;
+  background-position: 0px 0px; */
+  background:repeating-linear-gradient(90deg, white, white 4px, #D9D9D9 4px, #D9D9D9 8px);
 }
 .ktd-conWrap #top-tab>.tab-nav li button:before,
 .ktd-conWrap #top-tab>.tab-nav li a:before {content: ''; display: block; width: 20px; height: 20px; margin: 0 auto 4px;
@@ -1452,10 +1506,35 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ktd-conWrap #popup-number-change-info .agree-list li {padding-left: 10px; margin-bottom: 12px;}
 .ktd-conWrap #popup-number-change-info .agree-list li:before {background-color: #6F6F6F;}
 
+/* USIM */
+.ktd-conWrap .usim-number {padding-left: 82px;}
+.ktd-conWrap .usim-number .number,
+.ktd-conWrap .usim-number .number span {height: 40px; line-height: 40px;}
+.ktd-conWrap .usim-number .number span:first-child {margin-right: 16px;}
+.ktd-conWrap .usim-number + .ktd-btn-block {margin-top: 24px;}
+
+.ktd-usim-ex {margin-top:64px;}
+.ktd-usim-ex span {position: relative; font-size: 14px; color: #6F6F6F; padding-left: 11px;}
+.ktd-usim-ex span:before {content: ''; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #6F6F6F;}
+.ktd-usim-ex > div {margin-top:12px; padding:24px 20px; border: 1px solid #000; border-radius: 12px;}
+.ktd-usim-ex > div img {width: 100%;}
+
+/* 보안문자 - 토스트 */
+.ktd-conWrap .ui-popup.notmember .body,
+.ktd-conWrap .ui-popup.popup-usim-capture .body {padding-top: 85px; }
+
+.ktd-conWrap .ui-popup.notmember .notice-list,
+.ktd-conWrap .ui-popup.popup-usim-capture .notice-list {margin-bottom: 20px;}
+
+.ktd-conWrap .ui-popup.notmember .notice-list li,
+.ktd-conWrap .ui-popup.popup-usim-capture .notice-list li {margin-bottom: 12px;}
 
 
 
+.ktd-conWrap .ad_inp01 {margin:16px 0 0}
 
+.ktd-conWrap .ui-popup.notmember .btn-bottom,
+.ktd-conWrap .ui-popup.popup-usim-capture .btn-bottom {padding:0 !important}
 
 
 

@@ -24,24 +24,24 @@
 
     <!-- ktd : 추가 css -->
     <link rel="stylesheet" href="/directShop/css/ktDirect.css">
+
+	<!-- ktd : 추가 js -->
+    <script src="/directShop/js/ui/pub_ktDirect.js" type="text/javascript"></script>
 </head>
 <body id="main">
     <!-- ktd : Direct 안내 -->
     <div class="ktd-directInfo">
         <div class="info">
-            <h1>
-                지금 <br>
-                KT 다이렉트에서 <br>
-                요금제 <span>바로가입!</span>
-            </h1>
+            <div class="info-box">매장 방문 없이 바로 가능!</div>
+            <p class="info-txt">자급제&middot;중고&middot;해외직구폰 사용 고객이<br>쉽고 빠르게 개통할 수 있는</p>
+            <div class="info-copy"><img src="/images/directShop/renew/directInfo_tit.png" alt="온라인 유심가입 kt다이렉트"></div>
         </div>
         <div class="link-zone">
-            <h2><img src="/images/directShop/renew/thumb_kt.png" alt="KT 다이렉트"></h2>
             <ul>
-                <li><a href="#">유심가입</a></li>
-                <li><a href="#">데이터 쉐어링 가입</a></li>
-                <li><a href="#">무약정플렌 요금제 변경</a></li>
-                <li><a href="#">셀프개통(유심보유)</a></li>
+                <li><a href="#"><span>유심가입</span><em>(유심 미보유)</em></a></li>
+                <li><a href="#"><span>셀프개통</span><em>(유심 보유)</em></a></li>
+                <li><a href="#"><span>데이터 쉐어링</span><em>(유심 보유)</em></a></li>
+                <li><a href="#"><span>다이렉트<br>요금제 변경</span></a></li>
             </ul>
         </div>
     </div>
@@ -137,9 +137,9 @@
                     </li>
                 </ul>
                 <div class="swiper-scrollbar"></div>
-                <button type="button" class="btn-more">
+                <a href="javascript:;" class="btn-more">
                     <span class="hide">메뉴 펼치기</span>
-                </button>
+                </a>
             </div>
         </div>
         <!-- //ktd : 2depth Menu -->
@@ -147,40 +147,79 @@
         <!-- ktd : directShop>smart>directUsim.main.jsp 메인 컨텐츠 -->
         <div id="main-contents" >
             <div class="main-swiper">
+                <!-- 코너영역 526 -->
                 <style>
-                    .main-slide .slide-01 {
+                    .main-slide .slide-data {
+                        background-color: #FCD6A1;
                         background-image:
-                            url('/images/directShop/renew/thumb/thumb_main_banner01.png'),
-                            url('/images/directShop/renew/thumb/thumb_main_banner01_bg.png');
-                        background-repeat:no-repeat, repeat-x;
-                        background-position:100% 100%, 100% 100%;
-                        background-size:auto 60%, auto 100%;
+                            url('/images/directShop/renew/thumb/thumb_main_slide01.png');
+                        background-repeat:no-repeat;
+                        background-position:100% 100%;
+                        background-size:360px auto;
                     }
-                    .main-slide .slide-02 {
+                    .main-slide .slide-direct {
+                        background-color: #B3E3AD;
                         background-image:
-                            url('/images/directShop/renew/thumb/thumb_main_banner01.png'),
-                            url('/images/directShop/renew/thumb/thumb_main_banner01_bg.png');
-                        background-repeat:no-repeat, repeat-x;
-                        background-position:100% 100%, 100% 100%;
-                        background-size:auto 60%, auto 100%;
+                            url('/images/directShop/renew/thumb/thumb_main_slide02.png');
+                        background-repeat:no-repeat;
+                        background-position: calc(100% - -38px) 0;
+                        background-size: 360px auto;
                     }
+                    .main-slide .slide-direct strong {color: #EB3E3E; font-weight: bold;}
+
+
+                    .main-slide .slide-gs25 {
+                        background-color: #C5EFFC;
+                        background-image:
+                            url('/images/directShop/renew/thumb/thumb_main_slide03-2.png'),
+                            url('/images/directShop/renew/thumb/thumb_main_slide03-1.png');
+                        background-repeat:no-repeat, no-repeat;
+                        background-position:calc(100% + 27px) 100%, 20px calc(100% + 24px);
+                        background-size: 187px auto, 273px auto;
+                    }
+                    .main-slide .slide-gs25 .t img {display: block; margin-bottom: 10px; max-width: 76px;}
                 </style>
                 <div class="swiper-container main-slide">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide slide-01">
+                        <div class="swiper-slide slide-data">
                             <div>
-                                <a href="/direct/directEvent.do#event-month" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^상단^빅배너^다이렉트1월이벤트');">
+                                <a href="/direct/directEvent.do#event-month" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^상단^빅배너^데이터쉐어링하자');">
                                     <p class="t">데이터 쉐어링하자!</p>
-                                    <p class="t-3">다양한 스마트 기기에서도 <br>함께 사용할 수 있는 <br>데이터 공유 서비스</p>
+                                    <p class="t-3">
+                                        다양한 스마트 기기에서도<br>
+                                        함께 사용할 수 있는<br>
+                                        데이터 공유 서비스
+                                    </p>
                                 </a>
                             </div>
                         </div>
 
-                        <div class="swiper-slide slide-02">
+                        <div class="swiper-slide slide-direct">
                             <div>
-                                <a href="/direct/directEvent.do#event-month" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^상단^빅배너^다이렉트1월이벤트');">
-                                    <p class="t">배경 이미지 별도</p>
-                                    <p class="t-3">배너 이미지 별도<br>배너 이미지 별도<br>배너 이미지 별도</p>
+                                <a href="/direct/directEvent.do#event-month" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^상단^빅배너^kt다이렉트혜택');">
+                                    <p class="t">
+                                        kt 다이렉트 가입 시<br>
+                                        <strong>최대 28만원</strong> 혜택 제공!
+                                    </p>
+                                    <p class="t-3">
+                                        단말보험부터 사은품까지<br>
+                                        다이렉트에서!
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slide-gs25">
+                            <div>
+                                <a href="/direct/directEvent.do#event-month" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^상단^빅배너^gs25');">
+                                    <p class="t">
+                                        <img src="/images/directShop/renew/thumb/thumb_main_slide03-tit.png" alt="GS25">
+                                        디지털 생필품, kt USIM
+                                    </p>
+                                    <p class="t-3">
+                                        택배 기다리지 말고<br>
+                                        전국 GS25 매장에서 만나보세요.
+                                    </p>
                                 </a>
                             </div>
                         </div>
@@ -259,7 +298,7 @@
                             <a href="#">
                                 <dl class="join-plan">
                                     <dt>
-                                        무약정플랜 <br>
+                                        다이렉트 <br>
                                         요금제 변경
                                     </dt>
                                     <dd>
@@ -321,7 +360,7 @@
                             <a href="#">
                                 <dl class="join-plan">
                                     <dt>
-                                        무약정플랜 <br>
+                                        다이렉트 <br>
                                         요금제 변경
                                     </dt>
                                     <dd>

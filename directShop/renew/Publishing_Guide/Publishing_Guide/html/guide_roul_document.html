@@ -28,6 +28,8 @@
 	<script src="/directShop/js/lib/swiper.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
 
+	<script src="/directShop/js/ui/pub_ktDirect.js" type="text/javascript"></script>
+
     <script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shCore.js"></script>
     <script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shBrushJScript.js"></script>
     <script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shBrushCss.js"></script>
@@ -90,27 +92,41 @@
 
 								&lt;!-- ktd : 추가 css --&gt;
 								&lt;link rel=&quot;stylesheet&quot; href=&quot;/directShop/css/ktDirect.css&quot;&gt;
+
+								&lt;!-- ktd : 추가 js --&gt;
+								&lt;script src=&quot;/directShop/js/ui/pub_ktDirect.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 							&lt;/head&gt;
 							&lt;body&gt;
 								&lt;!-- ktd : Direct 안내 --&gt;
-								&lt;div class=&quot;ktd-directInfo&quot;&gt;Direct 안내 신규 영역&lt;/div&gt;
+								&lt;div class=&quot;ktd-directInfo&quot;&gt;
+									Direct 안내 신규 영역
+								&lt;/div&gt;
 								&lt;!-- //ktd : Direct 안내 --&gt;
 
 								&lt;!-- ktd : 사이트 영역 --&gt;
 								&lt;div class=&quot;ktd-conWrap&quot;&gt;
-									&lt;header&gt;Header 영역&lt;/header&gt;
-
-									&lt;div id=&quot;menu&quot;&gt;Menu 영역&lt;/div&gt;
-
-									&lt;div id=&quot;content&quot;&gt;Content 영역&lt;/div&gt;
-
-									&lt;div class=&quot;footer&quot;&gt;Footer 영역&lt;/div&gt;
+									기존 as-is 소스
 								&lt;/div&gt;
 								&lt;!-- //ktd : 사이트 영역 --&gt;
 							&lt;/body&gt;
 							&lt;/html&gt;
 						</pre>
 					</div>
+
+					<h4 class="s_subTitle01" style="color:#f00">공통 적용 사항</h4>
+					<ul class="desc_list01">
+						<li>"head" 영역 제일 하단으로 "ktDirect.css, pub_ktDirect.js" 추가</li>
+						<li>"body" 에 추가되는 "ktd-wrap"은 상기 pub_ktDirect.js에서 적용됨(별도 추가 작업 없음)</li>
+						<li>모든 페이지(새창등 별도페이지 제외) 상기 공통사항 예시처럼<br>
+							&lt;div class=&quot;ktd-directInfo&quot;&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;Direct 안내 신규 영역<br>
+							&lt;/div&gt;<br>
+							&lt;div class=&quot;ktd-conWrap&quot;&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;기존 as-is 소스<br>
+							&lt;/div&gt;<br>
+							"다이렉트 안내 영역"과 기존 as-is가 표시될 영역이 구분 되어야 함
+						</li>
+					</ul>
 				</section>
 
 				<section class="s_block">
@@ -120,6 +136,12 @@
 					<div class="s_content">
 						<div class="ktd-guide-wrap-info">
 							body : class="ktd-wrap"
+
+							<div>
+								작업영역 : div class="ktd-directInfo"
+
+								<div>"다이렉트 안내" 영역</div>
+							</div>
 							<div>
 								작업영역 : div class="ktd-conWrap"
 
@@ -147,6 +169,12 @@
 					<div class="s_content">
 						<div class="ktd-guide-wrap-info">
 							body : class="ktd-wrap"
+
+							<div>
+								작업영역 : div class="ktd-directInfo"
+
+								<div>"다이렉트 안내" 영역</div>
+							</div>
 							<div>
 								작업영역 : div class="ktd-conWrap"
 
