@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ko" class="kt5g">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<title> [KT 공식] 요금은 비우고 혜택은 채웁니다. KT 다이렉트</title>
+
+	<!-- style -->
+	<link rel="stylesheet" href="/directShop/css/default.css">
+    <link rel="stylesheet" href="/directShop/css/contents.css">
+    <link rel="stylesheet" href="/directShop/css/popup.css">
+    <link rel="stylesheet" href="/directShop/css/swiper.css">
+
+    <!-- js -->
+    <script type="text/javascript"  src="/directShop/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="/directShop/js/ui/common_front.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/ui.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/pub.js" type="text/javascript"></script>
+	<script src="/directShop/js/lib/swiper.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="/oneMinute/js/oneMinuteCommon.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+	<!-- ktd : 추가 css -->
+    <link rel="stylesheet" href="/directShop/css/ktDirect.css">
+
+	<!-- ktd : 추가 js -->
+    <script src="/directShop/js/ui/pub_ktDirect.js" type="text/javascript"></script>
+</head>
+<body>
+	<!-- ktd : Direct 안내 -->
+    <div class="ktd-directInfo">
+        <div class="info">
+            <div class="info-box">매장 방문 없이 바로 가능!</div>
+            <p class="info-txt">자급제&middot;중고&middot;해외직구폰 사용 고객이<br>쉽고 빠르게 개통할 수 있는</p>
+            <div class="info-copy"><img src="/images/directShop/renew/directInfo_tit.png" alt="온라인 유심가입 kt다이렉트"></div>
+        </div>
+        <div class="link-zone">
+            <ul>
+                <li><a href="#"><span>유심가입</span><em>(유심 미보유)</em></a></li>
+                <li><a href="#"><span>셀프개통</span><em>(유심 보유)</em></a></li>
+                <li><a href="#"><span>데이터 쉐어링</span><em>(유심 보유)</em></a></li>
+                <li><a href="#"><span>다이렉트<br>요금제 변경</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //ktd : Direct 안내 -->
+
+	<!-- ktd : 사이트 영역 -->
+    <div class="ktd-conWrap">
+        <div id="contents" class="new-contents">
+            <!-- 고객 인증 -->
+            <div class="content-cetify user">
+                <h1 class="tit"><button type="button" name="button" id="titleNm" class="back" aria-label="인증, 이전화면으로 이동">인증</button></h1>
+                <div id="content">
+                    <div class="cetify-wrap">
+                        <div class="ktd-block"><!-- ktd : ktd-block 추가 -->
+                            <div class="block-top">
+                                <strong>고객님의 정보를<br>입력해주세요</strong>
+                            </div>
+                        </div>
+
+                        <!-- ktd : ktd-other-auth 신규 -->
+                        <div class="ktd-other-auth">
+                            <ul class="tab-nav" data-effect="tab">
+                                <li class="active" id="">
+                                    <a href="javascript:void(0)" title="선택됨" role="button" id="no-default-go">핸드폰 인증</a>
+                                </li>
+                                <li class="" id="">
+                                    <a href="javascript:void(0)" title="" role="button" id="no-card-go">PASS+계좌인증</a>
+                                </li>
+                                <li class="" id="">
+                                    <a href="javascript:void(0)" title="" role="button" id="no-cp-naver-go">네이버 인증서</a>
+                                </li>
+                                <li class="" id="">
+                                    <a href="javascript:void(0)" title="" role="button" id="no-phone-go">신용카드</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //ktd : ktd-other-auth 신규 -->
+
+                        <div id="normal-input-area" class="section-area">
+                            <div class="member-input">
+                                <div class="row del-area">
+                                    <span class="user-name">
+                                        <input type="text" id="userName" title="이름 입력" placeholder="이름">
+                                    </span>
+                                </div>
+                                <div class="row" id="jumin-area1">
+                                    <span class="jumin">
+                                        <input type="tel" id="birthDate" maxlength="6" title="생년월일 6자리" placeholder="생년월일 6자리">
+                                    </span>
+                                    <span class="line"></span>
+                                    <span class="sex">
+                                        <input type="tel" id="jumin2" maxlength="1" title="주민등록번호 뒷자리 1자리 입력">
+                                    </span>
+                                    <input type="password" value="111111" title="주민등록번호 뒤 여섯자리" readonly="">
+                                </div>
+                                <div class="row">
+                                    <span class="phone">
+                                        <input type="tel" id="ktCertCustTel" maxlength="11" placeholder="KT 핸드폰번호 ‘-’  없이 입력" title="KT 핸드폰번호">
+                                    </span>
+                                </div>
+                                <!-- 외국인 인증정보 -->
+                                <div id="foreignerInfo" style="display: none;">
+                                    <div class="row">
+                                        <span class="foreign">
+                                            <input type="tel" id="foreignerReg" maxlength="8" placeholder="외국인등록증 발급일자 YYYYMMDD" title="외국인등록증 발급일자">
+                                        </span>
+                                    </div>
+                                    <select id="nationality" name="nationality" class="placeholder mb10" title="국적선택">
+                                        <option selected="selected" style="display: none;" value="">국적선택</option>
+                                        <option value="J002">Afghanistan(아프가니스탄)</option>
+                                        <option value="J006">Albania(알바니아)</option>
+                                        <option value="J062">Algeria(알제리)</option>
+                                        <option value="J007">Andorra(안도라)</option>
+                                        <option value="J003">Angola(앙골라)</option>
+                                    </select>
+                                    <p class="alert"><em>i</em>외국인인 경우 발급일자와 국적을 입력해주세요</p><!-- ktd : alert 위치이동 -->
+                                </div>
+                                <!-- //외국인 인증정보 -->
+                                <!-- 미성년자 -->
+                                <div id="minorsInfo" style="display: none;">
+                                    <p class="alert"><em>i</em>미성년자인 경우 핸드폰 개통 시 등록된 법정대리인 정보로 인증을 진행해주세요</p>
+                                    <div class="row">
+                                        <span class="p-name">
+                                            <input type="text" id="agentName" title="법정대리인 이름" placeholder="법정대리인 이름">
+                                        </span>
+                                    </div>
+                                    <div class="row">
+                                        <input type="tel" name="agentJuminTemp" id="agentJuminTemp" data-masking="true" value="" class="clearable mb0 iptnumber jumin-masking onX" placeholder="주민등록번호" title="주민번호 13자리 입력" maxlength="13">
+                                        <input type="hidden" id="agentJumin" name="agentJumin" value="">
+                                        <a href="#" class="clearbleDel" aria-hidden="false" role="button">삭제</a>
+                                    </div>
+                                    <div class="select-input-wrap">
+                                        <select class="placeholder" id="certifyWay" name="certifyWay" placeholder="통신사 선택" title="통신사 선택">
+                                            <option value="" selected="selected" style="display: none;">통신사 선택</option>
+                                            <option value="KTF">KT</option>
+                                            <option value="SKT">SK텔레콤</option>
+                                            <option value="LGT">LG유플러스</option>
+                                            <option value="KTM">KT(알뜰폰)</option>
+                                            <option value="SKM">SKT(알뜰폰)</option>
+                                        </select>
+                                        <input type="text" name="agentCustTel" id="agentCustTel" maxlength="11" value="" placeholder="핸드폰번호 ‘-’ 없이 입력">
+                                    </div>
+                                </div>
+                                <!-- //미성년자 -->
+
+                                <!-- ktd : ktd-checkbox 신규 -->
+                                <div class="ktd-checkbox ktc-termsChk">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="" id="passPopBtn">약관 확인 및 동의</label>
+                                </div>
+                                <!-- //ktd : ktd-checkbox 신규 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <button type="button" onclick="gaEventTracker(false, eventPrefix+'다이렉트', '본인인증', '핸드폰인증'); trackClicks(adobeTitVal+'다이렉트', '^'+adobeTitVal+'다이렉트^본인인증^핸드폰인증');" class="btn fill ui-popup-call authPopCall" data-cetify="hp" disabled>핸드폰 인증</button><!-- ktd : disabled -->
+                    <!-- ktd : 사용안함. 상단 탭형태로 새로 구성
+                        <div class="other-cerify">
+                        <a href="javascript:void(0);" class="ui-popup-call arrow-2" role="button" id="otherAuth">다른 인증방법 선택</a>
+                    </div> -->
+                </footer>
+            </div>
+            <!-- //고객 인증 -->
+            <!-- 신용카드 정보 인증 -->
+            <div class="content-cetify card">
+                <h1 class="tit"><button type="button" name="button" id="titleNm" class="back" aria-label="인증, 이전화면으로 이동">인증</button></h1>
+                <div id="content">
+                    <div class="cetify-wrap">
+                        <div class="ktd-block"><!-- ktd : ktd-block 추가 -->
+                            <div class="block-top">
+                                <strong>신용카드 정보를<br>입력해주세요</strong>
+                            </div>
+                        </div>
+
+                        <!-- ktd : ktd-other-auth 신규 -->
+                        <div class="ktd-other-auth">
+                            <ul class="tab-nav" data-effect="tab">
+                                <li class="" id="">
+                                    <a href="javascript:void(0)" title="선택됨" role="button" id="no-default-go">핸드폰 인증</a>
+                                </li>
+                                <li class="" id="">
+                                    <a href="javascript:void(0)" title="" role="button" id="no-card-go">PASS+계좌인증</a>
+                                </li>
+                                <li class="" id="">
+                                    <a href="javascript:void(0)" title="" role="button" id="no-cp-naver-go">네이버 인증서</a>
+                                </li>
+                                <li class="active" id="">
+                                    <a href="javascript:void(0)" title="" role="button" id="no-phone-go">신용카드</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //ktd : ktd-other-auth 신규 -->
+
+                        <div class="btn-input">
+                            <input type="text" id="creditCompnay" name="creditCompnay" aria-hidden="true" tabindex="-1" value="" class="" readonly="" placeholder="카드사 선택">
+                            <button type="button" name="button" class="ui-popup-call" data-target="#select-card" id="button-card">카드사 선택</button>
+                        </div>
+                        <div class="row del-area">
+                            <span class="name">
+                                <input type="text" id="creditCardNoTemp" title="신용카드 번호 입력" placeholder="신용카드 번호" data-masking="true" maxlength="16" class="is-card">
+                                <input type="hidden" id="creditCardNo" name="creditCardNo" value="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <button type="button" onclick="gaEventTracker(false, eventPrefix+'다이렉트', '본인인증', '신용카드인증하기'); trackClicks(adobeTitVal+'다이렉트', '^'+adobeTitVal+'다이렉트^본인인증^신용카드인증하기');" class="btn fill ui-popup-call authPopCall" data-tit="신용카드" data-cetify="card">신용카드 인증하기</button>
+                </footer>
+            </div>
+            <!-- //신용카드 정보 인증 -->
+
+            <!-- ktd : script 추가 -->
+            <script>
+                $(function(){
+                    $('.tab-nav li a').on('click', function(e){
+                        if($(this).is('#no-default-go')){
+                            $('.content-cetify.user #no-phone-go').parent('li').removeClass('active');
+                            $('.content-cetify.user #no-default-go').parent('li').addClass('active');
+                        }
+
+                        if($(this).is('#no-phone-go')){
+                            $('.content-cetify.card #no-default-go').parent('li').removeClass('active');
+                            $('.content-cetify.card #no-phone-go').parent('li').addClass('active');
+                        }
+                    });
+                })
+                $(document).on('click', '#no-default-go', function(){
+                    $('.content-cetify.user').show();
+                    $('.content-cetify.card').hide();
+                });
+            </script>
+            <!-- //ktd : script 추가 -->
+        </div>
+
+        <!-- 다른 인증방법 팝업  --><!-- ktd : 팝업 사용 안함 -->
+        <div id="popup-other-auth" class="ui-popup toast-popup popup-other-auth">
+            <div class="content">
+                <div class="header">다른 인증방법 선택</div>
+                <button type="button" class="btn-close">닫기</button>
+                <div class="body">
+                    <div class="auth-select sty2">
+                        <button type="button" class="no-card" id="no-card-go">
+                            <i class="t ips"></i>
+                            <span>PASS<br> 인증하기</span>
+                        </button>
+                        <button type="button" class="no-cp-naver" id="no-cp-naver-go">
+                            <i class="t inv"></i>
+                            <span>네이버 인증서<br> 인증하기</span>
+                        </button>
+                        <button type="button" class="no-phone" id="no-phone-go">
+                            <i class="t icd"></i>
+                            <span>신용카드<br> 인증하기</span>
+                        </button>
+                    </div>
+                    <div class="title">※ 안내</div>
+                    <ul class="jum-list">
+                        <li>PASS + 계좌 인증은 고객님 명의 휴대폰과 계좌를 이용하여 본인인증을 진행할 수 있습니다.</li>
+                        <li>네이버 인증 진행 시 반드시 최신 버전의 앱이 설치되어 있어야 합니다.</li>
+                        <li>네이버 앱에 인증을 진행하는 사용자의 ID가 로그인 되어 있어야 합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 다른 인증방법 팝업  -->
+
+        <!-- 카드사 선택// -->
+        <div id="select-card" class="ui-popup popup-type-2 select-card">
+            <div class="content">
+                <div class="header">카드사 선택</div>
+                <button type="button" class="btn-close">닫기</button>
+                <div class="body">
+                    <ul class="select-card-list">
+                        <li><span class="radio"><label for="radio1"><img src="/images/directShop/card/lotte.png" alt="롯데카드" aria-hidden="true">롯데카드</label><input type="radio" id="radio1" name="select-card" cardname="롯데카드" value="LT"></span></li>
+                        <li><span class="radio"><label for="radio2"><img src="/images/directShop/card/shinhan.png" alt="신한카드" aria-hidden="true">신한카드</label><input type="radio" id="radio2" name="select-card" cardname="신한카드" value="SH"></span></li>
+                        <li><span class="radio"><label for="radio3"><img src="/images/directShop/card/nh.png" alt="NH농협카드" aria-hidden="true">NH농협카드</label><input type="radio" id="radio3" name="select-card" cardname="NH농협카드" value="NH"></span></li>
+                        <li><span class="radio"><label for="radio4"><img src="/images/directShop/card/hana.png" alt="하나카드" aria-hidden="true">하나카드</label><input type="radio" id="radio4" name="select-card" cardname="하나카드" value="HN"></span></li>
+                        <li><span class="radio"><label for="radio5"><img src="/images/directShop/card/hyundai.png" alt="현대카드" aria-hidden="true">현대카드</label><input type="radio" id="radio5" name="select-card" cardname="현대카드" value="HD"></span></li>
+                        <li><span class="radio"><label for="radio6"><img src="/images/directShop/card/samsung.png" alt="삼성카드" aria-hidden="true">삼성카드</label><input type="radio" id="radio6" name="select-card" cardname="삼성카드" value="SS"></span></li>
+                        <li><span class="radio"><label for="radio7"><img src="/images/directShop/card/kb.png" alt="KB국민카드" aria-hidden="true">KB국민카드</label><input type="radio" id="radio7" name="select-card" cardname="KB국민카드" value="KB"></span></li>
+                        <li><span class="radio"><label for="radio8"><img src="/images/directShop/card/bc.png" alt="BC카드" aria-hidden="true">BC카드</label><input type="radio" id="radio8" name="select-card" cardname="BC카드" value="BC"></span></li>
+                    </ul>
+                </div>
+
+                <div class="btn-bottom">
+                    <button type="button" name="button" class="btn fill bottom btn-close" id="btnCardSelect">선택완료</button>
+                </div>
+            </div>
+        </div>
+        <!-- //카드사 선택 -->
+
+        <!-- 약관 확인 및 동의 / 신용카드 인증 약관 확인 및 동의 -->
+        <div id="terms-check" class="ui-popup toast-popup terms-check">
+            <div class="content">
+                <div class="header"><span class="hideblind">약관동의</span></div>
+                <button type="button" class="btn-close">닫기</button>
+                <div class="body">
+                    <div class="ui-accordion" data-head=">button">
+                        <div class="acc-item active">
+                            <div class="acc-head">
+                                <span class="checkbox">
+                                    <input type="checkbox" id="check-all" name="">
+                                    <label for="check-all" class="check-all-label"></label>
+                                </span>
+                                <button type="button" title="닫기" aria-expanded="true">버튼</button>
+                            </div>
+                            <div class="acc-cont" id="stpltAgreeList" tabindex="0">
+                                <!-- ktd수정 : 화면 확인위해 내용축소 -->
+                                <ul class="terms-list terms-list-Shop">
+                                    <li>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" id="stplList0" name="stpltAgreeVal" value="4" validityyn="Y">
+                                            <label for="stplList0" title="새창"><em>[필수]</em>비회원 이용 약관</label>
+                                        </span>
+                                        <a href="#agreeView4" class="icon-arrow-right popup-call agree-view" aria-label="[필수] 비회원 이용 약관레이어팝업열림" role="button"><em class="hidden">자세히 보기</em></a>
+                                    </li>
+                                    <li>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" id="stplList1" name="stpltAgreeVal" value="25" validityyn="Y">
+                                            <label for="stplList1" title="새창"><em>[필수]</em>제3자 명의대여 위험 안내</label>
+                                        </span>
+                                        <a href="#agreeView25" class="icon-arrow-right popup-call agree-view" aria-label="[필수] 제3자 명의대여 위험 안내레이어팝업열림" role="button"><em class="hidden">자세히 보기</em></a>
+                                    </li>
+                                    <li>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" id="stplList2" name="stpltAgreeVal" value="55" validityyn="Y">
+                                            <label for="stplList2" title="새창"><em>[필수]</em>KT 핸드폰 서비스 이용신청</label>
+                                        </span>
+                                        <a href="#agreeView55" class="icon-arrow-right popup-call agree-view" aria-label="[필수] KT 핸드폰 서비스 이용신청레이어팝업열림" role="button"><em class="hidden">자세히 보기</em></a>
+                                    </li>
+                                </ul>
+                                <ul list-type="agreement" class="terms-list raw-other" id="hpAgreeList">
+                                    <li>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" id="hp-agree-input-1" class="hp-agree-input-1" validityyn="Y">
+                                            <label for="hp-agree-input-1" title="새창"><em>[필수]</em>개인정보이용동의</label>
+                                        </span>
+                                        <a href="https://www.kmcert.com/kmcis/comm/terms_qr/kmcisHpAgree_QR_KT.html" class="go icon-arrow-right" target="_blank" title="새창 열기" role="button" aria-label="[필수]개인정보이용동의 새창 열기"><em class="hidden">자세히 보기</em></a>
+                                    </li>
+                                    <li>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" id="hp-agree-input-2" class="hp-agree-input-2" validityyn="Y">
+                                            <label for="hp-agree-input-2" title="새창"><em>[필수]</em>고유식별정보처리동의</label>
+                                        </span>
+                                        <a href="https://www.kmcert.com/kmcis/comm/terms_qr/kmcisHpDiscrAgree_QR_KT.html" class="go icon-arrow-right" target="_blank" title="새창 열기" role="button" aria-label="[필수]고유식별정보처리동의 새창 열기"><em class="hidden">자세히 보기</em></a>
+                                    </li>
+                                    <li>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" id="hp-agree-input-3" class="hp-agree-input-3" validityyn="Y">
+                                            <label for="hp-agree-input-3"><em>[필수]</em>서비스이용약관동의</label>
+                                        </span>
+                                        <a href="https://www.kmcert.com/kmcis/comm/terms_qr/kmcisHpUse_QR.html" class="go icon-arrow-right" target="_blank" title="새창 열기" role="button" aria-label="[필수]서비스이용약관동의 새창 열기"><em class="hidden">자세히 보기</em></a>
+                                    </li>
+                                </ul>
+                                <ul list-type="agreement" class="terms-list raw-other" style="display:none">
+                                    <li>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" id="card-agree-input-1" class="card-agree-input-1" validityyn="Y">
+                                            <label for="card-agree-input-1" title="새창"><em>[필수]</em>카드사 서비스 이용약관 </label>
+                                        </span>
+                                        <a href="#" class="go icon-arrow-right" target="_blank" title="새창 열기" role="button" aria-label="[필수]카드사 서비스 이용약관 새창 열기"><em class="hidden">자세히 보기</em></a>
+                                    </li>
+                                    <li>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" id="card-agree-input-2" class="card-agree-input-2" validityyn="Y">
+                                            <label for="card-agree-input-2" title="새창"><em>[필수]</em>본인확인 서비스 이용약관</label>
+                                        </span>
+                                        <a href="#" class="go icon-arrow-right" target="_blank" title="새창 열기" role="button" aria-label="[필수]본인확인 서비스 이용약관 새창 열기"><em class="hidden">자세히 보기</em></a>
+                                    </li>
+                                    <li>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" id="card-agree-input-3" class="card-agree-input-3" validityyn="Y">
+                                            <label for="card-agree-input-3"><em>[필수]</em>개인정보 수집 및 이용동의</label>
+                                        </span>
+                                        <a href="#" class="go icon-arrow-right" target="_blank" title="새창 열기" role="button" aria-label="[필수]개인정보 수집 및 이용동의 새창 열기"><em class="hidden">자세히 보기</em></a>
+                                    </li>
+                                </ul>
+                                <ul list-type="agreement" class="terms-list raw-samsung" style="display:none">
+                                    <li>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" id="s-card-agree-input-1" class="card-agree-input-1" validityyn="Y">
+                                            <label for="s-card-agree-input-1" title="새창"><em>[필수]</em>서비스 이용약관 </label>
+                                        </span>
+                                        <a href="#" class="go icon-arrow-right" target="_blank" title="새창 열기" role="button" aria-label="[필수]서비스 이용약관 새창 열기"><em class="hidden">자세히 보기</em></a>
+                                    </li>
+                                    <li>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" id="s-card-agree-input-2" class="card-agree-input-2" validityyn="Y">
+                                            <label for="s-card-agree-input-2" title="새창"><em>[필수]</em>개인정보 수집 및 이용동의</label>
+                                        </span>
+                                        <a href="#" class="go icon-arrow-right" target="_blank" title="새창 열기" role="button" aria-label="[필수]개인정보 수집 및 이용동의 새창 열기"><em class="hidden">자세히 보기</em></a>
+                                    </li>
+                                    <li>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" id="s-card-agree-input-3" class="card-agree-input-3" validityyn="Y">
+                                            <label for="s-card-agree-input-3"><em>[필수]</em>고유식별정보 처리에 대한 동의</label>
+                                        </span>
+                                        <a href="#" class="go icon-arrow-right" target="_blank" title="새창 열기" role="button" aria-label="[필수]고유식별정보 처리에 대한 동의 새창 열기"><em class="hidden">자세히 보기</em></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" name="button" class="btn fill bottom" id="btnTermsCheck">확인</button>
+            </div>
+        </div>
+        <!-- 약관 확인 및 동의 / 신용카드 인증 약관 확인 및 동의 -->
+
+        <!-- 인증번호 입력 팝업-->
+        <div id="popup-cert-number" class="ui-popup toast-popup cert-number">
+            <div class="content">
+                <div class="header">인증번호 입력</div>
+                <button type="button" class="btn-close">닫기</button>
+                <div class="body">
+                    <div class="member-input">
+                        <div class="row">
+                            <div class="btn-input2"><!-- ktd : btn-input2 타입으로 변경 -->
+                                <input type="tel" id="smsAuthNo" title="인증번호 입력" placeholder="인증번호 입력" maxlength="6">
+                                <button type="button" class="btn btn-resend" id="SmsSendBtn" disabled>인증번호 재발송</button><!-- ktd : disabled -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-foot">
+                    <button type="button" name="button" class="btn fill bottom" id="checkNumber">확인</button>
+                </div>
+            </div>
+        </div>
+        <!-- //인증번호 입력 팝업 -->
+
+        <!-- 무약정플랜 요금제변경 불가 안내 팝업 -->
+        <div id="popup-plan-change" class="ui-popup toast-popup plan-change-noti">
+            <div class="content">
+                <div class="header">무약정플랜 요금제변경 불가 안내</div>
+                <button type="button" class="btn-close">닫기</button>
+                <div class="body">
+                    <!-- 위약금 부과/유예 케이스 -->
+                    <p id="pplChgFailText" style="display: none;">
+                        <span style="color:#fe2c55;">고객님은 현재 무약정플랜 요금제 가입이 불가한 상태입니다.</span><br>
+                        아래 케이스 중 1개 이상에 해당되는 경우 무약정플랜 가입이 불가하며, 114 고객센터를 통해 상담 후 다이렉트 사이트에서 다시 요금제 가입을 진행해주세요.
+                        <br>
+                        1. 잔여 약정이 남아있는 경우: 약정 해지 후 가입가능
+                        <br>
+                        2. 결합 고객의 경우: 결합 해지 후 가입 가능
+                        <br>
+                        3. 일시정지 중인 경우: 정지 해제 후 가입 가능
+                        <br>
+                        4. 해지 고객의 경우: 신규/번호이동 가입으로 가입 가능
+                        <br>
+                        5. 요금제 변경이 예약되어 있는 경우: 예약 취소 후 가입 가능
+                    </p>
+                    <!-- //위약금 부과/유예 케이스 -->
+                </div>
+                <div class="btn-foot">
+                    <button type="button" name="button" class="btn fill btn-close" id="pplChgNoti">확인</button>
+                </div>
+            </div>
+        </div>
+        <!-- //무약정플랜 요금제변경 불가 안내 팝업 -->
+
+        <!-- ARS 인증 -->
+        <div id="ars-check" class="ui-popup toast-popup ars-check">
+            <div class="content">
+                <div class="header">ARS 인증</div>
+                <button type="button" class="btn-close">닫기</button>
+                <div class="body">
+                    <p>ARS 통해 비밀번호 앞 2자리를 입력 후<br>인증완료를 눌러주세요.</p>
+                </div>
+
+                <button type="button" name="button" class="btn fill" onclick="jsonCardEmbedResult();">인증완료</button>
+            </div>
+        </div>
+
+        <div id="ars-checkEr" class="ui-popup toast-popup ars-check">
+            <div class="content">
+                <div class="header">ARS 인증</div>
+                <button type="button" class="btn-close">닫기</button>
+                <div class="body">
+                    <p>입력하신 신용카드 인증 정보가 <span class="ib">일치하지 않습니다.</span> <br>재입력 후 인증 요청 해 주세요.</p>
+                </div>
+
+                <button type="button" name="button" class="btn fill bottom" id="checkEr">확인</button>
+            </div>
+        </div>
+        <!-- ARS 인증 -->
+
+        <div id="popup-order-raw-detail">
+            <!-- ktd수정 : 화면 확인위해 항목 및 내용축소 -->
+            <div id="agreeView4" data-popup="popup-fade" class="popup popup-raw agreeView" aria-hidden="true">
+                <header>
+                    <h1>비회원 이용 약관 (필수)</h1>
+                </header>
+                <div class="content">
+                    <!-- ktd수정 : 화면 확인위해 내용축소 -->
+                    <p></p><div class="ter_content w808"> <strong>제1조(목적)</strong><br> 이 약관은 주식회사 케이티(이하 "회사")의 KT.com (www.kt.com)의 하위 인터넷 사이트인 KT Shop(이하 “Shop”)에서, 회원으로 가입하지 아니하고 상품 또는 용역을 거래하는 자(이하 “비회원”)와 회사 그리고 KT.com에 입점한 판매자 간의 권리, 의무 기타 필요사항을 규정하고, 상품 또는 용역의 구매를 위한 서비스(이하 “서비스”라 함) 이용절차와 이용 조건 등을 규정함을 목적으로 합니다.</div><p></p>
+                </div>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div id="agreeView25" data-popup="popup-fade" class="popup popup-raw agreeView" aria-hidden="true">
+                <header>
+                    <h1>제3자 명의대여 위험 안내 (필수)</h1>
+                </header>
+                <div class="content">
+                    <p></p><ul class="agree-text"><li>대출업자 등 제3자에게 고객명의의 휴대폰을 개통해 주거나, 개통에 필요한 신청서류를 제공하는 경우 휴대폰 대출사기 등에 약용되어 심각한 경제적 피해를 입을수 있습니다.</li><li>신청자 본인은 대출업자 등 제3자에게 고객명의의 핸드폰을 개통해 주거나, 개통에 필요한 신청서류를 제공하는 경우</li><li>핸드폰 대출 사기들에 악용되어 심각한 경제적 피해를 입을 수 있음을 안내 받았으며, 어울려 신규계약서 내용, 뒷면의 이동전화서비스 이용약관 및 유의 사항, 관련 약관의 중요 내용에 대한 명시와 설명을 듣고 이에 동의하며 개인 정보 취급방침, 이용약관, 위치기반서비스/위치정보사업/통신과금 서비스/본인확인서비스 이용약관에 따라 위와 같이 신규계약을 체결합니다. </li></ul><p></p>
+                </div>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div id="agreeView55" data-popup="popup-fade" class="popup popup-raw agreeView" aria-hidden="true">
+                <header>
+                    <h1>KT 핸드폰 서비스 이용신청 (필수)</h1>
+                </header>
+                <div class="content">
+                    <p></p><ul class="agree-text"><li>본인은 서비스 이용 중 위 이용고객의 미납요금 채무(통화료, 정보이용료, 핸드폰요금 등) 및 서비스 이용에 따른 모든 책임을 지겠습니다.</li><li>법정대리권 및 연락번호가 변동이 있을 경우 당사에 고지해야 하며 미고지로 인한 책임은 법정대리인에 있습니다. </li><li>기재된 핸드폰 번호로 미성년자의 사용량 메시지가 발송됩니다.</li><li>신청서 내 미성년자 이용안내에 대한 내용 설명을 읽고 숙지하였음을 확인합니다. </li></ul><p></p>
+                </div>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div id="agreeView56" data-popup="popup-fade" class="popup popup-raw agreeView" aria-hidden="true">
+                <header>
+                    <h1>미성년자 네트워크 유해차단 서비스 (필수)</h1>
+                </header>
+                <div class="content">
+                    <p></p><div class="agree-text"><p>청소년의 이동전화 가입 시 필수적으로 유해정보차단수단에 가입하여야 합니다. KT자녀폰안심 프리-앱차단(무료/안드로이드폰전용) 가입에 동의합니다.</p><p>*전기통신사업법 제32조의7(청소년유해매체물 등의 차단)에 따라 전기통신사업자는 해당 청소년의 이동통신단말장치에 청소년유해매체물등을 차단하는 소프트웨어 등의 차단수단을 제공하여야 합니다.</p><ul><li>상품명 : KT 자녀폰 안심 프리</li><li>이용 요금 : 무료</li><li>제공 혜택 : 유해사이트, 유해앱 차단, 스마트폰 사용량 확인</li></ul></div><p></p>
+                </div>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div id="agreeViewA147" data-popup="popup-fade" class="popup popup-raw agreeView" aria-hidden="true">
+                <header>
+                    <h1>고객 혜택 제공을 위한 개인정보 수집 및 이용 관련 동의 (선택)</h1>
+                </header>
+                <div class="content">
+                    <p></p>
+                    <div class="ter_content w808">
+                        <table class="ter_tbs_02">
+                            <caption>고객 혜택 제공을 위한 개인정보 수집 및 이용 관련 동의</caption>
+                            <tbody>
+                                <tr>
+                                    <th height="26" align="center"><b>이용목적</b></th>
+                                    <th align="center"><b>수집 항목</b></th>
+                                    <th align="center"><b>보유기간</b></th>
+                                </tr>
+                                <tr>
+                                    <td height="26" align="center">
+                                        KT 통신 서비스와 KT가 제공하는 다른 상품ㆍ서비스간 개인정보의 결합ㆍ분석 및 이를 통한 개인맞춤ㆍ연계 서비스 제공<br>
+                                        KT 및 제 3자(kt그룹사, 협력사, 제휴사 등)의 상품ㆍ서비스ㆍ혜택에 대한 개인맞춤 추천, 정보 제공과 안내, 할인제도와 소개ㆍ가입의사 확인, 리텐션, 이벤트 안내등 마케팅<br>
+                                        신규 서비스 개발, 서비스개선<br>
+                                        고객 세분화, 선호도ㆍ라이프스타일ㆍ사회적관계 추정, 우량등급 고객 선정<br>
+                                        상기 목적을 위한 개인정보 분석
+                                    </td>
+                                    <td align="center">
+                                        위 개인정보 수집ㆍ이용 동의(필수동의)대상 개인정보 항목<br>위 개인(신용)정보 조회 및 이용/제공에 대한 동의(필수동의) 대상 항목<br>
+                                        서비스 이용기록, Application 사용 정보, 접속IP주소(도메인 및 URL 포함), 통신과금서비스 거래정보(결제정보, 사용처, 상품정보, 금액 등), 구글 GAID 혹은 애플 IDFA 및 이를 조합하여 생성된 정보<br>
+                                        <b>고객 본인 명의로 가입한 KT 제공 서비스(이동전화, 인터넷, 일반전화, tv, 부가서비스, KT 멤버십 등)신청 시 수집 및 이용에 동의한 모든 항목</b><br>
+                                        상기 본 항의 정보들을 조합하여 생성된 정보
+                                    </td>
+                                    <td align="center">KT 서비스 이용기간</td>
+                                </tr>
+                            </tbody>
+                        </table><br>
+                        <p>
+                            본인은 상기 내용과 같이 귀사가 본인의 개인정보ㆍ신용정보를 수집ㆍ이용함에 동의합니다<br>
+                            <b>(동의를 거부할 수 있으며, 거부에 따른 불이익은 없습니다.)</b><br>
+                            단, 주민등록번호는 가입의사확인, 명의도용 방지, 미환급금 반환, 복지할인, 본인확인서비스, 단말기 분할상환 대금채권 등을 기초 자산으로 한 자산유동화거래 목적과 같이 법적 근거가 있는 경우만 제한적으로 이용합니다.<br>
+                            구글 GAID, 애플 IDFA 수집 거부 방법 안내<br>
+                            -Android인 경우 [설정(일반) → Google → 광고] 또는 [설정 → 개인정보보호 → 광고 설정]<br>
+                            -IOS인 경우[설정 → 개인정보 → 광고]
+                        </p>
+                    </div>
+                    <p></p>
+                </div>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div id="agreeViewA148" data-popup="popup-fade" class="popup popup-raw agreeView" aria-hidden="true">
+                <header>
+                    <h1>개인정보 처리 위탁 및 고객 혜택 제공을 위한 광고 수신 동의 (선택)</h1>
+                </header>
+                <div class="content">
+                    <p></p>
+                    <div class="ter_content w808">
+                        본인이 수집 및 이용에 동의한 개인정보ㆍ신용정보ㆍ위치정보를 활용하여, KT및 제 3자의 상품 및 서비스에 대한 광고ㆍ홍보ㆍ프로모션ㆍ이벤트 제공 및 고객관리와 관련한 개인정보 처리 업무를 KT의 수탁사(ktIS/ktCS 등 상담채널, kt service 등 개통/AS 법인, 유통점, (주)케이티엠하우스 등)에 위탁하는 것과 전자적 전송매체(전화, 우편, SMS, LMS, MMS, App Push, 팩스, 스마트마케팅플랫폼 등 포함)를 통해 정보/광고를 전송하는 데 동의합니다.<br>
+                        ※ 본 동의를 거부할 시, kt 요금 할인, 제휴 상품 할인 정보 등 고객 맞춤형 혜택 정보를 수신할 수 없습니다.<br>
+                        <b>※ 본 동의를 거부할 수 있으며, 거부에 따른 불이익은 없습니다.</b> 동의를 철회하고자 하는 경우 고객센터(국번없이 100)를 통해 상담원으로부터 철회 할 수 있습니다.<br>
+                        ※ 회사의 서비스 제공 등 계약의 이행에 필요한 경우는 해당 위탁업무와 수탁자(증감, 변동 가능)를 회사의 홈페이지(www.kt.com)의 '개인정보처리방침'에 공개함으로써, 처리위탁 동의에 갈음합니다.
+                    </div>
+                    <p></p>
+                </div>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div id="agreeViewA077" data-popup="popup-fade" class="popup popup-raw agreeView" aria-hidden="true">
+                <header>
+                    <h1>고유식별정보 수집/이용 동의 (필수)</h1>
+                </header>
+                <div class="content">
+                    <p></p>
+                    <div class="ter_content w808">
+                        kt는 가입의사 확인, 명의도용방지, 미환급금반환, 복지할인, 본인확인서비스, 단말기 분할상환 대금채권 등을 기초자산으로 한 자산 유동화거래 목적과 같이 법적 근거가 있는 경우 고유식별정보(주민등록번호/외국인등록번호/여권번호/운전면허번호)를 처리합니다. <br>
+                        ※ 본인, 대리인 신분확인 이미지 및 기재사항 포함 <br>
+                        ※ 미성년자 고객유형으로 가입 시 법정대리인의 주민등록번호 포함
+                    </div>
+                    <p></p>
+                </div>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div id="agreeViewA048" data-popup="popup-fade" class="popup popup-raw agreeView" aria-hidden="true">
+                <header>
+                    <h1>개인(신용)정보 조회 및 이용에 대한 동의 (필수)</h1>
+                </header>
+                <div class="content">
+                    <p></p>
+                    <div class="ter_content w808">
+                        <table class="ter_tbs_02">
+                            <caption>개인(신용)정보 조회 및 이용에 대한 동의</caption>
+                            <tbody>
+                                <tr>
+                                    <th align="center"><b>제공받는자</b></th>
+                                    <th height="26" align="center"><b>목적</b></th>
+                                    <th align="center"><b>제공하는 항목</b></th>
+                                    <th align="center"><b>보유 및 이용기간</b></th>
+                                </tr>
+                                <tr>
+                                    <td align="center">한국정보통신진흥협회</td>
+                                    <td height="26" align="center">명의도용방지서비스, 통신가입사실 우편안내서비스</td>
+                                    <td align="center">고객명, 고유식별번호등</td>
+                                    <td rowspan="11" align="center">해당업무 처리 완료시까지 (거절의 경우 상담종료시까지)</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">한국정보통신진흥협회</td>
+                                    <td height="26" align="center">방송통신신용정보 공동관리, 스팸신고 및 차단, 분실단말기 공동관리, 분실신고된 단말기의 국외사용 차단(단말기 분실신고자에 한함)</td>
+                                    <td align="center">성명(법인명), 주민등록번호/외국인등록번호/사업자(법인)등록번호, 상품명, 회선수, 연체금액, 연체일자, 등록사유, 서비스 번호, 이용정지/해지 사유, 생년월일, 성별, 전화번호, 단말기정보, 주소정보</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="ter_tbs_02">
+                            <caption></caption>
+                            <tbody>
+                                <tr>
+                                    <th height="26" align="center"><b>제공받는 자</b></th>
+                                    <th align="center"><b>제공받는 자의 이용목적</b></th>
+                                    <th align="center"><b>제공하는 개인정보 항목</b></th>
+                                    <th align="center"><b>제공받는 자의 개인정보 보유 및 이용기간</b></th>
+                                </tr>
+                                <tr>
+                                    <td height="26" align="center">(삼성 단말 가입시) 삼성전자, 웰스토리, 삼성전자서비스<br>(LG 단말 가입시) LG전자</td>
+                                    <td align="center">이벤트 혜택 제공</td>
+                                    <td align="center">이름, 전화번호, 생년월일, 성별, 내국인/외국인, 예약번호, IMEI, 개통일</td>
+                                    <td align="center">이벤트 종료 후 6개월</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        ※ 채무불이행정보, 공공기록정보 중 체납정보, 금융질서 문란자 정보 등에 등록되어 있는 경우 청약에 대한 승낙을 유보할 수 있습니다.<br>만19세이상~만 24세 이하※ 일반적으로 신용정보를 조회하는 경우 신용등급이 하락할 수 있으나, 본 조회는 신용등급에 아무런 영향을 미치지 않습니다.
+                    </div>
+                    <p></p>
+                </div>
+                <button type="button" class="close">닫기</button>
+            </div>
+        </div>
+        <script>
+            //$('body').addClass('bg-f8');//ktd : bg-f8 사용안함
+        </script>
+        </div>
+	<!-- //ktd : 사이트 영역 -->
+</body>
+</html>
+
+<!-- 페이지 확인용 -->
+<script>
+    $(document).on('click', '#passPopBtn', function(){
+        // 팝업 호출
+        $('.check-all-label').html("약관 확인 및 동의");
+        popupOpen("#terms-check");
+    });
+
+    $(document).on('click', '.authPopCall', function(){
+        // 팝업 호출
+        popupOpen("#terms-check");
+    });
+
+    //신용카드 인증하기
+    $(document).on('click', '#no-phone-go', function(){
+        popupClose('#popup-other-auth');
+        $('.content-cetify.user').hide();
+        $('.content-cetify.card').show();
+    });
+
+    //네이버 인증서 인증하기
+    $(document).on('click', '#no-cp-naver-go', function(){
+
+        popupClose('#popup-other-auth');
+        $('.check-all-label').html("약관 확인 및 동의");
+        $('#btnTermsCheck').data('cetify', 'naver');
+        popupOpen("#terms-check");
+
+        //$('.content-cetify.user').hide();
+        //$('.content-cetify.card').show();
+    });
+
+    $(document).on("click", "#no-card-go", function() {
+        popupClose('#popup-other-auth');
+
+        $('.check-all-label').html("약관 확인 및 동의");
+        // 약관확인창 pass 데이터 변경 처리
+        $('#btnTermsCheck').data('cetify', 'pass');
+        popupOpen("#terms-check");
+    });
+
+    // ARS 인증 실패 팝업
+    $(document).on("click", "#ars-checkEr", function() {
+        popupClose("#ars-checkEr");
+    });
+
+    // 요금제 유의사항 팝업 선택
+    $(document).on("click", "#pplChgNoti", function() {
+        location.href = "/directMain.do";
+    });
+</script>

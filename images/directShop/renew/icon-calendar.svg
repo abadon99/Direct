@@ -1,0 +1,13 @@
+<svg id="_008_icon_16_03_etc_calendar" data-name="008 icon/16/03 etc/calendar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="패스_38358" data-name="패스 38358" d="M0,0H16V16H0Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="_002_icon_16_05_unit_calendar" data-name="002 icon/16/05 unit/calendar" clip-path="url(#clip-path)">
+    <rect id="사각형_13691" data-name="사각형 13691" width="12.8" height="12" rx="2" transform="translate(1.6 2.4)" fill="none" stroke="#6f6f6f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line id="선_1" data-name="선 1" y2="2.4" transform="translate(10.667 1.6)" fill="none" stroke="#6f6f6f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line id="선_2" data-name="선 2" y2="2.4" transform="translate(5.333 1.6)" fill="none" stroke="#6f6f6f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line id="선_3" data-name="선 3" x2="12.4" transform="translate(1.6 6.4)" fill="none" stroke="#6f6f6f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

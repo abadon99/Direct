@@ -2,6 +2,16 @@
 $(function(){
     $('body').addClass('ktd-wrap');
 
+    //스크롤 메뉴 fixed
+    $(window).scroll(function(){
+        var height = $(document).scrollTop();
+        if(height > 0){
+            $('.ktd-conWrap').addClass('fixedHeader');
+        }else if(height == 0){
+            $('.ktd-conWrap').removeClass('fixedHeader');
+        }
+    });
+
     // 서브메뉴
     var swiperDepth = new Swiper('.ktd-depthMenu-wrap', {
         slidesPerView: 'auto',

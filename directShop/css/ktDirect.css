@@ -19,9 +19,9 @@ body.ktd-wrap {position: relative; font-size: 14px;}
   background: rgb(58,204,200);
   background: linear-gradient(135deg, rgba(58,204,200,1) 0%, rgba(43,153,222,1) 100%);
 }
-.ktd-directInfo .info .info-txt {margin-bottom:10px; font-size: 18px; line-height: 26px; text-align: center;}
+.ktd-directInfo .info .info-txt {margin-bottom:21px; font-size: 18px; line-height: 24px; text-align: center;}
 .ktd-directInfo .info .info-copy {text-align: center;}
-.ktd-directInfo .info .info-copy img {max-width: 302px;}
+.ktd-directInfo .info .info-copy img {max-height: 118px;}
 
 .ktd-directInfo .link-zone {margin-top:40px}
 .ktd-directInfo .link-zone ul {display: flex; flex-wrap: wrap;}
@@ -68,11 +68,11 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 
 @media all and (max-height: 910px) {
 	.ktd-directInfo .info {max-height: 60vh; background-size: auto 90%;}
-  .ktd-directInfo .info .info-copy img {max-width: 80%;}
+  .ktd-directInfo .info .info-copy img {max-height: 94px;}
   .ktd-directInfo .link-zone {margin-top:5vh}
 }
 @media all and (max-height: 680px) {
-  .ktd-directInfo .info .info-copy img {max-width: 70%;}
+  .ktd-directInfo .info .info-copy img {max-height: 82px;}
   .ktd-directInfo .link-zone li a {height:60px}
 }
 
@@ -135,11 +135,11 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-conWrap form span.btn:disabled,
 .ktd-conWrap form a.btn.disabled {background-color: #E0E0E0; color: #A8A8A8; cursor: default;}
 
-.ktd-conWrap form a.btn.white,
-.ktd-conWrap form button.btn.white,
-.ktd-conWrap form input.btn.white,
-.ktd-conWrap form label.btn.white,
-.ktd-conWrap form span.btn.white {background-color: #fff; color: #000; border:1px solid #A8A8A8;}
+.ktd-conWrap a.btn.white,
+.ktd-conWrap button.btn.white,
+.ktd-conWrap input.btn.white,
+.ktd-conWrap label.btn.white,
+.ktd-conWrap span.btn.white {background-color: #fff; color: #000; border:1px solid #A8A8A8;}
 
 
 
@@ -239,6 +239,11 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-tab li a span {display: block; padding: 7px 0; min-height: 40px; font-size: 16px; color: #6F6F6F; border-top: 2px solid transparent; border-bottom: 1px solid #D9D9D9; background-color: #f4f4f4;}
 .ktd-tab li.active a span {font-weight: 500; color: #000; border-top-color: #5DDFDE; border-bottom-color:transparent; background:#fff;}
 
+#content > .ktd-tab.line {position: sticky; top:64px; background-color: #fff; z-index: 11;}
+.fixedHeader #content > .ktd-tab.line {
+  -webkit-box-shadow: 0 4px 2px -2px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,0.1);
+}
 .ktd-tab.line li + li {border-left: none;}
 .ktd-tab.line li a {display: table; width: 100%;}
 .ktd-tab.line li a span {display: table-cell; height: 40px; padding: 0 2px; border-top:none; background-color: #fff; font-size: 14px; vertical-align: middle;}
@@ -276,7 +281,11 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 
 
 /* 헤더 */
-.ktd-conWrap header {position: sticky;height:64px;padding-top: 22px;background:#fff;}
+.ktd-conWrap header {position: sticky;height:64px;padding-top: 22px;background:#fff; z-index: 11;}
+.ktd-conWrap.fixedHeader header {
+  -webkit-box-shadow: 0 4px 2px -2px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,0.1);
+}
 .ktd-conWrap header > div {margin-top: 0;padding:0 20px;max-width: 100%;}
 .ktd-conWrap header h1 {width: 100px; height: 20px; background: none;}
 .ktd-conWrap header h1 a {background: url('/images/directShop/renew/kt_logo.svg') 0 0 no-repeat;}
@@ -298,7 +307,11 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 }
 
 /* 서브메뉴 */
-.ktd-depthMenu {display:block;position: sticky;top: 64px;background: #fff;z-index: 10;}
+.ktd-depthMenu {display:block;position: sticky;top: 64px;background: #fff;z-index: 11;}
+.fixedHeader .ktd-depthMenu {
+  -webkit-box-shadow: 0 4px 2px -2px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,0.1);
+}
 .ktd-depthMenu-wrap {position:relative;box-sizing: border-box;min-height: 40px;padding: 6px 40px 6px 8px;}
 .ktd-depthMenu-wrap ul {width: 100%;}
 .ktd-depthMenu-wrap ul li {display: inline-block; width: auto; vertical-align: top; word-break: keep-all;}
@@ -327,9 +340,9 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-conWrap #main-contents .main-swiper p.t,
 .ktd-conWrap #main-contents .main-swiper p.t-2,
 .ktd-conWrap #main-contents .main-swiper p.t-3 {color:#fff}
-.ktd-conWrap #main-contents .main-swiper p.t {margin-bottom:12px; font-size: 32px; line-height: 38px; font-weight: bold;}
+.ktd-conWrap #main-contents .main-swiper p.t {margin-bottom:12px; font-size: 28px; line-height: 34px; font-weight: bold; color:#161616; letter-spacing: -0.25px;}
 .ktd-conWrap #main-contents .main-swiper p.t-2,
-.ktd-conWrap #main-contents .main-swiper p.t-3 {font-weight: 500;}
+.ktd-conWrap #main-contents .main-swiper p.t-3 {font-size: 14px; line-height: 19px; color: #161616;}
 .ktd-conWrap #main-contents .main-swiper .opt {bottom:24px; left: 20px; width:auto; background:rgba(0, 0, 0, 0.5); border-radius: 5px; padding:1px 7px 3px; z-index: 1; min-width: 58px;}
 .ktd-conWrap #main-contents .swiper-pagination-fraction,
 .ktd-conWrap #main-contents .swiper-pagination-custom,
@@ -384,11 +397,15 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-conWrap .use-direct li.icon-add:before {background-image: url('/images//directShop/renew/icon_set_add.svg');}
 
 .ktd-main-section-1 .tac {margin-top:40px;}
+.ktd-main-section-1 .tac .btn {height: 40px; line-height: 38px; font-size: 14px; border-radius: 8px; font-weight: 500; min-width: 94px; width: auto; padding: 0 16px; display: inline-block; text-align: center; background-color: #000;color: #fff;}
 
-.ktd-conWrap .join-link {margin-top:48px; display: flex;}
+.ktd-conWrap .join-link {margin-top:40px; display: flex; margin-bottom: 8px; border-top: 1px solid #d9d9d9; padding-top: 40px;}
 .ktd-conWrap .join-link > a {position: relative; flex: 1; text-align: left;}
 .ktd-conWrap .join-link > a + a {margin-left: 16px;}
-.ktd-conWrap .join-link dl {position: relative; flex: 1; padding: 16px; border-radius: 20px; color: #fff;}
+.ktd-conWrap .join-link dl {position: relative; flex: 1; padding: 16px; border-radius: 20px; color: #fff;
+  -webkit-box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.15);
+  box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.15);
+}
 .ktd-conWrap .join-link dt {font-size: 16px; font-weight: bold;}
 .ktd-conWrap .join-link dd {font-size: 12px; margin-top:8px;}
 
@@ -693,11 +710,14 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 
 /****************************** 공통 - 콘텐츠 ******************************/
 /* 요금제 슬라이드 */
-.ktd-conWrap .payment-slide {padding:0 15px 0 16px;}
+.ktd-conWrap .payment-slide {padding:0 15px 0 20px;}
 .ktd-conWrap .payment-slide .swiper-pagination {position:relative; bottom:inherit; left: inherit; text-align: center; margin:24px 0 0; height:6px;}
 .ktd-conWrap .payment-slide .swiper-pagination .swiper-pagination-bullet {width: 6px; height: 6px; display: inline-block; border-radius: 100%; background: #fff; opacity: 0.6; vertical-align: top;}
 .ktd-conWrap .payment-slide .swiper-pagination .swiper-pagination-bullet-active {width:20px; border-radius: 3px; opacity: 1;}
-.ktd-conWrap .payment-slide .swiper-slide > div {padding: 24px; border:1px solid #D9D9D9; border-radius: 20px; text-align: center; background:#fff;}
+.ktd-conWrap .payment-slide .swiper-slide > div {padding: 24px; border:1px solid #D9D9D9;   border-radius: 20px; text-align: center; background:#fff;
+  -webkit-box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.05);
+  box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.05);
+}
 .ktd-conWrap .payment-slide .swiper-slide a {display: block; width: 100%; height: 100%;}
 
 .ktd-conWrap .payment-slide .flag {display:block; margin-bottom: 4px;}
@@ -745,8 +765,8 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-conWrap .benefit-list02 + .benefit-list02 {margin-top:20px;}
 .ktd-conWrap .benefit-list02 li {display: table-cell; width: 50%; text-align: center;}
 .ktd-conWrap .benefit-list02 li img {max-width: 96px;}
-.ktd-conWrap .benefit-list02 li span {display: block; margin-top: 4px; color:#000}
-.ktd-conWrap .benefit-list02 li span.info {font-size: 12px; color: #6F6F6F;}
+.ktd-conWrap .benefit-list02 li span {display: block; margin-top: 2px; color:#000}
+.ktd-conWrap .benefit-list02 li span.info {font-size: 12px; color: #6F6F6F; margin-top:4px}
 .ktd-conWrap .benefit-list02 li:nth-child(n+3) {margin-top:20px;}
 
 .ktd-gift-section .btn-gift {margin-top:32px; text-align: center;}
@@ -812,6 +832,8 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 
 .ktd-conWrap #content-recommend {padding:0 20px; height: calc(100% - 64px);}
 .ktd-conWrap .btn-bottom{padding:40px 24px !important}
+.ktd-conWrap .btn-bottom.btn-bottom-inline {text-align: center;}
+.ktd-conWrap .btn-bottom.btn-bottom-inline > button {min-width: 128px;}
 
 /* popup */
 /* .ui-popup {min-width: auto; max-width: 478px; left: inherit; margin-left: -20px;} */
@@ -820,7 +842,7 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 
 .ktd-conWrap .ui-popup.toast-popup .content {padding:0 20px 24px;}
 .ktd-conWrap .ui-popup.toast-popup .content>.btn-close{position:absolute;top:26px;right:20px;z-index:1}
-.ktd-conWrap .ui-popup.toast-popup .header{font-size:20px;text-align:left;font-weight:500;letter-spacing:-.64px;padding: 24px 45px 16px 20px;height: 66px;width:100%;position:absolute;left:0;top:0;background-color:#fff;overflow:hidden;z-index:1;border-radius:20px 20px 0 0;color:#000}
+.ktd-conWrap .ui-popup.toast-popup .header{font-size:20px;text-align:left;font-weight:500;letter-spacing:-.64px;padding: 24px 45px 16px 20px;height: 66px;width:100%;position:absolute;left:0;top:0;background-color:#fff;overflow:hidden;z-index:1;border-radius:20px 20px 0 0;color:#000;}
 .ktd-conWrap .ui-popup.toast-popup .body{padding:73px 0 0; margin-bottom: 40px; height:auto;line-height:1.5; color: #6F6F6F;}
 
 @media all and (max-width: 450px) {
@@ -918,8 +940,8 @@ body.ktd-wrap {position: relative; font-size: 14px;}
 .ktd-checkbox {margin-top:20px; position: relative;}
 .ktd-checkbox > div {position: relative;}
 .ktd-checkbox > div + div {margin-top:16px;}
-.ktd-checkbox input[type="checkbox"] {-webkit-appearance: none; appearance: none; border: none; width: 20px; height: 20px; background: url('/images/directShop/renew/icon_check4.svg') 0 0 no-repeat; background-size: 100%; position: absolute; top: 50%; left: 0; transform: translateY(-50%);}
-.ktd-checkbox label {padding-left:28px; color:#6F6F6F; font-size: 16px; cursor: pointer;}
+.ktd-checkbox input[type="checkbox"] {-webkit-appearance: none; appearance: none; border: none; width: 20px; height: 20px; background: url('/images/directShop/renew/icon_check4.svg') 0 0 no-repeat; background-size: 100%; position: absolute; top: 2px; left: 0;}
+.ktd-checkbox label {display:inline-block; padding-left:28px; color:#6F6F6F; font-size: 16px; cursor: pointer;}
 .ktd-checkbox input[type="checkbox"]:checked {background-image: url('/images/directShop/renew/icon_check4_on.svg');}
 .ktd-checkbox input[type="checkbox"]:checked + label {color:#000; font-weight: 500;}
 
@@ -1191,7 +1213,7 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 /**************************************************************************/
 /******************************* 가입신청서 *******************************/
 /**************************************************************************/
-.tab-content>div {min-height: 200px;}
+.tab-content>div {min-height: 50px;}/*200px*/
 #orderForm .ktd-noti-list {margin: 24px 0 0; padding: 0;}
 #orderForm .ktd-noti-list li + li {margin-top:12px}
 
@@ -1259,6 +1281,7 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ktd-conWrap .input-number-wrap {}
 .ktd-conWrap .input-number-wrap h2 {margin-bottom:12px; font-size: 14px; font-weight: 500; line-height: 24px; color: #6F6F6F;}
 
+.ktd-conWrap .btn-input + .btn-input2 {margin-top:32px}
 .ktd-conWrap .btn-input2 + h2 {margin-top:48px;}
 .ktd-conWrap .btn-input2 {display:flex; margin-bottom: 0;}
 .ktd-conWrap .btn-input2 input {padding: 0;}
@@ -1268,17 +1291,10 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ktd-conWrap .btn-input2 .btn:disabled {background-color: #E0E0E0; font-weight: 500; color: #A8A8A8;}
 .ktd-conWrap .btn-input2 .btn.btn02 {min-width: 94px;}
 
+.ktd-conWrap .btn-input2 button:disabled {background-color: #E0E0E0; font-weight: 500; color: #A8A8A8;}
+.ktd-conWrap .btn-input2 button {min-width: 94px; white-space: nowrap;}
+
 .ktd-conWrap .ktd-selfLink {margin-top:40px;}
-
-
-
-
-
-
-
-
-
-
 
 .ktd-conWrap .user-auth.auth-type01 {margin-top:24px}
 
@@ -1312,6 +1328,14 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 
 .ktd-conWrap .tab-nav li input,
 .ktd-conWrap .tab-button li input {width: 100%; display: block; position: absolute; top: 0; left: 0; height: 100%; opacity: 0;}
+
+.ktd-conWrap .tab-nav.tab-round {}
+.ktd-conWrap .tab-nav.tab-round li {border-radius: 20px;}
+.ktd-conWrap .tab-nav.tab-round li + li {margin-left: 10px;}
+.ktd-conWrap .tab-nav.tab-round li a {display: block; font-size: 14px; font-weight: 500; height: 40px; line-height: 38px; letter-spacing: -0.52px; color: #6F6F6F; position: relative; z-index: 10; cursor: pointer;}
+.ktd-conWrap .tab-nav.tab-round li.active {background-color: #000;}
+.ktd-conWrap .tab-nav.tab-round li.active label {color: #fff;}
+.ktd-conWrap .tab-nav.tab-round li.active label:before {content: ''; display: inline-block; width: 16px; height: 16px; background: url('/images/directShop/renew/icon_check.svg') no-repeat 0 calc(50% + 2px);}
 
 /* progress menu */
 .ktd-conWrap #top-tab {max-width: initial; margin:0 -20px; padding: 16px 20px 0;}
@@ -1360,6 +1384,34 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ktd-conWrap .clearbleWrap {margin-top:32px;}
 .ktd-conWrap .clearbleWrap:first-child {margin-top:0;}
 .ktd-conWrap .clearbleDel {height:40px;}
+
+.ktd-conWrap .clearbleWrap ~ .btn-input2 {margin-top: 32px;}
+
+/* 데이터 쉐어링 서비스 */
+.ktd-conWrap .parent-line-search .parent-line-list{margin-top:32px; margin-bottom: 64px;}
+.ktd-conWrap .parent-line-search .parent-line-list li.checkbox{display:block;}
+.ktd-conWrap .parent-line-search .parent-line-list li.checkbox + li.checkbox{margin-top:0; border-top: 1px solid #D9D9D9;}
+
+.ktd-conWrap .parent-line-search .parent-line-list li.checkbox input[type=radio] {right: auto; left: 0; transform: translateY(calc(-50% + 1px)); background-image: url('/images/directShop/renew/icon_check_off.svg');}
+.ktd-conWrap .parent-line-search .parent-line-list li.checkbox input[type=radio]:checked {background-image: url('/images/directShop/renew/icon_check2_on.svg');}
+
+.ktd-conWrap .parent-line-search .parent-line-list li.checkbox label{padding-left:28px;font-size:0;height: 64px; line-height: 64px;}
+.ktd-conWrap .parent-line-search .parent-line-list li.checkbox label span{display:inline-block;font-size:16px;color:#6F6F6F; font-weight: 400;}
+.ktd-conWrap .parent-line-search .parent-line-list li.checkbox label .b-txt{color:#6F6F6F;}
+.ktd-conWrap .parent-line-search .parent-line-list li.checkbox label span + span{position:relative;padding-left:10px;}
+.ktd-conWrap .parent-line-search .parent-line-list li.checkbox label span + span:before{content:'';display:block;position:absolute;left:4px;top:50%;width:4px;height:1px;background:#dcdddc;}
+
+.ktd-conWrap .parent-line-search .parent-line-list li.checkbox input[type=radio]:checked + label,
+.ktd-conWrap .parent-line-search .parent-line-list li.checkbox input[type=radio]:checked + label span {font-weight: 500; color: #000;}
+.ktd-conWrap .parent-line-search .parent-line-list li.checkbox input[type=radio]:checked + label span + span:before {background-color: #000;}
+
+.ktd-conWrap .parent-line-search .link{margin-top:40px;}
+
+.ktd-conWrap #popup-datasharing-info .btn-bottom {padding:40px 0 !important}
+
+
+
+
 
 /* 내정보 */
 .ktd-conWrap .tab-content {margin-top:35px}
@@ -1426,7 +1478,6 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ktd-conWrap .ui-popup.popup-type-2 .body {min-height: calc(100% - 175px); padding:24px 20px 0}
 .ktd-conWrap .ui-popup.popup-type-2 .btn-bottom {padding:40px 20px 20px !important;}
 
-
 /* 국적선택 */
 .ktd-conWrap #select-nationality .select-list {margin-top:18px}
 .ktd-conWrap #select-nationality li + li {border-top: 1px solid #D9D9D9;}
@@ -1463,8 +1514,6 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ktd-conWrap #select-number .radio input {right: auto; left: 0; background-image: url('/images/directShop/renew/icon_check_off.svg');}
 .ktd-conWrap #select-number .radio input:checked {background-image: url('/images/directShop/renew/icon_check2_on.svg');}
 .ktd-conWrap #select-number .radio input:checked + label {font-weight: 500;}
-
-
 
 /* 계좌인증 팝업 */
 #popup-accountWindow {}
@@ -1529,29 +1578,174 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ktd-conWrap .ui-popup.notmember .notice-list li,
 .ktd-conWrap .ui-popup.popup-usim-capture .notice-list li {margin-bottom: 12px;}
 
-
-
 .ktd-conWrap .ad_inp01 {margin:16px 0 0}
 
 .ktd-conWrap .ui-popup.notmember .btn-bottom,
 .ktd-conWrap .ui-popup.popup-usim-capture .btn-bottom {padding:0 !important}
 
+/* 요금납부 방법 */
+.ktd-conWrap .fee-btn-wrap {margin-top:64px}
+.ktd-conWrap .fee-btn-wrap h2 .btn-fee-info {position:relative; margin-left: 2px; top: -6px; width: 16px; height: 16px; background: url('/images/directShop/renew/btn-fee-info2.svg') 0 0 no-repeat; background-size: 100%; color: transparent; font-size: 1px; overflow: hidden; vertical-align: bottom;}
 
+.ktd-conWrap .input-number-wrap .btn-input2,
+.ktd-conWrap [id*=tab-money-] .btn-input2 {justify-content: space-between;}
+.ktd-conWrap .input-number-wrap .btn-input2 .clearbleWrap,
+.ktd-conWrap [id*=tab-money-] .btn-input2 .clearbleWrap {width: 100%;}
+.ktd-conWrap [id*=tab-money-] .clearbleWrap input[type=text]:read-only {background-color: #F8F8F8; color: #6F6F6F;}
+.ktd-conWrap [id*=tab-money-] .btn-input2 > button.btn {min-width: 100px;}
 
-
-
-
-
-
+/* 유심배송지 */
+.ktd-conWrap #tab-con5 .input-number-wrap > input {margin-top: 32px;}
+.ktd-conWrap #tab-con5 .input-number-wrap > input[type=tel] {background-color: #F8F8F8; color: #6F6F6F;}
 
 .ktd-conWrap footer {padding:40px 20px 24px;}
 
 
+/**************************************************************************/
+/******************************* 가입내역조회 ******************************/
+/**************************************************************************/
+.ktd-conWrap #main-contents .notmember {padding:40px 20px 0;}
+
+.ktd-conWrap #main-contents .notmember .header h2 {font-size: 24px; font-weight: 500;}
+.ktd-conWrap #main-contents .notmember .header h2 + p {margin-top:9px; color: #6F6F6F;}
+
+.ktd-conWrap #main-contents #certification > input {margin-top:32px}
+.ktd-conWrap #main-contents #certification > .row {margin-top: 48px;}
+.ktd-conWrap #main-contents #certification > .ktd-btn-block + .row {margin-top: 32px;}
+.ktd-conWrap #main-contents #certification + .btn-bottom {margin-top:27px}
+
+.ktd-conWrap #main-contents .notmember #btn-cert-call {margin:0}
+.ktd-conWrap #main-contents .notmember #btn-cert-send {background-color: #3ACCC8; color: #141414;}
+
+/* 주문내역조회 */
+.ktd-conWrap #contents.ktd-order {padding:0 0 64px; background-color: #F4F4F4;}
+.ktd-conWrap .ktd-order > .header {margin-top: 40px; padding: 0 20px; background-color: #fff;}
+.ktd-conWrap .ktd-order > .header h2 {font-size: 24px; font-weight: 500;}
+.ktd-conWrap .period {padding:33px 20px 32px; background-color: #fff;}
+.ktd-conWrap .period .input-wrap {margin-bottom: 0;}
+
+.ktd-conWrap .period .btn-wrap {display: -webkit-flex; display: -ms-flex; display: flex; margin-bottom: 24px;}
+.ktd-conWrap .period .btn-wrap button {flex-basis: auto; flex-grow: 1; flex-shrink: 1; border: 1px solid #e4e4e4; margin-left: -1px; font-size: 14px; line-height: 1.54; letter-spacing: -0.52px; text-align: center; color: #6F6F6F; height: 40px; line-height: 38px; margin-bottom: 0;}
+.ktd-conWrap .period .btn-wrap button.active {border-color: #000; color: #000; font-weight: 500; border-width: 2px; z-index: 1;}
+.ktd-conWrap .period .btn-wrap button:first-child {border-bottom-left-radius: 4px; border-top-left-radius: 4px;}
+.ktd-conWrap .period .btn-wrap button:last-child {border-bottom-right-radius: 4px; border-top-right-radius: 4px;}
+
+.ktd-conWrap .period .input-wrap input[type="date"] {position:relative; border: none; border-bottom: 1px solid #D9D9D9; height: 40px; line-height: 38px; font-size: 16px;text-align: left; padding-left: 24px; border-radius: 0; flex: 1;}
+.ktd-conWrap .period .input-wrap input[type="date"]::-webkit-inner-spin-button,
+.ktd-conWrap .period .input-wrap input[type="date"]::-webkit-calendar-picker-indicator {background:url('/images/directShop/renew/icon-calendar.svg') no-repeat; background-size:16px; width:16px; height:16px; position:absolute; left: -18px; margin-top: 6px;}
+.period .input-wrap span {font-size: 16px; font-weight: 700; letter-spacing: -0.52px; color: #000; flex-basis: 21px; flex-shrink: 0; flex-grow: 0; text-align: center;}
+.ktd-conWrap .period .input-wrap button {margin-left: 12px; width: 74px; min-width: inherit;}
+
+/* 리스트 */
+.ktd-conWrap .gray-box.inquiry {margin:0; padding:40px 20px 0; background-color: transparent;}
+
+.ktd-order .gray-box .date {text-align: left; font-size: 14px; font-weight: 500; color: #6F6F6F; margin-bottom: 8px;}
+.ktd-order .round-box.order-detail {border: 1px solid #D9D9D9; border-radius: 12px; padding: 24px; margin-bottom: 32px;}
+
+.ktd-order .round-box>p {min-height: inherit; padding: 0 0 20px; border-color: #D9D9D9;}
+.ktd-order .round-box>p span,
+.ktd-order .round-box>p strong {display: inline-block;}
+.ktd-order .round-box>p span {position:relative; font-size: 14px; color: #6F6F6F; float: none;}
+.ktd-order .round-box>p span:after {content: ':'; display: inline-block; padding: 0 4px; font-size: 11px;}
+.ktd-order .round-box>p strong {float: none; text-align: left; font-size: 14px;}
+.ktd-order .round-box.order-detail>p strong button {font-weight: 500; font-size: 14px;}
+
+.ktd-order .round-box.order-detail .detial-box {padding: 20px 0 0;}
+.ktd-order .round-box.order-detail .detial-box .plan-image,
+.ktd-order .round-box.order-detail .detial-box .plan-image span,
+.ktd-order .round-box.order-detail .detial-box .price {font-size: 14px; color: #6F6F6F;}
+.ktd-order .round-box.order-detail .detial-box .price {font-size: 14px; color: #000; font-weight: 500;}
+.ktd-order .round-box.order-detail .detial-box .price strong {font-size: 14px;}
+.ktd-order .round-box.order-detail .detial-box .plan-image {margin-bottom: 16px;}
+.ktd-order .round-box.order-detail .detial-box .cancel {border-top: 1px solid #D9D9D9; padding-top:20px}
+.ktd-order .round-box.order-detail .detial-box .cancel span {font-size: 16px; font-weight: 500; color: #1DA8A5;}
+
+.ktd-order .round-box span .tooltip-pop {margin-left:2px;margin-top:-1px;width:16px;height:16px;background:url('/images/directShop/renew/btn-fee-info2.svg') 0 0 no-repeat;background-size:100%;color:transparent;font-size:1px;overflow:hidden;vertical-align:middle;}
+
+.ktd-order > .btn-area {padding: 0 20px;}
+
+.ktd-conWrap [id*=popup-couponguide].ui-popup.toast-popup .body {margin-bottom: 0;}
+
+/* 상세 */
+.ui-popup.detail.ktd-order > .content {padding:0}
+.ui-popup.detail.ktd-order > .content .header {height: 64px; line-height: 64px; padding: 0 20px;}
+.ui-popup.detail.ktd-order > .content .btn-close {top: 20px; right: 20px;}
+
+.ui-popup.detail.ktd-order .gray-box {background-color: #F4F4F4; padding:32px 20px 64px; margin-bottom: 0;}
+
+.ui-popup.detail.ktd-order .gray-box .round-box {border:1px solid #D9D9D9; border-radius: 12px; padding: 24px; margin-bottom: 16px;}
+
+.ui-popup.detail.ktd-order .gray-box .round-box>p {padding: 0; border: none;}
+.ui-popup.detail.ktd-order .gray-box .round-box>p + p {margin-top:16px;}
+.ui-popup.detail.ktd-order .gray-box .round-box>p span {display: inline-block; width: 120px; vertical-align: top;}
+.ui-popup.detail.ktd-order .gray-box .round-box>p span:after {display: none;}
+
+.ui-popup.detail.ktd-order .gray-box .round-box.order-detail > p {padding: 0 0 20px; border-bottom: 1px solid #D9D9D9;}
+.ui-popup.detail.ktd-order .gray-box .round-box.order-detail > p span {display: inline; width: auto;}
+.ui-popup.detail.ktd-order .gray-box .round-box.order-detail > p span:after {display: inline-block;}
+
+.ui-popup.detail.ktd-order .notice-list{margin-top: 32px;}
+.ui-popup.detail.ktd-order .notice-list dt {padding-left: 0; font-size: 14px; font-weight: 500; color: #6F6F6F; margin-bottom: 12px;}
+.ui-popup.detail.ktd-order .notice-list dd {font-size: 14px; color: #6F6F6F;}
+.ui-popup.detail.ktd-order .notice-list dd:before {background-color: #6F6F6F;}
+.ui-popup.detail.ktd-order .notice-list dd + dd {margin-top: 16px;}
+
+.ui-popup.detail.ktd-order .order-detail #popup-couponguide {margin-left: -45px;}
+.ui-popup.detail.ktd-order .order-detail #popup-couponguide .content {position: absolute;}
+
+/****************************** faq ******************************/
+.ktd-faq .ktd-block {padding:40px 0 33px;}
+.ktd-faq .ktd-block .block-top {margin-bottom: 0;}
+
+.ktd-faq .faq-area {margin: 0; padding: 0 0 64px; background-color: #fff;}
+
+.ktd-faq .faq-area dt,
+.ktd-faq .faq-area dd {border: 1px solid #BBBBBB; border-radius: 12px; padding: 24px 50px 24px 42px; margin-bottom: 16px;}
+.ktd-faq .faq-area dt.selected {border-radius: 12px 12px 0 0; border-bottom: none; padding-bottom: 20px; margin-bottom: 0;}
+.ktd-faq .faq-area dt.selected + dd:before {background-color: #D9D9D9;}
+.ktd-faq .faq-area dt.selected + dd {border-radius: 0 0 12px 12px; border-top:none; padding-top: 20px;}
+.ktd-faq .faq-area em.t {left: 24px; font-size: 14px; font-weight: bold; color: #1DA8A5; font-family: 'Noto Sans KR';}
+.ktd-faq .faq-area strong.t {color: #000;}
+.ktd-faq .faq-area .btn-arrow:after {top: 32px; right: 25px; width: 10px; height: 10px;}
+
+.ktd-faq .faq-area .area {font-size: 14px; color: #6F6F6F;}
+
+/****************************** 본인인증 ******************************/
+.ktd-conWrap .cetify-wrap .ktd-block {padding-right: 0; padding-left: 0;}
+.ktd-conWrap .cetify-wrap .ktd-block .block-top {margin-bottom: 0;}
+
+.ktd-conWrap #contents.new-contents .content-cetify.user #content {min-height: calc(100% - 176px);}
+.ktd-conWrap #contents.new-contents .content-cetify.card #content {min-height: calc(100% - 207px);}
+
+.ktd-other-auth .tab-nav {flex-wrap: wrap; height: auto;}
+.ktd-other-auth .tab-nav li {flex-basis: calc(100% / 2); height: 40px; box-sizing: border-box;}
+.ktd-other-auth .tab-nav li + li {margin-left: 0;}
+.ktd-other-auth .tab-nav li:nth-child(1) {border-radius: 4px 0 0 0;}
+.ktd-other-auth .tab-nav li:nth-child(2) {border-radius: 0 4px 0 0; margin:0 0 0 -1px}
+.ktd-other-auth .tab-nav li:nth-child(3) {border-radius: 0 0 0 4px; margin:-1px 0 0 0}
+.ktd-other-auth .tab-nav li:nth-child(4) {border-radius: 0 0 4px 0; margin:-1px 0 0 -1px}
+
+.ktd-conWrap .content-cetify .row {margin-bottom: 32px;}
+.ktd-conWrap .content-cetify input,
+.ktd-conWrap .content-cetify select {background-color: #fff;}
+
+.ktd-conWrap .content-cetify .member-input .sex {padding-right: 0;}
+.ktd-conWrap .content-cetify input[type=password] {background-color: #fff; border-bottom: 1px solid #D9D9D9;}
+
+.ktd-conWrap .content-cetify .alert {margin-top:0}
+.ktd-conWrap .content-cetify #minorsInfo .alert {margin:-20px 0 49px}
+
+.ktd-conWrap .content-cetify .btn-input {margin-bottom: 32px;}
+.ktd-conWrap .content-cetify .name input {margin-bottom: 0;}
 
 
+/* 인증번호 팝업 */
+.ktd-conWrap #popup-cert-number .member-input {margin-top:16px}
+.ktd-conWrap #popup-cert-number .btn-resend {min-width: 126px;}
 
-
-
+.ktd-conWrap .popup header {position: relative; ; height: auto;}
+.ktd-conWrap .popup header h1 {width: auto; height: auto;}
+.ktd-conWrap .popup .content {padding-top:20px}
 
 /****************************** Footer ******************************/
 .ktd-conWrap .footer {margin-top:64px; padding:32px 24px 40px; line-height: 1.6; font-size: 14px; color:#ccc; background-color: #393939;}

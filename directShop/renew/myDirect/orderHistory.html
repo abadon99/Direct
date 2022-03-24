@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko" class="kt5g">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>기타.조회페이지 [KT 공식] 요금은 비우고 혜택은 채웁니다. KT 다이렉트</title>
+
+	<!-- style -->
+	<link rel="stylesheet" href="/directShop/css/default.css?ver=20220322">
+	<link rel="stylesheet" href="/directShop/css/contents.css?ver=20220322">
+	<link rel="stylesheet" href="/directShop/css/popup.css?ver=20220322">
+	<link rel="stylesheet" href="/directShop/css/swiper.css">
+
+    <!-- js -->
+	<script type="text/javascript"  src="/directShop/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="/directShop/js/ui/common_front.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/ui.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/pub.js" type="text/javascript"></script>
+	<script src="/directShop/js/lib/swiper.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="/oneMinute/js/oneMinuteCommon.js?ver=202203" charset="utf-8"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js?ver=20220322" charset="utf-8"></script>
+
+	<!-- ktd : 추가 css -->
+	<link rel="stylesheet" href="/directShop/css/ktDirect.css">
+
+	<!-- ktd : 추가 js -->
+	<script src="/directShop/js/ui/pub_ktDirect.js" type="text/javascript"></script>
+</head>
+<body>
+	<!-- ktd : Direct 안내 -->
+	<div class="ktd-directInfo">
+        <div class="info">
+            <div class="info-box">매장 방문 없이 바로 가능!</div>
+            <p class="info-txt">자급제&middot;중고&middot;해외직구폰 사용 고객이<br>쉽고 빠르게 개통할 수 있는</p>
+            <div class="info-copy"><img src="/images/directShop/renew/directInfo_tit.png" alt="온라인 유심가입 kt다이렉트"></div>
+        </div>
+        <div class="link-zone">
+            <ul>
+                <li><a href="#"><span>유심가입</span><em>(유심 미보유)</em></a></li>
+                <li><a href="#"><span>셀프개통</span><em>(유심 보유)</em></a></li>
+                <li><a href="#"><span>데이터 쉐어링</span><em>(유심 보유)</em></a></li>
+                <li><a href="#"><span>다이렉트<br>요금제 변경</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //ktd : Direct 안내 -->
+
+	<!-- ktd : 사이트 영역 -->
+	<div class="ktd-conWrap">
+		<div class="bodyCont body-reheight">
+			<header>
+				<div>
+					<h1>
+						<a href="https://direct.kt.com/directMain.do">   KT다이렉트 </a>
+					</h1>
+					<button type="button" name="button" class="menu">메뉴</button>
+				</div>
+			</header>
+			<!-- side -->
+			<div id="menu">
+				<div class="inner">
+					<button type="button" name="button" class="menu-close">닫기</button>
+
+					<ul>
+						<li><a href="https://direct.kt.com/directMain.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^홈');">홈</a></li>
+						<li><a href="javascript:void(0);" class="btn-arrow" title="가입하기 메뉴 열기" role="button">가입하기</a>
+							<ul class="sub">
+								<li><a href="/direct/directUsimUseN.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^유심가입');">유심가입</a></li>
+								<li><a href="/direct/DirectUsimMemRate.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^다이렉트 요금제 변경');">다이렉트 요금제 변경</a></li>
+								<li><a href="/direct/directWatchPpl.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^스마트워치요금제');">스마트워치요금제</a></li>
+								<li><a href="/direct/directFaq.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^자주묻는질문');">자주묻는 질문</a></li>
+							</ul>
+						</li>
+						<li><a href="/direct/directUsimUseY.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^셀프개통유심보유');">셀프개통</a></li>
+						<li><a href="/direct/directShare.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^데이터쉐어링가입');">데이터쉐어링 가입</a></li>
+						<li><a href="javascript:void(0);" class="btn-arrow" title="중고/자급제폰 메뉴 열기" role="button">중고/자급제폰</a>
+							<ul class="sub">
+								<li><a href="/direct/directUsimSelfSuff.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^자급제폰');">자급제폰</a></li>
+								<li><a href="/direct/directUsim.usedphone.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^중고폰');">중고폰</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" class="btn-arrow" title="이벤트 메뉴 열기" role="button">이벤트</a>
+							<ul class="sub">
+								<li><a href="/direct/directEventIng.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^진행중이벤트');">진행중 이벤트</a></li>
+								<li><a href="/direct/directEventEnd.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^종료된이벤트');">종료된 이벤트</a></li>
+								<li><a href="/direct/directEventWinner.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^당첨자발표');">당첨자 발표</a></li>
+							</ul>
+						</li>
+						<li><a href="/mydirect/orderHistory.do" onclick="trackClicks('mKT direct-메인', '^mKT direct-메인^전체메뉴^가입내역조회');" role="button">가입내역조회</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<script>
+				$('#menu .btn-arrow').attr('aria-expanded', false);
+				$('#menu .btn-arrow').on('click',function(e){
+					if(!$(this).hasClass('selected')){
+						$(this).addClass('selected').attr('aria-expanded', true);
+						$(this).parent('li').find('.sub').slideDown();
+						$(this).attr('title' , $(this).attr('title').replace('열기', '닫기'));
+						return false;
+					}else{
+						$(this).removeClass('selected').attr('aria-expanded', false);
+						$(this).parent('li').find('.sub').slideUp();
+						$(this).attr('title' , $(this).attr('title').replace('닫기', '열기'));
+						return false;
+					};
+				});
+				if(!(location.pathname.indexOf('directMain.do') > -1)){
+					$(".ktd-depthMenu").hide();
+				}
+			</script>
+			<!-- //side -->
+
+			<input type="hidden" id="inqOrdrHistory" value="N" />
+			<input type="hidden" name="pgType" value="list">
+			<!-- <h2 class="tit"><button type="button" name="button" onclick="location.href='/directMain.do'">KT 다이렉트</button></h2> -->
+
+			<!-- 주문 내역 -->
+			<div id="contents" class="ktd-order"><!-- ktd수정 : class ktd-order로 변경 -->
+				<div class="header">
+					<h2>가입내역 조회</h2>
+				</div>
+				<div class="period">
+					<div class="btn-wrap">
+						<button type="button" name="button" data-type="day" data-period="7" onclick="orderHist.chgMonth(this);" class="active">1주</button>
+						<button type="button" name="button" data-type="month" data-period="1" onclick="orderHist.chgMonth(this);" class="">1개월</button>
+						<button type="button" name="button" data-type="month" data-period="3" onclick="orderHist.chgMonth(this);" class="">3개월</button>
+						<button type="button" name="button" onclick="orderHist.getList(1);" class="">직접</button>
+					</div>
+					<div class="input-wrap">
+						<input type="date" class="sOrdrRcpDt" value="0000-00-00">
+						<span>-</span>
+						<input type="date" class="eOrdrRcpDt" value="0000-00-00">
+						<button type="button" name="" class="btn medium">조회</button>
+					</div>
+					<!-- ktd수정 : 주석
+					<div class="order-period-info" style="display:none;">
+						<p class="txt">
+							총 주문/신청 내역<span class="num">(2)</span>
+						</p>
+						<p class="date">2022.03.15~2022.03.22</p>
+					</div>
+					-->
+				</div>
+				<div class="gray-box inquiry" id="orderHistory">
+					<div class="date">2022.03.15</div>
+					<div class="round-box order-detail">
+						<p>
+							<span>주문번호</span>
+							<strong>
+								<!-- ktd수정 : class text-red 제거 -->
+								<button type="button" name="arrow" class="ui-popup-call detail arrow" data-target="#detail" data-ordr-no="930007805485">930007805485</button>
+							</strong>
+						</p>
+						<div class="detial-box">
+							<div class="plan-image">
+								<span>5G 다이렉트 67</span>
+								<div class="price">월 <strong>67,000</strong>원</div>
+							</div>
+							<div class="plan-image">
+								<span> KT 다이렉트 쿠폰팩
+									<a href="#popup-couponguide2" class="ui-popup-call tooltip-pop" data-target="#popup-couponguide2" title="새창열림" role="button">유의사항</a>
+								</span>
+								<div class="price"> 올리브영 (월 4,000원)</div>
+							</div>
+
+							<div class="cancel">
+								<span>주문취소</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="date">2022.03.15</div>
+					<div class="round-box order-detail">
+						<p>
+							<span>신청번호</span>
+							<strong><button type="button" name="arrow" class="ui-popup-call detail arrow" data-target="#detail" data-ordr-no="930007805454">930007805454</button></strong>
+						</p>
+						<div class="detial-box">
+							<div class="plan-image">
+								<span>LTE-데이터쉐어링</span>
+								<div class="price">월 <strong>8,250</strong>원</div>
+							</div>
+
+							<div class="cancel">
+								<span>개통완료</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn-area" id="moreOrderHistory" style="display: none;">
+					<button type="button" onclick="orderHist.getMoreList();" class="btn fill" title="주문내역 더보기">더보기</button>
+				</div>
+
+				<!-- ktd수정 : 개발 루핑 제거 체크 필요. 리스트에 제휴쿠폰 팝업 반복 사용 말고 따로 구성 -->
+				<div id="popup-couponguide2" class="ui-popup toast-popup popup-couponguide">
+					<div class="content">
+						<div class="header">제휴쿠폰 이용안내</div>
+						<button type="button" class="btn-close">닫기</button>
+						<div class="body">
+							<ul class="jum-list">
+								<li> 선택하신 요금제에 따라 혜택 금액은 달라지며 개통월기준 2달 후(요금납부 확인 후) 개통연락처로 쿠폰이 제공됩니다. </li>
+								<li> 쿠폰은 약정기간 중 매월 1회 제공되며 제공된 쿠폰은 재발행되지 않습니다. </li>
+								<li> 약정기간 중 요금제 변경의 경우 변경된 요금기준으로 쿠폰 금액이 변경, 발행됩니다. </li>
+								<li> 쿠폰 변경은 3월, 6월, 9월, 12월 변경기간내에서 만 가능하며 변경 기간은 쿠폰 문자 발송 시 안내예정 입니다. </li>
+								<li> 쿠폰 발행 연락처는 변경할 수 없습니다.(최초 개통 연락처로 약정기간 중 발행됩니다.) </li>
+								<li> 발행된 쿠폰의 유효기간은 매달 말일까지 사용가능하며 미사용 시 소멸됩니다. (쿠폰 발행 시 유효기간이 안내되어 있으니 꼭 확인하시기 바랍니다.) </li>
+								<li> 쿠폰은 요금납부 확인 후 매달 5일 발행될 예정입 니다. </li>
+								<li> 발행된 쿠폰은 타인에게 양도 불가합니다. </li>
+								<li> 쿠폰 분실 시 재발행은 불가합니다. </li>
+							</ul>
+						</div>
+						<div class="btn-bottom btn-bottom-inline">
+							<button type="button" name="button" class="btn inline bottom btn-close" id="">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- //ktd수정 : 리스트에 제휴쿠폰 팝업 반복 사용 말고 따로 구성 -->
+			</div>
+			<!-- //주문 내역 -->
+			<!-- 주문 상세 -->
+			<div id="detail" class="ui-popup detail ktd-order" style="display: none;"><!-- //ktd수정 : ktd-order 추가 -->
+				<div class="content">
+					<div class="header">가입내역 상세</div>
+					<button type="button" class="btn-close">닫기</button>
+					<div class="body">
+						<div class="gray-box">
+							<div class="date">2022.03.15</div>
+							<div class="round-box order-detail">
+								<p>
+									<span>주문번호</span>
+									<strong>930007805485</strong>
+								</p>
+								<div class="detial-box">
+									<div class="plan-image">
+										<span>5G 다이렉트 67</span>
+										<div class="price">월 <strong>67,000</strong>원</div>
+									</div>
+									<div class="plan-image">
+										<span>KT 다이렉트 쿠폰팩
+											<a href="#" class="ui-popup-call tooltip-pop" data-target="#popup-couponguide" title="새창열림" role="button">유의사항</a>
+										</span>
+										<div class="price">올리브영(월 4,000원)</div>
+									</div>
+									<div id="popup-couponguide" class="ui-popup toast-popup popup-couponguide">
+										<div class="content">
+											<div class="header">제휴쿠폰 이용안내</div>
+											<button type="button" class="btn-close">닫기</button>
+											<div class="body">
+												<ul class="jum-list">
+													<li> 선택하신 요금제에 따라 혜택 금액은 달라지며 개통월기준 2달 후(요금납부 확인 후) 개통연락처로 쿠폰이 제공됩니다. </li>
+													<li> 쿠폰은 약정기간 중 매월 1회 제공되며 제공된 쿠폰은 재발행되지 않습니다. </li>
+													<li> 약정기간 중 요금제 변경의 경우 변경된 요금기준으로 쿠폰 금액이 변경, 발행됩니다. </li>
+													<li> 쿠폰 변경은 3월, 6월, 9월, 12월 변경기간내에서 만 가능하며 변경 기간은 쿠폰 문자 발송 시 안내예정 입니다. </li>
+													<li> 쿠폰 발행 연락처는 변경할 수 없습니다.(최초 개통 연락처로 약정기간 중 발행됩니다.) </li>
+													<li> 발행된 쿠폰의 유효기간은 매달 말일까지 사용가능하며 미사용 시 소멸됩니다. (쿠폰 발행 시 유효기간이 안내되어 있으니 꼭 확인하시기 바랍니다.) </li>
+													<li> 쿠폰은 요금납부 확인 후 매달 5일 발행될 예정입 니다. </li>
+													<li> 발행된 쿠폰은 타인에게 양도 불가합니다. </li>
+													<li> 쿠폰 분실 시 재발행은 불가합니다. </li>
+												</ul>
+											</div>
+											<div class="btn-bottom btn-bottom-inline">
+												<button type="button" name="button" class="btn inline bottom btn-close" id="">확인</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="cancel">
+										<span>주문취소</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="round-box">
+								<p>
+									<span>가입유형</span>
+									<strong>신규가입</strong>
+								</p>
+								<p>
+									<span>이름</span>
+									<strong>신정*</strong>
+								</p>
+							</div>
+
+							<div class="round-box">
+								<p>
+									<span>요금제</span>
+									<strong>5G 다이렉트 67</strong>
+								</p>
+								<p>
+									<span>개통 희망번호 1순위</span>
+									<strong>010-****-3326</strong>
+								</p>
+								<p>
+									<span>개통 희망번호 2순위</span>
+									<strong>010-****-3327</strong>
+								</p>
+								<p>
+									<span>납부방법</span>
+									<strong>신용카드</strong>
+								</p>
+								<p>
+									<span>명세서</span>
+									<strong>MMS</strong>
+								</p>
+								<p>
+									<span>연락처</span>
+									<strong>010-88**-*218</strong>
+								</p>
+							</div>
+
+							<dl class="notice-list">
+								<dt>안내</dt>
+								<dd>개통이 지연될 경우, 고객센터(1899-8245)로 문의해 주세요.</dd>
+								<dd>기다리지 않으셔도 개통이 진행되며, 결과는 입력하신 연락받을 번호에 문자로 안내해드립니다.</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //주문 상세 -->
+
+			<!-- 주문 조회-->
+			<div id="main-contents" >
+				<!-- 비회원 주문조회// -->
+				<div id="notmember" class="notmember">
+					<div class="content">
+						<div class="header">
+							<h2>주문조회</h2>
+							<p>KT 다이렉트를 통해 주문하신 내역은 다이렉트 페이지 내 “가입내역조회” 메뉴를 통해서만 확인 가능합니다.</p>
+						</div>
+						<div class="body" id="certification">
+							<input type="text" name="custNm" id="custNm" class="" placeholder="고객명 입력">
+							<input type="tel" name="custPhone" id="custPhone" class="" placeholder="핸드폰번호 입력" maxlength="13">
+							<div class="row row-certification" id="CaptchaNumber" style="text-align: center;">
+								<link type="text/css" rel="stylesheet" href="/botdetectcaptcha?get=layout-stylesheet&amp;t=1647928800">
+								<div class="BDC_CaptchaDiv " id="captchaInSession_CaptchaDiv">
+									캡챠
+								</div>
+								<input type="tel" class="ad_inp01" id="captchaInSession" name="captchaInSession" placeholder="보안문자" title="보안문자 입력" maxlength="6" autocomplete="off">
+							</div>
+							<div class="ktd-btn-block">
+								<button type="button" class="btn medium inline" id="btn-cert-call" disabled>인증번호 받기</button>
+							</div>
+
+
+
+
+							<div class="row">
+								<span class="td">
+									<input type="tel" name="smsAuthNo" id="smsAuthNo" maxlength="6" title="인증번호 입력" placeholder="인증번호 입력">
+								</span>
+							</div>
+						</div>
+						<div class="btn-bottom btn-2">
+							<button type="button" name="button" class="btn white btn-close">취소</button>
+							<button type="button" class="btn fill" id="btn-cert-send" >계좌인증 요청</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //주문 조회-->
+		</div>
+
+		<div id="popup-couponguide" class="ui-popup toast-popup popup-couponguide">
+			<div class="content">
+				<div class="header">제휴쿠폰 이용안내</div>
+				<button type="button" class="btn-close">닫기</button>
+				<div class="body">
+					<ul class="jum-list">
+						<li> 선택하신 요금제에 따라 혜택 금액은 달라지며 개통월기준 2달 후(요금납부 확인 후) 개통연락처로 쿠폰이 제공됩니다. </li>
+						<li> 쿠폰은 약정기간 중 매월 1회 제공되며 제공된 쿠폰은 재발행되지 않습니다. </li>
+						<li> 약정기간 중 요금제 변경의 경우 변경된 요금기준으로 쿠폰 금액이 변경, 발행됩니다. </li>
+						<li> 쿠폰 변경은 3월, 6월, 9월, 12월 변경기간내에서 만 가능하며 변경 기간은 쿠폰 문자 발송 시 안내예정 입니다. </li>
+						<li> 쿠폰 발행 연락처는 변경할 수 없습니다.(최초 개통 연락처로 약정기간 중 발행됩니다.) </li>
+						<li> 발행된 쿠폰의 유효기간은 매달 말일까지 사용가능하며 미사용 시 소멸됩니다. (쿠폰 발행 시 유효기간이 안내되어 있으니 꼭 확인하시기 바랍니다.) </li>
+						<li> 쿠폰은 요금납부 확인 후 매달 5일 발행될 예정입 니다. </li>
+						<li> 발행된 쿠폰은 타인에게 양도 불가합니다. </li>
+						<li> 쿠폰 분실 시 재발행은 불가합니다. </li>
+					</ul>
+				</div>
+				<div class="btn-bottom btn-bottom-inline">
+					<button type="button" name="button" class="btn inline bottom btn-close" id="">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //ktd : 사이트 영역 -->
+</body>
+</html>

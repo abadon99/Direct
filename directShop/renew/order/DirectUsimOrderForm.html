@@ -123,7 +123,7 @@
 						<div id="top-tab" class="swiper-container">
 							<ul class="tab-nav swiper-wrapper">
 								<li class="swiper-slide">
-									<a href="javascript:history.back();" role="button" aria-label="5G&nbsp;신규가입, 가입유형선택 이전화면으로 이동" aria-selected="false" title=""><em>1</em>5G&nbsp;신규가입</a><!-- ktd수정 : em 항목 전체 추가 -->
+									<a href="javascript:history.back();" role="button" aria-label="5G&nbsp;신규가입, 가입유형선택 이전화면으로 이동" aria-selected="false" title=""><em>1</em>5G<br>신규가입</a><!-- ktd수정 : em 항목 전체 추가 -->
 								</li>
 								<li class="active swiper-slide">
 									<button type="button" name="button" class="tab-anchor" navidx="1" aria-label="내정보 입력화면으로 이동" data-initlabel="내정보 입력화면으로 이동" aria-selected="true" title="선택됨"><em>2</em>내정보</button>
@@ -138,9 +138,6 @@
 								<li class="swiper-slide">
 									<button type="button" name="button" class="tab-anchor" navidx="3" aria-label="번호이동 입력화면으로 이동" data-initlabel="번호이동 입력화면으로 이동" aria-selected="false" title=""><em>4</em>번호이동</button>
 								</li>
-
-
-
 								<!-- <li class="swiper-slide" id="btn-pass">
 									<button type="button" name="button" class="tab-anchor" navidx="11" aria-label="PASS+계좌 인증 입력화면으로 이동" data-initlabel="PASS+계좌 인증 입력화면으로 이동" aria-selected="false" title="">PASS+계좌 인증</button>
 								</li>
@@ -150,12 +147,14 @@
 								<li class="swiper-slide" id="btn-naver">
 									<button type="button" name="button" class="tab-anchor" navidx="16" aria-label="네이버 인증서 인증 입력화면으로 이동" data-initlabel="네이버 인증서 인증 입력화면으로 이동" aria-selected="false" title="">네이버 인증서 인증</button>
 								</li> -->
-
 								<li class="swiper-slide">
 									<button type="button" name="button" class="tab-anchor" navidx="8" aria-label="USIM 입력화면으로 이동" data-initlabel="USIM 입력화면으로 이동" aria-selected="false" title=""><em>5</em>USIM</button>
 								</li>
 								<li class="swiper-slide">
-									<button type="button" name="button" class="tab-anchor" navidx="4" aria-label="요금납부방법 입력화면으로 이동" data-initlabel="요금납부방법 입력화면으로 이동" aria-selected="false" title=""><em>6</em>요금납부방법</button>
+									<button type="button" name="button" class="tab-anchor" navidx="4" aria-label="요금납부방법 입력화면으로 이동" data-initlabel="요금납부방법 입력화면으로 이동" aria-selected="false" title=""><em>6</em>요금납부<br>방법</button>
+								</li>
+								<li class="swiper-slide">
+									<button type="button" name="button" class="tab-anchor" navidx="5" aria-label="고객주소 입력화면으로 이동" data-initlabel="고객주소 입력화면으로 이동" aria-selected="false" title=""><em>7</em>유심<br>배송지</button>
 								</li>
 								<li class="swiper-slide">
 									<button type="button" name="button" class="tab-anchor" navidx="5" aria-label="고객주소 입력화면으로 이동" data-initlabel="고객주소 입력화면으로 이동" aria-selected="false" title=""><em>7</em>고객주소</button>
@@ -169,9 +168,29 @@
 							<div id="tab-con13">
 								<!--쉐어링 이용 회선 선택-->
 								<div class="parent-line-search">
-									<h2 class="sharing-title">쉐어링 서비스 가입할 회선 선택</h2>
-									<p class="t-txt">데이터 쉐어링 서비스 이용을 원하시는 회선을 선택해주세요.</p>
-									<ul class="parent-line-list"></ul>
+									<div class="ktd-title"><!-- ktd수정 : 타이틀영역 변경 -->
+										<h2>데이터 쉐어링 서비스<br>이용을 원하시는 회선을<br>선택해주세요.</h2>
+									</div>
+									<ul class="parent-line-list">
+										<li class="checkbox">
+											<input type="radio" id="disireServiceNum0" name="disireServiceNum" value="010-1234-1234" servicepplgroup="114" mainsvccontid="123456789" billaccid="123456789">
+											<label for="disireServiceNum0">
+												<span>010</span><span class="b-txt">1234</span><span>1234</span>
+											</label>
+										</li>
+										<li class="checkbox">
+											<input type="radio" id="disireServiceNum1" name="disireServiceNum" value="010-1234-1234" servicepplgroup="114" mainsvccontid="123456789" billaccid="123456789">
+											<label for="disireServiceNum1">
+												<span>010</span><span class="b-txt">1234</span><span>1234</span>
+											</label>
+										</li>
+										<li class="checkbox">
+											<input type="radio" id="disireServiceNum2" name="disireServiceNum" value="010-1234-1234" servicepplgroup="114" mainsvccontid="123456789" billaccid="123456789">
+											<label for="disireServiceNum2">
+												<span>010</span><span class="b-txt">1234</span><span>1234</span>
+											</label>
+										</li>
+									</ul>
 								</div>
 							</div>
 
@@ -351,7 +370,7 @@
 							</div>
 
 							<div id="tab-con1" class="active">
-								<div class="user-name">
+								<div class="ktd-title">
 									<h2>신분증 정보를<br>입력해 주세요.</h2><!-- ktd수정 : 문구 변경 -->
 
 									<!-- 개인인 경우 -->
@@ -458,7 +477,7 @@
 								</div>
 
 								<!-- 미성년자인 경우 -->
-								<div class="user-name">
+								<div class="ktd-title">
 									<h2>신분증 정보를<br>입력해 주세요.</h2><!-- ktd수정 : 문구 변경 -->
 
 									<!-- 미성년자인 경우 -->
@@ -640,59 +659,62 @@
 							</div>
 
 							<div id="tab-con4" class="">
-								<div class="parents-name">
-									<h2>요금납부방법</h2>
+								<div class="ktd-title">
+									<h2>요금을 어떻게<br>납부할까요?</h2>
+								</div>
 
-									<ul class="tab-nav" data-effect="tab">
-										<li><a href="#tab-money-1" name="selRdFeePay" rdfeepay="C" rdfeepayck="A" aria-selected="false" role="button">인증신용카드</a></li>
-										<li><a href="#tab-money-2" name="selRdFeePay" rdfeepay="C" rdfeepayck="C" aria-selected="false" role="button">타신용카드</a></li>
-										<li><a href="#tab-money-3" name="selRdFeePay" rdfeepay="D" rdfeepayck="D" aria-selected="false" role="button">자동이체</a></li>
-									</ul>
-									<div class="tab-content">
-										<div id="tab-money-1">
-											<input type="text" id="feeCardNumTemp" name="feeCardNumTemp" value="" class="is-card" maxlength="16" placeholder="카드번호" readonly="">
-											<input type="hidden" id="feeCardNum" name="feeCardNum" value="">
+								<ul class="tab-nav" data-effect="tab">
+									<li class="active"><a href="#tab-money-1" name="selRdFeePay" rdfeepay="C" rdfeepayck="A" aria-selected="false" role="button">인증신용카드</a></li>
+									<li><a href="#tab-money-2" name="selRdFeePay" rdfeepay="C" rdfeepayck="C" aria-selected="false" role="button">타신용카드</a></li>
+									<li><a href="#tab-money-3" name="selRdFeePay" rdfeepay="D" rdfeepayck="D" aria-selected="false" role="button">자동이체</a></li>
+								</ul>
+								<div class="tab-content">
+									<div id="tab-money-1" class="active">
+										<input type="text" id="feeCardNumTemp" name="feeCardNumTemp" value="" class="is-card clearable" maxlength="16" placeholder="카드번호" readonly=""><!-- ktd수정 : clearable 추가 -->
+										<input type="hidden" id="feeCardNum" name="feeCardNum" value="">
 
-											<div class="btn-input2 mb0">
-												<span class="clearbleWrap"><input type="tel" id="feeCardDate" name="feeCardDate" value="" class="clearable mb0 free-spacing" placeholder="유효기간 - MMYY 숫자 4자리" title="유효기간 - MMYY 숫자 4자리 입력"><a href="#" class="clearbleDel" aria-hidden="true" tabindex="-1" role="button">삭제</a></span>
-												<button type="button" id="card_effectiveness" name="button" class="btn">유효성 체크</button>
-											</div>
+										<div class="btn-input2"><!-- ktd수정 : mb0 제거 -->
+											<input type="tel" id="feeCardDate" name="feeCardDate" value="" class="clearable" placeholder="유효기간 - MMYY 숫자 4자리" title="유효기간 - MMYY 숫자 4자리 입력"><!-- ktd수정 : mb0제거 free-spacing 제거 -->
+											<button type="button" id="card_effectiveness" name="button" class="btn" disabled>유효성 체크</button><!-- ktd수정 : disable -->
 										</div>
-
-										<div id="tab-money-2">
-											<input type="text" id="feeCardNumCgTemp" name="feeCardNumCgTemp" value="" class="is-card" maxlength="16" data-masking="true" placeholder="카드번호" title="카드번호 입력">
-											<input type="hidden" id="feeCardNumCg" name="feeCardNumCg" value="">
-											<div class="btn-input2 mb0">
-												<span class="clearbleWrap"><input type="tel" name="feeCardDateCg" id="feeCardDateCg" value="" class="clearable mb0 free-spacing" placeholder="유효기간 - MMYY 숫자 4자리" title="유효기간 - MMYY 숫자 4자리 입력"><a href="#" class="clearbleDel" aria-hidden="true" tabindex="-1" role="button">삭제</a></span>
-												<button type="button" id="card_effectiveness" name="button" class="btn">유효성 체크</button>
-											</div>
-										</div>
-
-										<div id="tab-money-3">
-											<div class="btn-input mb0">
-												<button type="button" name="feeBankNm" id="feeBankNm" class="ui-popup-call" data-target="#select-bank">은행 선택</button>
-												<input type="text" name="feeBank" id="feeBank" aria-hidden="true" tabindex="-1" data-masking="true" value="" class="" placeholder="은행/증권사" title="은행/증권사 선택">
-											</div>
-											<div class="btn-input2 mb0">
-												<button type="button" id="bank_effectiveness" name="button" class="btn">유효성 체크</button>
-												<span class="clearbleWrap"><input type="tel" name="feeAccountTemp" id="feeAccountTemp" value="" data-masking="true" class="clearable account-masking mb0" placeholder="계좌번호 입력" title="계좌번호 입력"><a href="#" class="clearbleDel" aria-hidden="true" tabindex="-1" role="button">삭제</a></span>
-												<input type="hidden" id="feeAccount" name="feeAccount" value="">
-												<input type="hidden" id="nstepValue" name="nstepValue" value="">
-												<input type="hidden" id="feeBankCd" name="feeBankCd" value="">
-											</div>
-										</div>
-
 									</div>
-									<div class="checkbox fee">
-										<input type="checkbox" name="feeCardAgree" id="feeCardAgree" value="N">
-										<label for="feeCardAgree">[필수] 납부요금에 대해 위 카드번호(계좌)에서 지정된 출금일에 결제(인출)되는 것에 동의합니다.</label>
+
+									<div id="tab-money-2">
+										<input type="text" id="feeCardNumCgTemp" name="feeCardNumCgTemp" value="" class="is-card clearable" maxlength="16" data-masking="true" placeholder="카드번호" title="카드번호 입력"><!-- ktd수정 : clearable 추가 -->
+										<input type="hidden" id="feeCardNumCg" name="feeCardNumCg" value="">
+										<div class="btn-input2"><!-- ktd수정 : mb0 제거 -->
+											<input type="tel" name="feeCardDateCg" id="feeCardDateCg" value="" class="clearable" placeholder="유효기간 - MMYY 숫자 4자리" title="유효기간 - MMYY 숫자 4자리 입력"><!-- ktd수정 : mb0제거 free-spacing 제거 -->
+											<button type="button" id="card_effectiveness" name="button" class="btn">유효성 체크</button>
+										</div>
 									</div>
+
+									<div id="tab-money-3">
+										<div class="btn-input"><!-- ktd수정 : mb0 제거 -->
+											<button type="button" name="feeBankNm" id="feeBankNm" class="ui-popup-call" data-target="#select-bank">은행 선택</button>
+											<input type="text" name="feeBank" id="feeBank" aria-hidden="true" tabindex="-1" data-masking="true" value="" class="" placeholder="은행/증권사" title="은행/증권사 선택">
+										</div>
+										<div class="btn-input2"><!-- ktd수정 : mb0 제거 -->
+											<input type="tel" name="feeAccountTemp" id="feeAccountTemp" value="" data-masking="true" class="clearable account-masking free-spacing" placeholder="계좌번호 입력" title="계좌번호 입력"><!-- ktd수정 : mb0제거 free-spacing 제거 -->
+											<button type="button" id="bank_effectiveness" name="button" class="btn" disabled>유효성 체크</button>
+											<input type="hidden" id="feeAccount" name="feeAccount" value="">
+											<input type="hidden" id="nstepValue" name="nstepValue" value="">
+											<input type="hidden" id="feeBankCd" name="feeBankCd" value="">
+										</div>
+									</div>
+
+								</div>
+
+								<div class="ktd-checkbox"><!-- ktd수정 : class 변경 -->
+									<input type="checkbox" name="feeCardAgree" id="feeCardAgree" value="N">
+									<label for="feeCardAgree">[필수] 납부요금에 대해 위 카드번호(계좌)에서 지정된 출금일에 결제(인출)되는 것에 동의합니다.</label>
 								</div>
 
 								<div class="fee-btn-wrap hidden">
-									<h2>요금명세서 <button type="button" name="button" class="btn-fee-info ui-popup-call" data-target="#fee-info">요금명세서 안내</button> </h2>
+									<div class="ktd-title"><!-- ktd수정 : class 변경 -->
+										<h2>어디로 요금명세서를<br>받을까요? <button type="button" name="button" class="btn-fee-info ui-popup-call" data-target="#fee-info">요금명세서 안내</button></h2>
+									</div>
 
-									<ul class="tab-nav" data-effect="tab">
+									<ul class="tab-nav tab-round" data-effect="tab"><!-- ktd수정 : class 추가 -->
 										<li class="active">
 											<a href="#" aria-selected="true" title="선택됨" role="button"><label for="tab-mms">MMS</label></a>
 											<input id="tab-mms" data-link="#money-paper-1" type="radio" name="selRdFeeList" val="MB" aria-hidden="true" tabindex="-1">
@@ -742,27 +764,29 @@
 
 							<!-- 유심배송지 / eSim/usim 개통시 배송받는 주소 -> 주소 -->
 							<div id="tab-con5" class="">
-								<p class="mb15" style="color:#666;">* 유심 미보유 고객에 한해 유심카드비용(7,700원)은 후청구됩니다.</p>
+								<div class="ktd-title">
+									<h2>어디로 배송할까요?</h2>
+									<h2>주소가<br>어디신가요?</h2>
+								</div><!-- ktd수정 : ktd-title 추가 -->
+								<!-- <p class="mb15" style="color:#666;">* 유심 미보유 고객에 한해 유심카드비용(7,700원)은 후청구됩니다.</p> -->
 								<div class="input-number-wrap">
-									<h2>주소</h2>
-										<div class="btn-input2 mb10">
-										<button type="button" name="button" onclick="goPopup();" class="btn">조회</button>
-										<input type="text" id="zipCd" name="zipCd" value="" class="" placeholder="우편번호" title="우편번호 입력">
-									</div>
-									<input type="text" name="mailAdr" id="mailAdr" value="" class="mb10" placeholder="기본주소" title="기본주소 입력">
+									<div class="btn-input2">
+										<input type="text" id="zipCd" name="zipCd" value="" class="clearable" placeholder="우편번호" title="우편번호 입력">
+										<button type="button" name="button" onclick="goPopup();" class="btn" disabled>조회</button>
+									</div><!-- ktd수정 : input, button 순서 변경 clearable class 추가 -->
+									<input type="text" name="mailAdr" id="mailAdr" value="" class="" placeholder="기본주소" title="기본주소 입력"><!-- ktd수정 : mb10제거 -->
 									<input type="text" name="addrDetail" id="addrDetail" value="" placeholder="상세주소" title="상세주소 입력">
 									<!-- <p class="mt10 mb50">입력하신 주소로 나노유심을 배송해드립니다. </p> -->
 									<input type="hidden" name="dtlAdr" id="dtlAdr" value="">
-									<h2 class="mt50">연락처</h2>
 									<input type="tel" name="rcvmtrPrsnCntplc" id="rcvmtrPrsnCntplc" value="" class="" placeholder="휴대폰번호 입력 ‘-’없이" title="휴대폰번호 입력">
-								</div>
+								</div><!-- ktd수정 : h2 삭제 -->
 							</div>
 							<!-- 유심배송지 -->
 
 							<!-- USIM-->
 							<div id="tab-con8" class="">
 								<div class="input-number-wrap">
-									<div class="user-name">
+									<div class="ktd-title">
 										<h2>개통하실 유심카드<br>번호를 입력해 주세요.</h2>
 									</div>
 									<div class="usim-number">
@@ -787,7 +811,7 @@
 
 							<!-- ktd수정 : PASS+계좌인증, 네이버 인증서, 신용카드 인증서 병합 -->
 							<div id="tab-con21" class="">
-								<div class="user-name">
+								<div class="ktd-title">
 									<h2>본인인증 후,<br>약관확인 및 동의해주세요.</h2>
 								</div>
 
@@ -966,55 +990,16 @@
 										<li><span class="radio"><label for="radio13"><img src="/images/directShop/bank/bnk.png" alt="경남은행" aria-hidden="true"><input type="radio" id="radio13" name="select-bank" value="B012" nstepvalue="039" bankname="경남은행">경남은행</label></span></li>
 										<li><span class="radio"><label for="radio14"><img src="/images/directShop/bank/kj.png" alt="광주은행" aria-hidden="true"><input type="radio" id="radio14" name="select-bank" value="B007" nstepvalue="034" bankname="광주은행">광주은행</label></span></li>
 										<li><span class="radio"><label for="radio15"><img src="/images/directShop/bank/kb.png" alt="국민은행" aria-hidden="true"><input type="radio" id="radio15" name="select-bank" value="B033" nstepvalue="004" bankname="국민은행">국민은행</label></span></li>
-										<li><span class="radio"><label for="radio16"><img src="/images/directShop/bank/kftc.png" alt="금융결제원" aria-hidden="true"><input type="radio" id="radio16" name="select-bank" value="B097" nstepvalue="099" bankname="금융결제원">금융결제원</label></span></li>
-										<li><span class="radio"><label for="radio17"><img src="/images/directShop/bank/ibk.png" alt="기업은행" aria-hidden="true"><input type="radio" id="radio17" name="select-bank" value="B032" nstepvalue="003" bankname="기업은행">기업은행</label></span></li>
-										<li><span class="radio"><label for="radio18"><img src="/images/directShop/bank/nh.png" alt="농협중앙회" aria-hidden="true"><input type="radio" id="radio18" name="select-bank" value="B039" nstepvalue="011" bankname="농협중앙회">농협중앙회</label></span></li>
-										<li><span class="radio"><label for="radio19"><img src="/images/directShop/bank/nh.png" alt="농협회원조합" aria-hidden="true"><input type="radio" id="radio19" name="select-bank" value="B040" nstepvalue="012" bankname="농협회원조합">농협회원조합</label></span></li>
-										<li><span class="radio"><label for="radio110"><img src="/images/directShop/bank/dgb.png" alt="대구은행" aria-hidden="true"><input type="radio" id="radio110" name="select-bank" value="B004" nstepvalue="031" bankname="대구은행">대구은행</label></span></li>
-										<li><span class="radio"><label for="radio111"><img src="/images/directShop/bank/db.png" alt="도이치은행" aria-hidden="true"><input type="radio" id="radio111" name="select-bank" value="B084" nstepvalue="055" bankname="도이치은행">도이치은행</label></span></li>
-										<li><span class="radio"><label for="radio112"><img src="/images/directShop/bank/boa.png" alt="뱅크오브아메리카" aria-hidden="true"><input type="radio" id="radio112" name="select-bank" value="B022" nstepvalue="060" bankname="뱅크오브아메리카">뱅크오브아메리카</label></span></li>
-										<li><span class="radio"><label for="radio113"><img src="/images/directShop/bank/bnk.png" alt="부산은행" aria-hidden="true"><input type="radio" id="radio113" name="select-bank" value="B005" nstepvalue="032" bankname="부산은행">부산은행</label></span></li>
-										<li><span class="radio"><label for="radio114"><img src="/images/directShop/bank/nfcf.png" alt="산림조합" aria-hidden="true"><input type="radio" id="radio114" name="select-bank" value="B049" nstepvalue="064" bankname="산림조합">산림조합</label></span></li>
-										<li><span class="radio"><label for="radio115"><img src="/images/directShop/bank/kdb.png" alt="산업은행" aria-hidden="true"><input type="radio" id="radio115" name="select-bank" value="B031" nstepvalue="002" bankname="산업은행">산업은행</label></span></li>
-										<li><span class="radio"><label for="radio116"><img src="/images/directShop/bank/kfcc.png" alt="새마을금고연합회" aria-hidden="true"><input type="radio" id="radio116" name="select-bank" value="B014" nstepvalue="045" bankname="새마을금고연합회">새마을금고연합회</label></span></li>
-										<li><span class="radio"><label for="radio117"><img src="/images/directShop/bank/sh.png" alt="수협중앙회" aria-hidden="true"><input type="radio" id="radio117" name="select-bank" value="B036" nstepvalue="007" bankname="수협중앙회">수협중앙회</label></span></li>
-										<li><span class="radio"><label for="radio118"><img src="/images/directShop/bank/cu.png" alt="신용협동조합" aria-hidden="true"><input type="radio" id="radio118" name="select-bank" value="B016" nstepvalue="048" bankname="신용협동조합">신용협동조합</label></span></li>
-										<li><span class="radio"><label for="radio119"><img src="/images/directShop/bank/shinhan.png" alt="신한은행" aria-hidden="true"><input type="radio" id="radio119" name="select-bank" value="B030" nstepvalue="088" bankname="신한은행">신한은행</label></span></li>
-										<li><span class="radio"><label for="radio120"><img src="/images/directShop/bank/woori.png" alt="우리은행" aria-hidden="true"><input type="radio" id="radio120" name="select-bank" value="B041" nstepvalue="020" bankname="우리은행">우리은행</label></span></li>
-										<li><span class="radio"><label for="radio121"><img src="/images/directShop/bank/post.png" alt="우체국" aria-hidden="true"><input type="radio" id="radio121" name="select-bank" value="B023" nstepvalue="071" bankname="우체국">우체국</label></span></li>
-										<li><span class="radio"><label for="radio122"><img src="/images/directShop/bank/kj.png" alt="전북은행" aria-hidden="true"><input type="radio" id="radio122" name="select-bank" value="B010" nstepvalue="037" bankname="전북은행">전북은행</label></span></li>
-										<li><span class="radio"><label for="radio123"><img src="/images/directShop/bank/jp.png" alt="제이피모간체이스은행" aria-hidden="true"><input type="radio" id="radio123" name="select-bank" value="B086" nstepvalue="057" bankname="제이피모간체이스은행">제이피모간체이스은행</label></span></li>
-										<li><span class="radio"><label for="radio124"><img src="/images/directShop/bank/shinhan.png" alt="제주은행" aria-hidden="true"><input type="radio" id="radio124" name="select-bank" value="B008" nstepvalue="035" bankname="제주은행">제주은행</label></span></li>
-										<li><span class="radio"><label for="radio125"><img src="/images/directShop/bank/kakao.png" alt="카카오뱅크" aria-hidden="true"><input type="radio" id="radio125" name="select-bank" value="B102" nstepvalue="0900000" bankname="카카오뱅크">카카오뱅크</label></span></li>
-										<li><span class="radio"><label for="radio126"><img src="/images/directShop/bank/k.png" alt="케이뱅크" aria-hidden="true"><input type="radio" id="radio126" name="select-bank" value="B101" nstepvalue="0890000" bankname="케이뱅크">케이뱅크</label></span></li>
-										<li><span class="radio"><label for="radio127"><img src="/images/directShop/bank/citi.png" alt="한국씨티은행" aria-hidden="true"><input type="radio" id="radio127" name="select-bank" value="B048" nstepvalue="027" bankname="한국씨티은행">한국씨티은행</label></span></li>
 									</ul>
 								</div>
 
 								<div id="tab-stock">
 									<ul class="select-card-list">
-										<!--<li><span class="radio"><label for="radio21"><img src="/images/directShop/stock/hmsec.png" alt="현대차투자증권"><input type="radio" id="radio21" name="select-stock" value="">현대차투자증권</label></span></li> -->
 										<li><span class="radio"><label for="radio22"><img src="/images/directShop/stock/sk.png" alt="SK증권" aria-hidden="true"><input type="radio" id="radio22" name="select-stock" value="B060" nstepvalue="266" bankname="SK증권">SK증권</label></span></li>
 										<li><span class="radio"><label for="radio23"><img src="/images/directShop/stock/kyobo.png" alt="교보증권" aria-hidden="true"><input type="radio" id="radio23" name="select-stock" value="B098" nstepvalue="261" bankname="교보증권">교보증권</label></span></li>
-										<!--<li><span class="radio"><label for="radio24"><img src="/images/directShop/stock/kj.png" alt="광주은행" aria-hidden="true"><input type="radio" id="radio24" name="select-stock" value="">광주은행</label></span></li> -->
 										<li><span class="radio"><label for="radio25"><img src="/images/directShop/stock/shinhan.png" alt="굿모닝신한증권" aria-hidden="true"><input type="radio" id="radio25" name="select-stock" value="B064" nstepvalue="278" bankname="굿모닝신한증권">굿모닝신한증권</label></span></li>
 										<li><span class="radio"><label for="radio26"><img src="/images/directShop/stock/daishin.png" alt="대신증권" aria-hidden="true"><input type="radio" id="radio26" name="select-stock" value="B061" nstepvalue="267" bankname="대신증권">대신증권</label></span></li>
 										<li><span class="radio"><label for="radio27"><img src="/images/directShop/stock/kdb.png" alt="KDB대우증권" aria-hidden="true"><input type="radio" id="radio27" name="select-stock" value="B053" nstepvalue="238" bankname="KDB대우증권">KDB대우증권</label></span></li>
-										<li><span class="radio"><label for="radio28"><img src="/images/directShop/stock/db.png" alt="동부증권" aria-hidden="true"><input type="radio" id="radio28" name="select-stock" value="B065" nstepvalue="279" bankname="동부증권">동부증권</label></span></li>
-										<!--<li><span class="radio"><label for="radio29"><img src="/images/directShop/stock/yuanta.png" alt="유안타증권" aria-hidden="true"><input type="radio" id="radio29" name="select-stock" value="">유안타증권</label></span></li> -->
-										<li><span class="radio"><label for="radio210"><img src="/images/directShop/stock/meritz.png" alt="메리츠증권" aria-hidden="true"><input type="radio" id="radio210" name="select-stock" value="B067" nstepvalue="287" bankname="메리츠증권">메리츠증권</label></span></li>
-										<li><span class="radio"><label for="radio211"><img src="/images/directShop/stock/bookook.png" alt="부국증권" aria-hidden="true"><input type="radio" id="radio211" name="select-stock" value="B069" nstepvalue="290" bankname="부국증권">부국증권</label></span></li>
-										<li><span class="radio"><label for="radio212"><img src="/images/directShop/stock/samsung.png" alt="삼성증권" aria-hidden="true"><input type="radio" id="radio212" name="select-stock" value="B054" nstepvalue="240" bankname="삼성증권">삼성증권</label></span></li>
-										<li><span class="radio"><label for="radio213"><img src="/images/directShop/stock/shinyoung.png" alt="신영증권" aria-hidden="true"><input type="radio" id="radio213" name="select-stock" value="B070" nstepvalue="291" bankname="신영증권">신영증권</label></span></li>
-										<li><span class="radio"><label for="radio214"><img src="/images/directShop/stock/nh.png" alt="엔에이치투자증권" aria-hidden="true"><input type="radio" id="radio214" name="select-stock" value="B068" nstepvalue="289" bankname="엔에이치투자증권">엔에이치투자증권</label></span></li>
-										<li><span class="radio"><label for="radio215"><img src="/images/directShop/stock/woori.png" alt="우리투자증권" aria-hidden="true"><input type="radio" id="radio215" name="select-stock" value="B056" nstepvalue="247" bankname="우리투자증권">우리투자증권</label></span></li>
-										<li><span class="radio"><label for="radio216"><img src="/images/directShop/stock/eugene.png" alt="유진투자증권" aria-hidden="true"><input type="radio" id="radio216" name="select-stock" value="B066" nstepvalue="280" bankname="유진투자증권">유진투자증권</label></span></li>
-										<li><span class="radio"><label for="radio217"><img src="/images/directShop/stock/kiwoom.png" alt="키움증권" aria-hidden="true"><input type="radio" id="radio217" name="select-stock" value="B059" nstepvalue="264" bankname="키움증권">키움증권</label></span></li>
-										<li><span class="radio"><label for="radio218"><img src="/images/directShop/stock/hana.png" alt="하나대투증권" aria-hidden="true"><input type="radio" id="radio218" name="select-stock" value="B063" nstepvalue="270" bankname="하나대투증권">하나대투증권</label></span></li>
-										<li><span class="radio"><label for="radio219"><img src="/images/directShop/stock/hi.png" alt="하이투자증권" aria-hidden="true"><input type="radio" id="radio219" name="select-stock" value="B057" nstepvalue="262" bankname="하이투자증권">하이투자증권</label></span></li>
-										<li><span class="radio"><label for="radio220"><img src="/images/directShop/stock/truefriend.png" alt="한국투자증권" aria-hidden="true"><input type="radio" id="radio220" name="select-stock" value="B055" nstepvalue="243" bankname="한국투자증권">한국투자증권</label></span></li>
-										<li><span class="radio"><label for="radio221"><img src="/images/directShop/stock/hanwha.png" alt="한화증권" aria-hidden="true"><input type="radio" id="radio221" name="select-stock" value="B062" nstepvalue="269" bankname="한화증권">한화증권</label></span></li>
-										<li><span class="radio"><label for="radio222"><img src="/images/directShop/stock/hyundai.png" alt="현대증권" aria-hidden="true"><input type="radio" id="radio222" name="select-stock" value="B051" nstepvalue="218" bankname="현대증권">현대증권</label></span></li>
 									</ul>
 								</div>
 							</div>
@@ -1022,7 +1007,7 @@
 					</div>
 
 					<div class="btn-bottom">
-						<button type="button" name="button" class="btn fill bottom btn-close" id="btnBankSelect">선택완료</button>
+						<button type="button" name="button" class="btn fill bottom btn-close" id="btnBankSelect" disabled>선택완료</button>
 					</div>
 				</div>
 			</div>
@@ -1376,8 +1361,8 @@
 							</ul>
 						</div>
 					</div>
-					<div class="btn-bottom">
-						<button type="button" name="button" class="btn black btn-close">확인</button>
+					<div class="btn-bottom btn-bottom-inline">
+						<button type="button" name="button" class="btn inline btn-close">확인</button>
 					</div>
 					<button type="button" class="btn-close">닫기</button>
 				</div>
@@ -1533,12 +1518,14 @@
 			<!-- 데이터쉐어링 가입 전 유의사항	 -->
 			<div id="popup-datasharing-info" class="ui-popup toast-popup popup-datasharing-info">
 				<div class="content">
-					<div class="header check">
+					<div class="header">데이터쉐어링 가입 전 유의사항</div>
+					<!-- ktd수정 : 제목영역 구성 변경, 체크영역 하단 버튼 타입으로 변경
+						<div class="header check">
 						<div class="checkbox">
 							<input type="checkbox" name="couponAgree" id="popupDatasharingAgree">
 							<label for="popupDatasharingAgree">데이터쉐어링 가입 전 유의사항</label>
 						</div>
-					</div>
+					</div> -->
 					<button type="button" class="btn-close">닫기</button>
 					<div class="body">
 						<ul class="datasharing-list">
@@ -1557,6 +1544,10 @@
 							<li>쉐어링 개통 후 최초 인식된 서브 단말기 기준으로 사용이 가능하며, 등록 후 다른 종류의 단말기로 유심이동은 불가합니다.</li>
 							<li>개인 보안등급 설정이 되어있는 경우 개통이 불가합니다.</li>
 						</ul>
+
+						<div class="btn-bottom"><!-- ktd수정 : 추가 -->
+							<button type="button" name="couponAgree" class="btn black" id="popupDatasharingAgree">모두 확인하였습니다</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1708,9 +1699,9 @@
 	})
 
 	$(function(){
-		setTimeout(function(){
-			$('.ui-tab.fixed li').eq(5).find('button').trigger('click');
-		}, 200);
+		// setTimeout(function(){
+		// 	$('.ui-tab.fixed li').eq(7).find('button').trigger('click');
+		// }, 200);
 		//popupOpen('#popup-number-change-info')
 	})
 </script>
