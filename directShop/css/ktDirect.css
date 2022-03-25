@@ -1210,9 +1210,7 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 
 .ktd-conWrap .toast-popup .content{height:auto !important;max-height:90% !important;}
 
-/**************************************************************************/
 /******************************* 가입신청서 *******************************/
-/**************************************************************************/
 .tab-content>div {min-height: 50px;}/*200px*/
 #orderForm .ktd-noti-list {margin: 24px 0 0; padding: 0;}
 #orderForm .ktd-noti-list li + li {margin-top:12px}
@@ -1601,9 +1599,7 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ktd-conWrap footer {padding:40px 20px 24px;}
 
 
-/**************************************************************************/
 /******************************* 가입내역조회 ******************************/
-/**************************************************************************/
 .ktd-conWrap #main-contents .notmember {padding:40px 20px 0;}
 
 .ktd-conWrap #main-contents .notmember .header h2 {font-size: 24px; font-weight: 500;}
@@ -1647,7 +1643,7 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ktd-order .round-box>p strong {display: inline-block;}
 .ktd-order .round-box>p span {position:relative; font-size: 14px; color: #6F6F6F; float: none;}
 .ktd-order .round-box>p span:after {content: ':'; display: inline-block; padding: 0 4px; font-size: 11px;}
-.ktd-order .round-box>p strong {float: none; text-align: left; font-size: 14px;}
+.ktd-order .round-box>p strong {float: none; text-align: left; font-size: 14px; font-weight: 500;}
 .ktd-order .round-box.order-detail>p strong button {font-weight: 500; font-size: 14px;}
 
 .ktd-order .round-box.order-detail .detial-box {padding: 20px 0 0;}
@@ -1677,8 +1673,9 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 
 .ui-popup.detail.ktd-order .gray-box .round-box>p {padding: 0; border: none;}
 .ui-popup.detail.ktd-order .gray-box .round-box>p + p {margin-top:16px;}
-.ui-popup.detail.ktd-order .gray-box .round-box>p span {display: inline-block; width: 120px; vertical-align: top;}
+.ui-popup.detail.ktd-order .gray-box .round-box>p span {float:left; display: inline-block; width: 130px; padding-right: 10px; vertical-align: top;}
 .ui-popup.detail.ktd-order .gray-box .round-box>p span:after {display: none;}
+.ui-popup.detail.ktd-order .gray-box .round-box>p strong {float: right; width: calc(100% - 130px);}
 
 .ui-popup.detail.ktd-order .gray-box .round-box.order-detail > p {padding: 0 0 20px; border-bottom: 1px solid #D9D9D9;}
 .ui-popup.detail.ktd-order .gray-box .round-box.order-detail > p span {display: inline; width: auto;}
@@ -1693,7 +1690,7 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ui-popup.detail.ktd-order .order-detail #popup-couponguide {margin-left: -45px;}
 .ui-popup.detail.ktd-order .order-detail #popup-couponguide .content {position: absolute;}
 
-/****************************** faq ******************************/
+/****************************** Faq ******************************/
 .ktd-faq .ktd-block {padding:40px 0 33px;}
 .ktd-faq .ktd-block .block-top {margin-bottom: 0;}
 
@@ -1738,7 +1735,6 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ktd-conWrap .content-cetify .btn-input {margin-bottom: 32px;}
 .ktd-conWrap .content-cetify .name input {margin-bottom: 0;}
 
-
 /* 인증번호 팝업 */
 .ktd-conWrap #popup-cert-number .member-input {margin-top:16px}
 .ktd-conWrap #popup-cert-number .btn-resend {min-width: 126px;}
@@ -1746,6 +1742,47 @@ a.btn-re-charge span:after {content: "";height: 8px;width: 8px;border: 2px solid
 .ktd-conWrap .popup header {position: relative; ; height: auto;}
 .ktd-conWrap .popup header h1 {width: auto; height: auto;}
 .ktd-conWrap .popup .content {padding-top:20px}
+
+/****************************** 주문완료 ******************************/
+.ktd-complete .ktd-block {padding-right: 0; padding-left: 0;}
+.ktd-complete .ktd-block .block-top {margin-bottom: 0;}
+
+.ktd-complete .round-box {border:1px solid #D9D9D9; border-radius: 12px; padding: 24px; margin-bottom: 16px;}
+
+.ktd-complete .round-box>p {min-height: inherit; padding: 0; border: none;}
+.ktd-complete .round-box>p + p {margin-top: 16px;}
+
+.ktd-complete .round-box>p span {position: relative; font-size: 14px; color: #6F6F6F; float: left; display: inline-block; width: 90px; padding-right: 16px; vertical-align: top;}
+.ktd-complete .round-box>p strong {display: inline-block; float: right; text-align: left; font-size: 14px; font-weight: 500; color: #000; width: calc(100% - 106px); word-break:break-all;}
+.ktd-complete .round-box>p strong.num {font-weight: 700; color: #1DA8A5;}
+
+.ktd-complete .notice-list{margin-top: 32px;}
+.ktd-complete .notice-list dt {padding-left: 0; font-size: 14px; font-weight: 500; color: #6F6F6F; margin-bottom: 12px;}
+.ktd-complete .notice-list dd {font-size: 14px; color: #6F6F6F;}
+.ktd-complete .notice-list dd:before {background-color: #6F6F6F;}
+.ktd-complete .notice-list dd + dd {margin-top: 16px;}
+
+.ktd-complete .btn-bottom {padding:40px 0 24px !important}
+
+/* 주문 상태 */
+.ktd-conWrap .open-msg {padding-top:188px; font-weight: 500; color: #000;}
+.ktd-conWrap .open-msg {background: url('/images/directShop/renew/complete-open.svg') 50% 40px no-repeat; background-size: 128px auto;}
+.ktd-conWrap .open-msg-2 {background-image: url('/images/directShop/renew/complete-open2.svg');}
+.ktd-conWrap .open-msg-3 {background-image: url('/images/directShop/renew/complete-open3.svg');}
+
+.ktd-conWrap .open-information dt {font-size: 14px; font-weight: 500; color: #6F6F6F; margin-bottom: 12px;}
+.ktd-conWrap .open-information dd + dd {margin-top:16px;}
+.ktd-conWrap .open-information dd {position:relative; font-size: 14px; color: #6F6F6F; padding-left: 10px;}
+.ktd-conWrap .open-information dd:before {content: ''; width: 4px; height: 4px; border-radius: 50%; background-color: #6F6F6F; position: absolute; top: 9px; left: 0;}
+
+.ktd-conWrap .sharing-complete .notice strong {font-size: 14px; font-weight: 500; color: #6F6F6F; margin-bottom: 12px;}
+.ktd-conWrap .sharing-complete .notice li + li {margin-top:16px;}
+.ktd-conWrap .sharing-complete .notice li {position:relative; font-size: 14px; color: #6F6F6F; padding-left: 10px;}
+.ktd-conWrap .sharing-complete .notice li:before {content: ''; width: 4px; height: 4px; border-radius: 50%; background-color: #6F6F6F; position: absolute; top: 9px; left: 0;}
+
+.ktd-conWrap #popup-open-ing .body {margin-bottom: 0; padding-top:155px; background: url('/images/directShop/renew/complete-time.svg') 50% 60px no-repeat; background-size: 80px auto;}
+.ktd-conWrap #popup-open-ing .body p {font-size: 16px; font-weight: 400; color: #6F6F6F;}
+.ktd-conWrap #popup-open-ing .btn-bottom {padding:40px 0 24px !important}
 
 /****************************** Footer ******************************/
 .ktd-conWrap .footer {margin-top:64px; padding:32px 24px 40px; line-height: 1.6; font-size: 14px; color:#ccc; background-color: #393939;}

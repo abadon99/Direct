@@ -1,0 +1,28 @@
+<svg id="Illust-개통예약" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_22699" data-name="사각형 22699" width="128" height="128" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="사각형_22701" data-name="사각형 22701" width="90" height="90" transform="translate(19 19)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_26178" data-name="그룹 26178">
+    <g id="그룹_26177" data-name="그룹 26177" clip-path="url(#clip-path)">
+      <path id="패스_57859" data-name="패스 57859" d="M128,64A64,64,0,1,1,64,0a64,64,0,0,1,64,64" fill="#f4f4f4"/>
+    </g>
+  </g>
+  <g id="그룹_26180" data-name="그룹 26180">
+    <g id="그룹_26179" data-name="그룹 26179" clip-path="url(#clip-path-2)">
+      <path id="패스_57860" data-name="패스 57860" d="M94.9,36.2H39.1a4,4,0,0,0-4,4v48a4,4,0,0,0,4,4H94.9a4,4,0,0,0,4-4v-48a4,4,0,0,0-4-4" fill="#fff"/>
+      <path id="패스_57861" data-name="패스 57861" d="M99,48H35V40a4,4,0,0,1,4-4H95a4,4,0,0,1,4,4Z" fill="#d4faf9"/>
+      <line id="선_5927" data-name="선 5927" y2="12" transform="translate(51 29.796)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.5"/>
+      <line id="선_5928" data-name="선 5928" y2="12" transform="translate(83 29.796)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.5"/>
+      <line id="선_5929" data-name="선 5929" x2="63.369" transform="translate(35.315 48.19)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.5"/>
+      <rect id="사각형_22700" data-name="사각형 22700" width="63.805" height="56" rx="4" transform="translate(35.097 36.204)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.5"/>
+      <path id="패스_57862" data-name="패스 57862" d="M55,77A16,16,0,1,1,39,61,16,16,0,0,1,55,77" fill="#fde9a2"/>
+      <path id="패스_57863" data-name="패스 57863" d="M54.735,71.814a15.987,15.987,0,1,1-8.45-9.466" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.5"/>
+      <path id="패스_57864" data-name="패스 57864" d="M53.662,64.748,37.419,81.418l-6.788-7" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

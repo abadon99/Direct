@@ -1,0 +1,31 @@
+<svg id="Illust-개통완료" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_22703" data-name="사각형 22703" width="128" height="128" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="사각형_22705" data-name="사각형 22705" width="90" height="90" transform="translate(19 19)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_26192" data-name="그룹 26192">
+    <g id="그룹_26191" data-name="그룹 26191" clip-path="url(#clip-path)">
+      <path id="패스_57869" data-name="패스 57869" d="M128,64A64,64,0,1,1,64,0a64,64,0,0,1,64,64" fill="#f4f4f4"/>
+    </g>
+  </g>
+  <g id="그룹_26194" data-name="그룹 26194">
+    <g id="그룹_26193" data-name="그룹 26193" clip-path="url(#clip-path-2)">
+      <path id="패스_57870" data-name="패스 57870" d="M82.891,107h-38a6,6,0,0,1-6-6V27a6,6,0,0,1,6-6h38a6,6,0,0,1,6,6v74a6,6,0,0,1-6,6" fill="#fff"/>
+      <path id="패스_57871" data-name="패스 57871" d="M89.109,33h-50V27a6,6,0,0,1,6-6h38a6,6,0,0,1,6,6Z" fill="#d4faf9"/>
+      <path id="패스_57872" data-name="패스 57872" d="M39.109,95h50v6a6,6,0,0,1-6,6h-38a6,6,0,0,1-6-6Z" fill="#d4faf9"/>
+      <line id="선_5932" data-name="선 5932" x2="50" transform="translate(38.891 33)" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+      <line id="선_5933" data-name="선 5933" x2="50" transform="translate(38.891 95.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+      <line id="선_5934" data-name="선 5934" x2="8" transform="translate(59.891 26.637)" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+      <path id="패스_57873" data-name="패스 57873" d="M65.891,101a2,2,0,1,1-2-2,2,2,0,0,1,2,2" fill="#fff"/>
+      <circle id="타원_2673" data-name="타원 2673" cx="2" cy="2" r="2" transform="translate(61.891 99)" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="1.5"/>
+      <rect id="사각형_22704" data-name="사각형 22704" width="50" height="86" rx="6" transform="translate(38.891 21)" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="패스_57874" data-name="패스 57874" d="M75.792,63.843a12,12,0,1,1-12-12,12,12,0,0,1,12,12" fill="#fde9a2"/>
+      <path id="패스_57875" data-name="패스 57875" d="M75.6,60.368a11.994,11.994,0,1,1-6.338-7.1" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.5"/>
+      <path id="패스_57876" data-name="패스 57876" d="M74.792,55.068,62.61,67.571l-5.091-5.252" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

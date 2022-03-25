@@ -212,7 +212,7 @@
                     </div>
                 </div>
                 <footer>
-                    <button type="button" onclick="gaEventTracker(false, eventPrefix+'다이렉트', '본인인증', '신용카드인증하기'); trackClicks(adobeTitVal+'다이렉트', '^'+adobeTitVal+'다이렉트^본인인증^신용카드인증하기');" class="btn fill ui-popup-call authPopCall" data-tit="신용카드" data-cetify="card">신용카드 인증하기</button>
+                    <button type="button" onclick="gaEventTracker(false, eventPrefix+'다이렉트', '본인인증', '신용카드인증하기'); trackClicks(adobeTitVal+'다이렉트', '^'+adobeTitVal+'다이렉트^본인인증^신용카드인증하기');" class="btn fill ui-popup-call authPopCall" data-tit="신용카드" data-cetify="card" disabled>신용카드 인증하기</button><!-- ktd : disabled -->
                 </footer>
             </div>
             <!-- //신용카드 정보 인증 -->
@@ -299,7 +299,7 @@
         <!-- 약관 확인 및 동의 / 신용카드 인증 약관 확인 및 동의 -->
         <div id="terms-check" class="ui-popup toast-popup terms-check">
             <div class="content">
-                <div class="header"><span class="hideblind">약관동의</span></div>
+                <div class="header">약관동의</div><!-- //ktd수정 : span 제거 -->
                 <button type="button" class="btn-close">닫기</button>
                 <div class="body">
                     <div class="ui-accordion" data-head=">button">

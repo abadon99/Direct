@@ -124,6 +124,20 @@ $(function(){
             $(this).parent('li').removeClass('on');
         }
     })
+
+    // 만족도 평가
+    var checkVivald = setInterval(function(){
+        if($('body > #DCX_SDEG').length>0){
+            $('#DCX_SDEG').appendTo('.ktd-conWrap');
+            $('#widgetMaskLayer').appendTo('.ktd-conWrap');
+        };
+        if($('.ktd-conWrap > #DCX_SDEG').length>0){
+            clearInterval(checkVivald)
+        };
+    },100)
+
+    // as-is select toggle 호출
+    selectEvent();
 });
 
 var TABDepth = {
