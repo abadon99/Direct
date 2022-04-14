@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko" class="kt5g">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<title> [KT 공식] 요금은 비우고 혜택은 채웁니다. KT 다이렉트</title>
+
+	<!-- style -->
+	<link rel="stylesheet" href="/directShop/css/default.css">
+    <link rel="stylesheet" href="/directShop/css/contents.css">
+    <link rel="stylesheet" href="/directShop/css/popup.css">
+    <link rel="stylesheet" href="/directShop/css/swiper.css">
+
+    <!-- js -->
+	<script type="text/javascript"  src="/directShop/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="/directShop/js/ui/common_front.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/ui.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/pub.js" type="text/javascript"></script>
+	<script src="/directShop/js/lib/swiper.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="/oneMinute/js/oneMinuteCommon.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+	<!-- ktd : 추가 css -->
+    <link rel="stylesheet" href="/directShop/css/ktDirect.css">
+
+	<!-- ktd : 추가 js -->
+    <script src="/directShop/js/ui/pub_ktDirect.js" type="text/javascript"></script>
+
+	<!-- as-is -->
+	<script>
+		$(document).on("click",".btnPopClose.tout",function() {
+			$("#sessionWrap").hide();
+		});
+		$(document).on("click",".line_benner .close",function() {
+			$('.line_benner').slideUp();
+			return false;
+		});
+
+		$(document).on("click",".searchEng",function() {
+			if ($.trim($("#SearchCommon").val()).length == 0) {
+				alert("검색어를 입력해주세요.");
+				return;
+			}
+			location.href="https://m.search.kt.com/search.asp?c=MOL000&r=02&f=&o=&e=&k="+encodeURI($('#SearchCommon').val());
+		});
+
+		$(window).bind("pageshow", function(event) {
+			if ( event.originalEvent && event.originalEvent.persisted) {
+				$("#SearchCommon").val('');
+				$("a.ollehSearch").show();
+				$("a.ollehSearchClose").hide();
+				$("header fieldset").removeClass("on").hide();
+			}
+		});
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="/content/openshop/price/ollehShopPd_mobile.css" />
+	<!-- //as-is -->
+</head>
+<body>
+	<!-- ktd : Direct 안내 -->
+	<div class="ktd-directInfo">
+        <div class="info">
+            <div class="info-box">매장 방문 없이 바로 가능!</div>
+            <p class="info-txt">자급제&middot;중고&middot;해외직구폰 사용 고객이<br>쉽고 빠르게 개통할 수 있는</p>
+            <div class="info-copy"><img src="/images/directShop/renew/directInfo_tit.png" alt="온라인 유심가입 kt다이렉트"></div>
+        </div>
+        <div class="link-zone">
+            <ul>
+                <li><a href="#"><span>유심가입</span><em>(유심 미보유)</em></a></li>
+                <li><a href="#"><span>셀프개통</span><em>(유심 보유)</em></a></li>
+                <li><a href="#"><span>데이터 쉐어링</span><em>(유심 보유)</em></a></li>
+                <li><a href="#"><span>다이렉트<br>요금제 변경</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //ktd : Direct 안내 -->
+
+	<!-- ktd : 사이트 영역 -->
+    <div class="ktd-conWrap">
+		<form id="prodViewForm"  name="prodViewForm" method="post" action="/direct/DirectUsimOrderForm.do">
+			<div id="contents" class="new-contents footer-bottom"> <!-- ktd수정 : bg-f8 class 삭제 -->
+				<style>
+					div.directShopInfo {height:250px; font-size:14px; font-weight:bold;}
+					div.directShopInfo h4 {height:30px; font-size:15px; font-weight:bold;}
+					div.buyProcWrap {padding:30px; font-size:15px; font-weight:bold;}
+					ul.buyProc li {float:left; width:20%; margin:0 5px;font-size:12px;text-align:center;vertical-align:center;}
+					ul.buyProc li div {width:100%;height:40px;border:1px solid #cccccc;text-align:center;vertical-align:center;}
+				</style>
+				<h1><button type="button" name="button" id="titleNm">페이지 확인용 팝업</button></h1>
+
+				<!-- content-recommend -->
+				<div id="content-recommend" >
+					** 팝업호출 popupOpen('#id')
+					<style>
+						.ktd-selfLink {padding-bottom: 50px;}
+						.ktd-selfLink a span:after {display: none;}
+					</style>
+					<div class="ktd-selfLink">
+						<a href="#" onclick="popupOpen('#con-notice-pop');" role="button"><span>01. 이동전화 사기판매 주의 안내 : con-notice-pop</span></a>
+						<a href="#" onclick="popupOpen('#coupon-useguide');" role="button"><span>02. 제휴쿠폰 이용안내 : coupon-useguide</span></a>
+						<a href="#" onclick="popupOpen('#popup-payment-info');" role="button"><span>03. 온라인 가입신청 요금제 : popup-payment-info</span></a>
+						<a href="#" onclick="popupOpen('#popup-phone-new');" role="button"><span style="text-decoration:line-through">04. 신규가입 개통 안내 : popup-phone-new</span></a>
+						<a href="#" onclick="popupOpen('#popup-phone-move');" role="button"><span style="text-decoration:line-through">05. 번호이동 개통 안내 : popup-phone-move</span></a>
+						<a href="#" onclick="popupOpen('#popup-good-more');" role="button"><span>06. 상품 자세히 보기 : popup-good-more</span></a>
+						<a href="#" onclick="popupOpen('#popup-plan-change');" role="button"><span>07. 요금제 변경시 유의사항 : popup-plan-change</span></a>
+						<a href="#" onclick="popupOpen('#popup-ys-plan-sale');" role="button"><span>08. Y’s 요금제 : popup-ys-plan-sale</span></a>
+					</div>
+
+					<!-- wrapStep1 -->
+					<div id="wrapStep1" class="wrapStep">
+						<div id="con-notice-pop" class="ui-popup toast-popup active" tabindex="0" aria-hidden="false" style="display:block;">
+							<div class="content">
+								<div class="header">이동전화 사기판매 주의 안내</div>
+								<button type="button" class="btn-close">닫기</button>
+								<div class="body">
+									<p>이동전화 가입 시 일부 불·편법영업 행위에 의한 사기판매 피해가 우려되어, 이용자 여러분의 각별한 주의가 요구됩니다.</p>
+									<ul class="con-notice-list">
+										<li>
+											<strong><span class="num">1.</span> 소액대출(내구제 대출 등) 용도로 개통</strong>
+											현금성 대출을 받기 위해 카드/인증서/계좌번호 등의 개인정보를 요구하는 경우
+										</li>
+										<li>
+											<strong><span class="num">2.</span> 선입금 요구, 잔여할부금 면제</strong>
+											추후 잔여할부금을 면제하는 조건으로 선입금을 요구하는 경우
+										</li>
+										<li>
+											<strong><span class="num">3.</span> 신분증 전달 요구</strong>
+											온라인 가입 시 가입자의 신분증을 택배 등으로 전달할 것을 요구하는 경우
+										</li>
+										<li>
+											<strong><span class="num">4.</span> 비공식계약서 작성</strong>
+											불법지원금 제공(현금지급, 할부금 면제 등) 조건을 별도의 계약서로 작성하는 경우
+										</li>
+									</ul>
+									<p class="alert"><em>i</em>불법지원금 제공과 불법 대출인 것을 알고도 이에 동조하는 경우 발생하는 피해에 대해서는 법적으로 보호를 받을 수 없습니다.</p>
+								</div>
+								<div class="btn-bottom btn-bottom-inline"><!-- ktd수정 : 버튼 inline, black 추가 -->
+									<button type="button" name="button" class="btn inline black bottom btn-close" id="">확인</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //wrapStep1 -->
+
+					<!-- 제휴쿠폰 이용안내 -->
+					<div id="coupon-useguide" class="ui-popup toast-popup coupon-guide"> <!-- active 클래스 추가로 활성화 popup-type-2 -->
+						<div class="content">
+							<div class="header">제휴쿠폰 이용안내</div>
+							<button type="button" class="btn-close">닫기</button>
+							<div class="body">
+								<ul class="jum-list">
+									<li> 선택하신 요금제에 따라 혜택 금액은 달라지며 개통월기준 2달 후(요금납부 확인 후) 개통연락처로 쿠폰이 제공됩니다. </li>
+									<li> 쿠폰은 약정기간 중 매월 1회 제공되며 제공된 쿠폰은 재발행되지 않습니다. </li>
+									<li> 약정기간 중 요금제 변경의 경우 변경된 요금기준으로 쿠폰 금액이 변경, 발행됩니다. </li> <li> 쿠폰 변경은 3월, 6월, 9월, 12월 변경기간내에서 만 가능하며 변경 기간은 쿠폰 문자 발송 시 안내예정 입니다. </li>
+									<li> 쿠폰 발행 연락처는 변경할 수 없습니다.(최초 개통 연락처로 약정기간 중 발행됩니다.) </li>
+									<li> 발행된 쿠폰의 유효기간은 매달 말일까지 사용가능하며 미사용 시 소멸됩니다.(쿠폰 발행 시 유효기간이 안내되어 있으니 꼭 확인하시기 바랍니다.) </li>
+									<li> 쿠폰은 요금납부 확인 후 매달 5일 발행될 예정입니다.(5일이 토/일/공휴일 일 경우 다음 영업일에 발송)</li>
+									<li> 발행된 쿠폰은 타인에게 양도 불가합니다. </li>
+									<li> 쿠폰 분실 시 재발행은 불가합니다. </li>
+								</ul>
+							</div>
+							<div class="btn-bottom btn-bottom-inline"><!-- ktd수정 : 버튼 inline, black 추가 -->
+								<button type="button" name="button" class="btn inline black bottom btn-close" id="">확인</button>
+							</div>
+						</div>
+					</div>
+					<!-- // 제휴쿠폰 이용안내 -->
+				</div>
+
+				<!-- ktd수정 : 온라인 가입신청 요금제 팝업 -->
+				<div id="popup-payment-info" class="ui-popup popup-payment-info">
+					<div class="content">
+						<div class="header">선택하신 콘텐츠와<br>월 통신요금을 확인해주세요.</div>
+						<div class="body">
+							<ul class="payment-list">
+								<li>
+									<span class="item">월정액</span>
+									<span class="value"><strong>45,000원</strong></span>
+								</li>
+								<li>
+									<span class="item">시즌초이스</span>
+									<span class="value"><em>+11,000원</em></span>
+								</li>
+								<li>
+									<span class="item">넷플릭스</span>
+									<span class="value"><em>가입 후 과금</em></span>
+								</li>
+								<li>
+									<span class="item">KT 다이렉트 쿠폰팩</span>
+									<span class="value">페이코 (월 2,000원)</span>
+								</li>
+							</ul>
+							<ul class="payment-list">
+								<li>
+									<span class="item">월 통신요금</span>
+									<span class="value"><strong>56,000원</strong></span>
+								</li>
+							</ul>
+						</div>
+						<div class="btn-bottom btn-2">
+							<button type="button" class="btn medium white btn-close">다시선택</button>
+							<button type="button" class="btn medium">선택완료</button>
+						</div>
+					</div>
+				</div>
+				<!-- //ktd수정 : 온라인 가입신청 요금제 팝업 신규 -->
+
+				<!-- 신규가입 개통 안내 -->
+				<div id="popup-phone-new" class="ui-popup popup-type-2">
+					<div class="content">
+						<div class="header">신규가입 개통 안내</div>
+						<button type="button" class="btn-close">닫기</button><!-- ktd수정 : 닫기 버튼 위치 변경 -->
+						<div class="body">
+							<p class="msg-type-1">지금은 개통 예약만<br> 가능합니다.</p>
+							<p class="msg-type-2">자동 개통 후 문자로 알려드립니다.</p>
+							<div class="open-time">
+								<dt>※ 셀프개통 가능시간</dt>
+								<dd>
+									<ul>
+										<li><span class="d">평일</span> 09시~21시</li>
+										<li><span class="d">토요일</span> 10시~18시 <br>(일요일, 신정/설/추석 당일 제외)</li>
+									</ul>
+									<p class="info-txt-mark mt15">이외의 시간은 개통 예약만 가능하며 자동 개통 후 문자로 알려드립니다.</p>
+								</dd>
+							</div>
+						</div>
+						<div class="btn-bottom">
+							<button type="button" class="btn black btn-close">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- //신규가입 개통 안내 -->
+
+				<!-- 번호이동 개통 안내 -->
+				<div id="popup-phone-move" class="ui-popup  popup-type-2">
+					<div class="content">
+						<div class="header">번호이동 개통 안내</div>
+						<button type="button" class="btn-close">닫기</button><!-- ktd수정 : 닫기 버튼 위치 변경 -->
+						<div class="body">
+							<p class="msg-type-1">지금은 번호이동 바로개통<br>가능한 시간이 아닙니다.</p>
+							<p class="msg-type-2">
+								가입 신청서 작성을 완료해주시면<br>
+								개통 가능한 시간에 상담원이<br>
+								개통해 드립니다.<br>
+							</p>
+							<div class="open-time">
+								<dt>※ 셀프개통 가능시간</dt>
+								<dd>
+									<ul>
+										<li><span>평일/토요일</span> 10시~20시<br>(일요일, 신정/설/추석 당일 제외)</li>
+									</ul>
+									<p class="info-txt-mark mt15">이외의 시간은 개통 예약만 가능하며 자동 개통 후 문자로 알려드립니다.</p>
+								</dd>
+							</div>
+						</div>
+						<div class="btn-bottom">
+							<button type="button" class="btn fill btn-close">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- 번호이동 개통 안내 -->
+
+				<!-- 상품 자세히 보기-->
+				<div id="popup-good-more" class="ui-popup popup-type-2">
+					<div class="content" style="height: auto;">
+						<div class="header" >요금제</div>
+						<button type="button" class="btn-close">닫기</button>
+						<iframe src="" frameborder="0"></iframe>
+					</div>
+				</div>
+				<!-- //상품 자세히 보기-->
+
+				<!-- 요금제 변경시 유의사항 팝업 -->
+				<div id="popup-plan-change" class="ui-popup toast-popup plan-change-noti">
+					<div class="content">
+						<div class="header">요금제 변경시 유의사항</div>
+						<button type="button" class="btn-close">닫기</button>
+						<div class="body">
+							<!-- 위약금 부과/유예 케이스 -->
+							<p id="pplChgFailText">
+							</p>
+							<!-- //위약금 부과/유예 케이스 -->
+
+							<!-- 0406 : 위약금 없음. 요금제 유의사항 안내 -->
+							<div class="wscroll" id="pplChgPassText">
+								<div class="inscroll" tabindex="0">
+									<ul class="com-list-dot">
+										<li class="info-txt-mark">요금제는 월 1회만 변경 가능하며 변경한 달에는 다른 요금제로 변경할 수 없습니다.</li>
+										<li class="info-txt-mark">단, 신청 당일에는 1회에 한하여 변경 전 요금제로 재변경이 가능하며, 처음 변경 신청하였던 요금제를 제외한 다른 요금제로 변경 신청하실 수 있습니다.</li>
+										<li class="info-txt-mark">요금제 변경 예약 신청 고객님은 예약 신청을 먼저 취소한 후 요금제를 변경해주세요.</li>
+										<li class="info-txt-mark">휴대폰 정지 상태에서는 요금제를 변경할 수 없습니다.</li>
+										<li class="info-txt-mark">요금제를 변경하면 변경 전 요금제의 부가 및 이월 혜택은 이용할 수 없으나 아래와 같은 경우 혜택이 유지됩니다.
+											<ul class="com-list-dot minus">
+												<li class="info-txt-mark">번호변경이나 동일 계열의 요금제로 변경한 경우</li>
+												<li class="info-txt-mark">이월 가능 요금제 간 변경일 경우</li>
+											</ul>
+										</li>
+										<li class="info-txt-mark">요금제 변경 시점부터 요금제 월정액 및 무료제공 혜택이 각각 일할 적용됩니다.</li>
+										<li class="info-txt-mark">신규 가입이 제한된 요금제는 다른 요금제로 변경할 경우 기존 요금제로 재변경이 불가능합니다.</li>
+										<li class="info-txt-mark">가입자 또는 실사용자가 미성년자인 경우, 부모님(법정대리인)의 동의 후 변경할 수 있습니다.</li>
+									</ul>
+									<!-- 5G Y 무약정 플랜 -->
+									<ul class="com-list-dot caution" id="pplTypeA" style="display:none;">
+										<li class="info-txt-mark">음성통화량이 일600분을 초과하는 횟수가 월 3회를 넘거나, 당월 총 음성 통화량이 1만분을 초과하는 경우, 수신처 1,000곳 초과할 경우, 상업적 목적으로 이용하는 경우 등의 사유가 발생시 과금</li>
+										<li class="info-txt-mark">문자 메세지 일150건 초과 발송일이 10일을 초과하거나, 수신처 3,000곳 초과할 경우, 상업적 목적으로 이용하는 경우 등의 사유가 발생시 과금</li>
+										<li class="info-txt-mark">세금(부가세), 국제전화, KT114 직접연결수수료 및 통화료, KT114 전화번호 안내 서비스, 수신자 부담(콜렉트콜), 소액결제 이용료, 060 등 정보 이용료, 유료 부가서비스 월 이용료 등은 별도로 청구됩니다.</li>
+									</ul>
+									<!-- //5G Y 무약정 플랜 -->
+									<!-- LTE Y 무약정 플랜 -->
+									<ul class="com-list-dot caution" id="pplTypeB" style="display:none;">
+										<li class="info-txt-mark">음성통화량이 일600분을 초과하는 횟수가 월 3회를 넘거나, 당월 총 음성 통화량이 1만분을 초과하는 경우, 수신처 1,000곳 초과할 경우, 상업적 목적으로 이용하는 경우 등의 사유가 발생시 과금</li>
+										<li class="info-txt-mark">문자 메세지 일150건 초과 발송일이 10일을 초과하거나, 수신처 3,000곳 초과할 경우, 상업적 목적으로 이용하는 경우 등의 사유가 발생시 과금</li>
+										<li class="info-txt-mark">세금(부가세), 국제전화, KT114 직접연결수수료 및 통화료, KT114 전화번호 안내 서비스, 수신자 부담(콜렉트콜), 소액결제 이용료, 060 등 정보 이용료, 유료 부가서비스 월 이용료 등은 별도로 청구됩니다.</li>
+									</ul>
+									<!-- //LTE Y 무약정 플랜 -->
+									<!-- 5G 다이렉트 -->
+									<ul class="com-list-dot caution" id="pplTypeC" style="display:none;">
+										<li class="info-txt-mark">음성통화량이 일600분을 초과하는 횟수가 월 3회를 넘거나, 당월 총 음성 통화량이 10,000분을 초과하는 경우, 수신처 1,000곳 초과할 경우, 상업적 목적으로 이용하는 경우 등의 사유가 발생시 과금</li>
+										<li class="info-txt-mark">1일 500건을 초과하는 문자메시지를 발송하거나 1일 150건을 초과하는 문자메시지를 월 10회 초과 발송한 경우, 문자메시지를 광고성 스팸 메시지 발송과 같이 상업적 목적으로 이용하거나, 물리적 장치 또는 자동 발송 프로그램을 이용하는 경우(수신처가 월 2,000개 회선을 초과) 등의 사유 발생시 기본제공 혜택 제한하며 제한 시점부터 사용량에 대하여 정상요금 부가 혹은 차단될 수 있습니다.</li>
+										<li class="info-txt-mark">세금(부가세), 국제전화, KT114 직접연결수수료 및 통화료, KT114 전화번호 안내 서비스, 수신자 부담(콜렉트콜), 소액결제 이용료, 060 등 정보 이용료, 유료 부가서비스 월 이용료 등은 별도로 청구됩니다.</li>
+									</ul>
+									<!-- //5G 다이렉트 -->
+									<p>예) LTE 데이터 선택 32.8 요금제 이용 고객의 경우</p>
+									<div class="com_table">
+										<table class="tbl">
+											<colgroup>
+												<col style="width:40%">
+												<col style="width:60%">
+											</colgroup>
+											<caption>요금제별 예시</caption>
+											<tbody>
+												<tr>
+													<th scope="row">변경 전 이용기간</th>
+													<td>4월 1일 ~ 4월 20일 (20일)</td>
+												</tr>
+												<tr>
+													<th scope="row">변경 전 이용량<br>(데이터)</th>
+													<td>300MB</td>
+												</tr>
+												<tr>
+													<th scope="row">일할 기본제공량<br>(데이터)</th>
+													<td>200MB <br>= 300MB X 20일 / 30일</td>
+												</tr>
+												<tr>
+													<th scope="row">초과분(데이터)</th>
+													<td>100MB <br>(요금:0.5KB당 0.011원)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- 0406 : 위약금 없음. 요금제 유의사항 안내 -->
+						</div>
+						<div class="btn-bottom"><!-- ktd수정 : 버튼 클래스 통일 -->
+							<button type="button" name="button" class="btn fill btn-close" id="pplChgNoti">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- //요금제 변경시 유의사항 팝업 -->
+
+				<!-- 202101 반영예정 :  Y’s 요금제 -->
+				<div id="popup-ys-plan-sale" class="ui-popup toast-popup">
+					<div class="content">
+						<div class="header">Y 고객님만의 더 큰 혜택</div>
+						<button type="button" class="btn-close">닫기</button>
+						<div class="body">
+							<p class="p-col1">고객님, Y고객님이시군요! <br>Y 고객님께는 특별 추가 할인 혜택이 적용됩니다.</p>
+							<p class="mt10">만 29세 이하 고객의 경우 선택하신 요금제 월정액에서 월 5,500원 자동 할인 적용되며,  할인금액은 요금 청구서에서 확인하실 수 있습니다.</p>
+						</div>
+						<div class="btn-bottom"><!-- ktd수정 : 버튼 클래스 통일 -->
+							<button type="button" class="btn fill" onclick="pplChgYsPlanOk();">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- //202101 반영예정 :  Y’s 요금제 -->
+			</div>
+		</form>
+	</div>
+	<!-- //ktd : 사이트 영역 -->
+</body>
+</html>

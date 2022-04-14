@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ko" class="kt5g">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<title> [KT 공식] 요금은 비우고 혜택은 채웁니다. KT 다이렉트</title>
+
+	<!-- style -->
+	<link rel="stylesheet" href="/directShop/css/default.css">
+    <link rel="stylesheet" href="/directShop/css/contents.css">
+    <link rel="stylesheet" href="/directShop/css/popup.css">
+    <link rel="stylesheet" href="/directShop/css/swiper.css">
+
+    <!-- js -->
+	<script type="text/javascript"  src="/directShop/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="/directShop/js/ui/common_front.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/ui.js" type="text/javascript"></script>
+	<script src="/directShop/js/ui/pub.js" type="text/javascript"></script>
+	<script src="/directShop/js/lib/swiper.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="/oneMinute/js/oneMinuteCommon.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+	<!-- ktd : 추가 css -->
+    <link rel="stylesheet" href="/directShop/css/ktDirect.css">
+
+	<!-- ktd : 추가 js -->
+    <script src="/directShop/js/ui/pub_ktDirect.js" type="text/javascript"></script>
+
+	<!-- as-is -->
+	<script>
+		$(document).on("click",".btnPopClose.tout",function() {
+			$("#sessionWrap").hide();
+		});
+		$(document).on("click",".line_benner .close",function() {
+			$('.line_benner').slideUp();
+			return false;
+		});
+
+		$(document).on("click",".searchEng",function() {
+			if ($.trim($("#SearchCommon").val()).length == 0) {
+				alert("검색어를 입력해주세요.");
+				return;
+			}
+			location.href="https://m.search.kt.com/search.asp?c=MOL000&r=02&f=&o=&e=&k="+encodeURI($('#SearchCommon').val());
+		});
+
+		$(window).bind("pageshow", function(event) {
+			if ( event.originalEvent && event.originalEvent.persisted) {
+				$("#SearchCommon").val('');
+				$("a.ollehSearch").show();
+				$("a.ollehSearchClose").hide();
+				$("header fieldset").removeClass("on").hide();
+			}
+		});
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="/content/openshop/price/ollehShopPd_mobile.css" />
+	<!-- //as-is -->
+</head>
+<body>
+	<!-- ktd : Direct 안내 -->
+	<div class="ktd-directInfo">
+        <div class="info">
+            <div class="info-box">매장 방문 없이 바로 가능!</div>
+            <p class="info-txt">자급제&middot;중고&middot;해외직구폰 사용 고객이<br>쉽고 빠르게 개통할 수 있는</p>
+            <div class="info-copy"><img src="/images/directShop/renew/directInfo_tit.png" alt="온라인 유심가입 kt다이렉트"></div>
+        </div>
+        <div class="link-zone">
+            <ul>
+                <li><a href="#"><span>유심가입</span><em>(유심 미보유)</em></a></li>
+                <li><a href="#"><span>셀프개통</span><em>(유심 보유)</em></a></li>
+                <li><a href="#"><span>데이터 쉐어링</span><em>(유심 보유)</em></a></li>
+                <li><a href="#"><span>다이렉트<br>요금제 변경</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //ktd : Direct 안내 -->
+
+	<!-- ktd : 사이트 영역 -->
+    <div class="ktd-conWrap">
+		<form id="prodViewForm"  name="prodViewForm" method="post" action="/direct/DirectUsimOrderForm.do">
+			<div id="contents" class="new-contents footer-bottom"> <!-- ktd수정 : bg-f8 class 삭제 -->
+				<style>
+					div.directShopInfo {height:250px; font-size:14px; font-weight:bold;}
+					div.directShopInfo h4 {height:30px; font-size:15px; font-weight:bold;}
+					div.buyProcWrap {padding:30px; font-size:15px; font-weight:bold;}
+					ul.buyProc li {float:left; width:20%; margin:0 5px;font-size:12px;text-align:center;vertical-align:center;}
+					ul.buyProc li div {width:100%;height:40px;border:1px solid #cccccc;text-align:center;vertical-align:center;}
+				</style>
+
+				<h1><button type="button" name="button" id="titleNm">요금제 선택</button></h1>
+
+				<!-- content-recommend -->
+				<div id="content-recommend" >
+					<!-- 다른 요금제 선택 -->
+					<div id="other-plan" class="wrapStep" style="display: none;">
+						<ul class="tab tab-charge" data-effect="tab"><!-- ktd수정 : 탭 메뉴명 -->
+							<li class="active"><a href="#tab-con1" role="button" data-ppl-group="5g" data-prod-cgt-cd="30">5G 요금제</a></li>
+							<li><a href="#tab-con2" role="button" data-ppl-group="lte" data-prod-cgt-cd="15">LTE 요금제</a></li>
+						</ul>
+						<div class="tab-content">
+							<div id="tab-con1" class="active">
+								<div class="swiper-container tab-payment tab-payment5g"><!-- ktd수정 : 슬라이드 클래스 추가 -->
+									<ul class="tab select-charge swiper-wrapper">
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class="active " data-group-cd="140">5G 슈퍼플랜 초이스</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="92">5G 슈퍼플랜</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="95">5G Y 슈퍼플랜</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="93">5G 일반</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="145">5G 주니어</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="96">5G 청소년</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" data-group-cd="500" class="pplDirect" style="">다이렉트전용</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" data-group-cd="140,92,95,93,145,96,500">전체</a></li>
+									</ul>
+									<div class="swiper-scrollbar"></div>
+								</div>
+								<ul class="ktd-noti-list"><!-- ktd수정 : ktd-noti-list 변경 -->
+									<li>"자세히 보기"는 kt.com으로 새창 이동하여 요금상세설명을 확인하실 수 있습니다.</li>
+									<li>가입을 위한 요금제 선택은 "현재(다이렉트)페이지"에서 진행해주세요.</li>
+								</ul>
+								<div class="sort-area charge-table boxPplSelect">
+									<div class="area select-area">
+										<a href="#sortProdLy_5g" class="">데이터 많은순 </a>
+										<ul id="sortProdLy_5g" class="sortflog" style="width: 106px; display: none;">
+											<li><a href="javascript:void(0);" data-sort-prod="dataDesc">데이터 많은순 </a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="dataAsc">데이터 적은순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="amtDesc">높은 가격순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="amtAsc">낮은가격순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="tlkDesc">음성 많은순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="tlkAsc">음성 적은순</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="list-charge" id="pplList_5g">
+									<div class="area">
+										<div class="box">
+											<div class="title">슈퍼플랜 프리미엄 초이스(시즌/지니)</div>
+											<!--<div class="summary"></div>-->
+											<a role="button" href="https://product.kt.com/wDic/productDetail.do?ItemCode=1372&amp;CateCode=6002&amp;filter_code=81&amp;option_code=109&amp;pageSize=5" class="go-charge" title="새창 열기" target="_blank">자세히 보기</a><!-- ktd수정 : "자세히보기" 위치 이동 -->
+											<div class="line">
+												<span class="a">데이터</span>
+												<span class="b">완전 무제한</span>
+											</div>
+											<div class="opt">
+												<span>데이터 완전 무제한</span>
+											</div>
+											<div class="line">
+												<span class="a">테더링</span>
+												<span class="b">100GB</span>
+											</div>
+											<div class="line">
+												<span class="a">로밍</span>
+												<span class="b">3Mbps무제한</span>
+											</div>
+											<div class="line">
+												<span class="a">음성/문자</span>
+												<span class="b">집/이동전화 무제한 / 기본제공</span>
+											</div>
+											<div class="price">
+												월 130,000원<!--(부가세 포함)-->
+											</div>
+											<a href="javascript:void(0);" class="go aPplOk" soc="PL216U618" pplgroupdivcd="140" pplid="0827" pplnm="슈퍼플랜 프리미엄 초이스&amp;#40;시즌&amp;#x2F;지니&amp;#41;" data="완전 무제한" tlk="집&amp;#x2F;이동전화 무제한" char="기본제공" chguseyn="Y" tngrpplyn="N" onlinefrmuseyn="N" senioryn="N" prsnlshare="100GB" roaming="3Mbps무제한">요금제 선택</a>
+										</div>
+										<div class="choice-area">
+											<div class="title">기본제공</div>
+											<ul class="float-list">
+												<li>
+													<label for="list-superPlan2">
+														<span class="t">시즌 플레인 + 지니 스마트 음악감상 + 블라이스 스토리</span>
+													</label>
+													<input type="checkbox" id="list-superPlan2" class="checkbox-1" name="list-superPlan2" value="" checked="checked" disabled>
+												</li>
+											</ul>
+											<div class="title">시즌 초이스를 선택해주세요</div>
+											<p>다양한 콘텐츠 중 매월 1가지 골라 즐길 수 있는 부가서비스 입니다.</p>
+											<ul>
+												<li>
+													<label for="list-0827-choice-1">
+														<span class="t">시즌믹스</span>
+														<span class="m">실시간 TV부터 최신 영화, 드라마까지 고화질로 즐기는 영상</span>
+													</label>
+													<input type="checkbox" id="list-0827-choice-1" class="checkbox-1" name="seeznAddItem" value="PL2026804" onclick="validSeeznBoxItem(this);" pplid="0827" pplgroupdivcd="140">
+												</li>
+												<li>
+													<label for="list-0827-choice-5">
+														<span class="t">게임박스</span>
+														<span class="m">100개 이상의 콘솔/PC 고사양 게임을 별도 구매없이, 모바일에서 즐길 수 있는 스트리밍 게임 서비스</span>
+													</label>
+													<input type="checkbox" id="list-0827-choice-5" class="checkbox-1" name="seeznAddItem" value="PL2024788" onclick="validSeeznBoxItem(this);" pplid="0827" pplgroupdivcd="140">
+												</li>
+											</ul>
+										</div>
+										<div class="expend-block"><!-- ktd수정 : expend-block 추가 -->
+											<button type="button" class="btn-expend"><span>자세히 보기</span></button>
+										</div>
+									</div>
+
+									<div class="area">
+										<div class="box">
+											<div class="title">슈퍼플랜 스페셜 초이스(시즌/지니)</div>
+											<!--<div class="summary"></div>-->
+											<a role="button" href="https://product.kt.com/wDic/productDetail.do?ItemCode=1372&amp;CateCode=6002&amp;filter_code=81&amp;option_code=109&amp;pageSize=5" class="go-charge" title="새창 열기" target="_blank">자세히 보기</a><!-- ktd수정 : "자세히보기" 위치 이동 -->
+											<div class="line">
+												<span class="a">데이터</span>
+												<span class="b">완전 무제한</span>
+											</div>
+											<div class="opt">
+												<span>데이터 완전 무제한</span>
+											</div>
+											<div class="line">
+												<span class="a">테더링</span>
+												<span class="b">70GB</span>
+											</div>
+											<div class="line">
+												<span class="a">로밍</span>
+												<span class="b">100Kbps 무제한</span>
+											</div>
+											<div class="line">
+												<span class="a">음성/문자</span>
+												<span class="b">집/이동전화 무제한 / 기본제공</span>
+											</div>
+											<div class="price">
+												월 110,000원<!--(부가세 포함)-->
+											</div>
+											<a href="javascript:void(0);" class="go aPplOk" soc="PL216U617" pplgroupdivcd="140" pplid="0828" pplnm="슈퍼플랜 스페셜 초이스&amp;#40;시즌&amp;#x2F;지니&amp;#41;" data="완전 무제한" tlk="집&amp;#x2F;이동전화 무제한" char="기본제공" chguseyn="Y" tngrpplyn="N" onlinefrmuseyn="N" senioryn="N" prsnlshare="70GB" roaming="100Kbps 무제한">요금제 선택</a>
+										</div>
+										<div class="choice-area">
+											<div class="title">기본제공</div>
+											<ul class="float-list">
+												<li>
+													<label for="list-superPlan2">
+														<span class="t">시즌 플레인 + 지니 스마트 음악감상 + 블라이스 스토리</span>
+													</label>
+													<input type="checkbox" id="list-superPlan2" class="checkbox-1" name="list-superPlan2" value="" checked="checked" disabled>
+												</li>
+											</ul>
+											<div class="title">시즌 초이스를 선택해주세요</div>
+											<p>다양한 콘텐츠 중 매월 1가지 골라 즐길 수 있는 부가서비스 입니다.</p>
+											<ul>
+												<li>
+													<label for="list-0828-choice-1">
+														<span class="t">시즌믹스</span>
+														<span class="m">실시간 TV부터 최신 영화, 드라마까지 고화질로 즐기는 영상</span>
+													</label>
+													<input type="checkbox" id="list-0828-choice-1" class="checkbox-1" name="seeznAddItem" value="PL2026804" onclick="validSeeznBoxItem(this);" pplid="0828" pplgroupdivcd="140">
+												</li>
+												<li>
+													<label for="list-0828-choice-5">
+														<span class="t">게임박스</span>
+														<span class="m">100개 이상의 콘솔/PC 고사양 게임을 별도 구매없이, 모바일에서 즐길 수 있는 스트리밍 게임 서비스</span>
+													</label>
+													<input type="checkbox" id="list-0828-choice-5" class="checkbox-1" name="seeznAddItem" value="PL2024788" onclick="validSeeznBoxItem(this);" pplid="0828" pplgroupdivcd="140">
+												</li>
+											</ul>
+										</div>
+										<div class="expend-block"><!-- ktd수정 : expend-block 추가 -->
+											<button type="button" class="btn-expend"><span>자세히 보기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="btn-bottom">
+									<button type="button" class="btn fill popupSelPpl" disabled>요금제 선택</button> <!-- ktd수정 : 활성 disabled 제거 -->
+								</div>
+							</div>
+
+							<div id="tab-con2">
+								<div class="swiper-container tab-payment tab-paymentLte"><!-- ktd수정 : 슬라이드 클래스 추가 -->
+									<ul class="tab select-charge swiper-wrapper">
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class="active " data-group-cd="90">데이터ON</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="91">Y데이터 ON </a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="240">LTE Y틴&#40;청소년&#41;</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="242">LTE 주니어</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="114">LTE 일반</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="31">LTE 복지</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="110">LTE 시니어</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="247">순 선택형&#40;LTE&#41;</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" class=" " data-group-cd="248">순 망내무한 선택형&#40;LTE&#41;</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" data-group-cd="500" class="pplDirect" style="">다이렉트전용</a></li>
+										<li class="swiper-slide"><a href="javascript:void(0);" role="button" data-group-cd="90,91,240,242,114,31,110,247,248,500">전체</a></li>
+									</ul>
+									<div class="swiper-scrollbar"></div>
+								</div>
+								<ul class="ktd-noti-list"><!-- ktd수정 : ktd-noti-list 변경 -->
+									<li>"자세히 보기"는 kt.com으로 새창 이동하여 요금상세설명을 확인하실 수 있습니다.</li>
+									<li>가입을 위한 요금제 선택은 "현재(다이렉트)페이지"에서 진행해주세요.</li>
+								</ul>
+								<div class="sort-area charge-table boxPplSelect">
+									<div class="area select-area">
+										<a href="#sortProdLy_lte" class="">데이터 많은순 </a>
+										<ul id="sortProdLy_lte" class="sortflog" style="width: 106px; display: none;">
+											<li><a href="javascript:void(0);" data-sort-prod="dataDesc">데이터 많은순 </a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="dataAsc">데이터 적은순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="amtDesc">높은 가격순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="amtAsc">낮은가격순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="tlkDesc">음성 많은순</a></li>
+											<li><a href="javascript:void(0);" data-sort-prod="tlkAsc">음성 적은순</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="list-charge" id="pplList_lte">
+									<div class="area">
+										<div class="box">
+											<div class="title">데이터ON 프리미엄</div>
+											<!--<div class="summary"></div>-->
+											<a role="button" href="https://product.kt.com/wDic/productDetail.do?ItemCode=1248&amp;CateCode=6002&amp;filter_code=2&amp;option_code=1&amp;pageSize=5" class="go-charge" title="새창 열기" target="_blank">자세히 보기</a><!-- ktd수정 : "자세히보기" 위치 이동 -->
+											<div class="line">
+												<span class="a">데이터</span>
+												<span class="b">완전 무제한</span>
+											</div>
+											<div class="opt">
+												<span>데이터 완전 무제한</span>
+											</div>
+											<div class="line">
+												<span class="a">음성</span>
+												<span class="b">집/이동전화 무제한</span>
+											</div>
+											<div class="opt">
+												<span>집/이동전화 무제한(영상/부가 300분)</span>
+											</div>
+											<div class="line">
+												<span class="a">문자</span>
+												<span class="b">기본제공</span>
+											</div>
+
+											<div class="price">
+												월 89,000원<!--(부가세 포함)-->
+											</div>
+											<a href="javascript:void(0);" class="go aPplOk" soc="KDRTLTE90" pplgroupdivcd="90" pplid="0748" pplnm="데이터ON 프리미엄" data="완전 무제한" tlk="집&amp;#x2F;이동전화 무제한" char="기본제공" chguseyn="Y" tngrpplyn="N" onlinefrmuseyn="N" senioryn="N" prsnlshare="0" roaming="0">요금제 선택</a>
+										</div>
+									</div>
+
+									<div class="area">
+										<div class="box">
+											<div class="title">데이터ON 비디오</div>
+											<!--<div class="summary"></div>-->
+											<a role="button" href="https://product.kt.com/wDic/productDetail.do?ItemCode=1248&amp;CateCode=6002&amp;filter_code=2&amp;option_code=1&amp;pageSize=5" class="go-charge" title="새창 열기" target="_blank">자세히 보기</a><!-- ktd수정 : "자세히보기" 위치 이동 -->
+											<div class="line">
+												<span class="a">데이터</span>
+												<span class="b">100GB</span>
+											</div>
+											<div class="opt">
+												<span>무제한(100GB+최대5Mbps 속도제어)</span>
+											</div>
+											<div class="line">
+												<span class="a">음성</span>
+												<span class="b">집/이동전화 무제한</span>
+											</div>
+											<div class="opt">
+												<span>집/이동전화 무제한(영상/부가 300분)</span>
+											</div>
+											<div class="line">
+												<span class="a">문자</span>
+												<span class="b">기본제공</span>
+											</div>
+											<div class="price">
+												월 69,000원<!--(부가세 포함)-->
+											</div>
+											<a href="javascript:void(0);" class="go aPplOk" soc="KDRTLTE70" pplgroupdivcd="90" pplid="0747" pplnm="데이터ON 비디오" data="100GB" tlk="집&amp;#x2F;이동전화 무제한" char="기본제공" chguseyn="Y" tngrpplyn="N" onlinefrmuseyn="N" senioryn="N" prsnlshare="0" roaming="0">요금제 선택</a>
+										</div>
+									</div>
+								</div>
+								<div class="btn-bottom">
+									<button type="button" class="btn fill popupSelPpl" disabled>요금제 선택</button> <!-- ktd수정 : 활성 disabled 제거 -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //다른 요금제 선택 -->
+
+					<!-- ktd수정 : 가입신청 신규 영역 -->
+					<div id="wrapStepJoin" class="wrapStep ktd-join" style="display: none;">
+						<!-- 요금제 -->
+						<div class="ktd-section">
+							<div class="top">
+								<h2>요금제</h2>
+								<a href="#" name="other-plan_system" class="btn-charge-go recommTag" data-target="#other-plan" role="button">다른 요금제 선택하기</a>
+							</div>
+							<div class="payment-box">
+								<div class="tit">5G 다이렉트 67</div>
+								<div class="etc">Y고객 5,500 추가 할인</div>
+								<div class="data">데이터 200GB (5Mbps속도제한)ㅣ테더링 10GB | 로밍 0 ㅣ음성 집/이동전화 무제한 ㅣ문자 무제한</div>
+							</div>
+						</div>
+
+						<!-- USIM 보유여부 -->
+						<div class="ktd-section">
+							<div class="top">
+								<h2>USIM 보유여부</h2>
+							</div>
+							<div class="ktd-checkbox">
+								<!-- //ktd수정 : radio type으로 변경 -->
+								<div>
+									<input type="radio" name="usimYN" id="usimN" data-yn="N">
+									<label for="usimN">새로운 유심(USIM)이 필요해요</label>
+								</div>
+								<div>
+									<input type="radio" name="usimYN" id="usimY" data-yn="Y">
+									<label for="usimY">개통할 유심(USIM)이 있어요</label>
+								</div>
+							</div>
+						</div>
+
+						<!-- 가입유형 -->
+						<div class="ktd-section">
+							<div class="top">
+								<h2>가입유형</h2>
+							</div>
+							<div class="ktd-select-box">
+								<div>
+									<input type="radio" name="sbscTypeCd" id="sbscTypeCd01" value="" checked="checked">
+									<label for="sbscTypeCd01"><span>신규가입</span></label>
+								</div>
+								<div>
+									<input type="radio" name="sbscTypeCd" id="sbscTypeCd02" value="">
+									<label for="sbscTypeCd02"><span>번호이동</span></label>
+								</div>
+							</div>
+
+							<div class="ktd-tooltip">
+								<button type="button" name="button" class="tooltipHelp" data-type="ktdTooltip" title="열기">셀프개통 가능시간</button>
+								<div class="tooltipArticle" style="width:240px;">
+									<ul class="ktd-dot-list">
+										<li>
+											<span>신규가입 : 평일/토요일 09시~21시</span>
+										</li>
+										<li>
+											<span>번호이동 : 평일/토요일 10시~19시</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- 고객유형 -->
+						<div class="ktd-section">
+							<div class="top">
+								<h2>고객유형</h2>
+							</div>
+							<div class="ktd-select-box">
+								<div>
+									<input type="radio" name="userTypeATag" id="userTypeATag01" value="" checked="checked">
+									<label for="userTypeATag01"><span>개인</span></label>
+								</div>
+								<div>
+									<input type="radio" name="userTypeATag" id="userTypeATag02" value="">
+									<label for="userTypeATag02"><span>미성년자</span></label>
+								</div>
+							</div>
+						</div>
+
+						<!-- 콘텐츠 선택 -->
+						<div class="ktd-section">
+							<div class="top">
+								<h2>콘텐츠 선택</h2>
+								<div class="ktd-tooltip">
+									<button type="button" name="button" class="tooltipHelp" data-type="ktdTooltip" title="열기">유의사항</button>
+									<div class="tooltipArticle" style="width:282px;">
+										넷플릭스 콘텐츠 선택 시 발송되는 MMS를 통해 별도 가입해주셔야 하며, 가입 완료 확인 후 선택하신 넷플릭스 멤버십에 따라 통합 청구됩니다.
+									</div>
+								</div>
+							</div>
+							<dl id="boxYsPpl" class="list-charge-ys list-charge-2">
+								<dt>
+									<a href="#" role="button">시즌초이스 (+11,000원)</a>
+									<input type="checkbox" class="checkbox-1" id="diySeeznItem" name="diySeeznItem" title="시즌초이스 (+11,000원)">
+								</dt>
+								<dd class="area">
+									<div class="choice-area">
+										<div class="title">시즌 초이스를 선택해주세요</div>
+										<p>다양한 콘텐츠 중 매월 <strong>2가지</strong> 골라 즐길 수 있는 부가서비스 입니다.</p>
+										<ul>
+											<li><!-- ktd수정 : input, label 순서 변경 -->
+												<input type="checkbox" id="recomm-diy-choice-1" class="checkbox-1" name="diySeeznAddItem" value="PL19C6566" onclick="validDiySeeznBoxItem(this);">
+												<label for="recomm-diy-choice-1">
+													<span class="t">시즌믹스</span>
+													<span class="m">실시간 TV부터 최신 영화, 드라마까지 초고화질로 즐기는 영상<br>(매달 VOD용 코코(11,000©)와 콘텐츠팩 코코(11,000©) 제공)</span>
+												</label>
+											</li>
+											<li>
+												<input type="checkbox" id="recomm-diy-choice-2" class="checkbox-1" name="diySeeznAddItem" value="PL19C6565" onclick="validDiySeeznBoxItem(this);">
+												<label for="recomm-diy-choice-2">
+													<span class="t">지니 스마트 음악감상</span>
+													<span class="m">무손실 원음의 실시간 음악 스트리밍</span>
+												</label>
+											</li>
+											<li>
+												<input type="checkbox" id="recomm-diy-choice-4" class="checkbox-1" name="diySeeznAddItem" value="PL2043265" onclick="validDiySeeznBoxItem(this);">
+												<label for="recomm-diy-choice-4">
+													<span class="t">블라이스 스토리</span>
+													<span class="m">인기 웹소설·웹툰 무제한 감상<br>로맨스부터 시크릿까지 장르별로 즐기는 콘텐츠</span>
+												</label>
+											</li>
+											<li>
+												<input type="checkbox" id="recomm-diy-choice-5" class="checkbox-1" name="diySeeznAddItem" value="PL2024787" onclick="validDiySeeznBoxItem(this);">
+												<label for="recomm-diy-choice-5">
+													<span class="t">게임박스</span>
+													<span class="m">100개 이상의 콘솔/PC 고사양 게임을 별도 구매 없이, 모바일에서 즐길 수 있는 스트리밍 게임 서비스</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</dd>
+								<dt>
+									<a href="#" role="button">넷플릭스 (가입 후 과금)</a>
+									<input type="checkbox" class="checkbox-1" id="recomm-diy-netflixChoice01" name="diyNetflixAddItem" value="PL211R774" title="넷플릭스 (가입 후 과금)">
+								</dt>
+								<dt>
+									<a href="#" role="button">콘텐츠 선택안함</a>
+									<input type="checkbox" class="checkbox-1" id="" name="" value="" title="콘텐츠 선택안함">
+								</dt>
+							</dl>
+							<!-- <div class="ktd-checkbox">
+								<input type="checkbox" name="" id="fnToppingPickSkip" onclick="fnToppingPick('skip')">
+								<label for="fnToppingPickSkip">콘텐츠 선택안함</label>
+							</div> -->
+							<!-- ktd수정 : as-is script -->
+							<script>
+								$(function(){
+									$(document).on('click','dl.list-charge-ys dt a', function(){
+										var obj = $(this);
+										var objPr = $(this).parent();
+										var root = $(this).closest('.list-charge-ys');
+
+										if(objPr.hasClass('selected')){
+											root.find('dt').removeClass('selected')
+											root.find('dt a').attr({'title' : '닫힘', 'aria-expanded' : false, 'aria-selected' : false});
+											root.find('dd').slideUp();
+											$('html, body').animate({
+												scrollTop:0
+											},100);
+										}else{
+											root.find('dt').removeClass('selected');
+											root.find('dt a').attr({'title' : '닫힘', 'aria-expanded' : false, 'aria-selected' : false});
+											root.find('dd').fadeOut();
+											objPr.addClass('selected');
+											obj.attr({'title' : '열림', 'aria-expanded' : true, 'aria-selected' : true})
+											objPr.next('dd').slideDown(200,function(){
+												$('html, body').animate({
+													scrollTop:objPr.offset().top
+												},100);
+											});
+										}
+									});
+
+									// ktd수정 : check 여부 추가 확인
+									$(document).on('click','dl.list-charge-ys input[type="checkbox"]', function(){
+										if($(this).prop('checked')){
+											$(this).parent('dt').addClass('selected');
+										} else {
+											$(this).parent('dt').removeClass('selected');
+										}
+									})
+								})
+							</script>
+						</div>
+
+						<!-- 다이렉트 쿠폰 -->
+						<div class="ktd-section">
+							<div class="top">
+								<h2>다이렉트 쿠폰</h2>
+							</div>
+							<div class="couponpack">
+								<div class="ktd-coupon-select"><!-- ktd수정 : ktd-coupon-select class변경 -->
+									<ul>
+										<li>
+											<input type="radio" name="affiliate_rd" id="affiliate_rd01" title="" affiliatecd="01" affiliatenm="블라이스" affiliateamt="2000">
+											<label for="affiliate_rd01">
+												<img src="https://image.shop.kt.com/upload/editor/display/coupon_blice.png" alt="Blice">
+												<strong>블라이스</strong>
+												<span class="color-gray">최신 인기 웹소설</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="affiliate_rd" id="affiliate_rd02" title="" affiliatecd="02" affiliatenm="페이코" affiliateamt="2000">
+											<label for="affiliate_rd02">
+												<img src="/images/directShop/renew/coupon_payco.png" alt="페이코">
+												<strong>페이코</strong>
+												<span class="color-gray">월 2,000 원</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="affiliate_rd" id="affiliate_rd03" title="" affiliatecd="03" affiliatenm="요기요" affiliateamt="2000">
+											<label for="affiliate_rd03">
+												<img src="/images/directShop/renew/coupon_yogiyo.png" alt="요기요">
+												<strong>요기요</strong>
+												<span class="color-gray">월 2,000 원</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="affiliate_rd" id="affiliate_rd04" title="" affiliatecd="04" affiliatenm="GS25" affiliateamt="2000">
+											<label for="affiliate_rd04">
+												<img src="/images/directShop/renew/coupon_gs25.png" alt="GS25">
+												<strong>GS25</strong>
+												<span class="color-gray">월 2,000 원</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="affiliate_rd" id="affiliate_rd05" title="" affiliatecd="05" affiliatenm="올리브영" affiliateamt="2000">
+											<label for="affiliate_rd05">
+												<img src="/images/directShop/renew/coupon_oliveyoung.png" alt="올리브영">
+												<strong>올리브영</strong>
+												<span class="color-gray">월 2,000 원</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="affiliate_rd" id="affiliate_rd06" title="" affiliatecd="06" affiliatenm="예스24" affiliateamt="2000">
+											<label for="affiliate_rd06">
+												<img src="/images/directShop/renew/coupon_yes24.png" alt="예스24">
+												<strong>예스24</strong>
+												<span class="color-gray">월 2,000 원</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="affiliate_rd" id="affiliate_rd07" title="" affiliatecd="07" affiliatenm="펫프렌즈" affiliateamt="2000">
+											<label for="affiliate_rd07">
+												<img src="/images/directShop/renew/coupon_petfriends.png" alt="펫프렌즈">
+												<strong>펫프렌즈</strong>
+												<span class="color-gray">월 2,000 원</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="ktd-checkbox">
+									<input type="checkbox" name="couponAgree" id="couponAgree">
+									<label for="feeCardAgree">(필수) 서비스 가입 안내사항 확인/동의</label>
+									<button type="button" name="button" class="ui-popup-call" data-target="#coupon-useguide" id="">
+										<em class="hidden">내용보기</em>
+									</button>
+								</div>
+							</div>
+							<script>
+								// 다이렉트 쿠폰 선택
+								$(document).on('click', '.ktd-coupon-select input', function(e) {
+									$('.ktd-coupon-select input').attr('title','')
+									$(this).attr('title','선택');
+								});
+							</script>
+						</div>
+
+						<!-- 월예상납부액 -->
+						<div id="" class="ui-popup toast-popup active ktd-estimated-payment" tabindex="0" aria-hidden="false" style="display:block;">
+							<div class="content">
+								<div class="header">
+									<span>월예상납부액</span>
+									<strong>55,000원</strong>
+									<button type="button" name="btn-more-list"><span class="hidden">펼처보기</span></button>
+								</div>
+								<div class="body">
+									<ul class="payment-list">
+										<li>
+											<span class="item"><strong>월정액</strong></span>
+											<span class="value"><strong>45,000원</strong></span>
+										</li>
+										<li>
+											<span class="item">시즌초이스</span>
+											<span class="value"><em>+11,000원</em></span>
+										</li>
+										<li>
+											<span class="item">넷플릭스</span>
+											<span class="value"><em>가입 후 과금</em></span>
+										</li>
+										<li>
+											<span class="item">KT 다이렉트 쿠폰팩</span>
+											<span class="value">페이코 (월 2,000원)</span>
+										</li>
+									</ul>
+									<ul class="payment-list">
+										<li>
+											<span class="item">데이터</span>
+											<span class="value">무제한</span>
+										</li>
+										<li>
+											<span class="item">테더링</span>
+											<span class="value">50GB</span>
+										</li>
+										<li>
+											<span class="item">로밍</span>
+											<span class="value">50GB</span>
+										</li>
+										<li>
+											<span class="item">음성문자</span>
+											<span class="value">무제한</span>
+										</li>
+									</ul>
+								</div>
+								<div class="btn-bottom">
+									<button type="button" name="button" id="" class="btn fill bottom ui-popup-call" data-target="#popup-payment-info" disabled>온라인 가입신청</button>
+								</div>
+
+								<script>
+									$(function(){
+										$('button[name="btn-more-list"]').on('click', function(e){
+											var conBlock = $(this).closest('.ktd-estimated-payment');
+											if(conBlock.hasClass('on')){
+												conBlock.removeClass('on')
+											} else {
+												conBlock.addClass('on')
+											}
+										})
+									})
+								</script>
+							</div>
+						</div>
+					</div>
+					<!-- //ktd수정 : 가입신청 신규 영역 -->
+				</div>
+			</div>
+		</form>
+	</div>
+	<!-- //ktd : 사이트 영역 -->
+</body>
+</html>
+
+
+<!-- 화면 확인용 - 개발 진행시 삭제 -->
+<script>
+	$(function(){
+		$('#wrapStepJoin').show();
+	})
+</script>
+<!-- 화면 확인용 -->

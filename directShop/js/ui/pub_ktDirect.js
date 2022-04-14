@@ -65,6 +65,10 @@ $(function(){
         //     $('.ktd-conWrap').addClass('bg-f8');
         // }
 
+        $('.wrapStep').hide();
+        $('#other-plan').show();
+        $(window).scrollTop(0);
+
         var swiperTabPayment5g = new Swiper('.tab-payment5g', {
             slidesPerView: 'auto',
             freeMode: true,
@@ -135,10 +139,10 @@ $(function(){
             clearInterval(checkVivald)
         };
     },100)
-
-    // as-is select toggle 호출
-    selectEvent();
 });
+
+// as-is select toggle 호출
+selectEvent();
 
 var TABDepth = {
     init: function( ins ){
@@ -217,5 +221,55 @@ $(document).on('click', '[data-type="tooltipToggle"]', function(e) {
         $(this).attr('title','열기').next('div').slideUp();
     } else {
         $(this).attr('title','닫기').next('div').slideDown();
+    }
+});
+
+// 툴팁-팝업형태
+$(document).on('click', '[data-type="ktdTooltip"]', function(e) {
+    _this = $(this);
+    $('.accessible-end').remove();
+    $(".tooltipHelp").removeClass("on");
+    $('.tooltipArticle').hide();
+
+    if( _this.hasClass("on") ){
+        _this.removeClass("on");
+        _this.attr('title', '열기');
+        $('.accessible-end').remove();
+        $(".tooltipHelp").removeClass("on");
+        $('.tooltipArticle').hide();
+    }
+    else {
+        _this.addClass("on");
+        _this.attr('title', '닫기');
+
+        $('.tooltipArticle').append('<a href="javascript:void(0)" class="accessible-end"><em class="hidden">닫기</em></a>');
+        _this.next('.tooltipArticle').show();
+    }
+
+    $('.accessible-end').on('focusin', function() {
+        _this.attr('tabindex', '0');
+        _this.focus();
+    });
+
+    $('.accessible-end').on('click', function() {
+        _this.removeClass("on");
+        _this.attr('title', '열기');
+        _this.focus();
+        $('.accessible-end').remove();
+        $(".tooltipHelp").removeClass("on");
+        $('.tooltipArticle').hide();
+    });
+
+    e.preventDefault();
+});
+
+// 툴팁-팝업형태 닫기
+$("body, html").on({
+    "click , touchstart" : function(e){
+        if( ! $(e.target).hasClass("tooltipArticle").length){
+            $('.accessible-end').remove();
+            $(".tooltipHelp").removeClass("on");
+            $('.tooltipArticle').hide();
+        }
     }
 });

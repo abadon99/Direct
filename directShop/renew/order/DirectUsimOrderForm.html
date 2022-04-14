@@ -451,7 +451,7 @@
 												<input type="tel" name="creditCustJumin2Temp" id="creditCustJumin2Temp" data-masking="true" value="" class="clearable mb0 iptnumber jumin-masking" placeholder="외국인등록번호" title="외국인등록번호 13자리 입력" maxlength="13">
 												<input type="hidden" id="creditCustJumin2" value="">
 												<div class="btn-input"><!-- ktd수정 : class 변경 -->
-													<button type="button" name="button" class="ui-popup-call" data-target="#select-nationality">국적을 선택하세요.</button>
+													<button type="button" name="button" class="ui-popup-call arrow-right" data-target="#select-nationality">국적을 선택하세요.</button>
 													<input type="text" id="creditNationalityName" name="creditNationalityName" value="" class="" placeholder="국적을 선택하세요." title="국적선택">
 													<input type="hidden" id="creditNationalityCd" name="creditNationalityCd" value="">
 												</div>
@@ -690,7 +690,7 @@
 
 									<div id="tab-money-3">
 										<div class="btn-input"><!-- ktd수정 : mb0 제거 -->
-											<button type="button" name="feeBankNm" id="feeBankNm" class="ui-popup-call" data-target="#select-bank">은행 선택</button>
+											<button type="button" name="feeBankNm" id="feeBankNm" class="ui-popup-call arrow-right" data-target="#select-bank">은행 선택</button>
 											<input type="text" name="feeBank" id="feeBank" aria-hidden="true" tabindex="-1" data-masking="true" value="" class="" placeholder="은행/증권사" title="은행/증권사 선택">
 										</div>
 										<div class="btn-input2"><!-- ktd수정 : mb0 제거 -->
@@ -817,7 +817,7 @@
 
 								<ul class="tab-nav credit-nav" data-effect="tab">
 									<li id="" class="active"><a href="#tab-certified-1" name="" aria-selected="true" title="선택됨" role="button">PASS+계좌인증</a></li>
-									<li id=""><a href="#tab-certified-2" name="" aria-selected="false" role="button">네이버 인증서</a></li>
+									<li id=""><a href="#" name="" aria-selected="false" role="button">네이버 인증서</a></li>
 									<li id=""><a href="#tab-certified-3" name="" aria-selected="false" role="button">신용카드</a></li>
 								</ul>
 
@@ -841,7 +841,7 @@
 												<li>PASS 인증받을 실명과 계좌의 명의가 일치해야 인증이 가능 합니다.</li>
 												<li>은행별 점검시간에는 계좌확인이 불가 합니다.</li>
 											</ul>
-											<div class="ktd-checkbox ktc-termsChk">
+											<div class="ktd-checkbox ktd-termsChk">
 												<input type="checkbox" name="" id="">
 												<label for="" id="passPopBtn">약관 확인 및 동의</label>
 											</div>
@@ -853,7 +853,7 @@
 									<div id="tab-certified-3">
 										<div class="btn-input">
 											<input type="text" id="creditCompnay" name="creditCompnay" aria-hidden="true" tabindex="-1" value="" class="" readonly="" placeholder="카드사 선택" title="카드사 선택">
-											<button type="button" name="button" class="ui-popup-call" data-target="#select-card" id="button-card">카드사 선택</button>
+											<button type="button" name="button" class="ui-popup-call arrow-right" data-target="#select-card" id="button-card">카드사 선택</button>
 											<input type="hidden" id="creditCompnayCd" name="creditCompnayCd" value="">
 										</div>
 
@@ -893,10 +893,12 @@
 
 			<!-- layer -->
 			<!-- 카드사 선택// -->
-			<div id="select-card" class="ui-popup popup-type-2 select-card"> <!-- active 클래스 추가로 활성화 -->
+			<div id="select-card" class="ui-popup popup-type-2 select-card ui-popup-fixed"> <!-- active 클래스 추가로 활성화 --><!-- ktd수정 : ui-popup-fixed : header, bottom fixed 일 경우 -->
 				<div class="content">
-					<div class="header">카드사 선택</div>
-					<button type="button" class="btn-close">닫기</button>
+					<div class="header"><!-- ktd수정 : header, bottom fixed 일 경우 -->
+						카드사 선택
+						<button type="button" class="btn-close">닫기</button>
+					</div>
 					<div class="body">
 						<ul class="select-card-list">
 							<!-- ktd수정 : input label로 순서 변경 -->
@@ -908,23 +910,123 @@
 							<li><span class="radio"><input type="radio" id="radio6" name="select-card" cardname="삼성카드" value="SS"><label for="radio6"><img src="/images/directShop/card/samsung.png" alt="삼성카드" aria-hidden="true">삼성카드</label></span></li>
 							<li><span class="radio"><input type="radio" id="radio7" name="select-card" cardname="KB국민카드" value="KB"><label for="radio7"><img src="/images/directShop/card/kb.png" alt="KB국민카드" aria-hidden="true">KB국민카드</label></span></li>
 							<li><span class="radio"><input type="radio" id="radio8" name="select-card" cardname="BC카드" value="BC"><label for="radio8"><img src="/images/directShop/card/bc.png" alt="BC카드" aria-hidden="true">BC카드</label></span></li>
+							<li><span class="radio"><input type="radio" id="radio1" name="select-card" cardname="롯데카드" value="LT"><label for="radio1"><img src="/images/directShop/card/lotte.png" alt="롯데카드" aria-hidden="true">롯데카드</label></span></li>
+							<li><span class="radio"><input type="radio" id="radio2" name="select-card" cardname="신한카드" value="SH"><label for="radio2"><img src="/images/directShop/card/shinhan.png" alt="신한카드" aria-hidden="true">신한카드</label></span></li>
+							<li><span class="radio"><input type="radio" id="radio3" name="select-card" cardname="NH농협카드" value="NH"><label for="radio3"><img src="/images/directShop/card/nh.png" alt="NH농협카드" aria-hidden="true">NH농협카드</label></span></li>
+							<li><span class="radio"><input type="radio" id="radio4" name="select-card" cardname="하나카드" value="HN"><label for="radio4"><img src="/images/directShop/card/hana.png" alt="하나카드" aria-hidden="true">하나카드</label></span></li>
+							<li><span class="radio"><input type="radio" id="radio5" name="select-card" cardname="현대카드" value="HD"><label for="radio5"><img src="/images/directShop/card/hyundai.png" alt="현대카드" aria-hidden="true">현대카드</label></span></li>
+							<li><span class="radio"><input type="radio" id="radio6" name="select-card" cardname="삼성카드" value="SS"><label for="radio6"><img src="/images/directShop/card/samsung.png" alt="삼성카드" aria-hidden="true">삼성카드</label></span></li>
+							<li><span class="radio"><input type="radio" id="radio7" name="select-card" cardname="KB국민카드" value="KB"><label for="radio7"><img src="/images/directShop/card/kb.png" alt="KB국민카드" aria-hidden="true">KB국민카드</label></span></li>
+							<li><span class="radio"><input type="radio" id="radio8" name="select-card" cardname="BC카드" value="BC"><label for="radio8"><img src="/images/directShop/card/bc.png" alt="BC카드" aria-hidden="true">BC카드</label></span></li>
 						</ul>
 					</div>
-
 					<div class="btn-bottom">
 						<button type="button" name="button" class="btn black bottom btn-close" id="btnCardSelect" disabled>선택완료</button><!-- ktd수정 : class fill - black 으로 변경 -->
 					</div>
 				</div>
 			</div>
-
 			<!-- //카드사 선택 -->
-			<div id="select-number" class="ui-popup popup-type-2  select-number">
+
+			<!-- 희망번호// -->
+			<div id="select-number" class="ui-popup popup-type-2  select-number ui-popup-fixed"><!-- ktd수정 : ui-popup-fixed : header, bottom fixed 일 경우 -->
 				<div class="content">
-					<div class="header">희망번호</div>
-					<button type="button" class="btn-close">닫기</button>
+					<div class="header"><!-- ktd수정 : header, bottom fixed 일 경우 -->
+						희망번호
+						<button type="button" class="btn-close">닫기</button><!-- ktd수정 : 닫기 중복, 하단 닫기 삭제 -->
+					</div>
 					<div class="body"><!-- ktd수정 : style 제거 -->
 						<ul class="select-list">
 							<!-- ktd수정 : input labe 순서 변경 -->
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6564-5635">
+									<label for="010-6564-5635">010-6564-5635</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6583-5635">
+									<label for="010-6583-5635">010-6583-5635</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6740-5635">
+									<label for="010-6740-5635">010-6740-5635</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6740-5636">
+									<label for="010-6740-5636">010-6740-5636</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6740-5637">
+									<label for="010-6740-5637">010-6740-5637</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6564-5635">
+									<label for="010-6564-5635">010-6564-5635</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6583-5635">
+									<label for="010-6583-5635">010-6583-5635</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6740-5635">
+									<label for="010-6740-5635">010-6740-5635</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6740-5636">
+									<label for="010-6740-5636">010-6740-5636</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6740-5637">
+									<label for="010-6740-5637">010-6740-5637</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6564-5635">
+									<label for="010-6564-5635">010-6564-5635</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6583-5635">
+									<label for="010-6583-5635">010-6583-5635</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6740-5635">
+									<label for="010-6740-5635">010-6740-5635</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6740-5636">
+									<label for="010-6740-5636">010-6740-5636</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="rdoHopeNo" id="010-6740-5637">
+									<label for="010-6740-5637">010-6740-5637</label>
+								</span>
+							</li>
 							<li>
 								<span class="radio">
 									<input type="radio" name="rdoHopeNo" id="010-6564-5635">
@@ -967,15 +1069,17 @@
 					<div class="btn-bottom">
 						<button type="button" name="button" class="btn black bottom" id="btnHopeNoReserve" disabled>선택완료</button><!-- ktd수정 : class fill - black 으로 변경 -->
 					</div>
-					<button type="button" class="btn-close">닫기</button>
 				</div>
 			</div>
+			<!-- //희망번호 -->
 
 			<!-- 은행/증권사 선택// -->
-			<div id="select-bank" class="ui-popup popup-type-2 select-card"> <!-- active 클래스 추가로 활성화 -->
+			<div id="select-bank" class="ui-popup popup-type-2 select-card ui-popup-fixed"><!-- ktd수정 : ui-popup-fixed : header, bottom fixed 일 경우 --> <!-- active 클래스 추가로 활성화 -->
 				<div class="content">
-					<div class="header">은행/증권사 선택</div>
-					<button type="button" class="btn-close">닫기</button>
+					<div class="header">
+						은행/증권사 선택
+						<button type="button" class="btn-close">닫기</button>
+					</div><!-- ktd수정 : header, bottom fixed 일 경우 -->
 					<div class="body">
 						<div class="bank">
 							<ul class="tab-button" data-effect="tab">
@@ -985,6 +1089,11 @@
 							<div class="tab-content">
 								<div id="tab-bank" class="active">
 									<ul class="select-card-list">
+										<li><span class="radio"><label for="radio11"><img src="/images/directShop/bank/keb.png" alt="KEB하나은행" aria-hidden="true"><input type="radio" id="radio11" name="select-bank" value="B026" nstepvalue="081" bankname="KEB하나은행">KEB하나은행</label></span></li>
+										<li><span class="radio"><label for="radio12"><img src="/images/directShop/bank/sc.png" alt="SC은행" aria-hidden="true"><input type="radio" id="radio12" name="select-bank" value="B044" nstepvalue="023" bankname="SC은행">SC은행</label></span></li>
+										<li><span class="radio"><label for="radio13"><img src="/images/directShop/bank/bnk.png" alt="경남은행" aria-hidden="true"><input type="radio" id="radio13" name="select-bank" value="B012" nstepvalue="039" bankname="경남은행">경남은행</label></span></li>
+										<li><span class="radio"><label for="radio14"><img src="/images/directShop/bank/kj.png" alt="광주은행" aria-hidden="true"><input type="radio" id="radio14" name="select-bank" value="B007" nstepvalue="034" bankname="광주은행">광주은행</label></span></li>
+										<li><span class="radio"><label for="radio15"><img src="/images/directShop/bank/kb.png" alt="국민은행" aria-hidden="true"><input type="radio" id="radio15" name="select-bank" value="B033" nstepvalue="004" bankname="국민은행">국민은행</label></span></li>
 										<li><span class="radio"><label for="radio11"><img src="/images/directShop/bank/keb.png" alt="KEB하나은행" aria-hidden="true"><input type="radio" id="radio11" name="select-bank" value="B026" nstepvalue="081" bankname="KEB하나은행">KEB하나은행</label></span></li>
 										<li><span class="radio"><label for="radio12"><img src="/images/directShop/bank/sc.png" alt="SC은행" aria-hidden="true"><input type="radio" id="radio12" name="select-bank" value="B044" nstepvalue="023" bankname="SC은행">SC은행</label></span></li>
 										<li><span class="radio"><label for="radio13"><img src="/images/directShop/bank/bnk.png" alt="경남은행" aria-hidden="true"><input type="radio" id="radio13" name="select-bank" value="B012" nstepvalue="039" bankname="경남은행">경남은행</label></span></li>
@@ -1005,7 +1114,6 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="btn-bottom">
 						<button type="button" name="button" class="btn fill bottom btn-close" id="btnBankSelect" disabled>선택완료</button>
 					</div>
@@ -1103,8 +1211,9 @@
 							</div>
 						</div>
 					</div>
-
-					<button type="button" name="button" class="btn black bottom" onclick="checkAuthType();" disabled>확인</button><!-- ktd수정 : class fill - black 으로 변경 -->
+					<div class="btn-bottom"><!-- ktd수정 : 버튼 클래스 통일, class fill - black 으로 변경 -->
+						<button type="button" name="button" class="btn black bottom" onclick="checkAuthType();" disabled>확인</button>
+					</div>
 				</div>
 			</div>
 			<!-- 약관 확인 및 동의 -->
@@ -1117,8 +1226,9 @@
 					<div class="body">
 						<p>ARS 통해 비밀번호 앞 2자리를 입력 후<br>인증완료를 눌러주세요.</p>
 					</div>
-
-					<button type="button" name="button" class="btn black bottom" onclick="jsonCardEmbedResult();" disabled>인증완료</button><!-- ktd수정 : class fill - black 으로 변경 -->
+					<div class="btn-bottom"><!-- ktd수정 : 버튼 클래스 통일, class fill - black 으로 변경 -->
+						<button type="button" name="button" class="btn black bottom" onclick="jsonCardEmbedResult();" disabled>인증완료</button>
+					</div>
 				</div>
 			</div>
 
@@ -1129,8 +1239,9 @@
 					<div class="body">
 						<p>입력하신 신용카드 인증 정보가 <span class="ib">일치하지 않습니다.</span> <br>재입력 후 인증 요청 해 주세요.</p>
 					</div>
-
-					<button type="button" name="button" class="btn fill bottom" id="checkEr">확인</button>
+					<div class="btn-bottom"><!-- ktd수정 : 버튼 클래스 통일, class fill - black 으로 변경 -->
+						<button type="button" name="button" class="btn fill bottom" id="checkEr">확인</button>
+					</div>
 				</div>
 			</div>
 			<!-- ARS 인증 -->
@@ -1153,7 +1264,6 @@
 							<input type="text" class="ad_inp01" id="hopeCaptcha" name="hopeCaptcha" placeholder="보안문자 입력" title="보안문자 입력" maxlength="6">
 						</div>
 					</div>
-
 					<div class="btn-bottom">
 						<button type="button" name="button" class="btn black" id="btnSendCaptchaHopeNo">확인</button>
 					</div>
@@ -1179,7 +1289,6 @@
 							<input type="text" class="ad_inp01" id="usimCaptcha" name="usimCaptcha" placeholder="보안문자 입력" title="보안문자 입력" maxlength="6">
 						</div>
 					</div>
-
 					<div class="btn-bottom">
 						<button type="button" name="button" class="btn black" id="btnSendCaptchaUsimNo">확인</button>
 					</div>
@@ -1204,10 +1313,8 @@
 								<strong>kt.com</strong><span>kt.com홈페이지 또는 마이 케이티 앱에서 요금을 편리하고 빠르게 직접 확인할 수 있는 명세서입니다.</span>
 							</li>
 						</ul>
-
 					</div>
-
-					<div>
+					<div class="btn-bottom"><!-- ktd수정 : 버튼 클래스 통일 -->
 						<button type="button" name="button" class="btn fill btn-close">확인</button>
 					</div>
 				</div>
@@ -1233,10 +1340,12 @@
 			<!-- //데이터쉐어링 번호 조회 -->
 
 			<!-- 국가 선택// -->
-			<div id="select-nationality" class="ui-popup popup-type-2">
+			<div id="select-nationality" class="ui-popup popup-type-2 ui-popup-fixed"><!-- ktd수정 : ui-popup-fixed : header, bottom fixed 일 경우 -->
 				<div class="content">
-					<div class="header">국적 선택</div>
-					<button type="button" class="btn-close">닫기</button>
+					<div class="header"><!-- ktd수정 : header, bottom fixed 일 경우 -->
+						국적 선택
+						<button type="button" class="btn-close">닫기</button>
+					</div>
 					<div class="body">
 						<div class="btn-input2">
 							<input type="text" placeholder="국적명 입력" name="nationName" class="text" id="nationName" value="">
@@ -1273,12 +1382,41 @@
 									<label for="nationality-5">Angola(앙골라)</label>
 								</span>
 							</li>
+							<li style="display: block;">
+								<span class="radio">
+									<input type="radio" id="nationality-1" name="select-nationality" nationalityname="Afghanistan(아프가니스탄)" value="J002">
+									<label for="nationality-1">Afghanistan(아프가니스탄)</label>
+								</span>
+							</li>
+							<li style="display: block;">
+								<span class="radio">
+									<input type="radio" id="nationality-2" name="select-nationality" nationalityname="Albania(알바니아)" value="J006">
+									<label for="nationality-2">Albania(알바니아)</label>
+								</span>
+							</li>
+							<li style="display: block;">
+								<span class="radio">
+									<input type="radio" id="nationality-3" name="select-nationality" nationalityname="Algeria(알제리)" value="J062">
+									<label for="nationality-3">Algeria(알제리)</label>
+								</span>
+							</li>
+							<li style="display: block;">
+								<span class="radio">
+									<input type="radio" id="nationality-4" name="select-nationality" nationalityname="Andorra(안도라)" value="J007">
+									<label for="nationality-4">Andorra(안도라)</label>
+								</span>
+							</li>
+							<li style="display: block;">
+								<span class="radio">
+									<input type="radio" id="nationality-5" name="select-nationality" nationalityname="Angola(앙골라)" value="J003">
+									<label for="nationality-5">Angola(앙골라)</label>
+								</span>
+							</li>
 						</ul>
 						<div class="ktd-btn-block ktd-more-block">
 							<button type="button"><span>더보기 <em>10/43</em></span></button>
 						</div>
 					</div>
-
 					<div class="btn-bottom">
 						<button type="button" name="button" class="btn black btn-close" id="btnNationalitySelect" disabled>선택완료</button><!-- ktd수정 : class fill - black 으로 변경 -->
 					</div>
@@ -1290,6 +1428,7 @@
 			<div id="popup-ex-esim" class="ui-popup popup-type-2">
 				<div class="content">
 					<div class="header">IMEI/EID 확인 방법</div>
+					<button type="button" class="btn-close">닫기</button><!-- ktd수정 : 닫기 버튼 위치 통일 -->
 					<div class="body">
 						<ul class="txt">
 							<li><em>※</em> 아이폰 &gt; 설정 &gt; 일반 &gt; 정보에서 모델명/EID/IMEI 정보를 복사하여 입력해 주세요</li>
@@ -1303,15 +1442,17 @@
 					<div class="btn-bottom">
 						<button type="button" name="button" class="btn fill btn-close">확인</button>
 					</div>
-					<button type="button" class="btn-close">닫기</button>
 				</div>
 			</div>
 			<!--  //imei/eid 확인방법-->
 
 			<!-- 번호이동 사전동의 안내--><!-- ktd수정 : tab 제거/콘텐츠 구성 변경 -->
-			<div id="popup-number-change-info" class="ui-popup popup-type-2">
+			<div id="popup-number-change-info" class="ui-popup popup-type-2 ui-popup-fixed"><!-- ktd수정 : ui-popup-fixed : header, bottom fixed 일 경우 -->
 				<div class="content">
-					<div class="header">번호이동 사전동의 안내</div>
+					<div class="header"><!-- ktd수정 : header, bottom fixed 일 경우 -->
+						번호이동 사전동의 안내
+						<button type="button" class="btn-close">닫기</button><!-- ktd수정 : 닫기 버튼 위치 통일 -->
+					</div>
 					<div class="body">
 						<p class="msg">
 							이전 통신사에 번호이동 의사를 전송하고<br> 확인하는 절차 입니다.<br> 사전동의를 완료 하셔도 이전 통신사<br>
@@ -1364,14 +1505,14 @@
 					<div class="btn-bottom btn-bottom-inline">
 						<button type="button" name="button" class="btn inline btn-close">확인</button>
 					</div>
-					<button type="button" class="btn-close">닫기</button>
 				</div>
 			</div>
 
+			<!-- 홈페이지 인증 안내 -->
 			<div id="popup-homepage-information" class="ui-popup toast-popup" tabindex="0">
 				<div class="content">
 					<div class="header"><h1>홈페이지 인증 안내</h1></div>
-					<button type="button" class="btn-close">닫기</button>
+					<button type="button" class="btn-close">닫기</button><!-- ktd수정 : 닫기 중복, 하단 닫기 삭제 -->
 					<div class="body">
 						<ul>
 							<li><em>01.</em>카드사 홈페이지 창에서 로그인 해주세요.</li>
@@ -1383,12 +1524,10 @@
 							<a href="#" id="go-homepage" class="arrow-2" target="_blank" title="새창열림" role="button">홈페이지 바로 가기</a>
 						</p>
 					</div>
-					<div class="bottom-btn">
+					<div class="btn-bottom"><!-- ktd수정 : 버튼 클래스 통일 -->
 						<button type="button" class="btn fill" onclick="jsonCardEmbedResult();">인증완료</button>
 					</div>
 				</div>
-
-				<button type="button" class="close">닫기</button>
 			</div>
 			<script>
 				$('.tab-agree a').on('click',function(){
@@ -1432,7 +1571,7 @@
 			<!-- 카드사 홈페이지 인증 사전등록 -->
 			<div id="popup-homepage-id" class="ui-popup toast-popup" tabindex="0">
 				<div class="content">
-					<div class="header"><h1>카드사 홈페이지 인증 사전등록</h1></div>
+					<div class="header"><h1>카드사 홈페이지 인증 사전등록</h1></div><!-- ktd수정 : 닫기 중복, 하단 닫기 삭제 -->
 					<button type="button" class="btn-close">닫기</button>
 					<div class="body">
 						<p>
@@ -1440,11 +1579,10 @@
 						</p>
 						<a href="#" class="arrow-2" id="regi-skip" role="button">홈페이지 인증 사전등록 건너뛰기</a>
 					</div>
-					<div class="bottom-btn">
+					<div class="btn-bottom"><!-- ktd수정 : 버튼 클래스 통일 -->
 						<a href="#" target="_blank" title="새창열림" id="go-homepage-regi" class="btn fill" role="button">확인</a>
 					</div>
 				</div>
-				<button type="button" class="close">닫기</button>
 			</div>
 			<!-- //카드사 홈페이지 인증 사전등록 -->
 
@@ -1462,7 +1600,7 @@
 							<button type="button" class="btn" id="homePageAuthBtn" onclick="jsonCardEmbedNormal();">인증하기</button>
 						</div>
 					</div>
-					<div class="bottom-btn">
+					<div class="btn-bottom"><!-- ktd수정 : 버튼 클래스 통일 -->
 						<!-- <button type="button" name="button" class="btn fill btn-close" onclick="popupOpen('#popup-homepage-regi')">인증완료</button> -->
 						<button type="button" name="button" class="btn fill btn-close" onclick="jsonCardEmbedResult();">인증완료</button>
 					</div>
@@ -1476,7 +1614,6 @@
 					<div class="header">사전동의 정보전송 완료</div>
 					<button type="button" class="btn-close">닫기</button>
 					<div class="body">
-
 						<div class="number-change-complete" id="agreeARS">
 							<p><em class="sendArsNum">ARS(1566-1509)</em>로 번호이동 사전동의를 진행해주세요</p>
 							<ul class="txtlist">
@@ -1492,7 +1629,7 @@
 						</div>
 
 					</div>
-					<div class="bottom-btn">
+					<div class="btn-bottom"><!-- ktd수정 : 버튼 클래스 통일 -->
 						<button type="button" class="btn fill btn-close">확인</button>
 					</div>
 				</div>
@@ -1508,7 +1645,7 @@
 						<p class="p-col1">고객님, Y고객님이시군요! <br>Y 고객님께는 특별 추가 할인 혜택이 적용됩니다.</p>
 						<p class="mt10">만 29세 이하 고객의 경우 선택하신 요금제 월정액에서 월 5,500원 자동 할인 적용되며,  할인금액은 요금 청구서에서 확인하실 수 있습니다.</p>
 					</div>
-					<div class="bottom-btn">
+					<div class="btn-bottom"><!-- ktd수정 : 버튼 클래스 통일 -->
 						<button type="button" class="btn fill" onclick="ysPlanConfirm();">확인</button>
 					</div>
 				</div>
@@ -1544,10 +1681,9 @@
 							<li>쉐어링 개통 후 최초 인식된 서브 단말기 기준으로 사용이 가능하며, 등록 후 다른 종류의 단말기로 유심이동은 불가합니다.</li>
 							<li>개인 보안등급 설정이 되어있는 경우 개통이 불가합니다.</li>
 						</ul>
-
-						<div class="btn-bottom"><!-- ktd수정 : 추가 -->
-							<button type="button" name="couponAgree" class="btn black" id="popupDatasharingAgree">모두 확인하였습니다</button>
-						</div>
+					</div>
+					<div class="btn-bottom"><!-- ktd수정 : 버튼 위치 통일 -->
+						<button type="button" name="couponAgree" class="btn black" id="popupDatasharingAgree">모두 확인하였습니다</button>
 					</div>
 				</div>
 			</div>
@@ -1556,12 +1692,15 @@
 			<!-- 데이터쉐어링 가입 유의사항 -->
 			<div id="popup-datasharing-info02" class="ui-popup toast-popup popup-datasharing-info">
 				<div class="content">
+					<div class="header">데이터쉐어링 가입 유의사항</div>
+					<!-- ktd수정 : 제목영역 구성 변경, 체크영역 하단 버튼 타입으로 변경
 					<div class="header check">
 						<div class="checkbox">
 							<input type="checkbox" name="couponAgree" id="popupDatasharingAgree02">
 							<label for="popupDatasharingAgree02">데이터쉐어링 가입 유의사항</label>
 						</div>
 					</div>
+					-->
 					<button type="button" class="btn-close">닫기</button>
 					<div class="body">
 						<strong class="datasharing-title">5G 데이터 쉐어링</strong>
@@ -1608,6 +1747,9 @@
 							<li>스마트기기(태블릿PC, 패드 등)을 해외에서 분실한 경우, USIM 카드 도용으로 인해 과다한 해외통화 요금이 발생할 수 있으니, 로밍센터(+82-2-2190-0901)를 통해 반드시 분실신고를 해주시기 바랍니다</li>
 						</ul>
 					</div>
+					<div class="btn-bottom"><!-- ktd수정 : 버튼 위치 통일 -->
+						<button type="button" name="couponAgree" class="btn black" id="popupDatasharingAgree">모두 확인하였습니다</button>
+					</div>
 				</div>
 			</div>
 			<!-- 데이터쉐어링 가입 유의사항 -->
@@ -1627,9 +1769,46 @@
 						<button type="button" class="btn medium inline btn-close">확인</button>
 					</div>
 				</div>
-				<a href="#" class="popLoop">팝업 타이틀로 이동</a>
+				<!-- <a href="#" class="popLoop">팝업 타이틀로 이동</a> -->
 			</div>
 			<!-- //ktd수정 : 계좌인증 팝업 신규 -->
+
+			<!-- 유심개통 안내 ktd : asis소스에 워딩, layout 수정 popup.css 하단 추가 -->
+			<div id="self-opening-pop" class="ui-popup">
+				<!-- 노출시 class.active 추가, 속성 tabindex="0" aria-hidden="false" style="display:block;"-->
+				<div class="content">
+					<div class="body">
+						<div class="self-opening-cont">
+							<div class="top_txt">
+								<strong>홍길동 고객님 죄송합니다.</strong>
+								<p id="selfMsg">유심개통 시간이 경과되어 유심개통을 더 이상 진행할 수 없습니다.</p><!-- 셀프개통 -->
+								<p id="sharingMsg" style="display: none;">데이터쉐어링 셀프개통 시간이 경과되어 데이터쉐어링 셀프개통을 더 이상 진행할 수 없습니다.</p><!-- 데이터쉐어링 -->
+								<p>유심개통 시간에 이용하여 주시기 바랍니다. <br>이용에 불편을 드려 대단히 죄송합니다.</p><!-- 공통 -->
+							</div>
+
+							<div class="noti-list">
+								<strong>안내</strong>
+								<ul>
+									<!-- 셀프개통 -->
+									<li>개통 시간 :<br>
+										신규가입 - 평일/토요일 09시~21시<br>
+										번호이동 - 평일/토요일 10시~19시
+									</li>
+									<!-- 데이터쉐어링 -->
+									<li>셀프개통 시간 : 평일/토요일 09시~21시</li>
+									<!-- 공통 -->
+									<li>개통 내역은 ‘가입내역조회’ 또는 ‘kt.com &gt; 마이페이지’ 에서 확인해 보실 수 있습니다.</li>
+									<li>기타 문의 사항은 고객센터 (1899-8245)로 문의해 주세요.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="btn-bottom btn-bottom-inline"><!-- ktd수정 : 버튼 클래스 통일 -->
+						<button type="button" name="button" class="btn inline bottom btn-close" id="selfInfoEnd">확인</button>
+					</div>
+				</div>
+			</div>
+			<!-- //유심개통 안내 -->
 		</form>
 
 		<!-- as-is -->

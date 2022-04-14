@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+		<title>KT 다이렉트 퍼블리싱가이드</title>
+
+		<link rel="apple-touch-icon" href="/images/mobile/favicon.png">
+		<link rel="shortcut icon" href="/images/mobile/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="/directShop/css/default.css">
+		<link rel="stylesheet" href="/directShop/css/contents.css">
+		<link rel="stylesheet" href="/directShop/css/popup.css">
+		<link rel="stylesheet" href="/directShop/css/swiper.css">
+
+		<link rel="stylesheet" href="/directShop/css/ktDirect.css">
+
+		<link href="/directShop/renew/Publishing_Guide/Publishing_Guide/common/css/ini.min.css" rel="stylesheet">
+		<link href="/directShop/renew/Publishing_Guide/Publishing_Guide/common/css/guide.css" rel="stylesheet">
+		<link href="/directShop/renew/Publishing_Guide/Publishing_Guide/common/css/shCore.css" rel="stylesheet" type="text/css" />
+		<link href="/directShop/renew/Publishing_Guide/Publishing_Guide/common/css/shThemeRDark.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript"  src="/directShop/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+		<script src="/directShop/js/ui/common_front.js" type="text/javascript"></script>
+		<script src="/directShop/js/ui/ui.js" type="text/javascript"></script>
+		<script src="/directShop/js/ui/pub.js" type="text/javascript"></script>
+		<script src="/directShop/js/lib/swiper.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/common/mobile/js/shopLayer.js" charset="utf-8"></script>
+
+		<script src="/directShop/js/ui/pub_ktDirect.js" type="text/javascript"></script>
+
+		<script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shCore.js"></script>
+		<script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shBrushJScript.js"></script>
+		<script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shBrushCss.js"></script>
+		<script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/shBrushXml.js"></script>
+		<script type="text/javascript" src="/directShop/renew/Publishing_Guide/Publishing_Guide/common/js/guide.js"></script>
+
+
+		<script>
+			SyntaxHighlighter.all()
+		</script>
+	</head>
+
+<body class="test">
+	<style>
+		body.test {position: relative;}
+		.test .text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
+		.test .text p {font-size: 40px; white-space: nowrap;}
+		.test .text p + p {margin-top:20px}
+		.test .tit {width: 130px; display: inline-block;}
+		.test .sizeText {font-weight: bold; color: #f00;}
+		/* @media only screen and (max-width:280px) {
+			body {background-color: #000;}
+		}
+		@media (horizontal-viewport-segments: 2){
+			body {background-color: green;}
+		}
+		@media (horizontal-viewport-segments: 1){
+			body {background-color: #f00;}
+		} */
+		/* @media (vertical-viewport-segments: 2){
+			body {background-color: green;}
+		} */
+
+		/* @media only screen and (min-device-width: 884px) and (orientation: portrait) {
+			body {background-color: #000;}
+		}
+		@media only screen and (min-device-width: 1104px) and (orientation: landscape) {
+			body {background-color: #f00;}
+		} */
+		/* @media only screen and (-webkit-min-device-pixel-ratio: 1) {
+			body {background-color: #000;}
+		}
+		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+			body {background-color: #f0f;}
+		} */
+
+		@media screen and (screen-spanning: single-fold-vertical) {
+			body {
+				background: #ff2052;
+			}
+		}
+		@media screen and (screen-spanning: single-fold-horizontal) {
+			body {
+				background: #ff2052;
+			}
+		}
+
+		@media only screen and (min-resolution: 373dpi) {
+			body {
+				background: #f00;
+			}
+		}
+		@media only screen and (min-resolution: 192dpi) {
+			body {
+				background: #ff0;
+			}
+		}
+		@media only screen and (min-resolution: 384dpi) {
+			body {
+				background: #f0f;
+			}
+		}
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 1) {
+			body {
+				background: #0f0;
+			}
+		}
+		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+			body {
+				background: #0ff;
+			}
+		}
+	</style>
+
+	<div class="left">asdf asdf asdf</div>
+
+	<div class="text">
+		<p><span class="tit">Width</span> <span class="sizeText deviceW"></span>px</p>
+		<p><span class="tit">Height</span> <span class="sizeText deviceH"></span>px</p>
+	</div>
+	<script>
+		$(document).ready(myfunction);
+		$(window).on('resize',myfunction);
+
+		function myfunction() {
+			var winW = $(window).width();
+			var winH = $(window).height();
+
+			$('.deviceW').text(winW);
+			$('.deviceH').text(winH);
+
+			console.log("Available Width: " + window.screen.availWidth);
+			console.log("Available Height: " + window.screen.availHeight);
+		}
+
+		// document.body.addEventListener('DOMSubtreeModified', function(e){
+		// 	//console.log ($('body').innerWidth(), $('body').width())
+		// 	//alert ($('body').innerWidth(), $('body').width())
+		// });
+
+		// const segments = window.getWindowSegments();
+		// console.log(segments.length) // 1
+		// console.log(segments.length) // 2
+	</script>
+</body>
+</html>
